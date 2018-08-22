@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>每一个突破，都有无限惊喜</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/common/css/common.css">
+    <link rel="stylesheet" href="/acts/magpieFestival/css/luckWheel.css">
+    <script src="/common/js/autoFixedLayout.js"></script>
+    <style>
+        .actBreak{
+            background-color: #2a2725;
+            text-align: center;
+        }
+        .section img{
+            display: block;
+            width: 100%;
+        }
+        .section1{
+            position: relative;
+        }
+        .section1 .score_box{
+            width: 3.33rem;
+            height: 2.01rem;
+            margin: 0 auto;
+            color: #fde3ad;
+            position: relative;
+            z-index: 3;
+            margin-bottom: 1.55rem;
+        }
+        .section1 .score_box p{
+            font-size: .3rem;
+            margin: .45rem auto;
+        }
+        .section1 .score_box span._account,span.main_score{
+            font-size: .45rem;
+            font-weight: bold;
+        }
+        .section1 .score_box span._unit{
+            font-size: .3rem;
+            margin-left: 0.05rem;
+        }
+        .score_section{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+<body class="actBreak">
+    <div class="section"><img src="/acts/actBreak/images/0312wap_01.png" alt="第1张"></div>
+    <div class="section section1">
+        <img src="/acts/actBreak/images/0312wap_02.png" alt="第1张">
+        <div class="score_section">
+            <div class="score_box">
+                <p>累计投资总额</p>
+                <span class="_account main_score"></span><span class="_unit">元</span>
+            </div>
+            <div class="score_box">
+                <p>累计为用户赚取</p>
+                <span class="_interest main_score"></span><span class="_unit">元</span>
+            </div>
+            <div class="score_box">
+                <p>累计投资笔数</p>
+                <span class="_invest main_score"></span><span class="_unit">笔</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="section">
+        <a href="javascript:void(0)" id="investBtn" style="display: block;width: 60%;margin: auto">
+            <img src="/acts/actBreak/images/0312btn.png" alt="第1张">
+        </a>
+    </div>
+    <div class="section"><img src="/acts/actBreak/images/0312wap_04.png" alt="第1张"></div>
+<%include ../js.html%>
+</body>
+<script>
+    /**
+     * 投资按钮
+     */
+    var goInvest = function(){
+        var $goInvest = $('#investBtn');
+        $goInvest.click(function(){
+            if(window.navigator.userAgent.indexOf('LRAPP') != -1){//在app中
+                lrNative.toAppJumpTo({
+                    type:'investList',
+                    pram:'0'
+                })
+            }else{//app外部
+                window.location.href = _config.mainIP+'/invest/list';
+            }
+        });
+    };
+
+    $(function(){
+        TL.judePlatform(function(){
+                goInvest();
+            },
+            {
+                native:function(){
+                    window.nativeInit = function () {//必须使用这样的方式
+                        goInvest();
+                    };
+
+                    lrNative.toAppGetArgs();//获取鉴权参数
+                },
+                wechat:function(){
+                    goInvest();
+                }
+            });
+
+        TL.Ajax({
+            url:'getStatData'
+        }).done(function(msg){
+            var $main_count = $('._account');
+            $main_count.html(msg.amountTotal);
+            $('._interest').html(msg.collectInterestTotal);
+            $('._invest').html(msg.projectInvestSize);
+        });
+
+
+    });
+
+</script>
+</html>

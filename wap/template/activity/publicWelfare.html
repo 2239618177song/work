@@ -1,0 +1,28 @@
+<div class="publicWelfare">
+    <div ng-if="wap" class="common-head" ng-click="toback()"><i></i>
+        <p>{{title}}</p>
+    </div>
+    <img class="publicWelfare-banner" src="{{h5Banner}}">
+    <div class="publicWelfare-content">
+        <h1>{{mtitle}}</h1>
+        <p>{{summary}}</p>
+        <img ng-if="!videoUrl" src="{{imgUrl}}">
+        <a ng-if="videoUrl" href="{{videoUrl}}">
+            <img src="{{imgUrl}}">
+            <div ng-if="videoUrl" class="video-box">
+                <img src="images/actList/play-icon.png" class="play-icon">
+            </div>
+        </a>
+        <section ng-bind-html="content | asHtml"></section>
+    </div>
+    <div ng-if="picList.length>0" class="publicWelfare-live">
+        <h1>活动现场</h1>
+        <div class="live-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" ng-repeat="item in picList">
+                    <img src="{{item.imgUrl}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

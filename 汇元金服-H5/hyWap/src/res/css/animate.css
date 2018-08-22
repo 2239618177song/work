@@ -1,0 +1,19 @@
+@keyframes scaleIn{
+    from{
+        -webkit-transform: scale(0.1);
+        -ms-transform: scale(0.1);
+        -o-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+
+    to{
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.scaleIn{
+    animation:scaleIn 0.5s;
+}

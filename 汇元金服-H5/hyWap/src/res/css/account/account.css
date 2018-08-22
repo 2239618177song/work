@@ -1,0 +1,203 @@
+._accountSec{
+
+}
+
+/*公用筛选列表样式*/
+._accountSec .lrToolBar{
+    padding:0.2rem 0.3rem;
+    text-align: left;
+    background-color: #fff;
+    font-size:0.28rem;
+}
+
+._accountSec .lrToolBar li {
+    line-height: 0.50rem;
+}
+
+._accountSec .lrToolBar li > span.title{
+    color:#333;
+    margin-right: 0.2rem;
+}
+
+._accountSec .lrToolBar li > a{
+    color:#aaa;
+    margin-right: 0.2rem;
+    display: inline-block;
+}
+
+._accountSec .lrToolBar li > a.active{
+    color:#f97023;
+}
+
+
+/*功能列表公用样式*/
+._accountSec .op_list{
+    background-color: #fff;
+    padding:0 0.4rem;
+    margin-top:0.2rem;
+}
+
+._accountSec .op_list .l_item{
+    border-bottom: 1px solid #eee;
+    height: 1rem;
+    line-height: 1rem;
+    display: block;
+    position: relative;
+    color:#999;
+    font-size: 0.24rem;
+}
+
+._accountSec .op_list .l_item:last-child{
+    border:none;
+}
+
+._accountSec .op_list .l_item .title{
+    position: absolute;
+    left:0;
+    width:2rem;
+    text-align: left;
+    font-size: 0.28rem;
+}
+
+._accountSec .op_list .l_item .title .icon{
+    width:0.4rem;
+    height: 0.4rem;
+    background-repeat: no-repeat;
+    background-size: 0.4rem;
+    background-position: 50% 50%;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-right: 0.2rem;
+}
+
+._accountSec .op_list .l_item .description{
+    position: absolute;
+    right:0.4rem;
+    width:4.4rem;
+    text-align: right;
+}
+
+._accountSec .op_list .l_item .arrow{
+    position: absolute;
+    display: block;
+    height: 1rem;
+    right:0;
+    width:0.3rem;
+    background: url(../../images/arrow_right.png) no-repeat 50% 50%;
+    background-size: 0.3rem;
+}
+
+
+/*一些图标*/
+._accountSec .op_list .l_item .title .icon-card{
+    background-image: url(../../images/bank_card@2x.png);
+}
+
+._accountSec .op_list .l_item .title .icon-welfare{
+    background-image: url(../../images/coupon@2x.png);
+}
+
+._accountSec .op_list .l_item .title .icon-captialRecord{
+    background-image: url(../../images/capital@2x.png);
+}
+
+._accountSec .op_list .l_item .title .icon-investRecord{
+    background-image: url(../../images/invest_record@2x.png);
+}
+
+._accountSec .op_list .l_item .title .icon-calendar{
+    background-image: url(../../images/calendar.png);
+}
+
+._accountSec .op_list .l_item .title .icon-smrz{
+    background-image: url(../../images/setting_ic_authentication@2x.png);
+}
+
+._accountSec .op_list .l_item .title .icon-bdsj{
+    background-image: url(../../images/setting_ic_cellphone@2x.png);
+}
+
+._accountSec .op_list .l_item .title .icon-yxrz{
+    background-image: url(../../images/setting_ic_mailbox@2x.png);
+}
+
+._accountSec .op_list .l_item .title .icon-sqtz{
+    background-image: url(../../images/setting_ic_shortcut@2x.png);
+}
+
+._accountSec .op_list .l_item .title .icon-yqhy{
+    background-image: url(../../images/setting_ic_invite@2x.png);
+}
+
+._accountSec .op_list .l_item .title .icon-bzzx{
+    background-image: url(../../images/setting_ic_help@2x.png);
+}
+
+._accountSec .op_list .l_item .title .icon-bbxx{
+    background-image: url(../../images/setting_ic_edition@2x.png);
+}
+
+._accountSec .op_list .l_item .title .icon-shdz{
+    background-image: url(../../images/setting_ic_adress@2x.png);
+}
+
+._accountSec .op_list .l_item .title .icon-gywm{
+    background-image: url(../../images/hy_setting_aboutus_ic.png);
+}
+
+._accountSec .op_list .l_item .title .icon-income{
+    background-image: url(../../images/shouyi.png);
+}
+
+._accountSec .op_list .l_item .title .icon-allNum{
+    background-image: url(../../images/shengou.png);
+}
+
+._accountSec .op_list .l_item .title .icon-detail{
+    background-image: url(../../images/mingxi.png);
+}
+
+._helpSec .op_list .l_item .title{
+    width: auto !important;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    right: 0.7rem;
+}
+
+._helpSec .op_list .l_item .arrow{
+    transition:transform 0.5s;
+}
+
+._helpSec .op_list .l_item.open .arrow{
+    transform-origin: 50% 50%;
+    transform:rotate(90deg)
+}
+
+._helpSec .qa_item .content{
+    padding:0.2rem;
+    background-color: #eee;
+    display: none;
+}
+
+._helpSec .qa_item .content.show{
+    display: block;
+}
+
+._helpSec .qa_item .content p{
+    font-size: 0.28rem !important;
+    line-height: 0.4rem;
+    text-align: left;
+}
+
+._helpSec .qa_item .content p span{
+    font-size: 0.28rem !important;
+    line-height: 0.4rem;
+    color:#666;
+    word-break: break-all;
+}
+
+._helpSec .qa_item .content img{
+    width:100% !important;
+    margin:0.2rem auto;
+}

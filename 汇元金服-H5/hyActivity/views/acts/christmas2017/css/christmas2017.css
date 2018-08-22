@@ -1,0 +1,250 @@
+li{
+	list-style: none;
+}
+
+.christmasSec{
+	background-color: #482bb0;
+}
+
+.top{
+	height:14.18rem;
+    background: url(/acts/christmas2017/images/act_christmas_1.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.lucky_list{
+	width: 4.55rem;
+	height: 1.73rem;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -2.275rem;
+	background-color: #cabef8;
+}
+
+.lucky_list li{
+	width: 100%;
+	height: .43rem;
+	line-height: .43rem;
+}
+
+.lucky_list li:first-child{
+	background: #a290e6;
+}
+
+.lucky_list li span{
+	width: 33%;
+	height: 100%;
+	text-align: center;
+    float: left;
+}
+
+.sec_content{
+	height: 20.73rem;
+	background: url(/acts/christmas2017/images/act_christmas_2.png) no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.sec_content a{
+	display: block;
+	width: 2.34rem;
+	height: .61rem;
+	line-height: .61rem;
+	background: #fd5270;
+	border-radius: 10px;
+	margin: 5.64rem auto .31rem;
+	text-align:center;
+	color: #fff;
+	font-size: .3rem;
+}
+
+.sec_content .mark_day{
+	width: 6.12rem;
+	height: 7.12rem;
+	margin: 0 auto;
+}
+
+.sec_content .mark_day ul{
+	width: 2.71rem;
+	height: 3.34rem;
+    overflow: hidden;
+    float: left;
+}
+
+.sec_content .mark_day ul:nth-child(even){
+	float: right;
+}
+
+.sec_content .mark_day ul:nth-child(3){
+	margin-top: .46rem;
+}
+
+.sec_content .mark_day ul:nth-child(4){
+	margin-top: .46rem;
+}
+
+.sec_content .mark_day .act_30{
+	background: url(/acts/christmas2017/images/act_mark_day1.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.sec_content .mark_day .act_60{
+	background: url(/acts/christmas2017/images/act_mark_day2.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.sec_content .mark_day .act_90{
+	background: url(/acts/christmas2017/images/act_mark_day3.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.sec_content .mark_day .act_180{
+	background: url(/acts/christmas2017/images/act_mark_day4.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.sec_content .mark_day ul li{
+	height: .33rem;
+	line-height: .33rem;
+	color: #434343;
+	font-size: .20rem;
+	text-align: center;
+}
+
+.sec_content .mark_day ul li:first-child{
+	margin-top: .76rem;
+	height: .62rem;
+	line-height: .62rem;
+	font-weight: 700;
+}
+
+.sec_content .mark_day ul li span{
+	float: left;
+	height: 100%;
+}
+
+.sec_content .mark_day ul li span:nth-child(odd){
+	width: 60%;
+}
+
+.sec_content .mark_day ul li span:nth-child(even){
+	width: 40%;
+}
+
+.sec_content .my_awads{
+	margin: .37rem auto 0;
+	width: 2.35rem;
+	height: 1.04rem;
+	background: url(/acts/christmas2017/images/act_awads.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.sec_content .money_max{
+	width: 5.24rem;
+	height: 1.65rem;
+	position: absolute;
+	bottom: .36rem;
+	left: 50%;
+	margin-left: -2.62rem;
+	border: 2px solid #c1387d;
+    overflow: hidden;
+}
+
+.sec_content .money_max li{
+	width: 100%;
+    height: .395rem;
+	line-height: .395rem;
+	border-bottom: 2px solid #c1387d;
+	color: #fff;
+}
+
+.sec_content .money_max li:nth-child(4){
+	border: none;
+}
+
+.sec_content .money_max li span{
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+footer{
+	height: 4.05rem;
+    background-color: #482bb0;
+    color: #fff;
+}
+
+footer .rule{
+	width: 6.09rem;
+	height: 3.27rem;
+	margin: 0 auto .28rem;
+	background-color: #5e43bf;
+	overflow: hidden;
+}
+
+footer .rule h2{
+	margin-top: .17rem;
+	margin: .14rem 0 .14rem 0;
+	font-size: .27rem;
+	font-weight: 700;
+}
+
+footer .rule p{
+	padding-left: .77rem;
+	padding-right: .38rem;
+	text-align: left;
+	font-size: .22rem;
+	line-height: .33rem;
+}
+/*我的奖品弹窗*/
+._tips{
+    background-color: rgba(14, 9, 35, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+._tips .tips_list{
+		position: fixed;
+    width: 3.22rem;
+    height: 3.8rem;
+    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	    margin: auto;
+    background: url(/acts/christmas2017/images/myAwads_tips.png) no-repeat;
+    	background-size: 100% 100%;
+}
+
+._tips .tips_list p{
+	color: #fff;
+	font-size: .29rem;
+	line-height: .35rem;
+	margin-top: 1rem;
+}
+
+._tips .tips_list span{
+	font-size: .15rem;
+}
+
+._tips .tips_list strong{
+	font-weight: 600;
+}
+
+._tips .tips_list .gift_cha{
+	position: absolute;
+	right: -.1rem;
+	top: .1rem;
+	background: url(/acts/christmas2017/images/close.png) no-repeat;
+    background-size: 100% 100%;
+    width: .4rem;
+    height: .4rem;
+}

@@ -1,0 +1,18 @@
+<div class="my-info-wrapper my-bank-wrapper" ng-controller="myBankCtrl">
+	<div class="common-head" ng-click="toback()"><i></i><p>我的银行卡</p></div>
+	<div class="info-box">
+		<ul>
+			<li class="bank"><p>尾号{{user.bankNum}}</p><span><img src="images/recharge/{{user.bankCode}}.png"></span></li>
+			<li><p>{{user.realName}}</p><span>姓名</span></li>
+			<li><p>{{user.idCards}}</p><span>身份证号</span></li>
+			<li><p>{{user.phone | limitTo:3}}****{{user.phone | limitTo:-4}}</p><span>手机号</span></li>
+		</ul>
+	</div>
+	<div class="bot-tips">
+        <span>友情提示<i></i></span>
+        <p><i></i>此银行卡为您的充值和取现银行卡，同卡进出不可更改</p>
+        <p><i></i>银行充值单笔限额为{{user.singleQuota}}元</p>
+        <p><i></i>银行充值每日限额为{{user.dayQuota}}元</p>
+        <p><i></i>银行提现单笔限额为500,000元</p>
+    </div>
+</div>

@@ -1,0 +1,109 @@
+._welfareSec{
+    padding-top: 1rem;
+}
+
+._welfareSec .filter_top{
+    padding:0.2rem 0;
+}
+
+._welfareSec .btn_group{
+    border: 1px solid #ff6737;
+    height: .6rem;
+    line-height: .6rem;
+    width: 4.78rem;
+    margin: 0 auto;
+    border-radius: .1rem;
+    overflow: hidden;
+}
+
+._welfareSec .btn_group span{
+    display: inline-block;
+    margin: 0;
+    color: #ff6737;
+    width: 33.33%;
+    transition: all .3s;
+    border-left: 1px solid #ff6737;
+}
+
+._welfareSec .btn_group span.active{
+    color:#fff;
+    background-color: #ff6737;
+}
+
+._welfareSec .welfare_item{
+    border-radius: 0.2rem;
+    height: 2.6rem;
+    position:relative;
+    margin:0 0.2rem 0.2rem 0.2rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+
+._welfareSec .welfare_item .info{
+    position: absolute;
+    width:60%;
+    height: 100%;
+    left:0.4rem;
+    top:0.4rem;
+    color:#999;
+    text-align: left;
+}
+
+._welfareSec .welfare_item .info p.title{
+    font-size:0.36rem;
+    color:#666;
+}
+
+._welfareSec .welfare_item .info p.remark{
+    font-size:0.24rem;
+    height: 0.8rem;
+    line-height: 0.4rem;
+    margin-top: 0.2rem;
+}
+
+._welfareSec .welfare_item .info p.date{
+    font-size:0.24rem;
+
+}
+
+._welfareSec .welfare_item .value{
+    position: absolute;
+    width: 37%;
+    height: 100%;
+    right: 0;
+    text-align: center;
+    top: 0rem;
+}
+
+._welfareSec .welfare_item .value .title{
+    font-size: 0.68rem;
+    font-weight: 300;
+    margin-top: 0.2rem;
+}
+
+._welfareSec .welfare_item .value .title span{
+    font-size: 0.4rem;
+}
+
+._welfareSec .welfare_item .value .condition{
+    font-size:0.30rem;
+    margin-top: 0.2rem;
+    color:#666;
+}
+
+._welfareSec .welfare_item.normal{
+    background-image: url(../../images/hongbaoquan1@2x.png);
+}
+
+._welfareSec .welfare_item.out_date{
+    background-image: url(../../images/hongbaoquan_3@2x.png);
+}
+
+._welfareSec .welfare_item.used{
+    background-image: url(../../images/hongbaoquan_2@2x.png);
+}
+
+._welfareSec .welfare_item.selected{
+    background-image: url(../../images/hongbaoquan_gray@2x.png);
+}

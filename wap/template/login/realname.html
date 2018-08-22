@@ -1,0 +1,19 @@
+<div class="wrap" ng-controller='controllerRealName'>
+
+        <form class="marT" name="realform" >
+            <div class="control-group">
+                <label class="icon-user">
+                </label>
+                <input ng-mode="username" type="text" placeholder="请输入您的真实姓名">
+            </div>
+            <div ng-class="{'color-danger':classusername}" > {{desc_username}}</div>
+            <div class="control-group marT2" >
+                <label class="icon-doc-text-inv">
+                </label>
+                <input ng-mode="userID" type="text" placeholder="请输入您的身份证号码">
+            </div>
+            <div ng-class="{'color-danger':classpassword}" > {{desc_password}}</div>
+            <input type ="submit" class="marT3 button-info" ng-click="toPassword()" value ="确定" >
+            
+        </form>
+</div>

@@ -1,0 +1,14 @@
+<div class="special-code-dialog special-dialog">
+	<i class="special-close" ng-click="closeDialog()"></i>
+	<div class="title">我的幸运码</div>
+	<div class="nocode" ng-show="!luckAmount">
+		<p>您还是无码状态<i class="special-nocode"></i></p>
+		<a class="goinvest" ng-click="closeDialog()" href="" ui-sref="cpDetail({pid: product.id})" ng-if="wap">立即去投资</a>
+		<a class="goinvest goToApp" ng-click="closeDialog()" ng-if="!wap" href="jsmp://page=9?pid={{product.id}}&ptype={{product.type}}&atid=1">立即去投资</a>
+	</div>
+	<div class="mycode" ng-show="luckAmount">
+		<div class="codebox">
+			<p ng-repeat="item in luckCodes track by $index">{{item}}</p>
+		</div>
+	</div>
+</div>

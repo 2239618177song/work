@@ -1,0 +1,30 @@
+._settingSec{
+    padding-top: 1rem;
+}
+
+._settingSec .tips{
+    color:#e0462a;
+    font-size:0.24rem;
+    padding: 0 0.4rem;
+    text-align: left;
+    line-height: 0.8rem;
+}
+
+._settingSec .btn_area{
+    padding:0 0.6rem;
+}
+
+._settingSec .btn_area .btn{
+    height: 0.8rem;
+    line-height: 0.8rem;
+}
+
+._settingSec .to_find_paypwd {
+    text-align: right;
+    margin-top: .4rem;
+}
+
+._settingSec .to_find_paypwd a {
+    font-size: .26rem;
+    color: #999;
+}

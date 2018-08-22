@@ -1,0 +1,66 @@
+
+/*
+  * 投资风云榜通用样式
+  */
+
+.rank_list {
+    position: relative;
+}
+
+.rank_list .list{
+    position: absolute;
+    width: 5.6rem;
+    top:0;
+    left:50%;
+    margin-left: -2.8rem;
+}
+
+.rank_list .list li{
+    background-color: #e1a914;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    margin-top: 0.1rem;
+    border-radius: 0.05rem;
+    overflow: hidden;
+}
+
+.rank_list .list li:nth-child(2){
+    background: url(../images/a_1.png) no-repeat 0.2rem 50%;
+    background-size: 0.3rem 0.3rem;
+}
+
+.rank_list .list li.no_result{
+    background:none !important;
+}
+
+.rank_list .list li:nth-child(3){
+    background: url(../images/a_2.png) no-repeat 0.2rem 50%;
+    background-size: 0.3rem 0.3rem;
+}
+
+.rank_list .list li:nth-child(4){
+    background: url(../images/a_3.png) no-repeat 0.2rem 50%;
+    background-size: 0.3rem 0.3rem;
+}
+
+.rank_list .list li:nth-child(even){
+    background-color: #fff29b;
+}
+
+.rank_list .list li.no_result{
+    background:none;
+    height:2rem;
+    line-height:2rem;
+    font-size:0.28rem;
+
+}
+
+.rank_list .list li span{
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.24rem;
+}

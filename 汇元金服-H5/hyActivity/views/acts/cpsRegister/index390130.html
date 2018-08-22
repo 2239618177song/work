@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!--dd-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>汇元金服-新手注册</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/acts/cpsRegister/css/cpsReg.css">
+    <script src="/common/js/autoFixedLayout.js"></script>
+    <style>
+        .semContent{
+            background-color: #8091ff;
+        }
+        .semBanner{
+            width: 100%;
+        }
+        .semBox{
+            /*background:url('/acts/cpsRegister/images/xm_bg.png') no-repeat;*/
+            width: 100%;
+            background-size: contain;
+            margin-top: .3rem;
+        }
+        .semContent img{
+            width: 100%;
+            display: block;
+        }
+        .rule_box{
+            color: #fff;
+            padding: 0.3rem 0;
+            background-color: #da9303;
+        }
+        .rule_box h2{
+            font-size: 0.3rem;
+            margin: 0.2rem 0;
+        }
+        .rule_box p{
+            width: 5.6rem;
+            color: #fff;
+            margin: auto;
+            text-align: left;
+            line-height: 1.2;
+            font-size: 0.2rem;
+        }
+        .main_btn_color{
+            background-color: #ff4d7c !important;
+            color: #fff !important;
+        }
+        /*input格式修改*/
+        .formBox {
+            width: 6.5rem;
+            /* height: 450px; */
+            margin: 0 auto 0;
+        }
+        .form_item {
+            width: 100%;
+        }
+        .form_component{
+            width: 100%;
+        }
+        .cpsRegSec #registerForm input[type=text], #registerForm input[type=password] {
+            border: none;
+            border-radius: 0.2rem;
+        }
+        .cpsRegSec #registerForm .form_component.style2 input {
+            width: 65%;
+        }
+        .cpsRegSec .form_component.style2 .vcode ,
+        .cpsRegSec #registerForm .btn{
+            width: 30%;
+            font-size: 0.3rem;
+            border-radius: 0.2rem !important;
+        }
+        .cpsRegSec input::-webkit-input-placeholder{
+            color: #a9a4a4;
+        }
+        .cpsRegSec #registerForm  #checkProtocol:after{
+            content:'';
+            display:inline-block;
+            width: 0.45rem;
+            height: 0.45rem;
+            vertical-align: TEXT-BOTTOM;
+            border-radius:0;
+            float:left;
+            background-color: none;
+            background:url('/acts/cpsRegister/images/check_dd.png') no-repeat 10% 100%;
+            background-size:0.4rem 0.4rem;
+        }
+
+        .cpsRegSec #registerForm  #checkProtocol:checked:after{
+            width: 0.45rem;
+            height: 0.45rem;
+            background-image:url('/acts/cpsRegister/images/checked_dd.png')
+
+        }
+        .cpsRegSec .form_item.checkProtocol{
+            width: 79%;
+            margin: auto;
+        }
+        .cpsRegSec #registerForm .checkProtocol label {
+            margin-left: 0;
+        }
+        .cpsRegSec .form_item.register_btn{
+            /*width: 80%;*/
+            width: 6rem;
+            height: 0.94rem;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+        }
+        .cpsRegSec .form_component .registerBtn{
+            width: 100% !important;
+        }
+        .cpsRegSec #registerForm .checkProtocol,
+        .cpsRegSec #registerForm .checkProtocol label a {
+            color: #fff;
+        }
+        /*.cpsRegSec #registerForm .checkProtocol label a {*/
+            /*color: #fff;*/
+        /*}*/
+        .cpsRegSec #registerForm .checkProtocol label {
+            line-height: 0.7rem;
+        }
+
+
+
+        .semBox{
+            padding-bottom: 1rem;
+        }
+        .fix_btn{
+            display: block;
+            width: 7.5rem;
+            height: 1rem;
+            background-color: #ff4e76;
+            position: fixed;
+            bottom: 0;
+            color: #fff;
+            line-height: 1rem;
+            font-size: 0.4rem;
+            letter-spacing: .2rem;
+        }
+
+        .formBox{
+            position: relative;
+            margin-top: -5.5rem;
+        }
+    </style>
+</head>
+<body class="cpsRegSec">
+
+<div class="semContent">
+    <div class="semBanner"><img src="/acts/cpsRegister/images/dd0306_01.png"></div>
+    <div class="semBox semWrap ">
+        <div class="formBox">
+            <form action="" id="registerForm" class="clearfix">
+                <div class="form_item">
+                    <div class="form_component">
+                        <input type="text"
+                               placeholder="请输入手机号码"
+                               maxLength="11"
+                               name="mobile"
+                               pattern="[0-9]*"
+                        />
+                    </div>
+                </div>
+                <div class="form_item">
+                    <div class="form_component style2">
+                        <input type="text" placeholder="验证码" class="f_left" name="imgVCodeInput" maxlength="4"/>
+
+                        <a href="javascript:void(0)" class="vcode main_btn_color">
+                            <img src="" alt="" id="imgVCode">
+                        </a>
+                    </div>
+                </div>
+                <div class="form_item">
+                    <div class="form_component style2">
+                        <input type="text"
+                               placeholder="手机验证码" class="f_left"
+                               name="vCode"
+                               pattern="[0-9]*"
+                               maxlength="4">
+                        <a href="javascript:void(0)"
+                           class="btn main_btn_color"
+                           id="vCode">获取验证码</a>
+                    </div>
+                </div>
+                <div class="form_item">
+                    <div class="form_component">
+                        <input type="password"
+                               placeholder="请设置登录密码，6-18位数字字母组合"
+                               autocomplete="off"
+                               maxlength="18"
+                               name="password"/>
+                    </div>
+                </div>
+                <div class="form_item clearfix checkProtocol" >
+                    <div class="form_component">
+                        <input type="checkbox" id="checkProtocol" checked> <label for="checkProtocol">阅读并同意《<a href="javascript:void(0)" id="openProtocol">汇元金服用户协议</a>》</label>
+                    </div>
+                </div>
+                <div class="form_item clearfix register_btn">
+                    <div class="form_component " id="btnSubmit">
+                        <!--<a href="javascript:void(0)" class="" id="btnSubmit">-->
+                        <img src="/acts/cpsRegister/images/dd_btn2.png">
+                        <!--</a>-->
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="content_pic">
+            <img src="/acts/cpsRegister/images/dd0306_02.png">
+        </div>
+    </div>
+
+    <a href="#registerForm" class="fix_btn">立即注册</a>
+</div>
+<% include ../js.html %>
+</body>
+<script>
+    var CpsReg = (function(){
+        /*表单相关*/
+        var $mobile= $('[name=mobile]'),
+            $vcode = $('[name=vCode]'),
+            $password = $('[name=password]'),
+            $rePassword = $('[name=rePassword]'),
+            $inviteCode = $('[name=inviteCode]'),
+            $vcodeBtn = $('#vCode'),
+
+            $imgVCodeInput = $('[name=imgVCodeInput]'),
+            $imgVcode = $('#imgVCode'),
+            $openProtocol = $('#openProtocol'),
+            $btn = $('#btnSubmit'),
+            $checkProtocol = $('#checkProtocol');
+
+        var initSomePlugins = function(){
+            /*标识符*/
+            var TOKEN = TL.getRandom();//前端生成token，忽略可能的重复
+
+            /*图形验证码*/
+            TL.getVcode({
+                elem:$imgVcode,
+                token:TOKEN
+            });
+
+            /*展开协议*/
+            $openProtocol.click(function(){
+                var $this = $(this);
+                if($this.data('load')){
+                }
+                TL.openRegisterProtocol();
+            });
+
+            /*发送短信*/
+            TL.sendVcode({
+                $input:$mobile,//手机号码
+                $btn:$vcodeBtn,//发送按钮
+                $vcode:$imgVCodeInput,
+                $imgVcode:$imgVcode,
+                url:'sendRegisterMobileVCode',
+                delay:60,
+                keyName:'mobile',
+                extraArgs:{
+                    token:TOKEN,
+                    version:'1.2.0'
+                }
+            });
+        };
+
+
+        var bindEvent = function () {
+            $btn.bind('click',function(){
+                var $this = $(this);
+
+                if($this.hasClass('disabled'))return;
+                if($mobile.val() == ''){
+                    $.Alert('手机号码不能为空！');return;
+                }
+
+                if(!/^1[3-9]\d{9}$/.test($mobile.val())){
+                    $.Alert('手机号码格式有误！');return;
+                }
+
+                if($imgVCodeInput.val() == ''){
+                    $.Alert('图形验证码不能为空！');return;
+                }
+
+                if($vcode.val() == ''){
+                    $.Alert('手机验证码不能为空！');return;
+                }
+
+                if($password.val() == ''){
+                    $.Alert('密码不能为空！');return;
+                }
+
+                if(!/^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$)[^\s]{6,18}$/.test($password.val())){
+                    $.Alert('密码格式有误(6-18为数字字母的组合)！');return;
+                }
+                if(!$checkProtocol[0].checked){
+                    $.Alert('请确认用户注册协议！');
+                    return;
+                }
+
+                var semChannel = TL.getQueryField('from');
+
+                $this.addClass('disabled');
+
+                var data = {
+                    mobile:$mobile.val(),
+                    vCode:$vcode.val(),
+                    password:$password.val(),
+                    from:semChannel,
+                    invitationCode:$inviteCode.val()
+                };
+
+                TL.Ajax({
+                    url:'register',
+                    data:data,
+                    load:true,
+                    type:'post'
+                }).done(function(){
+                    $this.removeClass('disabeld');
+                    $.Alert('恭喜,注册成功!', function () {
+                        window.location.href = _config.mainIP+'/user/login';
+                        $this.removeClass('disabled');
+                    });
+                },function(){
+                    $this.removeClass('disabled');
+                }).fail(function(){
+                    $this.removeClass('disabled');
+                });
+
+            });
+        };
+
+        return {
+            init: function () {
+                initSomePlugins();
+                bindEvent();
+            }
+        }
+    })();
+
+
+    $(function () {
+        CpsReg.init();
+    });
+
+    // TL.checkFrontEnd('https://www.huiyuanjinfu.com/user/foword?url=/sem/cps/cpsRegister&channel='+channel);
+
+</script>
+</html>

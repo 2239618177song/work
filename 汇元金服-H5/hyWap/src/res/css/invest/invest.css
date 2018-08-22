@@ -1,0 +1,1383 @@
+._investListSec{
+
+}
+
+._investListSec .filter_title{
+    background: linear-gradient(45deg,rgb(210,53,47),rgb(230,105,63));
+    width:100%;
+    height: 1rem;
+    overflow: hidden;
+    position: fixed;
+    left:0;
+    top:0;
+}
+
+._investListSec .filter_title .btn_group{
+    border:1px solid #fff;
+    position: absolute;
+    height: 0.56rem;
+    line-height: 0.56rem;
+    left:30%;
+    top:50%;
+    transform:translate(-22%,-50%);
+    overflow: hidden;
+    border-radius: 0.1rem;
+}
+
+._investListSec .filter_title .btn_group span{
+    color:#fff;
+    padding:0 0.3rem;
+    font-size: 0.30rem;
+    /*border-right:1px solid #fff;*/
+    display: block;
+    /*display: inline-block;*/
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+._investListSec .filter_title .btn_group span:after{
+    content:'';
+    position: absolute;
+    height: 100%;
+    border-right: 1px solid #fff;
+    right:0;
+}
+
+._investListSec .filter_title .btn_group span.active{
+    background-color: #fff;
+    color:rgb(210,53,47) !important;
+}
+
+._investListSec .filter_title .btn_group span:last-child:after{
+    border:none;
+}
+
+
+/*标的详情*/
+._investDetailSec{
+    padding-top: 1rem;
+    padding-bottom: 1.2rem;
+}
+
+._investDetailSec a.calculate_btn{
+    display: inline-block;
+    width:0.5rem;
+    height: 0.5rem;
+    background: url(../../images/icon_calculator@2x.png) no-repeat 50% 50%;
+    background-size: 0.5rem;
+    box-shadow: none;
+}
+
+._investDetailSec .project_info{
+    background-color: #fff;
+    width:84%;
+    margin:0.8rem auto 0;
+    height: 7rem;
+    box-shadow: 0 0 15px #ffe0ce;
+    border-radius: 0.2rem;
+    position: relative;
+    /*animation:scaleInForDetail 0.3s;*/
+}
+
+._investDetailSec .project_info:before,
+._investDetailSec .project_info:after{
+    content:'';
+    position: absolute;
+    border-radius: 0.1rem;
+    background-color: #fff;
+    box-shadow: 0 0 15px #f2d7d3;
+    top:-0.3rem;
+    height: 0.6rem;
+    left:0;
+    z-index:-1;
+}
+
+._investDetailSec .project_info:before{
+    width:90%;
+    left:5%;
+    top:-0.3rem;
+    animation:scaleInForDetail 1s;
+    z-index:-1;
+
+}
+
+._investDetailSec .project_info:after{
+    width:80%;
+    left:10%;
+    top:-0.6rem;
+    animation:scaleInForDetail 1.5s;
+    z-index:-2;
+}
+
+@keyframes scaleInForDetail{
+    from{
+        transform:translateY(50%);
+    }
+
+    to{
+        transform:translateY(0);
+    }
+}
+
+._investDetailSec .project_info .sold_out{
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    right: 0.2rem;
+    top: 4rem;
+    z-index: 99;
+    background: url(../../../res/images/sold_out@2x.png) no-repeat 0 0;
+    background-size: 1.5rem;
+}
+
+._investDetailSec .project_info .title{
+    height: 1rem;
+    line-height: 1rem;
+}
+
+._investDetailSec .project_info .title .left_tag{
+    float: left;
+    width:1rem;
+    height: 100%;
+    text-align: left;
+}
+
+._investDetailSec .project_info .title .left_tag span.newer{
+    display: inline-block;
+    vertical-align: middle;
+    width:0.8rem;
+    height: 0.4rem;
+    background: url(../../images/corner_mark@2x.png) no-repeat 0 0;
+    background-size: 100%;
+    margin-left: -0.1rem;
+}
+
+._investDetailSec .project_info .title .right_state{
+    float: right;
+    width:1rem;
+    height: 100%;
+    text-align: right;
+}
+
+._investDetailSec .project_info .title .right_state .selling{
+    color:#fff;
+    background-color: #ea523b;
+    border-radius: 0.05rem;
+    display: inline-block;
+    width:0.8rem;
+    height: 0.35rem;
+    line-height: 0.35rem;
+    text-align: center;
+    font-weight: 300;
+    margin-right: 0.2rem;
+    font-size: 0.2rem;
+    vertical-align: middle;
+}
+
+._investDetailSec .project_info .title .text{
+    margin:0 1.1rem;
+    font-size: 0.32rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+._investDetailSec .project_info .content{
+    padding-top: 0.6rem;
+    border-top: 1px solid #ddd;
+}
+
+._investDetailSec .project_info .content .rate{
+    height: 1.4rem;
+}
+
+._investDetailSec .project_info .content .rate .r_value{
+    font-size: 0.8rem;
+    color:#ff721f;
+    font-weight: 300;
+    position: relative;
+}
+
+._investDetailSec .project_info .content .rate .r_value .count_time{
+    position: absolute;
+    font-size: 0.24rem;
+    right: 0.3rem;
+    top: -0.4rem;
+}
+
+._investDetailSec .project_info .content .rate .r_value .count_time .icon-time{
+    width:0.3rem;
+    height: 0.3rem;
+    display: inline-block;
+    background:url(../../Component/images/daojishi-@2x.png) no-repeat 0 0;
+    background-size: 0.2rem;
+    vertical-align: middle;
+    margin-right: 0.05rem;
+}
+
+._investDetailSec .project_info .content .rate .r_value .add_rate{
+    font-size: 0.4rem;
+}
+
+._investDetailSec .project_info .content .rate .r_title{
+    color:#999;
+    font-size: 0.24rem;
+    margin-top: 0.2rem;
+}
+
+._investDetailSec .project_info .content .info_list{
+    margin-top: 0.3rem;
+}
+
+._investDetailSec .project_info .content .info_list .item{
+    height: 0.8rem;
+    line-height: 0.8rem;
+    overflow: hidden;
+    width:4.6rem;
+    margin:0 auto;
+}
+
+._investDetailSec .project_info .content .info_list .item .r_value{
+    width:50%;
+    text-align: left;
+    float: left;
+    font-size: 0.4rem;
+    color:#666;
+    font-weight: 300;
+}
+
+._investDetailSec .project_info .content .info_list .item .r_title{
+    text-align: right;
+    width:50%;
+    float: right;
+    color:#999;
+    font-size: 0.24rem;
+}
+
+._investDetailSec .item_list{
+    margin-top:0.3rem;
+    padding:0 0.3rem;
+}
+
+._investDetailSec .item_list .item{
+    background-color: #FFf;
+    height: 1rem;
+    border:1px solid #eee;
+    margin-bottom: 0.2rem;
+    line-height: 1rem;
+    position: relative;
+    border-radius: 0.1rem;
+}
+
+._investDetailSec .item_list .item.type2{
+    padding-left: 0.3rem;
+}
+
+._investDetailSec .item_list .item .title{
+    width:50%;
+    left:0;
+    top:0;
+    text-align: left;
+    color:#333;
+    font-weight: 300;
+}
+
+._investDetailSec .item_list .item .title span.icon{
+    display: inline-block;
+    margin-right: 0.1rem;
+    margin-left: 0.3rem;
+    width:0.35rem;
+    height: 0.35rem;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 0.35rem;
+    vertical-align: middle;
+}
+
+._investDetailSec .item_list .item .title span.icon-xiangmu{
+    background-image:url(../../images/item@2x.png);
+}
+
+._investDetailSec .item_list .item .title span.icon-tzjl{
+    background-image:url(../../images/record@2x.png);
+}
+
+._investDetailSec .item_list .item .description{
+    position: absolute;
+    right: 0.6rem;
+    top:0;
+    color:#999;
+}
+
+._investDetailSec .item_list .item .arrow{
+    position: absolute;
+    width:0.3rem;
+    right: 0.2rem;
+    height: 100%;
+    top:0;
+    background: url(../../images/arrow_right.png) no-repeat 50% 50%;
+    background-size: 0.3rem;
+}
+
+._investDetailSec .btn_area{
+    position: fixed;
+    width: 100%;
+    bottom:0;
+    left:0;
+    padding:0 0.6rem;
+    height: 1.2rem;
+}
+
+._investDetailSec .btn_area .btn{
+    display: block;
+    /*border-radius: 0;*/
+    height: 0.9rem;
+    line-height: 0.9rem;
+    margin-top: 0.1rem;
+}
+
+
+/*投资记录*/
+._investRecordSec{
+    padding-top: 1rem;
+}
+
+._investRecordSec > .record_title{
+    height: 0.8rem;
+    line-height: 0.8rem;
+    color:#333;
+    padding:0 0.2rem;
+    font-size: 0.32rem;
+}
+
+._investRecordSec > .record_list{
+    background-color: #fff;
+    /*padding:0 20px;*/
+}
+
+._investRecordSec > .record_list .item{
+    overflow: hidden;
+    padding:0.3rem 0.2rem;
+    border-top:1px solid #eee;
+}
+
+._investRecordSec > .record_list li:first-child .item{
+    border-top:none;
+}
+
+._investRecordSec > .record_list .item > .value{
+    height: 100%;
+    float: right;
+    color:#e4393c;
+    font-size:0.32rem;
+    width:2rem;
+    text-align: right;
+    margin-top: 12px;
+}
+
+._investRecordSec > .record_list .item > .itemInfo{
+    text-align: left;
+}
+
+._investRecordSec > .record_list .item > .itemInfo > p.name{
+    font-size:0.32rem;
+    color:#333;
+}
+
+._investRecordSec > .record_list .item > .itemInfo > p.date{
+    color:#aaa;
+    font-size: 0.28rem;
+    margin-top: 0.1rem;
+}
+
+/*了解项目*/
+._proDetailInfoSec{
+    padding-top: 1rem;
+}
+
+._proDetailInfoSec > .sectionInfo{
+
+}
+
+._proDetailInfoSec > .sectionInfo > .title{
+    height: 40px;
+    line-height: 40px;
+    color:#333;
+    font-size: 0.32rem;
+    text-align: left;
+    padding:0 20px;
+}
+
+._proDetailInfoSec > .sectionInfo > .content{
+    background-color: #fff;
+    padding:20px ;
+}
+._proDetailInfoSec > .sectionInfo > .content img{
+    width:100%;
+    margin-bottom: 10px;
+}
+
+
+/*计算器*/
+._calculateSec{
+    padding-top: 1.2rem;
+}
+
+._calculateSec .result_area{
+
+}
+
+._calculateSec .result_area .title{
+    color:#999;
+    text-align: left;
+    padding:0.2rem 0.4rem;
+}
+
+._calculateSec .result_area .title .dotted{
+    width:0.1rem;
+    height: 0.1rem;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-color: #df432a;
+    margin-right: 0.2rem;
+    font-weight: 300;
+}
+
+._calculateSec .content{
+    position: relative;
+    height: 5rem;
+}
+
+._calculateSec .content .chart_view{
+    position: absolute;
+    bottom:0.8rem;
+}
+
+._calculateSec .content .chart_view.hy{
+    width:120px;
+    left:50%;
+    margin-left: -60px;
+}
+
+._calculateSec .content .chart_view p.name{
+    color:#ff721f;
+    margin-top: 0.2rem;
+}
+
+._calculateSec .content .chart_view.hy p.name{
+    font-size: 0.36rem;
+}
+
+._calculateSec .content .chart_view.hy p.platform{
+    font-size: 0.36rem;
+    color:#df442a;
+}
+
+._calculateSec .content .chart_view.other{
+    width:70px;
+}
+
+._calculateSec .content .chart_view .wrap{
+    position: relative;
+}
+
+._calculateSec .content .chart_view .wrap p{
+    position: absolute;
+    top:50%;
+    width:100%;
+    text-align: center;
+    transform:translateY(-50%);
+    color:#999;
+}
+
+._calculateSec .form{
+
+}
+
+._calculateSec .form .item{
+    background-color: #fff;
+    margin-bottom: 0.2rem;
+    height: 1rem;
+    line-height: 1rem;
+    position: relative;
+}
+
+._calculateSec .form .item .label{
+    position: absolute;
+    width:2rem;
+    left: 0.2rem;
+    top:0;
+    color:#333;
+}
+
+._calculateSec .form .item .label span.icon{
+    display: inline-block;
+    width:0.4rem;
+    height: 0.4rem;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 0.4rem;
+    vertical-align: middle;
+    margin-right: 0.15rem;
+}
+
+._calculateSec .form .item .input{
+    width: 4rem;
+    text-align: left;
+    position: absolute;
+    left:2.4rem;
+}
+
+._calculateSec .form .item .input input{
+    width: 100%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.28rem;
+}
+
+._calculateSec .form .item .label span.icon-amount{
+    background-image: url(../../images/cal_amount.png);
+}
+
+._calculateSec .form .item .label span.icon-rate{
+    background-image: url(../../images/cal_rate.png);
+}
+
+._calculateSec .form .item .label span.icon-date{
+    background-image: url(../../images/cal_date.png);
+}
+
+._calculateSec .btn_area{
+    padding:0 0.4rem;
+}
+
+/*支付页面*/
+._investPaySec{
+    padding-bottom: 1.3rem;
+}
+
+._investPaySec .pro_info{
+    position: relative;
+    z-index:9;
+}
+
+._investPaySec .pro_info .title{
+    font-size: .32rem;
+}
+
+._investPaySec .pro_info .rate{
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-top: 0.3rem;
+}
+
+._investPaySec .pro_info .rate .add_rate{
+    font-size: 0.4rem;
+}
+
+._investPaySec .pro_info .rate .title{
+    font-size: 0.28rem;
+    margin-top: 0.3rem;
+}
+
+._investPaySec .pro_info .other_info{
+    overflow: hidden;
+    margin-top: 0.3rem;
+}
+
+._investPaySec .pro_info .other_info .item{
+    width: 50%;
+    float: left;
+    font-weight: 300;
+}
+
+._investPaySec .pro_info .other_info .item .value{
+    font-size: 0.50rem;
+}
+
+._investPaySec .pro_info .other_info .item .title{
+    font-size: 0.28rem;
+    margin-top: 0.2rem;
+}
+
+._investPaySec .list_info{
+    width:96%;
+    background-color: #Fff;
+    margin: -0.5rem auto 0;
+    position: relative;
+    z-index:9;
+    border:1px solid #eee;
+    border-radius: 0.14rem;
+    padding-top: 0.6rem;
+}
+
+._investPaySec .list_info .item{
+    position: relative;
+    height: 0.8rem;
+    line-height: 0.8rem;
+}
+
+._investPaySec .list_info .item .label{
+    position: absolute;
+    width:2rem;
+    left:0.4rem;
+    text-align: left;
+    color:#999;
+}
+
+._investPaySec .list_info .item .input{
+    position: absolute;
+    left:2.3rem;
+    width:3rem;
+    text-align: left;
+}
+
+._investPaySec .list_info .item .btn_area{
+    position: absolute;
+    right: 0.4rem;
+    width:1rem;
+}
+
+._investPaySec .list_info .item .btn_area .btn{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    font-size:0.28rem;
+    vertical-align: middle;
+    display: inline-block;
+    width:100%;
+}
+
+._investPaySec .list_info .item.special{
+    border-top: 1px solid #eeeeee;
+    height: 1.2rem;
+    line-height: 1.2rem;
+}
+
+._investPaySec .list_info .item.special .label{
+    font-size:0.32rem;
+    color:#666;
+}
+
+._investPaySec .list_info .item.special .input input{
+    font-size: 0.32rem;
+    padding-left: 0;
+}
+
+._investPaySec .list_info .item.special .input input::-webkit-input-placeholder{
+    color:#dd3f29;
+}
+
+._investPaySec .welfare_list{
+    background-color: #Fff;
+    border:1px solid #eee;
+    border-radius: 0.15rem;
+    margin: 0.2rem auto;
+    width:96%;
+    padding:0.2rem 0.4rem;
+}
+
+._investPaySec .welfare_list .item{
+    position: relative;
+    height: 1.2rem;
+    font-size:0.32rem;
+}
+
+._investPaySec .welfare_list .item .title{
+    position: absolute;
+    left:0;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    color:#666;
+}
+
+._investPaySec .welfare_list .item .title .icon{
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-right: 0.1rem;
+    background-position: 50% 50%;
+    background-size: 0.4rem;
+    background-repeat: no-repeat;
+    vertical-align: text-bottom;
+}
+
+._investPaySec .welfare_list .item .title .icon-red{
+    background-image: url(../../../res/images/icon_red.png);
+}
+
+._investPaySec .welfare_list .item .title .icon-rate{
+    background-image: url(../../../res/images/icon_rate.png);
+}
+
+._investPaySec .welfare_list .item .description{
+    position: absolute;
+    right: 0.6rem;
+    line-height: 0.8rem;
+    height: 0.8rem;
+    text-align: right;
+    color:#999;
+}
+
+._investPaySec .welfare_list .item .info{
+    position: absolute;
+    top:0.8rem;
+    font-size: 0.24rem;
+}
+
+._investPaySec .welfare_list .item .arrow{
+    position: absolute;
+    right: 0;
+    height: 0.8rem;
+    width:0.4rem;
+    background: url(../../../res/images/arrow_right.png) no-repeat 50% 50%;
+    background-size: 0.3rem;
+}
+
+._investPaySec .checkProtocol{
+    font-size:0.28rem;
+    margin-top:20px;
+    text-align:left;
+    padding-left:15px;
+    color:#999;
+}
+
+._investPaySec  .checkProtocol #checkProtocol{
+    background-color:transparent;
+    margin-right: 10px;
+}
+
+._investPaySec  .checkProtocol a{
+    color:#999;
+}
+
+._investPaySec  .checkProtocol #checkProtocol:after{
+    content:'';
+    display:inline-block;
+    width:0.32rem;
+    height:0.32rem;
+    vertical-align:sub;
+    background:url(../../images/detail_bg_agree_disable@2x.png) no-repeat 0 0;
+    background-size:100% 100%;
+}
+
+._investPaySec  .checkProtocol #checkProtocol:checked:after{
+    background-image:url(../../images/detail_bg_agree_normal@2x.png);
+}
+
+._investPaySec > .btn_area{
+    position: fixed;
+    padding:0.2rem 0.2rem;
+    width: 100%;
+    bottom:0;
+    left:0;
+    z-index:999;
+}
+
+/*红包加息券面板*/
+._investPaySec .couponPanel{
+    background-color:#f8f8f8;
+    position:fixed;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    color:#666;
+    z-index:99999;
+    /* left:-100%; */
+    overflow: scroll;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transition:transform 0.2s;
+    transition:transform 0.2s;
+    -webkit-transform:translateX(-100%);
+    -moz-transform:translateX(-100%);
+    -o-transform:translateX(-100%);
+    -ms-transform:translateX(-100%);
+    transform:translateX(-100%);
+}
+
+._investPaySec .couponPanel.show{
+    -webkit-transform:translateX(0%);
+    -webkit-transform:translateX(0%);
+    -moz-transform:translateX(0%);
+    -o-transform:translateX(0%);
+    -ms-transform:translateX(0%);
+    transform:translateX(0%);
+}
+
+._investPaySec .couponPanel .noResult{
+    padding:20px 10%;
+    background-color:#fff;
+    margin-bottom:10px;
+}
+
+._investPaySec .couponPanel .noResult img{
+    width:90px;
+    margin-bottom:20px;
+}
+
+._investPaySec .couponPanel .noResult .text{
+    text-align:Center;
+    font-size:0.32rem;
+    line-height: 0.52rem;
+}
+
+._investPaySec .couponPanel .header{
+    height:40px;
+    line-height:40px;
+    padding:0 15px;
+    font-size:0.32rem;
+    text-align:left;
+}
+
+._investPaySec .couponPanel  .couponList ul{
+    overflow: hidden;
+}
+
+._investPaySec .couponPanel  .couponList li{
+    overflow:hidden;
+    background-color:#fff;
+    border-left:3px solid #ff4444;
+    margin-bottom:15px;
+    display: block;
+    width: 100%;
+}
+
+/*加息券类别*/
+._investPaySec .couponPanel  .couponList li.addRate{
+    border-color:#ff4444;
+}
+._investPaySec .couponPanel  .couponList li.addRate .left .value{
+    color:#ff4444;
+    margin-top:33px;
+}
+
+._investPaySec .couponPanel  .couponList li.actived{
+    background-color:#eee;
+}
+
+._investPaySec .couponPanel  .couponList li .left{
+    float:left;
+    width:33.33%;
+    height:100px;
+    position:relative;
+    border-right:1px dashed #ccc;
+}
+
+._investPaySec .couponPanel  .couponList li .left:before,
+._investPaySec .couponPanel  .couponList li .left:after
+{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    content:'';
+    position:absolute;
+    background-color:#f8f8f8;
+}
+
+._investPaySec .couponPanel  .couponList li .left:before{
+    right:-10px;
+    top:-10px;
+}
+
+._investPaySec .couponPanel  .couponList li .left:after{
+    right:-10px;
+    bottom:-10px;
+}
+
+._investPaySec .couponPanel  .couponList li .left .value{
+    font-size:0.8rem;
+    color:#ff4444;
+    margin-top:20px;
+}
+
+._investPaySec .couponPanel  .couponList li .left .value span{
+    font-size:0.28rem;
+}
+
+._investPaySec .couponPanel  .couponList li .left .title{
+    margin-top:10px;
+    font-size:0.28rem;
+    color:#999;
+}
+
+._investPaySec .couponPanel  .couponList li  .right{
+    margin-left:33.33%;
+    padding:0 10px 0 20px;
+    font-size:0.28rem;
+    text-align:left;
+}
+
+._investPaySec .couponPanel  .couponList li  .right .title{
+    font-size:0.28rem;
+    margin-top:15px;
+}
+
+._investPaySec .couponPanel  .couponList li  .right .remark{
+    height:0.72rem;
+    line-height:0.36rem;
+    margin:5px 0 ;
+}
+
+._investPaySec .couponPanel  .couponList li  .right .date{
+    color:#999;
+}
+
+._investPaySec .couponPanel  .couponList a.notUse{
+    background-color:#fff;
+    height:50px;
+    line-height:50px;
+    font-size:0.32rem;
+    color:#666;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+    display:block;
+    /* position:absolute;
+    width:100%;
+    bottom:0;
+    left:0; */
+}
+
+._operationSec  .record_list{
+    background-color: #fff;
+    margin-top: 0.1rem;
+}
+
+._operationSec  .record_list  .record:first-child{
+    border-top:none;
+}
+
+._operationSec  .record_list  .record{
+    padding:0.1rem 0;
+    border-top:1px solid #eee;
+    font-size: 0.32rem;
+    margin:0 0.2rem;
+}
+
+._operationSec  .record_list  .record > p{
+    line-height: 0.56rem;
+    overflow: hidden;
+}
+
+._operationSec  .record_list  .record .type{
+    color:#333;
+}
+
+._operationSec  .record_list  li.record .date{
+    color:#aaa;
+    font-size: 1.4rem;
+}
+
+._operationSec  .record_list  .record.success .value,
+._operationSec  .record_list  .record.success .status{
+    color:#ff721f;
+}
+
+._operationSec  .record_list  .record.going .value,
+._operationSec  .record_list  .record.going .status,
+._operationSec  .record_list  .record.fail .value,
+._operationSec  .record_list  .record.fail .status
+{
+    color:#aaa;
+}
+
+
+/*加个键盘，快捷投资使用*/
+#quickInvestPsw{
+    z-index:999;
+    position:fixed;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    overflow:hidden;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+
+    -webkit-transition: transform 0.2s;
+    -moz-transition: transform 0.2s;
+    -ms-transition: transform 0.2s;
+    -o-transition: transform 0.2s;
+    transition: transform 0.2s;
+}
+
+#quickInvestPsw.show{
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+}
+
+#quickInvestPsw .mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index:9999;
+}
+
+
+#quickInvestPsw .wrap{
+    height: 330px;
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index:99999;
+}
+
+#quickInvestPsw .wrap .title{
+    height:40px;
+    line-height:40px;
+    color:#6f6f6f;
+    font-size:0.36rem;
+    overflow:hidden;
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
+
+#quickInvestPsw .wrap .title > .close{
+    width:17px;
+    height:17px;
+    float:left;
+    margin-top: 10px;
+    margin-left: 10px;
+    background:url('../../images/icon_pay_close.png') no-repeat 0 0;
+    background-size:cover;
+}
+
+#quickInvestPsw .wrap .inputWrap{
+    margin:20px auto;
+    width:270px;
+    height:45px;
+    background:url('../../images/icon_input_bg.png') no-repeat 0 0;
+    background-size:270px  45px;
+    line-height:45px;
+    font-size:20px;
+    margin-top:20px;
+    overflow:hidden;
+    position:relative;
+}
+
+#quickInvestPsw .wrap .inputWrap span{
+    width:45px;
+    height:45px;
+    float:left;
+    color:#666;
+}
+
+#quickInvestPsw .wrap .inputWrap > input{
+    width:270px;
+    height:45px;
+    background-color:#eee;
+    opacity:0;
+    padding:0;
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+#quickInvestPsw .wrap  .forgetPsw{
+    display:block;
+    width:260px;
+    text-align:right;
+    margin:15px auto;
+    font-size:1.4rem;
+}
+
+
+.lrKeyboard{
+    position:absolute;
+    width:100%;
+    bottom:0;
+    background-color: #fff;
+
+}
+
+.lrKeyboard > table{
+    width:100%;
+    /* height:300px; */
+}
+
+.lrKeyboard > table td{
+    width:33.333%;
+    border:1px solid #ddd;
+    vertical-align:middle;
+    padding:0;
+}
+.lrKeyboard > table td.disabled{
+    background-color:#d1d5da;
+}
+
+.lrKeyboard > table td > a{
+    display:block;
+    width:100%;
+    height:50px;
+    line-height:50px;
+    font-size:0.5rem;
+    color:#000;
+}
+
+.lrKeyboard > table td > a.backspace{
+    background:url(../../images/icon_keyboard_backspace.png) no-repeat 50% 50%;
+    background-size:21px 15px;
+    background-color:#d1d5da;
+}
+
+.lrKeyboard > table td > a:active{
+    background-color:#aaa;
+}
+
+
+
+
+/*体验金*/
+
+.invest-info{
+    height: 4.2rem;
+    width: 100%;
+    background: url("../../images/expdetails-bg.png") no-repeat center;
+    background-size: 100%;
+    color: #fff;
+}
+.invest-info .name{
+    font-size: 15px;
+    line-height: 1rem;
+}
+.invest-info .price .value{
+    font-size: 0.6rem;
+    margin-bottom: 0.12rem;
+}
+.invest-info .price p{
+    font-size: 0.24rem;
+}
+.invest-info .bottom_info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.4rem;
+}
+.invest-info .bottom_info .item-value{
+    font-size: 0.40rem;
+    margin-bottom: 0.2rem;
+}
+.invest-info .bottom_info p{
+    font-size: 0.24rem;
+}
+.choose-list{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+    top: -0.6rem;
+    text-align: left;
+}
+.choose-list .info{
+    border-bottom: 1px solid #eee;
+    line-height: 0.6rem;
+    padding: 0.2rem 0.4rem;
+}
+.choose-list .choose-btn{
+    line-height: 0.6rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.32rem;
+    position: relative;
+}
+.choose-list .choose-btn .arrow{
+    width: 0.32rem;
+    height:0.5rem;
+    background: url("../../images/arrow_right.png") no-repeat center;
+    background-size: 100%;
+    position: absolute;
+    right: 0.2rem;
+    top: 0.25rem;
+}
+.expdetails-content{
+    padding: 0 0.2rem;
+}
+
+.exp-cuponlist{
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    padding-top: 1rem;
+}
+.exp-cuponlist .no-choose{
+    height: 0.88rem;
+    line-height: 0.88rem;
+}
+.couponPanel{
+    background-color:#fff;
+    position:fixed;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    color:#666;
+    z-index:1000000;
+    /* left:-100%; */
+    overflow-y: scroll;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+    transition:transform 0.2s;
+    transform:translateX(-100%);
+}
+
+.couponPanel.show{
+    transform:translateX(0%);
+}
+
+.couponPanel .noResult{
+    padding:60px 10%;
+    background-color:#fff;
+    margin-bottom:10px;
+}
+
+.couponPanel .noResult img{
+    width:2.69rem;
+    height: 1.76rem;
+    margin-bottom:20px;
+}
+
+.couponPanel .noResult .text{
+    text-align:Center;
+    font-size:0.26rem;
+    line-height: 0.52rem;
+}
+
+.couponPanel .header{
+    height:45px;
+    line-height:45px;
+    padding:0 15px;
+    font-size:0.32rem;
+    position: relative;
+    background: linear-gradient(45deg, rgb(210, 53, 47), rgb(230, 105, 63));
+    color: #fff;
+}
+.couponPanel .header .return_icon{
+    position: absolute;
+    width: 0.2rem;
+    height: 0.4rem;
+    left: 0.4rem;
+    top:50%;
+    margin-top: -0.2rem;
+    background: url(../../images/icon_left@2x.png) no-repeat 50% 50%;
+    background-size: 0.2rem 0.4rem;
+}
+
+
+.couponPanel .welfare_list{
+    background-color: #fffff8;
+    border:none;
+}
+
+.couponPanel .welfare_item{
+    width: 6.88rem;
+    height: 2.2rem;
+    margin:0 auto;
+    margin-top: 10px;
+    position:relative;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    padding: 0.3rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.couponPanel .welfare_item .active_icon{
+    position: absolute;
+    top:0.2rem;
+    right: 2.8rem;
+    width: 1.2rem;
+
+}
+.couponPanel .welfare_item.expert_bag .active_icon{
+    right: 3.4rem;
+}
+.couponPanel .welfare_item.expert_bag{
+    background-image: url(../../images/hongbaoquan1@2x.png);
+}
+.couponPanel .welfare_item .left_block h4{
+    font-size: 0.32rem;
+}
+.couponPanel .welfare_item .left_block span{
+    float: right;
+    font-size: 85%;
+    color: #888;
+}
+.couponPanel .welfare_item .right_block{
+    width: 2.2rem;
+    text-align: center;
+    font-size: 0.4rem;
+}
+.couponPanel .welfare_item .right_block span{
+    font-size: 50%;
+}
+.couponPanel .welfare_item.red_bag .right_block{
+    color: #ff6737;
+}
+.couponPanel .welfare_item.rate_bag .right_block{
+    color: #4ec8f7;
+}
+.couponPanel .welfare_item.expert_bag .right_block{
+    color: #ff6737;
+}
+.couponPanel .welfare_item.out_date .right_block,
+.couponPanel .welfare_item.used .right_block{
+    color: #eee!important;
+}
+.couponPanel .welfare_item .bottom_block{
+    line-height: 0.8rem;
+    font-size: 86%;
+    color: #888;
+}
+
+
+
+
+.exp-cuponlist .welfare_list .item.left_item{
+    border-right: 1px solid #eee;
+}
+
+.exp-cuponlist .welfare_list .item .item_center .icon{
+    display: inline-block;
+    width: 0.47rem;
+    height: 0.5rem;
+    margin-right: 0.1rem;
+    background-position: 50% 50%;
+    background-size: 0.4rem;
+    background-repeat: no-repeat;
+    vertical-align: text-bottom;
+}
+
+.exp-cuponlist .welfare_list .item .description{
+    font-size:78%;
+    color:#999;
+    margin-top: 0.35rem;
+}
+
+.exp-cuponlist .welfare_list .item .info{
+    font-size:78%;
+    margin-top: 0.18rem;
+}
+.exp-cuponlist .welfare_list .item.disabled .item_title,
+.exp-cuponlist .welfare_list .item.disabled .description{
+    color: #ccc;
+}

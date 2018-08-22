@@ -1,0 +1,157 @@
+.invite-center {
+    // background: #fff;
+    padding-bottom: 65px;
+    box-sizing: border-box;
+    .invite-detail-wrapper {
+        padding: 0;
+        background: #f2f2f2;
+        .invite-detail {
+            height: rem-calc(130, 375);
+            background: url('../../images/invite-icon/invite-bg.png') center center no-repeat;
+            background-size: 100% 100%;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            div:first-child {
+                padding-top: rem-calc(35, 375);
+                font-size: 14px;
+                text-align: center;
+            }
+            div:nth-child(2) {
+                font-size: 24px;
+                text-align: center;
+            }
+        }
+    }
+    .info {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        @include bottom-border(#d8d8d8);
+        background: #fff;
+        div {
+            flex: 0 0 50%;
+            font-size: 14px;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            &:first-child {
+                position: relative;
+                @include right-border(#d8d8d8);
+            }
+            span {
+                color: #fc764d;
+            }
+        }
+    }
+    .table-head {
+        background: #fff;
+        font-size: 14px;
+        color: #746d6d;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        height: 40px;
+        div {
+            flex: 0 0 25%;
+            display: flex;
+            justify-content: center;
+            &:first-child {
+                justify-content: flex-start;
+            }
+            &:last-child {
+                justify-content: center;
+            }
+        }
+    }
+    .invite-list {
+        margin-top: 10px;
+        .table-item {
+            background: #fff;
+            font-size: 14px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            height: 40px;
+            div {
+                flex: 0 0 25%;
+                display: flex;
+                justify-content: center;
+                &:first-child {
+                    justify-content: flex-start;
+                }
+                &:last-child {
+                    justify-content: center;
+                }
+            }
+        }
+        .invite-blank{
+            text-align: center;
+            color: #b2b2b2;
+            font-size: 12px;
+            img{
+                width:100%;
+            }
+        }
+    }
+    .invite-btn {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        @include top-border(#e4e4e4);
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ef5e41;
+            color: #fff;
+            width: rem-calc(335, 375);
+            height: rem-calc(45, 375);
+            font-size: 18px;
+        }
+    }
+    .fixed-box {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 99;
+        display: none;
+        .linkurl {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 1rem;
+            box-sizing: border-box;
+            background: #fff;
+            p {
+                font-size: 1rem;
+            }
+            textarea {
+                width: 100%;
+                padding: 0.4rem;
+                resize: none;
+                font-size: 0.9rem;
+                border: 1px solid #dcdcdc;
+                background: #f1f1f1;
+                margin-top: 0.5rem;
+                box-sizing: border-box;
+            }
+        }
+    }
+}

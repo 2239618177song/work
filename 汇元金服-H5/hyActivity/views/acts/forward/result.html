@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <style>
+        body{
+            text-align: center;
+            padding:0;
+            margin:0;
+        }
+
+        .result_area{
+            width:60%;
+            position: absolute;
+            left:20%;
+            top:40%;
+            transform:translateY(-50%);
+        }
+
+        .result_area span{
+            display: block;
+            width:130px;
+            height: 180px;
+            margin: 0 auto;
+        }
+
+        .result_area span.success{
+            background: url(/acts/forward/images/yes_cj.png) no-repeat 0 0;
+            background-size: 100% 100%;
+        }
+
+        .result_area span.fail{
+            background: url(/acts/forward/images/no_cj.png) no-repeat 0 0;
+            background-size: 100% 100%;
+        }
+
+        .result_area .reason{
+            font-size: 20px;
+            color:#666;
+            margin:20px auto;
+        }
+
+        .result_area .btn{
+            display: block;
+            width:200px;
+            height: 40px;
+            line-height: 40px;
+            background: linear-gradient(45deg,rgb(210,53,47),rgb(230,105,63));
+            color:#fff;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 300;
+            text-decoration: none;
+            margin:20px auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="result_area">
+        <span class="success" id="result"></span>
+        <div class="reason" id="reason"></div>
+
+        <div class="btn_area">
+            <a href="javascript:void(0)" class="btn" style="font-size:20px" id="doneBtn">确定</a>
+        </div>
+    </div>
+    <script src="/common/js/jquery-1.10.2.min.js"></script>
+    <script src="/common/js/native.js"></script>
+    <script src="/common/js/tool.js"></script>
+    <script>
+        var args = {};
+            location.search.slice(1).split('&').map(function(item,i){
+                var keyValue = item.split('=');
+                args[keyValue[0]] = decodeURIComponent(keyValue[1]);
+            });
+
+        //跳转类型
+        var typeList = {
+            realName:_config.mainIP+'/account/index?from=realName',
+            cash:_config.mainIP+'/account/index?from=cash',
+            recharge:_config.mainIP+'/account/index?from=recharge',
+            accredit:_config.mainIP+'/account/index?from=accredit'
+        };
+
+        window.onload = function(){
+            var $icon = document.getElementById('result');
+            var $reason = document.getElementById('reason');
+            var $btn = document.getElementById('doneBtn');
+            var flag = args['pram']*1;
+            flag ? $icon.className = 'success' : $icon.className = 'fail';
+
+            !flag ? $reason.innerHTML = decodeURIComponent(args['message']) : '';
+
+            $btn.onclick=function(){
+                if(navigator.userAgent.indexOf('LRAPP') !== -1){
+                    lrNative.toAppResult(args)
+                }else{
+                    debugger;
+                    window.location.href = typeList[args['type']]+'&code='+(flag ? '1' : '0');
+
+                }
+            }
+
+        }
+
+    </script>
+</body>
+</html>

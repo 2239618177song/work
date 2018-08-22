@@ -1,0 +1,29 @@
+<!-- 内容 -->
+<div ng-cloak class="ng-scope ng-cloak" ui-view=""></div>
+<!-- 底部 -->
+<div ng-controller="pageHomeCtrl" class="sign_box_1 sign_box_bottom">
+	<div ui-sref="main.home" class="button" ng-click="active = 1" ng-class="active==1 ? 'active' : ''">
+		<div class='icon-wrapper'>
+			<i class="ico_home"></i>
+		</div>
+		<span class="ico_title">首页</span>
+	</div>
+	<div ui-sref="main.bankBillList" class="button" ng-click="active = 2" ng-class="active==2 ? 'active' : ''">
+		<div class='icon-wrapper'>
+			<i class="ico_fund"></i>
+		</div>
+		<span class="ico_title">理财</span>
+	</div>
+	<div ui-sref="main.more" class="button" ng-click="active = 3" ng-class="active==3 ? 'active' : ''">
+		<div class='icon-wrapper'>
+			<i class="ico_found"></i>
+		</div>
+		<span class="ico_title">发现</span>
+	</div>
+	<div  ng-click='goAccount()' class="button" ng-click="active = 4" ng-class="active==4 ? 'active' : ''">
+		<div class='icon-wrapper'>
+			<i class="ico_account"></i>
+		</div>
+		<span class="ico_title">我的</span>
+	</div>
+</div>

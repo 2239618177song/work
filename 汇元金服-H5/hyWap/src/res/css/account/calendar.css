@@ -1,0 +1,220 @@
+/*日历*/
+._calendarSec {
+
+}
+
+._calendarSec .repatTips{
+    /* border:1px solid #aaa; */
+    overflow:hidden;
+    height:0.6rem;
+    line-height:0.6rem;
+    padding:0 10px;
+    font-size:0.28rem;
+}
+
+._calendarSec .repatTips .item{
+    display:inline-block;
+    vertical-align:middle;
+    color:#f97124;
+    margin-right:5px;
+}
+
+._calendarSec .repatTips .f_right{
+    color:#f97124;
+}
+
+/*引导tips*/
+._calendarSec .guideMask{
+    position:fixed;
+    z-index:9999;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    background:url(../../images/guide_mask_bg.png) repeat 0 0;
+    display:none;
+}
+
+._calendarSec .guideMask > .guideIcon{
+    position:absolute;
+    width:80%;
+    left:10%;
+    top:55%;
+}
+
+._calendarSec .guideMask > .getIt{
+    width:100px;
+    height:40px;
+    line-height:40px;
+    color:#fff;
+    font-size:0.36rem;
+    bordeR:1px solid #fff;
+    border-radius:5px;
+    position:absolute;
+    left:50%;
+    top:80%;
+    margin-left:-50px;
+    background-color:rgba(255,2552,255,0.1)
+}
+
+._calendarSdec .guideMask >  .title{
+    position:absolute;
+    width:100%;
+    top:50%;
+    font-size:0.4rem;
+    color:#fff;
+}
+
+._calendarSec .payBackInfo{
+    background: linear-gradient(45deg,rgb(210,53,47),rgb(230,105,63));
+    padding:1rem 20px 20px 20px;
+    color:#fff;
+}
+
+._calendarSec .payBackInfo a{
+    color:#fff;
+}
+
+._calendarSec .payBackInfo .payBackDetail{
+    float: right;
+    width:60%;
+}
+
+._calendarSec .payBackInfo .payBackDetail .item{
+    margin-bottom: 20px;
+    font-size: 0.28rem;
+}
+
+._calendarSec .payBackInfo .payBackDetail .item .title{
+    font-size: 0.32rem;
+    text-align: left;
+}
+
+/* ._calendarSec > .payBackInfo .payBackDetail .item .content{
+	padding:0 20px;
+} */
+
+._calendarSec .payBackInfo .payBackDetail .item table{
+    width: 100%;
+    margin-top: 10px;
+}
+
+._calendarSec .payBackInfo .payBackDetail .item table th,
+._calendarSec .payBackInfo .payBackDetail .item table td{
+    height: 25px;
+    line-height: 25px;
+    text-align: left;
+    padding:0 10px;
+}
+
+._calendarSec .payBackInfo .dateInfo{
+    margin-right: 60%;
+    padding-top: 1px;
+}
+
+._calendarSec .payBackInfo .dateInfo .changeYear{
+    font-size:0.6rem !important;
+    font-weight: 300;
+}
+
+._calendarSec .payBackInfo .dateInfo .year{
+    font-size:0.4rem;
+    margin-top: 0.1rem;
+}
+
+._calendarSec .payBackInfo .dateInfo .date{
+    font-size:1rem;
+    margin-top: 0.4rem;
+}
+
+._calendarSec .payBackInfo .dateInfo .month{
+    font-size:0.4rem;
+    margin-top:0.4rem;
+}
+
+
+._calendarSec .payBackInfo aside.tips{
+    font-size: 0.32rem;
+}
+
+._calendarSec .icon-dotted{
+    font-size: 0.32rem;
+    text-shadow:0 0 1px 1px #fff;
+}
+
+._calendarSec .calendar{
+    padding:0 20px 30px 20px;
+}
+
+._calendarSec .calendar table{
+    width: 100%;
+    font-size: 0.36rem;
+}
+
+._calendarSec .calendar table a{
+    color:#666;
+    display: inline-block;
+    width:28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 50%;
+    position:relative;
+
+}
+
+._calendarSec .calendar table th
+{
+    font-size: 0.32rem;
+    color:#666;
+    height: 50px;
+    line-height: 50px;
+}
+
+._calendarSec .calendar table tr{
+    border-bottom:1px solid #eee;
+}
+
+._calendarSec .calendar table td{
+    height: 50px;
+    line-height: 50px;
+    font-size: 0.36rem;
+}
+
+._calendarSec .calendar table td a._current{
+    border:1px solid #f97124;
+}
+._calendarSec .calendar table td a._notFinish:after{
+    display:block;
+    color:#f97124;
+}
+
+._calendarSec .calendar table td a:after{
+    content: '';
+    width:0.2rem;
+    height: 0.2rem;
+    position: absolute;
+    right: -0.15rem;
+    top: -0.1rem;
+    display: none;
+    background-color: #f97124;
+    border-radius: 50%;
+
+}
+
+._calendarSec .calendar table td a._finished:after{
+    display:block;
+    color:#aaa;
+}
+
+._calendarSec .calendar table td a._plan{
+    display: inline-block;
+    width:30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    border:1px solid #f97124;
+}
+
+._calendarSec .calendar table td a._other{
+    color:#aaa;
+}

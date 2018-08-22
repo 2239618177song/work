@@ -1,0 +1,44 @@
+<style type="text/css">
+	.invite-center .invite-detail-wrapper .invite-detail{
+		background-color:#ed6054;
+	}
+</style>
+<div class='invite-center' ng-controller="inviteCenter" ng-style='height'>
+    <div class="common-head" ng-click="toback()"><i></i>
+        <p>{{title}}</p>
+    </div>
+    <div class='invite-detail-wrapper'>
+        <div class='invite-detail'>
+            <div>累计获得返现(元)</div>
+            <div>{{inviteList.threePresentRewards}}</div>
+        </div>
+    </div>
+    <div class='info'>
+        <div><span>{{inviteList.total}}</span>累计邀请好友(人)</div>
+        <div><span>{{inviteList.investors}}</span>已完成投资(人)</div>
+    </div>
+    <div class='table-head'>
+        <div>注册手机号</div>
+        <div>姓名</div>
+        <div>注册时间</div>
+        <div>是否投资</div>
+    </div>
+    <div class='invite-list'>
+        <div class='table-item' ng-repeat="item in inviteList.page.rows">
+            <div>{{item.mobilePhone}}</div>
+            <div>{{item.realName | nameformat}}</div>
+            <div>{{item.regTime}}</div>
+            <div>{{item.isInvest}}</div>
+        </div>
+    </div>
+    <div class='invite-btn' ng-click='share()'>
+        <span>立即邀请好友</span>
+    </div>
+    <!--分享弹框-->
+    <div class="fixed-box" ng-click="closeshare()">
+        <div class="linkurl" ng-click="default($event)">
+            <p>复制以下网址，发送给您的好友注册并投资</p>
+            <textarea>{{protocol}}//wap.huiyuanjinfu.com/inviteReg?recommCode={{userOBJ.user.member.mobilephone}}&invitePerson={{invitePerson}}</textarea>
+        </div>
+    </div>
+</div>

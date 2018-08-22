@@ -1,0 +1,53 @@
+.HY_progress .p_value{
+    text-align: right;
+    font-size: 0.22rem;
+    height: 0.2rem;
+    line-height: 0.2rem;
+    margin-bottom: 8px;
+    color:#ffa26b;
+    padding-right: 0.2rem;
+}
+.HY_progress .p_item{
+    position:relative;
+    border-top: 1px solid #eee;
+}
+
+.HY_progress .p_item .p_process{
+    position:absolute;
+    left:0;
+    top:-2px;
+    height: 1px;
+    background-color:#f16300;
+    border-top: 1px solid #ffa26b;
+    border-bottom: 1px solid #ffa26b;
+    transition:width 1s ease-in-out;
+    width:0;
+    box-sizing: content-box;
+}
+
+.HY_progress .p_item .p_process .p_dotted{
+    width: 4px;
+    height: 4px;
+    border: 2px solid #ff853d;
+    background-color:#f16300;
+    border-radius:50%;
+    position:absolute;
+    right: -4px;
+    top: -4px;
+    /*box-shadow: 0 0 0 4px #dfebfd;*/
+    animation: ripplePrivate 3s infinite;
+    -webkit-animation: ripplePrivate 3s infinite;
+    box-sizing: content-box;
+}
+
+@keyframes ripplePrivate{
+    from{
+        box-shadow: none;
+    }
+    50%{
+        box-shadow: 0 0 0 2px #ffbd96;
+    }
+    to{
+        box-shadow: none;
+    }
+}

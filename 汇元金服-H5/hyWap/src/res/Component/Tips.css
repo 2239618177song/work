@@ -1,0 +1,132 @@
+/*自定义alert和confirm*/
+.__tips_mask,
+.__tips_mask1{
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    box-sizing:border-box;
+    color:#666;
+    z-index:99990999999;
+    display: none;
+}
+
+.__tips_mask.show{
+    display: block;
+}
+
+.__tips_mask > .__tips,
+.__tips_mask1 > .__tips{
+    width:300px;
+    background-color: #fff;
+    position:absolute;
+    left:50%;
+    top:35%;
+    margin-left: -150px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.__tips_mask > .__tips > .__content,
+.__tips_mask1 > .__tips > .__content{
+    padding:20px 10px;
+    border-bottom: 1px solid #eee;
+    word-break:break-all;
+    font-size:0.28rem;
+    color:#666;
+    line-height: 0.4rem;
+}
+
+.__tips_mask > .__tips > .__btm,
+.__tips_mask1 > .__tips > .__btm{
+    height:0.8rem;
+    line-height: 0.8rem;
+}
+
+.__tips_mask > .__tips > .__btm > a,
+.__tips_mask1 > .__tips > .__btm > a{
+    display: block;
+    height:100%;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    color:#666;
+    text-decoration: none;
+    font-size:0.28rem;
+}
+
+.__tips_mask > .__tips > .__btm > a.half,
+.__tips_mask1 > .__tips > .__btm > a.half{
+    width:50%;
+    float:left;
+    box-sizing:border-box;
+}
+
+.__tips_mask > .__tips > .__btm > a.half:first-child,
+.__tips_mask1 > .__tips > .__btm > a.half:first-child{
+    border-right: 1px solid #eee;
+}
+
+.scaleIn{
+    animation:scaleIn 0.3s;
+    -webkit-animation:scaleIn 0.3s;
+}
+
+.scaleInFast{
+    animation:scaleIn 0.1s;
+    -webkit-animation:scaleIn 0.1s;
+}
+
+@-webkit-keyframes scaleIn{
+    from{
+        -webkit-transform: scale(0.1);
+        -ms-transform: scale(0.1);
+        -o-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+
+    to{
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleIn{
+    from{
+        -webkit-transform: scale(0.1);
+        -ms-transform: scale(0.1);
+        -o-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+
+    to{
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes shake {
+
+    0%, 100% {-webkit-transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-2px);}
+    20%, 40%, 60%, 80% {-webkit-transform: translateX(2px);}
+}
+@keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-2px);}
+    20%, 40%, 60%, 80% {transform: translateX(2px);}
+}
+
+
+
+.shake{
+    -webkit-animation-name:shake;
+    -webkit-animation-duration:0.5s;
+    animation-name:shake;
+    animation-duration:0.5s;
+}

@@ -1,0 +1,63 @@
+<div class="newhand-wrapper cp-wrapper " ng-controller="myCouponCtrl">
+
+    <div class="common-head" style='margin-bottom:0px;'>
+        <i></i>
+        <p ng-click="toback()">{{title}}</p>
+        <img ui-sref="reminder({wap:true})" style="position:absolute;right:0;top:50%;transform:translate(0,-50%);width:1.9rem;padding-right:1rem;"
+            src="images/myaccount/question-icon.png">
+    </div>
+
+    <div class='wap-body' style="margin-top: 0;">
+        <div class='coupon-tabs' ng-if="type != 'useless'">
+            <span class='tab' ng-class="{0:'active',1:'',2:''}[active]" ng-click="onClick(0)">返现红包({{backCashLength}})</span>
+            <span class='tab' ng-class="{0:'',1:'active',2:''}[active]" ng-click="onClick(1)">加息券({{addIncomeLength}})</span>
+            <span class='tab' ng-class="{0:'',1:'',2:'active'}[active]" ng-click="onClick(2)">翻倍券({{doubleLength}})</span>
+        </div>
+        <!-- <ul class="nav nav-pills mb1 my-coupon" ng-if="type != 'useless'">
+            <li role="presentation" style="width: 33%" ng-class="{0:'active',1:'',2:''}[active]" ng-click="onClick(0)"><a href="">返现红包</a></li>
+            <li role="presentation" style="width: 33%" ng-class="{0:'',1:'active',2:''}[active]" ng-click="onClick(1)"><a href="">加息券</a></li>
+            <li role="presentation" style="width: 33%" ng-class="{0:'',1:'',2:'active'}[active]" ng-click="onClick(2)"><a href="">翻倍券</a></li>
+        </ul> -->
+        <!-- tab 0 -->
+        <div class="h5-coupon2" ng-class="{0:'hb-coupon',1:'jxq-coupon',2:'fbq-coupon'}[active]">
+            <div class='coupon-bg-wrapper' ng-repeat="coupon in coupons" ng-class="{0:'hb',1:'jxq',2:'fbq'}[active]">
+                <!--<div class='title'>{{coupon.name}}</div>-->
+                <div class='content'>
+                    <div class='left'>
+                        <span ng-if="coupon.type==1"><span>￥</span>{{coupon.amount}}</span>
+                        <span ng-if="coupon.type==2">{{coupon.raisedRates}}<span>%</span></span>
+                        <span ng-if="coupon.type==3"><span>￥</span>{{coupon.amount}}</span>
+                        <span ng-if="coupon.type==4">{{coupon.multiple}}倍</span>
+                        <div>投资期限≥{{coupon.productDeadline}}天可用</div>
+                        <div>单笔投资满{{coupon.enableAmount}}元</div>
+                    </div>
+                    <div class='right'>
+                    	<div class='title'>{{coupon.name}}</div>
+                    	<div class="myCoupon-btn" ui-sref="main.bankBillList">立即投资</div>
+                        <!--<div>单笔投资满{{coupon.enableAmount}}元</div>
+                        <div>投资期限≥{{coupon.productDeadline}}天(活动标除外)</div>-->
+                        <div>有效期至：{{coupon.expireDate | date:'y-M-d'}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="useless-coupon" ui-sref="myUselessCoupon">历史优惠券</div>
+
+    <!-- <div class="download" ng-show="showDownload == true">
+        <i class="close" ng-click="showDownload = false">×</i>
+        <div class="btn">
+            <a ng-click="downloadapp()" class="download-btn"></a>
+        </div>
+        <div class="logo">
+            <span class="download-logo"></span>
+            <div>
+                <span>啄米理财</span>
+                <p>国企背景平台</p>
+            </div>
+        </div>
+    </div>
+    <div class="share-ios"><img ng-click="closethis()" src="images/share-ios.png" /></div>
+    <div class="share-android"><img ng-click="closethis()" src="images/share-android.png" /></div> -->
+</div>

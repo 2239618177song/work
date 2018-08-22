@@ -1,0 +1,135 @@
+<style type="text/css">
+	.wap-smrz-box form.wap-shiming div.msg-box{
+		margin-bottom:5rem;
+	}
+</style>
+<div class="newhand-wrapper shiming" style="background: #f2f2f2;" ng-controller="SMRZcontroller">
+	<div class="common-head" ng-click="toback()"><i></i><p>{{title}}</p></div>
+
+	<div class="wap-smrz-box my-info-wrapper">
+		<form name='smrzForm' class="wap-shiming">
+			
+			<!--持卡人-->
+			<div class="user-box">
+                <span class='title'>持卡人</span>
+                <input type="text" name='name' ng-model="smrFrom.realName"  placeholder="请输入持卡人姓名" required>
+                <!--<input name="name" type="text" placeholder="请输入持卡人姓名" ng-model="smrFrom.realName"
+                    onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')" ng-blur="blurID('focusMobilephone',myForm)" required>-->
+            </div>
+			<!--身份证-->
+			<div class="userId-box">
+                <span class='title'>身份证号</span>
+                <input name="idCade" type="text" placeholder="请输入身份证号码" ng-model="smrFrom.idCards" required>
+            </div>
+			<!--选择银行-->
+			<div class="bank-box">
+                <span class='title'>选择银行</span>
+                <select ng-model="smrFrom.bank" ng-class="smrFrom.bank == '请选择' ? 'placeholder' : ''" ng-change="handleBankChange()">
+				<option value="请选择" disabled="disabled">请选择充值提现银行</option>
+				<option ng-repeat="bank in banklist" value="{{bank.id}}">{{bank.bankName}}</option>
+			</select>
+            </div>
+            <!--输入卡号-->
+            <div class="cardId-box">
+                <span class='title'>输入卡号</span>
+                	<input type="text" onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')"  name='bankCade' ng-model="smrFrom.bankNum1"  placeholder="请输入本人银行卡号" required></input>
+            </div>
+            <!--选择城市-->
+            <div class="city-box">
+            	<span class='title'>选择城市</span>
+				<input type="text"  name='bankCity' ng-model="smrFrom.bankCity"  placeholder="请输入开户城市首字母查询" ng-change="selectCity()"></input>
+				<input type="hidden" name='cityId' ng-model="smrFrom.cityId" required></input>
+                <ul class="city-list" ng-show="showCityList">
+                    <li  ng-repeat="city in sysCityList" ng-click="clickCity(city.cityId,city.city)">{{city.city}}</li>
+                </ul>
+                <i class="search"></i>
+			</div>
+			<!--输入支行名称-->
+			<div class="bankName-box">
+                <span class='title'>输入支行名称</span> 
+                	<input type="text" name='bankName' ng-model="smrFrom.bankName"  placeholder="请输入您的开户支行名称" required ng-if="showBankName"/>
+            </div>
+            <!--银行预留手机号-->
+            <div class="phone-box">
+                <span class='title'>银行预留手机号</span>
+                	<input type="text" ng-pattern="/^1[3|4|5|7|8][0-9]{9}$/" onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')" name='phone' ng-model="smrFrom.phone" placeholder="请输入银行预留手机号" required minlength="11" maxlength="11"/>
+            </div>
+            
+            <!--短信验证码-->
+            <div class="msg-box">
+                <span class='title'>短信验证码</span>
+                	<input type="text" ng-model="smrFrom.smsCode"  placeholder="请留意手机" required>
+                <!--<span ng-click="getyzm(myForm)" class='code-box'>{{nowTimer}}</span>-->
+                <span ng-if="smrzForm" class="code-box">
+                	<span ng-if="!smrzForm.name.$invalid && !smrzForm.idCade.$invalid && !smrzForm.bankCade.$invalid && !smrzForm.phone.$invalid && !smrzForm.cityId.$invalid && ( !showBankName || showBankName && !smrzForm.bankName.$invalid)" ng-click="toSub('信息认证')">{{nowTimer}}</span>
+                </span>
+            </div>
+            
+			
+			<!--<input type="text" name='name' ng-model="smrFrom.realName"  placeholder="请输入您的姓名" required></input>
+			<input type="text" name='idCade' ng-model="smrFrom.idCards" placeholder="请输入您的身份证" required></input>
+
+			<select ng-model="smrFrom.bank" ng-class="smrFrom.bank == '请选择' ? 'placeholder' : ''" ng-change="handleBankChange()">
+				<option value="请选择" disabled="disabled">请选择充值提现银行</option>
+				<option ng-repeat="bank in banklist" value="{{bank.id}}">{{bank.bankName}}</option>
+			</select>-->
+
+			<!-- <select ng-model="smrFrom.bankName" ng-options="bank.bankName for bank in banklist"></select> -->
+
+			
+			<!--<input type="text" onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')"  name='bankCade' ng-model="smrFrom.bankNum1"  placeholder="请输入您的充值和提现银行卡号" required></input>
+
+			<div class="city-box">
+				<input type="text"  name='bankCity' ng-model="smrFrom.bankCity"  placeholder="请输入您的开户城市拼音缩写(例如杭州:hz)" ng-change="selectCity()"></input>
+				<input type="hidden" name='cityId' ng-model="smrFrom.cityId" required></input>
+                <ul class="city-list" ng-show="showCityList">
+                    <li  ng-repeat="city in sysCityList" ng-click="clickCity(city.cityId,city.city)">{{city.city}}</li>
+                </ul>
+			</div>-->
+
+			<!--<input type="text" name='bankName' ng-model="smrFrom.bankName"  placeholder="请输入您的开户支行名称" required ng-if="showBankName"></input>
+
+			<input type="text" ng-pattern="/^1[3|4|5|7|8][0-9]{9}$/" onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')" name='phone' ng-model="smrFrom.phone" required minlength="11" maxlength="11" placeholder="请输入您的银行预留手机号"></input>
+
+			<input type="text" ng-model="smrFrom.smsCode"  placeholder="请输入短信验证码" required>
+				<div ng-if="smrzForm" class="msg-btn">
+					<p ng-if="!smrzForm.name.$invalid && !smrzForm.idCade.$invalid && !smrzForm.bankCade.$invalid && !smrzForm.phone.$invalid && !smrzForm.cityId.$invalid && ( !showBankName || showBankName && !smrzForm.bankName.$invalid)" ng-click="toSub('信息认证')">{{nowTimer}}</p>
+				</div>
+			</input>-->
+			
+		</form>
+			<!--<a ng-if="smrzForm.$invalid" style="background: #929292;" >认证</a>
+			<a ng-if="!smrzForm.$invalid" ng-click="toSub('实名认证')">认证</a>-->
+		
+		<!-- <div class="wap-sub-btn" ng-click="toSub('实名认证')">提交</div> -->
+                
+	    
+	    <!--<div class="bot-tips">
+                <span>友情提示<i></i></span>
+                <p>请确保您的信息真实有效，一经认证不可更改</p>
+                <p>认证银行卡用于充值和提现，同卡进出保障资金安全</p>
+                <p>如有疑问请联系客服人员</p>
+        </div>-->
+	</div>
+	<div class="tip">
+		<p>点击立即认证代表您已阅读同意<a href="{{protocol}}//pc.huiyuanjinfu.com/pay">《认证支付协议》</a></p>
+	</div>
+	<div class="submit-btn">
+		<a ng-if="smrzForm.$invalid" style="background: #929292;" >立即认证</a>
+		<a ng-if="!smrzForm.$invalid" ng-click="toSub('实名认证')">立即认证</a>
+	</div>
+	<!--<div class="tyj-box" ng-if="tyj">
+		<main>
+			<img class="bg" src="images/activity/tyj/certification-box.png">
+			<img ng-click="close()" class="close" src="images/activity/tyj/close-icon.png">
+			<div ng-if="isCps == 1">
+				<img ng-click="toWhere('myCoupon')" src="images/activity/tyj/button1.png">
+				<img ng-click="toWhere('main.bankBillList')" src="images/activity/tyj/button2.png">
+			</div>
+			<div ng-if="isCps ==0">
+				<img ng-click="toWhere('myTyj')" src="images/activity/tyj/button1.png">
+				<img ng-click="toWhere('tyjdetail')" src="images/activity/tyj/button2.png">
+			</div>
+		</main>
+	</div>-->
+</div>

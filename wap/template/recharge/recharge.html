@@ -1,0 +1,93 @@
+<div class="recharge-wrapper" ng-controller="rechargeController" ng-style='height'>
+    <div class="common-head" ng-click="toback()"><i></i>
+        <p>{{title}}</p>
+    </div>
+    <!--<div class='cash'>
+        账户可用余额<span>{{recharge.funds | currency:''}}</span>元
+    </div>-->
+
+    <div class="recharge-wrap">
+        <form name="rechargeForm" ng-submit="submitForm(rechargeForm.$valid)" novalidate>
+            <!-- 第一次充值的结构 -->
+            <div ng-if="recharge.sysArticleList.length==0">
+            	<div class="card-box">
+                    <img src="images/bankIcon/{{recharge.bankCode}}.png" />
+                    <div class="card-info">
+                        <div class="card-name">{{recharge.bankName}}<span>({{recharge.bankNum}})</span> </div>
+                  
+                        <div class='card-limit'>单笔{{recharge.singleQuota}}元/单日{{recharge.dayQuota}}元</div>
+                    </div>
+                </div>
+                <!-- 第一次充值的结构（结束） -->
+                <div class="recharge-box cash-box">
+                    <span class='title'>充值金额(元)</span>
+                    <div>
+                    	<span class="rmb">￥</span>
+                    <input type="text" class="text sum amount" name="recharge" ng-model="recharge.amount" ng-value="recharge.amount" required
+                        onkeyup="this.value=this.value.replace(/^\D*(\d*(?:\.\d{0,2})?).*$/g, '$1')" ng-blur="setAmount()" autocomplete="off"
+                        placeholder="请输入充值金额" ng-pattern="/^[0-9]+([.]{1}[0-9]+){0,1}$/" ng-change="setAmountError()" more3 rechargelimit>
+                    </div>
+                    
+                </div>
+                <!--<div class="card-box">
+                    <img src="images/bankIcon/{{recharge.bankCode}}.png" />
+                    <div class="card-info">
+                        <div class="card-name">{{recharge.bankName}}<span>({{recharge.bankNum}})</span> </div>
+                  
+                        <div class='card-limit'>单笔{{recharge.singleQuota}}元/单日{{recharge.dayQuota}}元</div>
+                    </div>
+                </div>-->
+                <div class='cash'>
+			                      可用余额<span>{{recharge.funds | currency:''}}</span>元
+			    </div>
+                <!-- <div class="cash-info">
+                    <table>
+                        <tr>
+                            <td>
+                                <p class="cost">可用余额 {{recharge.funds | currency:''}} 元</p>
+                                <p>充值后余额 <span>{{(recharge.amount * 1 + recharge.funds) | currency:''}}</span> 元</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div> -->
+                <div class="sub-box recharge-sub">
+                    <input type="submit" value="确定充值" class="sub-btn sub recharge" ng-disabled="rechargeForm.$invalid" />
+                </div>
+            </div>
+            <p ng-if="recharge.sysArticleList.length>0" style="padding:1rem 1.5rem;color:#E84033;">{{message}}</p>
+            <!-- 非第一次充值的结构 -->
+
+            <div class="recharge-tips">
+                <div>温馨提示</div>
+                <p>1.充值金额最少为3元</p>
+                <p>2.银行充值单笔限额最多为{{recharge.singleQuota | number}}元</p>
+                <p>3.银行充值单日限额{{recharge.dayQuota | number}}元</p>
+            </div>
+
+            <!-- 非第一次充值的结构（结束） -->
+
+        </form>
+    </div>
+    
+    <div class='kefu-wrapper'>
+        <a href='tel:400-872-9577'>
+            <i class='kefu'></i>
+            <span>联系客服</span>
+        </a>
+    </div>
+    <div class="rechargegiftbg" ng-show="giftFlag == true" ng-if="false">
+        <div class="rechargegift">
+            <a href="" class="close" ng-click="closeGift()"></a>
+            <a href="/myCoupon" class="check" ng-click="giftFlag = false">立即查看</a>
+        </div>
+    </div>
+    <form ng-hide="true" ng-submit="fuyouSubmit()" action="http://www-1.fuiou.com:18670/mobile_pay/h5pay/payAction.pay" method="POST"
+        id="fuyouForm">
+        ENCTP:<input type="text" name="ENCTP" value="{{fuyouObj.ENCTP}}"><br> LOGOTP:
+        <input type="text" name="LOGOTP" value="{{fuyouObj.LOGOTP}}"><br> MCHNTCD:
+        <input type="text" name="MCHNTCD" value="{{fuyouObj.MCHNTCD}}"><br> VERSION:
+        <input type="text" name="VERSION" value="{{fuyouObj.VERSION}}"><br> FM:
+        <input type="text" name="FM" value="{{fuyouObj.FM}}"><br>
+        <!-- <input type="submit" value="Submit"> -->
+    </form>
+</div>

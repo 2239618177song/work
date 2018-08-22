@@ -1,0 +1,116 @@
+<div class="wap-cjwt-box" ng-controller="CJWTCtrl">
+	<div class="common-head" ng-click="toback()" ng-if="wap">
+		<i></i>
+		<p>{{title}}</p>
+	</div>
+	<div class="cjwt-top">
+		<div class="top-content">
+			<p class="top-tips">在线客服竭诚为您服务</p>
+			<p>人工客服：400-872-9577</p>
+			<p>服务时间：09:30-17:30</p>
+			<p>官方QQ：4008729577</p>
+		</div>
+		<div class="box left" ng-click="YJFK()">
+			<i></i>
+			<p>意见反馈</p>
+		</div>
+		<a class="box right" href="tel:400-872-9577">
+			<i></i>
+			<p>电话咨询</p>
+		</a>
+	</div>
+	<div class="wtfl-content">
+		<div class="title">问题分类</div>
+		<div class="wtfl-main">
+			<div class="item" ui-sref="RZZC({wap:true})">
+				<i class="rzzc"></i>
+				<p>认证注册</p>
+			</div>
+			<div class="item" ui-sref="ZHAQ({wap:true})">
+				<i class="zhaq"></i>
+				<p>账户安全</p>
+			</div>
+			<div class="item" ui-sref="CZTX({wap:true})">
+				<i class="cztx"></i>
+				<p>充值提现</p>
+			</div>
+			<div class="item" ui-sref="TZFL({wap:true})">
+				<i class="tzfl"></i>
+				<p>投资福利</p>
+			</div>
+			<div class="item" ui-sref="CPJS({wap:true})">
+				<i class="cpjs"></i>
+				<p>产品介绍</p>
+			</div>
+			<div class="item" ui-sref="other({wap:true})">
+				<i class="other"></i>
+				<p>其他问题</p>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="title">常见问题</div>
+		<div class="question-box">
+			<div class="question-title" ng-click="onClick(0)">
+				<p>平台支持哪些银行卡？</p>
+				<i></i>
+			</div>
+			<div class="question-content" ng-show="num1">
+				<p>个人网银充值银行：工商银行，农业银行，建设银行，中国银行，民生银行，招商银行，浦发银行，广发银行，华夏银行，邮储银行，光大银行，交通银行，中信银行，东亚银行</p>
+				<p>借记卡快捷支付银行：中国银行，中国工商银行，中国农业银行，交通银行，广发银行，中国建设银行，浦发银行，中国邮政储蓄银行，中国民生银行，兴业银行，中信银行，华夏银行，中国光大银行，平安银行恒丰银行</p>
+			</div>
+		</div>
+		<div class="question-box">
+			<div class="question-title" ng-click="onClick(1)">
+				<p>提现什么时候到账？</p>
+				<i></i>
+			</div>
+			<div class="question-content" ng-show="num2">
+				<p>17:30前的提现当日到账，17:30之后的提现第二个工作日到账；</p>
+				<p>周末及节假日的提现均在节假日后第一个工作日到账;</p>
+			</div>
+		</div>
+		<div class="question-box">
+			<div class="question-title" ng-click="onClick(2)">
+				<p>充值失败了是什么原因？</p>
+				<i></i>
+			</div>
+			<div class="question-content" ng-show="num3">
+				<p>充值失败的原因可能是：</p>
+				<p>(1) 银行卡身份证信息与第三方托管身份信息不一致。</p>
+				<p>(2) 充值金额大于银行单笔或单日累计最高额。</p>
+			</div>
+		</div>
+		<div class="question-box">
+			<div class="question-title" ng-click="onClick(3)">
+				<p>提现收费吗？</p>
+				<i></i>
+			</div>
+			<div class="question-content" ng-show="num4">
+				<p>提现手续费按2元固定收取，每月前两笔提现免费，由汇元金服投资平台代用户承担，第三笔开始由用户自己承担。</p>
+			</div>
+		</div>
+		<div class="question-box">
+			<div class="question-title" ng-click="onClick(4)">
+				<p>项目怎样还款，收益怎样计算？</p>
+				<i></i>
+			</div>
+			<div class="question-content" ng-show="num5">
+				<p>平台采取T+1的起息方式，还款方式为到期结清（一次性还本付息）。</p>
+				<p>利息=（投资金额*预期年化）/360*实际投资天数。</p>
+			</div>
+		</div>
+		<div class="question-box">
+			<div class="question-title" ng-click="onClick(5)">
+				<p>如何获得红包或者加息券？</p>
+				<i></i>
+			</div>
+			<div class="question-content" ng-show="num6">
+				<p>(1) 新手注册，完成各项认证即可获得新人大礼包；</p>
+				<p>(2) 邀请好友，将您的邀请码或者邀请好友页面中的邀请链接发送给好友，您的好友通过该链接进行注册后方可获得推荐关系；或者直接在注册界面中自行填写您的邀请码后完成推荐。每成功推荐一位好友注册，可获得20元红包，好友也可获得平台5188元新人红包。邀请5位好友以上还可额外获得40元红包，推荐人每月最多可获得300元的邀请大礼哦！</p>
+				<p>(3) 平台不定期推出的各项活动即可获得相应的红包及加息券，欢迎大家时常关注汇元金服。</p>
+				<p>(4) 以上活动新手标不参与。</p>
+			</div>
+		</div>
+	</div>
+</div>

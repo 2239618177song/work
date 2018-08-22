@@ -1,0 +1,53 @@
+<div class="list-wrapper">
+    <div class="common-head"><i ng-click="toback()"></i>
+        <!-- <p>{{title}}</p> -->
+        <div class='pass-list-tabs'>
+            <span class='tab' ng-class="{0:'active',1:'',2:''}[active]" ng-click="onClick(0)">已售罄</span>
+            <span class='tab' ng-class="{0:'',1:'active',2:''}[active]" ng-click="onClick(1)">已还款</span>
+        </div>
+    </div>
+    <div class="cplist-content normalcplist">
+       
+        
+        
+        <div class='list-item' ng-repeat="item in cpList" infinite-scroll='loadMore(item)' infinite-scroll-distance='2' ui-sref="cpDetail({pid:item.id,from:'pastCplist'})">
+            <div class='item-title'>
+                <span class='title'>{{item.fullName}}</span>
+                <span class='title-tips' ng-if="item.isCash==1">红包</span>
+                <span class='title-tips' ng-if="item.isInterest==1">加息券</span>
+                <span class='title-tips' ng-if="item.isDouble==1">翻倍券</span>
+            </div>
+            <div class='item-content'>
+                <div class='rate'>
+                    <div class='num-wrapper'>
+                        <span class='num'>{{(item.rate*100+item.activityRate*100)/100}}</span>
+                        <span class='percent'>%</span>
+                        <!-- <span class='percent' ng-if="item.activityRate>0">
+                                    +{{item.activityRate | number:2}}%
+                            </span> -->
+                    </div>
+                    <div class='num-text'>预计年化收益率</div>
+                </div>
+                <div class="info">
+                	<div class='orange'>{{item.deadline}}天</div>
+                    <div class='gray pdb-6'>投资期限</div>
+                </div>
+                <div class='info'>
+                    <!--<div class='orange'>{{item.deadline}}天</div>
+                    <div class='gray pdb-6'>投资期限</div>-->
+                    <div class='orange'>{{item.leastaAmount}}元起</div>
+                    <div class='gray'>起投金额</div>
+                </div>
+                <div class='ring'>
+                    <span ng-bind="{0:'已售罄',1:'已还款',2:''}[active]"></span>
+                </div>
+            </div>
+        </div>
+        <div class="rem-rule"></div>
+    </div>
+</div>
+<style type="text/css">
+    .list-wrapper .cplist-content {
+        border-top: 0;
+    }
+</style>

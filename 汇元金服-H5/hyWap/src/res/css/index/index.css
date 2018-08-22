@@ -1,0 +1,115 @@
+._indexSec{
+    padding-bottom: 1.2rem;
+}
+
+._indexSec .notice {
+    height: 0.6rem;
+    line-height: 0.6rem;
+    padding: 0 0.2rem;
+    overflow: hidden;
+    background-color: #fff;
+    margin-top: 0.08rem
+}
+
+._indexSec .notice .leftIcon {
+    float: left;
+    width: 0.3rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+}
+
+._indexSec .notice .leftIcon>span {
+    display: inline-block;
+    width: 0.3rem;
+    height: 0.3rem;
+    background-repeat:  no-repeat;
+    background-position:  50% 50%;
+    background-size: 0.3rem 0.3rem;
+    animation: laba 1s infinite;
+    vertical-align: text-top;
+}
+
+@keyframes laba{
+    0%{
+        background-image: url(../../images/laba@2x.png);
+    }
+
+    50%{
+        background-image: url(../../images/laba2@2x.png);
+    }
+
+    100%{
+        background-image: url(../../images/laba3@2x.png);
+    }
+}
+
+._indexSec .notice .rightSlide {
+    margin-left: 0.4rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    overflow: hidden;
+    position: relative
+}
+
+._indexSec .notice .rightSlide a {
+    color: #999;
+    font-size: 0.28rem
+}
+
+._indexSec .notice .rightSlide ul {
+    height: 100%;
+    transition: transform .5s;
+}
+
+._indexSec .notice .rightSlide li {
+    height: 0.6rem;
+    line-height: 0.6rem;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+._indexSec .ads{
+    padding:0 0.2rem;
+}
+
+._indexSec .ads a.ad{
+    background-color: #fff;
+    border:1px solid #eee;
+    border-radius: 0.1rem;
+    display: block;
+    position: relative;
+    margin-top: 0.2rem;
+}
+
+._indexSec .ads a.ad.type2{
+    height: 2.2rem;
+}
+
+._indexSec .ads a.ad img{
+    width:100%;
+}
+
+._indexSec .ads a.ad p.value{
+    position: absolute;
+    color:#f9de64;
+    font-size: 0.40rem;
+    font-weight: bold;
+    text-align: left;
+    left:0.3rem;
+    top:0.8rem;
+}
+
+._indexSec .ads a.ad p.title{
+    position: absolute;
+    color:#999;
+    font-size: 0.36rem;
+    text-align: left;
+    left:0.3rem;
+    top:1.4rem;
+    font-weight: 300;
+}

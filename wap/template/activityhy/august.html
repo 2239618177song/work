@@ -1,0 +1,145 @@
+<div class="hy-august" ng-controller="hongyaAugustCtrl">
+	<div>
+		<img src="images/hyactivity/august-header.png" class="header" />
+	</div>
+	<div class="box box-a">
+		<i class="header header-a">一重礼</i>
+		<div class="header-desc"><b>368</b>元红包免费领！</div>
+		<table>
+			<tr>
+				<td>
+					<div class="redbag no-cond">
+						<div class="money">368元</div>
+						<div class="desc">投资额≥6000<br>产品期限≥66天<br>有效期：30天</div>
+					</div>
+
+				</td>
+				<td>
+					<div class="remark">每人限领一次哦</div>
+					<div class="btn-a coming" ng-if="dateState==1">敬请期待</div>
+					<div class="btn-a" ng-click="getGift()" ng-if="dateState == 2||dateState == 3">带我回家</div>
+					<div class="btn-a finished" ng-if="dateState==4">活动已结束</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="next"></div>
+	<div class="box">
+		<i class="header header-b">二重礼</i>
+		<div class="header-desc">累计投资赢红包</div>
+		<div class="remark">周一至周五累计投资即可领取红包！</div>
+		<table>
+			<tr>
+				<td>
+					<div class="redbag">
+						<div class="cond">累计投资达到1w</div>
+						<div class="money yellow">88元</div>
+						<div class="desc">投资额≥3000<br>产品期限≥35天<br>有效期：30天</div>
+					</div>
+				</td>
+				<td>
+					<div class="redbag">
+						<div class="cond">累计投资达到3w</div>
+						<div class="money yellow">288元</div>
+						<div class="desc">投资额≥3000<br>产品期限≥35天<br>有效期：30天</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="remark">红包领到手软</div>
+					<div class="btn-b coming" ng-if="dateState == 1">敬请期待</div>
+					<div class="btn-b" ng-if="dateState == 2" ng-click="goInvestList()">立即投资</div>
+					<div class="btn-b" ng-if="dateState == 3" ng-click="goInvestList()">立即使用</div>
+					<div class="btn-a finished" ng-if="dateState == 4">活动已结束</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="redbag">
+						<div class="cond">累计投资达到5w</div>
+						<div class="money yellow">448元</div>
+						<div class="desc">投资额≥3000<br>产品期限≥35天<br>有效期：30天</div>
+					</div>
+				</td>
+				<td>
+					<div class="redbag">
+						<div class="cond">累计投资达到10w</div>
+						<div class="money yellow">998元</div>
+						<div class="desc">投资额≥3000<br>产品期限≥35天<br>有效期：30天</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="next"></div>
+	<div class="box">
+		<i class="header header-c">三重礼</i>
+		<div class="header-desc">周末疯狂加息<b>2%</b></div>
+		<div class="remark">26日-27日汇元金服将推出周末活动专享标<br>利息达到<b>12.8%</b></div>
+		<div class="weekend-box">
+			<div class="tit">企融计划35-八月活动专享</div>
+			<div class="num">10.8%+2%</div>
+
+			<div class="btn-a coming" ng-if="dateState == 1 || dateState == 2">敬请期待</div>
+			<div class="btn-a" ng-if="dateState == 3" ng-click="goInvest()">立即投资</div>
+			<div class="btn-a finished" ng-if="dateState == 4">已结束</div>
+		</div>
+		<i class="ico-a"></i>
+	</div>
+	<div class="next"></div>
+	<div class="box">
+		<i class="header header-d">四重礼</i>
+		<div class="header-desc">邀壕友再获<b>100</b>元现金</div>
+		<div class="remark">活动期间，用户每邀请好友注册并首投1w元及以上（不含新手标、体验标），邀请方除了能获得【邀壕友享三重礼】的18元现金外，还能额外获得100元现金奖励，总计<b>118元</b>！</div>
+
+		<div class="btn-b coming" ng-if="dateState == 1" style="margin-top: 30px;">敬请期待</div>
+		<!-- <div class="btn-b" ng-if="dateState == 2||dateState == 3" style="margin-top: 30px;" ng-click="goInvite()">邀请我的壕友</div> -->
+		<div ng-if="dateState == 2||dateState == 3">
+			<a href="/myInvitation" target="_blank" class="btn-b" ng-if="wap && userOBJ.register">邀请我的壕友</a>
+			<a ui-sref="dl({returnurl:'myInvitation'})" target="_blank" class="btn-b" ng-if="wap && !userOBJ.register">邀请我的壕友</a>
+			<a href="jsmp://page=1" target="_blank" class="btn-b" ng-if="!wap">邀请我的壕友</a>
+		</div>
+
+
+		<div class="btn-b finished" ng-if="dateState == 4" style="margin-top: 30px;">活动已结束</div>
+
+		<i class="ico-b"></i>
+	</div>
+	<footer>
+		<p class="tel">投资热线：400-872-9577（9:30-17:30）</p>
+		<p class="tel">官方QQ：4008729577（9:30-17:30） </p>
+		<p class="warning">投资有风险，理财需谨慎</p>
+	</footer>
+	<div class="pop-btn left" ng-show="showPopbtn" ng-click="dialogType='rule';showDialog=true;"><span>活动<br>规则</span></div>
+	<div class="pop-btn right" ng-show="showPopbtn" ng-click="getResult()"><span>我的<br>累计<br>投资</span></div>
+	<div class="hyAugust-dialog-wrap" ng-show="showDialog" ng-click="showDialog=false;">
+		<div class="august-box" ng-click="$event.stopPropagation();handleDialog();">
+			<img src="../../images/hyactivity/august-redbag-succ.png" ng-show="dialogType == 'succ'">
+			<img src="../../images/hyactivity/august-redbag-successful.png" ng-show="dialogType == 'successful'">
+			<div class="august-rule" ng-show="dialogType == 'rule'">
+				<img src="../../images/hyactivity/august-rule.png">
+				<ol>
+					<li>【一重礼】368元返现红包，8月21日至8月27日，每人限领一次，红包使用规则：单笔投资满6000元，投资期限≥66天，有效期30天。</li>
+					<li>【二重礼】累计投资获取的返现红包将于8月26日发放至优惠券内，红包以最高额发放，红包使用规则：单笔投资满3000元，投资期限≥35天，有效期30天。</li>
+					<li>【三重礼】8月26日至8月27日，平台推出35天加息专享标，预期年化利率高达12.8%。</li>
+					<li>【四重礼】邀请人可获取100元额外奖励，被邀请人无法获取100元额外奖励。</li>
+				</ol>
+				<p class="warning">本次活动在法律范围内，啄米理财拥有最终解释权</p>
+			</div>
+			<div class="august-result" ng-show="dialogType == 'result'">
+				<img src="../../images/hyactivity/august-result.png">
+				<p>{{investNumber}}元</p>
+			</div>
+		</div>
+	</div>
+
+
+    <div class="hyactivity-dialog-wrap" ng-show="showActivityDialog" ng-if="dialogObj!=undefined && wap">
+        <a href="" class="hyactivity-box" ng-click="closeActivityDialog()" ui-sref="{{dialogObj.href}}({wap:true})" target="_blank" ng-class="dialogObj.className">
+        	<span class="money" ng-if="dialogObj.className == 'august-hongbao'">{{dialogObj.redbag}}</span>
+        </a>
+        <a href="" class="close" ng-click="closeActivityDialog()"></a>
+    </div>  
+
+</div>

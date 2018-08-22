@@ -1,0 +1,103 @@
+<!--云锐开发-->
+<div class="hy-new-reg2" ng-controller="zmChannelregCtrl">
+	<div class='chediandian'>
+		<div class="reg-form">
+			<form ng-model="fromregister" name="myForm" novalidate="">
+				<div>
+					<i class="reg-new-icon-phone"></i>
+					<input name="mobilephone" type="text" ng-pattern="/^1[3|4|5|7|8][0-9]{9}$/" placeholder="请输入手机号" ng-model="login.mobilephone"
+					 onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')" ng-blur="blurID('focusMobilephone',myForm)" minlength="11" maxlength="11"
+					 required>
+					<span></span>
+				</div>
+				<!--短信验证码-->
+				<div ng-disabled="true" class="part-wrap">
+					<i class="reg-new-icon-msg"></i>
+					<input ng-model="login.smsCode" type="text" placeholder="请输入短信验证码" maxlength="4" required name="smsCode">
+					<span class="get-msg" ng-click="getyzm(myForm)">{{nowTimer}}</span>
+				</div>
+				<!--图形验证码-->
+				<div ng-disabled="true" class="part-wrap">
+					<i class="reg-new-icon-msg"></i>
+					<input id="imgcode" type="text" placeholder="请输入图形码" ng-model="login.picCode" name="picCode" minlength="4" maxlength="4"
+					 required autocomplete="off" />
+					 <span class="img-box">
+					 	<img class="get-msg" ng-click="clickInput($event)" src="login/validateCode2.dos">
+					 </span>
+					
+				</div>
+				<div>
+					<i class="reg-new-icon-pwd"></i>
+					<input autocomplete="off" type="{{(passwordText|isShowPw).type}}" placeholder="密码为6-18位字母数字混合" ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/"
+					 ng-model="login.passWord" name="passWord" required/>
+					<span></span>
+				</div>
+				<div class="agreement-box">
+					<label for="agreement">
+						<input type="checkbox" ng-model="login.checkbox" ng-true-value="true" name="checkbox" id="agreement" class="check-box" checked style="display: none;" />
+						<i ng-class="{true: 'login-icons-check', false: 'login-icons-uncheck'}[login.checkbox]"></i>我已阅读并同意<a href="{{protocol}}//pc.huiyuanjinfu.com/zc" target="_blank" class="server-agreement">《汇元金服用户协议》</a>
+					</label>
+				</div>
+				<div>
+					<button class="reg-btn" ng-click="zuce(myForm)">立即注册</button>
+				</div>
+			</form>
+        </div>
+        <div class="toTop" ng-click="toTop()">
+            <button>立即注册</button>
+        </div>
+	</div>
+	<div class="hy-reg-box1" ng-if='false'>
+		<!-- <img src="../../images/hyactivity/reg-II-banner.png">
+		<img src="../../images/hyactivity/reg-II-bonus.png"> -->
+		<div class="reg-form">
+			<form ng-model="fromregister" name="myForm" novalidate="">
+				<div>
+					<i class="reg-new-icon-phone"></i>
+					<input name="mobilephone" type="text" ng-pattern="/^1[3|4|5|7|8][0-9]{9}$/" placeholder="请输入手机号（建议使用银行预留手机号）" ng-model="login.mobilephone"
+					 onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')" ng-blur="blurID('focusMobilephone',myForm)" minlength="11" maxlength="11"
+					 required>
+					<span></span>
+				</div>
+				<!--图形验证码-->
+				<div ng-disabled="true" class="part-wrap">
+					<i class="reg-new-icon-msg"></i>
+					<input id="imgcode" type="text" placeholder="请输入图形码" ng-model="login.picCode" name="picCode" minlength="4" maxlength="4"
+					 required autocomplete="off" />
+					 <span class="img-box">
+					 	<img class="get-msg" ng-click="clickInput($event)" src="login/validateCode2.dos">
+					 </span>
+					
+				</div>
+				<div ng-disabled="true" class="part-wrap">
+					<i class="reg-new-icon-msg"></i>
+					<input ng-model="login.smsCode" type="text" placeholder="请输入短信验证码" maxlength="4" required name="smsCode">
+					<span class="get-msg" ng-click="getyzm(myForm)">{{nowTimer}}</span>
+				</div>
+				<div>
+					<i class="reg-new-icon-pwd"></i>
+					<input autocomplete="off" type="{{(passwordText|isShowPw).type}}" placeholder="密码为6-18位字母数字混合" ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/"
+					 ng-model="login.passWord" name="passWord" required/>
+					<span></span>
+				</div>
+				<div>
+					<button class="reg-btn" ng-click="zuce(myForm)">立即领取新人礼包</button>
+				</div>
+				<div>
+					<!-- <p style="text-align: right;">我已注册，<a ui-sref="dl" class="change-btn">立即登录</a></p> -->
+					<p>*本活动仅限未注册过汇元金服的新用户</p>
+				</div>
+			</form>
+		</div>
+		<!-- <img src="../../images/hyactivity/reg-II-safe.png" style="width:95.46666666666667%"> -->
+		<!-- <p>客服热线：400-819-8282<br>官方QQ：480607428<br>本活动最终解释权归啄米理财所有</p> -->
+    </div>
+    
+	
+</div>
+<div class="share-ios">
+	<img ng-click="closethis()" src="images/share-ios.png" />
+</div>
+<div class="share-android">
+	<img ng-click="closethis()" src="images/share-android.png" />
+</div>

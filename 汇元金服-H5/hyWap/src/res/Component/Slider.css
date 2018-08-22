@@ -1,0 +1,62 @@
+.LRSlider{
+    position: relative;
+}
+
+.LRSlider .sliderWrap{
+    overflow: hidden;
+    padding-bottom: 52.5%;
+    background: url(../../res/images/zhanweitu_banner@2x.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+.LRSlider .sliderWrap > img{
+    width:100%;
+}
+
+.LRSlider .sliderWrap > ul{
+    position: absolute;
+    height:100%;
+    left:0;
+    top:0;
+    width:100%;
+    overflow: hidden;
+}
+
+.LRSlider .sliderWrap > ul li{
+    position: absolute;
+    height:100%;
+    width:100%;
+}
+
+.LRSlider .sliderWrap > ul li img{
+    width:100%;
+    height:100%;
+}
+
+/* 轮播控制 */
+.LRSlider .sliderWrap aside{
+    width:100%;
+    position: absolute;
+    font-size:0.36rem;
+    bottom:10px;
+    left:0;
+    z-index: 99;
+}
+
+.LRSlider .sliderWrap aside > a{
+    color:#fff;
+    font-size:0.28rem;
+    margin:0 3px;
+}
+
+.LRSlider .sliderWrap aside > a:after{
+    content:'●';
+    font-size: 0.40rem;
+    text-shadow:0 0 1px #ccc;
+}
+
+.LRSlider .sliderWrap aside > a.actived:after{
+    content:'●';
+    color:rgb(210,53,47);
+    text-shadow:0 0 2px #ccc;
+}

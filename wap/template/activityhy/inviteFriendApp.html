@@ -1,0 +1,67 @@
+<style type="text/css">
+    .common-head{
+        margin-bottom: 0px;
+    }
+    .invite-center{
+        padding-bottom: 0px;
+    }
+    .invite-center .invite-detail-wrapper .invite-detail {
+        background-color: #ed6054;
+    }
+
+    .invite-center .invite-btn span {
+        width: 100%;
+        background-color: #fc764d;
+    }
+    .invite-fri-wrapper{
+        position: relative;
+
+    }
+
+    .invite-center .invite-fri-btn {
+        width: 166px;
+        height: 2rem;
+        background: #fce15d;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 2rem;
+        color: #fff;
+        font-size: 1rem;
+        border-radius: 2rem;
+        position: absolute;
+        top: 48.5%;
+        left: 50%;
+        transform: translateX(-83px);
+
+    }
+</style>
+<div class='invite-center' ng-controller="inviteFriApp" ng-style='height'>
+
+        <!--<div class="common-head" ng-click="toback()" ng-if="false">
+                <i></i>
+                <p>{{title}}</p>
+            </div>-->
+    <div class="invite-fri-wrapper"><!--ui-sref="inviteCenter"-->
+    	<!--<a ng-if="!wap" href="jsmp://page=1">
+    		<span class='invite-fri-btn'>立即邀请好友</span>
+    	</a>-->
+        <!--<div class='invite-fri-btn' ng-click="share()" >
+           	 立即邀请好友
+        </div>-->
+        <div class='invite-fri-btn' ng-click="share()" ng-if="!app">
+           	 立即邀请好友
+        </div>
+        <a href="jsmp://page=1" class='invite-fri-btn' ng-if="app">
+        	 立即邀请好友
+        </a>
+        <img src="./images/inviteFri.png" alt="inviteFri.png" style="width:100%">
+    </div>
+
+
+    <!--<div class="fixed-box" ng-click="closeshare()">
+        <div class="linkurl" ng-click="default($event)">
+            <p>复制以下网址，发送给您的好友注册并投资</p>
+            <textarea>{{protocol}}//pc.huiyuanjinfu.com/inviteReg?recommCode={{userOBJ.user.member.mobilephone}}&invitePerson={{invitePerson}}</textarea>
+        </div>
+    </div>-->
+</div>

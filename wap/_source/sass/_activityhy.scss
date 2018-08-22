@@ -1,0 +1,2992 @@
+.hy-reg {
+    width: 100%;
+    position: relative;
+    img {
+        display: block;
+        width: 100%;
+    }
+    .reg-btn {
+        position: absolute;
+        display: block;
+        width: rem-calc(620, 750);
+        height: rem-calc(96, 750);
+        top: rem-calc(1105, 750);
+        left: rem-calc(65, 750);
+    }
+    .reg-btn2 {
+        position: absolute;
+        display: block;
+        width: rem-calc(620, 750);
+        height: rem-calc(96, 750);
+        bottom: rem-calc(755, 750);
+        left: rem-calc(65, 750);
+    }
+}
+
+.hy-invite {
+    width: 100%;
+    position: relative; // margin-bottom: rem-calc(100, 750);
+    // background: url(../../images/hyactivity/invite-bg.png) repeat;
+    // background-size: rem-calc(46 42, 750);
+    background: #6d58ce;
+    padding-bottom: rem-calc(18, 750);
+    img {
+        width: 100%;
+        display: block;
+    }
+    .invite-wrapper {
+        display: flex;
+        justify-content: center;
+        .content {
+            width: rem-calc(628, 750);
+            background: #c5b8ff;
+            box-shadow: 0px 7px 9px 0 #48369759;
+            .title {
+                display: flex;
+                height: rem-calc(125, 750);
+                justify-content: center;
+                align-items: center;
+                font-size: 18px;
+                color: #6f5acf;
+                font-weight: bold;
+            }
+            .subtitle {
+                background: #392a81;
+                padding: rem-calc(15 60, 750);
+                .arrow {
+                    margin: rem-calc(10 auto 0 auto);
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border: rem-calc(10, 750) solid transparent;
+                    border-top: rem-calc(10, 750) solid #45bbff;
+                }
+                .item {
+                    background: #ffe2b8;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #6d58ce;
+                    font-size: 12px;
+                    height: rem-calc(60, 750);
+                    span {
+                        color: #ff6c00;
+                        font-size: 15px;
+                    }
+                }
+                .text {
+                    font-size: 12px;
+                    color: #fff;
+                    span {
+                        color: #fd9e34;
+                        font-size: 15px;
+                    }
+                }
+            }
+            .mgb-34 {
+                margin-bottom: rem-calc(34, 750);
+            }
+            .mgb-22 {
+                margin-bottom: rem-calc(22, 750);
+            }
+        }
+    }
+    .info {
+        padding: rem-calc(10 0, 750);
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        line-height: 20px;
+    }
+    .invite-tips {
+        color: #fff9;
+        text-align: center;
+        line-height: 20px;
+        padding: rem-calc(10 0);
+    }
+    .btn {
+        display: block;
+        margin: 0 auto;
+        width: rem-calc(301, 750);
+        height: rem-calc(86, 750);
+        text-align: center;
+        line-height: rem-calc(86, 750);
+        background: url('../../images/zmActive/btn.png') center center no-repeat;
+        background-size: 100%;
+        color: #fff;
+        font-size: 15px;
+    }
+}
+
+.hy-download {
+    width: 100%;
+    position: relative;
+    img {
+        display: block;
+        width: 100%;
+    }
+    .dl-btn {
+        position: absolute;
+        display: block;
+        width: rem-calc(385, 750);
+        height: rem-calc(80, 750);
+        bottom: rem-calc(205, 750);
+        left: rem-calc(183, 750);
+        background: url('../../images/hyactivity/dl-btn.png');
+        background-size: cover;
+    }
+    .dl-btn {
+        position: absolute;
+        display: block;
+        width: rem-calc(385, 750);
+        height: rem-calc(80, 750);
+        bottom: rem-calc(205, 750);
+        left: rem-calc(183, 750);
+        background: url('../../images/hyactivity/dl-btn.png');
+        background-size: cover;
+    }
+    .dl-btn2 {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        height: rem-calc(100, 750);
+        background: #ffffff url('../../images/hyactivity/dl-btn2.png') no-repeat center center;
+        background-size: rem-calc(649 85, 750);
+    }
+    .download-btn {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: rem-calc(100, 750);
+        font-size: 18px;
+        background: #f16d4d;
+        color: #fff;
+    }
+}
+
+.hy-new-reg {
+    width: 100%;
+    position: relative;
+    .hy-reg-box1 {
+        position: relative;
+        img {
+            width: 100%;
+            display: block;
+        }
+        .reg-form {
+            position: absolute;
+            width: 100%;
+            top: rem-calc(490, 750);
+            form {
+                width: rem-calc(750, 750);
+                margin: 0 auto;
+                >div {
+                    height: rem-calc(79, 750);
+                    margin: rem-calc(0 85 35, 750);
+                    position: relative;
+                    input[type=text],
+                    input[type=password] {
+                        width: 100%;
+                        height: 100%;
+                        line-height: rem-calc(79, 750);
+                        display: inline-block;
+                        background: url('../../../images/hyactivity/reg-new-input-full.png') no-repeat center center;
+                        background-size: contain;
+                        box-sizing: border-box;
+                        padding: rem-calc(0 30 0 100, 750);
+                        &.part-input {
+                            width: rem-calc(340, 750);
+                            background: url('../../../images/hyactivity/reg-new-input-part.png') no-repeat center center;
+                            background-size: contain;
+                        }
+                    }
+                    >i {
+                        position: absolute;
+                        width: rem-calc(40, 750);
+                        height: rem-calc(40, 750);
+                        top: rem-calc(20, 750);
+                        left: rem-calc(42, 750);
+                        &.reg-new-icon-phone {
+                            @include rem-sprite("hyactivity/reg-new/*.png",
+                            icon-phone,
+                            $spacing: 4px, $rem-base:750px);
+                        }
+                        &.reg-new-icon-msg {
+                            @include rem-sprite("hyactivity/reg-new/*.png",
+                            icon-msg,
+                            $spacing: 4px, $rem-base:750px);
+                        }
+                        &.reg-new-icon-pwd {
+                            @include rem-sprite("hyactivity/reg-new/*.png",
+                            icon-pwd,
+                            $spacing: 4px, $rem-base:750px);
+                        }
+                        &.reg-new-icon-person {
+                            @include rem-sprite("hyactivity/reg-new/*.png",
+                            icon-person,
+                            $spacing: 4px, $rem-base:750px);
+                        }
+                    }
+                    .img-box {
+                        position: absolute;
+                        top: 0;
+                        right: rem-calc(40, 750);
+                        width: rem-calc(200, 750);
+                        height: rem-calc(78, 750);
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .get-msg {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: rem-calc(225, 750);
+                        height: rem-calc(79, 750);
+                        background: url('../../../images/hyactivity/reg-new-get.png') no-repeat center center;
+                        background-size: contain;
+                        color: #e16887;
+                        line-height: rem-calc(79, 750);
+                        text-align: center;
+                    }
+                    .reg-btn {
+                        width: rem-calc(604, 750);
+                        height: rem-calc(88, 750);
+                        padding-bottom: rem-calc(20, 750);
+                        background: url('../../../images/hyactivity/reg-new-btn-reg.png') no-repeat center center;
+                        background-size: contain;
+                        display: block; // margin: 0 auto;
+                        margin-left: rem-calc(-10, 750);
+                        color: #e16887;
+                        font-size: rem-calc(30, 750);
+                        text-align: center;
+                        letter-spacing: 2px;
+                        box-sizing: content-box;
+                        &:disabled {
+                            color: #999999;
+                        }
+                    }
+                    p {
+                        color: #fff;
+                        text-align: center;
+                        line-height: rem-calc(60, 750);
+                        i.checkbox {
+                            width: rem-calc(30, 750);
+                            height: rem-calc(30, 750);
+                            margin-right: rem-calc(10, 750);
+                            display: inline-block;
+                            @include rem-sprite("hyactivity/reg-new/*.png",
+                            icon-check,
+                            $spacing: 4px, $rem-base:960px);
+                            vertical-align: text-bottom;
+                            &.checked {
+                                @include rem-sprite("hyactivity/reg-new/*.png",
+                                icon-checked,
+                                $spacing: 4px, $rem-base:960px);
+                            }
+                        }
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
+                &.v2 {
+                    transform: scaleX(1.1);
+                    >div {
+                        input[type=text],
+                        input[type=password] {
+                            background: url('../../../images/hyactivity/reg-new-input-full-b.png') no-repeat center center;
+                            background-size: contain;
+                            &.part-input {
+                                margin-left: rem-calc(5, 750);
+                                background: url('../../../images/hyactivity/reg-new-input-part-b.png') no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        .img-box {
+                            right: rem-calc(5, 750);
+                            width: rem-calc(225, 750);
+                            border-radius: rem-calc(20, 750);
+                            overflow: hidden;
+                        }
+                        .get-msg {
+                            right: rem-calc(5, 750); // width: rem-calc(225, 750);
+                            // height: rem-calc(159, 1080);
+                            font-size: rem-calc(24, 750);
+                            background: url('../../../images/hyactivity/reg-new-get-red.png') no-repeat center center;
+                            color: #ffffff;
+                            background-size: contain;
+                        }
+                        .reg-btn {
+                            // width: rem-calc(968, 1080);
+                            // height: rem-calc(159, 1080);
+                            background: url('../../../images/hyactivity/reg-new-btn-reg-red.png') no-repeat center center;
+                            color: #ffffff;
+                            background-size: contain;
+                            max-width: 100%;
+                            margin-left: 0;
+                            &:disabled {
+                                color: #999999;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.hy-oil-reg {
+        .hy-reg-box1 {
+            // background: linear-gradient(to bottom, #ffa400, #ff9100);
+            .reg-form {
+                position: relative;
+                width: 100%;
+                top: 0;
+                padding: rem-calc(60 0 40, 750);
+            }
+        }
+    }
+    .reg-fixed {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        height: rem-calc(100, 750);
+        background: #ffd225;
+        color: #ffffff;
+        text-align: center;
+        font-size: rem-calc(30, 750);
+        line-height: rem-calc(100, 750);
+    }
+}
+
+.zm-invite-bg {
+    background: url('../../images/invite-icon/invite-active1.png') center center no-repeat;
+    background-size: 100%;
+    height: rem-calc(644, 375);
+    padding-top: rem-calc(260, 375);
+    box-sizing: border-box;
+    .reg-form {
+        width: 86%;
+        margin: 0 auto; // top: rem-calc(490, 750);
+        p {
+            color: #fff;
+            text-align: center;
+        }
+        form {
+            width: 100%;
+            >div {
+                height: rem-calc(80, 750);
+                margin: rem-calc(25 0, 750);
+                position: relative;
+                &.part-wrap {
+                    padding-right: rem-calc(230, 750);
+                }
+                input[type=text],
+                input[type=password] {
+                    width: 100%;
+                    height: 100%;
+                    line-height: rem-calc(72, 750);
+                    display: inline-block;
+                    background: #ffffff; // border: 2px #ededed solid;
+                    box-sizing: border-box;
+                    border-radius: 5px;
+                    padding: rem-calc(0 30 0 100, 750);
+                }
+                >i {
+                    position: absolute;
+                    width: rem-calc(40, 750);
+                    height: rem-calc(40, 750);
+                    top: rem-calc(20, 750);
+                    left: rem-calc(30, 750);
+                    &.reg-new-icon-phone {
+                        @include rem-sprite("hyactivity/reg-new/*.png",
+                        icon-phone,
+                        $spacing: 4px, $rem-base:750px);
+                    }
+                    &.reg-new-icon-msg {
+                        @include rem-sprite("hyactivity/reg-new/*.png",
+                        icon-msg,
+                        $spacing: 4px, $rem-base:750px);
+                    }
+                    &.reg-new-icon-pwd {
+                        @include rem-sprite("hyactivity/reg-new/*.png",
+                        icon-pwd,
+                        $spacing: 4px, $rem-base:750px);
+                    }
+                    &.reg-new-icon-person {
+                        @include rem-sprite("hyactivity/reg-new/*.png",
+                        icon-person,
+                        $spacing: 4px, $rem-base:750px);
+                    }
+                }
+                .img-box {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: rem-calc(218, 750);
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 5px;
+                    }
+                }
+                .get-msg {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    background: #ef5e41;
+                    width: rem-calc(218, 750);
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    line-height: normal;
+                    justify-content: center;
+                    border-radius: 5px;
+                }
+                .reg-btn {
+                    width: 100%;
+                    height: rem-calc(78, 750);
+                    background-image: linear-gradient(#ef5e41, #ff7458);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px 1px #00000026;
+                    color: #fff;
+                    display: block;
+                    margin: 0 auto;
+                    font-size: rem-calc(30, 750);
+                    line-height: rem-calc(78, 750);
+                    text-align: center;
+                    letter-spacing: 2px;
+                    box-sizing: content-box;
+                    &:disabled {
+                        color: #cccccc;
+                    }
+                }
+            }
+            .invite-tip {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+                margin: 0;
+                i {
+                    height: 12px;
+                    background: url('../../images/invite-icon/check.png') center center no-repeat;
+                    background-size: 100%;
+                    flex: 0 0 16px;
+                    margin-right: 10px;
+                    position: static;
+                }
+                a {
+                    flex: 0 0 auto;
+                    color: #fff;
+                    font-size: 12px;
+                }
+            }
+            .invite-login {
+                margin: 0;
+                height: auto;
+                font-size: 12px;
+                color: #fff;
+                text-align: right;
+            }
+        }
+    }
+    >img {
+        width: 100%;
+        display: block;
+    }
+}
+.chediandian {//车点点渠道
+    background: url('../../images/register-icon/chediandian.png') top center no-repeat;
+    background-size: 100%;
+    height: rem-calc(2000, 375);
+    padding-top: rem-calc(380, 375);
+    box-sizing: border-box;
+    position: relative;
+    .reg-form {
+        width: 86%;
+        margin: 0 auto; // top: rem-calc(490, 750);
+        p {
+            color: #fff;
+            text-align: center;
+        }
+        form {
+            width: 100%;
+            >div {
+                height: rem-calc(80, 750);
+                margin: rem-calc(25 0, 750);
+                position: relative;
+                &.part-wrap {
+                    padding-right: rem-calc(230, 750);
+                }
+                input{
+                    border:1px solid #333;
+                    border-radius: 0;
+                }
+                input[type=text],
+                input[type=password] {
+                    width: 100%;
+                    height: 100%;
+                    line-height: rem-calc(72, 750);
+                    display: inline-block;
+                    background: #ffffff; // border: 2px #ededed solid;
+                    box-sizing: border-box;
+                    border-radius: 0;
+                    padding: rem-calc(0 30 0 100, 750);
+                }
+                >i {
+                    position: absolute;
+                    width: rem-calc(40, 750);
+                    height: rem-calc(40, 750);
+                    top: rem-calc(20, 750);
+                    left: rem-calc(30, 750);
+                    &.reg-new-icon-phone {
+                        @include rem-sprite("hyactivity/reg-new/*.png",
+                        icon-phone,
+                        $spacing: 4px, $rem-base:750px);
+                    }
+                    &.reg-new-icon-msg {
+                        @include rem-sprite("hyactivity/reg-new/*.png",
+                        icon-msg,
+                        $spacing: 4px, $rem-base:750px);
+                    }
+                    &.reg-new-icon-pwd {
+                        @include rem-sprite("hyactivity/reg-new/*.png",
+                        icon-pwd,
+                        $spacing: 4px, $rem-base:750px);
+                    }
+                    &.reg-new-icon-person {
+                        @include rem-sprite("hyactivity/reg-new/*.png",
+                        icon-person,
+                        $spacing: 4px, $rem-base:750px);
+                    }
+                }
+                .img-box {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: rem-calc(218, 750);
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 5px;
+                    }
+                }
+                .get-msg {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    background: #ef5e41;
+                    width: rem-calc(218, 750);
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    line-height: normal;
+                    justify-content: center;
+                    border-radius: 5px;
+                }
+                .reg-btn {
+                    width: rem-calc(420,750);
+                    height: rem-calc(80, 750);
+                    background-color:#fe2400;
+                    border-radius: rem-calc(44, 750);
+                    box-shadow: 0 4px 8px 1px #00000026;
+                    color: #fff;
+                    display: block;
+                    margin: 0 auto;
+                    font-size: rem-calc(30, 750);
+                    line-height: rem-calc(78, 750);
+                    text-align: center;
+                    letter-spacing: 2px;
+                    box-sizing: content-box;
+                    &:disabled {
+                        color: #cccccc;
+                    }
+                }
+            }
+            .invite-tip {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+                margin: 0;
+                i {
+                    height: 12px;
+                    background: url('../../images/invite-icon/check.png') center center no-repeat;
+                    background-size: 100%;
+                    flex: 0 0 16px;
+                    margin-right: 10px;
+                    position: static;
+                }
+                a {
+                    flex: 0 0 auto;
+                    color: #fff;
+                    font-size: 12px;
+                }
+            }
+            .invite-login {
+                margin: 0;
+                height: auto;
+                font-size: 12px;
+                color: #fff;
+                text-align: right;
+            }
+            .agreement-box{
+                text-align: center;
+                color:#333;
+                margin-bottom:0;
+                a{
+                    color:#ff3253;
+                }
+                i{
+                    display: inline-block;
+                    width:1rem;
+                    height:1rem;
+                    border:1px solid #333;
+                    border-radius: rem-calc(4, 375);
+                    margin-right:rem-calc(6, 375);
+                    &.login-icons-check{
+                        background:url(../../images/register-icon/yes.png) center no-repeat;
+                        background-size: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .toTop{
+        width:rem-calc(420,750);
+        height:rem-calc(80,750);
+        background:#fe2400;
+        text-align: center;
+        line-height: rem-calc(80,750);
+        border-radius: rem-calc(44, 750);
+        position: absolute;
+        left:50%;
+        bottom:rem-calc(1450,750);
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        button{
+            color:#fff;
+        }
+    }
+    >img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.chedao {
+    @extend .zm-invite-bg;
+    background: url('../../images/zmChannel/chedao2.png') center center no-repeat;
+    background-size: 100%;
+    height: rem-calc(998, 375);
+    padding-top: 0;
+    .get-msg {
+        background: #ffb43f!important;
+    }
+    .reg-btn {
+        background-image: linear-gradient(#ffc263, #ffb43f)!important;
+    }
+}
+
+.cdd-reg-form-wrapper{
+    @extend .zm-invite-bg;
+    background: url('../../images/zmChannel/cdd-b.png') center center no-repeat;
+    background-size: 100%;
+    height: rem-calc(1363, 750);
+    padding-top: 0;
+    .get-msg {
+        border-radius: 10px;
+        background-color: rgb(138, 87, 227)!important;
+    }
+    .reg-btn {
+        border-radius: 10px;
+        background-image: -moz-linear-gradient( 90deg, rgb(113,63,255) 0%, rgb(255,194,99) 60%)!important;
+        background-image: -webkit-linear-gradient( 90deg, rgb(113,63,255) 0%, rgb(255,194,99) 60%)!important;
+        background-image: -ms-linear-gradient( 90deg, rgb(113,63,255) 0%, rgb(255,194,99) 60%)!important;
+        box-shadow: 0px 8px 12.96px 5.04px rgba(56, 30, 184, 0.22);
+    }
+}
+.hy-new-reg2 {
+    width: 100%;
+    position: relative;
+    background-color: #feedd1;
+    font-size: rem-calc(28, 750);
+    color: #852800;
+    .hy-reg-box1 {
+        img {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+        p {
+            color: #852800;
+            line-height: 1.5em;
+            font-size: rem-calc(28, 750);
+            padding: rem-calc(10 0, 750);
+            text-align: left;
+            &:last-child {
+                text-align: center;
+            }
+        }
+        .reg-form {
+            width: 86%;
+            margin: 0 auto; // top: rem-calc(490, 750);
+            form {
+                width: 100%;
+                >div {
+                    height: rem-calc(72, 750);
+                    margin: rem-calc(14 0, 750);
+                    position: relative;
+                    &.part-wrap {
+                        padding-right: rem-calc(230, 750);
+                    }
+                    input[type=text],
+                    input[type=password] {
+                        width: 100%;
+                        height: 100%;
+                        line-height: rem-calc(72, 750);
+                        display: inline-block;
+                        background: #ffffff;
+                        border: 2px #ededed solid;
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                        padding: rem-calc(0 30 0 100, 750);
+                    }
+                    >i {
+                        position: absolute;
+                        width: rem-calc(40, 750);
+                        height: rem-calc(40, 750);
+                        top: rem-calc(20, 750);
+                        left: rem-calc(42, 750);
+                        &.reg-new-icon-phone {
+                            @include rem-sprite("hyactivity/reg-new/*.png",
+                            icon-phone,
+                            $spacing: 4px, $rem-base:750px);
+                        }
+                        &.reg-new-icon-msg {
+                            @include rem-sprite("hyactivity/reg-new/*.png",
+                            icon-msg,
+                            $spacing: 4px, $rem-base:750px);
+                        }
+                        &.reg-new-icon-pwd {
+                            @include rem-sprite("hyactivity/reg-new/*.png",
+                            icon-pwd,
+                            $spacing: 4px, $rem-base:750px);
+                        }
+                        &.reg-new-icon-person {
+                            @include rem-sprite("hyactivity/reg-new/*.png",
+                            icon-person,
+                            $spacing: 4px, $rem-base:750px);
+                        }
+                    }
+                    .img-box {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: rem-calc(200, 750);
+                        height: rem-calc(72, 750);
+                        border-radius: 8px;
+                        overflow: hidden;
+                        padding: 2px;
+                        box-sizing: border-box;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .get-msg {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        background: #ffd100;
+                        width: rem-calc(218, 750);
+                        text-align: center;
+                    }
+                    .reg-btn {
+                        width: 100.46511627906978%;
+                        height: rem-calc(78, 750);
+                        background: url('../../../images/hyactivity/reg-II-reg.png') no-repeat center center;
+                        background-size: cover;
+                        display: block;
+                        margin: 0 auto;
+                        font-size: rem-calc(30, 750);
+                        line-height: rem-calc(78, 750);
+                        text-align: center;
+                        color: #fb3a4d;
+                        letter-spacing: 2px;
+                        box-sizing: content-box;
+                        &:disabled {
+                            color: #cccccc;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hy-touziyue {
+    width: 100%;
+    position: relative; // margin-bottom: rem-calc(100, 750);
+    >div {
+        width: 100%;
+        position: relative;
+        img {
+            display: block;
+            width: 100%;
+        }
+        .invest-btn {
+            position: absolute;
+            display: block;
+            bottom: 7.34017363851618%;
+            left: 12.666666666666665%;
+            width: 74.66666666666667%;
+            height: 6.314127861089187%; // background-color: rgba(255,255,255,0.5);
+        }
+        .count {
+            position: absolute;
+            display: block;
+            bottom: 15.074980268350435%;
+            left: 31.2%;
+            width: 37.6%;
+            height: 6.471981057616416%;
+            text-align: center;
+            color: #ffffff;
+            font-size: rem-calc(24, 750);
+            line-height: rem-calc(80, 750);
+            text-shadow: 0px 3px 7px rgba(147, 28, 20, 0.3);
+            a {
+                color: #ffffff;
+            }
+        }
+    }
+    .fixed-invest {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        height: rem-calc(100, 750);
+        background: #e4d29b; //url('../../images/hyactivity/invite-btn.png') no-repeat center center;
+        // background-size: rem-calc(750 110,750);
+        color: #c7322b;
+        text-align: center;
+        font-size: rem-calc(30, 750);
+        line-height: rem-calc(100, 750);
+    }
+}
+
+.hy-jiaxi {
+    width: 100%;
+    position: relative; // margin-bottom: rem-calc(100, 750);
+    >div {
+        width: 100%;
+        position: relative;
+        img {
+            display: block;
+            width: 100%;
+        }
+        .invest-btn {
+            position: absolute;
+            display: block;
+            width: 33.3333333333333333%;
+            height: 4.4136191677175286%;
+            left: 33.33333333333333%;
+            bottom: 1.8915510718789406%;
+            background: transparent;
+        }
+    }
+    .invest-fixed {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        height: rem-calc(100, 750);
+        background: #fff4d2;
+        color: #eb564e;
+        text-align: center;
+        font-size: rem-calc(30, 750);
+        line-height: rem-calc(100, 750);
+    }
+}
+
+.hyactivity-dialog-wrap {
+    position: fixed!important;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    .hyactivity-box {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 10%;
+        margin: auto;
+        width: rem-calc(488, 640);
+        height: rem-calc(698, 640); // background: url('../../images/hyactivity/hongbaoyu-pop.png') no-repeat;
+        background-size: cover;
+        position: relative;
+        box-sizing: border-box;
+        padding-top: rem-calc(570, 640);
+        display: block;
+        a.get {
+            display: block;
+            width: rem-calc(260, 640);
+            height: rem-calc(43, 640);
+            margin: 0 auto;
+        }
+        &.jiaxi {
+            background: url('../../images/hyactivity/jiaxi-pop.png') no-repeat;
+            background-size: cover;
+        }
+        &.runyue {
+            background: url('../../images/hyactivity/runyue-pop.png') no-repeat;
+            background-size: cover;
+        }
+        &.hongbaoyu {
+            background: url('../../images/hyactivity/hongbaoyu-pop.png') no-repeat;
+            background-size: cover;
+        }
+        &.august {
+            background: url('../../images/hyactivity/august-pop.png') no-repeat;
+            background-size: cover;
+        }
+        &.august-hongbao {
+            width: rem-calc(517, 750);
+            height: rem-calc(584, 750);
+            padding-top: rem-calc(230, 750);
+            background: url('../../images/hyactivity/august-redbag-pop.png') no-repeat;
+            background-size: cover;
+            text-align: center;
+            top: 20%;
+            .money {
+                font-size: rem-calc(56, 750);
+                font-weight: bold;
+                text-align: center;
+                color: #fdef73;
+                line-height: rem-calc(70, 750);
+                white-space: nowrap;
+            }
+        }
+        &.qixi {
+            background: url('../../images/hyactivity/qixi-pop.png') no-repeat;
+            background-size: cover;
+        }
+        &.fan-a {
+            background: url('../../images/hyactivity/fan-a-pop.png') no-repeat;
+            background-size: cover;
+        }
+        &.zm-back {
+            background: url('../../images/zmActive/zm-back-push.png') no-repeat;
+            background-size: cover;
+        }
+    }
+    a.close {
+        position: absolute;
+        width: rem-calc(110);
+        height: rem-calc(110);
+        background: image-url('../../images/index/closesd.png') no-repeat;
+        background-size: contain;
+        top: 10%;
+        left: 50%;
+        margin-top: rem-calc(698, 640);
+        transform: translateX(-50%);
+    }
+}
+
+.hyactivity-dialog-wrap2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../images/hyactivity/jiaxi-bg.png');
+    background-size: cover;
+    .hyactivity-box {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        margin: auto;
+        width: rem-calc(514, 750);
+        height: rem-calc(679, 750);
+        position: relative;
+        box-sizing: border-box;
+        transform: translateY(-50%);
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.hy-runyue {
+    width: 100%;
+    background: #f9f2e9;
+    position: relative; // margin-bottom: rem-calc(100, 750);
+    >div {
+        width: 100%;
+        position: relative;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .content {
+        position: relative;
+        background: url(../../images/hyactivity/runyue-content.png) center no-repeat;
+        background-size: 100% 100%;
+        img {
+            // min-height: 220px;
+        }
+        .board {
+            // position: absolute;
+            width: 100%;
+            top: 0;
+            margin: 0 auto;
+            padding: rem-calc(30 0 60, 750);
+            text-align: center;
+            h3 {
+                font-size: rem-calc(36, 750);
+                color: #FFFFFF;
+                border-bottom: rgba(255, 255, 255, 0.42) Solid 1px;
+                margin: rem-calc(0 auto 40, 750);
+                width: 5em;
+            }
+            .act-info {
+                font-size: rem-calc(36, 750);
+                color: #ffffff;
+                >span {
+                    display: inline-block;
+                    &:first-child {
+                        margin-right: 1em;
+                    }
+                }
+                b {
+                    color: #ffff00;
+                }
+                strong {
+                    font-size: rem-calc(48, 750);
+                    margin: 0 0.5em;
+                }
+            }
+            table {
+                font-size: rem-calc(24, 750);
+                color: #ffffff;
+                margin: 0 auto;
+                width: 70%;
+                tr {
+                    th {
+                        text-align: center;
+                        line-height: 2;
+                    }
+                    td {
+                        text-align: center;
+                        line-height: 1.3;
+                    }
+                }
+            }
+            .user-info {
+                font-size: rem-calc(24, 750);
+                color: #ffffff;
+                margin-top: rem-calc(30, 750);
+                margin-bottom: rem-calc(10, 750);
+                line-height: 1.7em;
+            }
+            .invest-btn {
+                background: #F9F2E8;
+                border-radius: rem-calc(14, 750);
+                font-size: rem-calc(48, 750);
+                color: #EA585A;
+                letter-spacing: rem-calc(10, 750);
+                width: rem-calc(400, 750);
+                height: rem-calc(84, 750);
+                line-height: rem-calc(84, 750);
+                display: inline-block;
+                &.overDue {
+                    color: #ffffff;
+                    background-color: #9b9b9b;
+                }
+            }
+        }
+    }
+    .details {
+        position: relative;
+        width: 83.3333333333%;
+        margin: 0 auto;
+        .details-header {
+            width: 100%; //rem-calc(625, 750);
+            height: rem-calc(43, 750); // margin: 0 auto;
+            background: #804f57;
+            position: relative;
+            border-radius: rem-calc(8, 750);
+            &:after {
+                position: absolute;
+                content: '';
+                display: block;
+                background: #57464A;
+                border-radius: rem-calc(8, 750);
+                left: rem-calc(6, 750);
+                top: rem-calc(17, 750);
+                bottom: rem-calc(10, 750);
+                right: rem-calc(6, 750);
+            }
+        }
+        .details-body {
+            width: 95%;
+            margin: rem-calc(-24, 750) auto 0;
+            background: #ffffff;
+            z-index: 1;
+            position: relative;
+            box-shadow: #DFB988 0px 10px 40px;
+            padding: rem-calc(35 20, 750);
+            box-sizing: border-box;
+            font-size: rem-calc(24, 750);
+            line-height: 1.7em;
+            color: #784D55;
+            b {
+                font-weight: bold;
+            }
+            &:before {
+                width: 100%;
+                height: rem-calc(28, 750);
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(0deg, rgba(225, 189, 141, 0) 0%, rgba(210, 163, 114, 1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D2A372', endColorstr='#E1BD8D', GradientType=0);
+            }
+        }
+    }
+    .rules {
+        width: 79.16666666666%;
+        margin: rem-calc(50 auto 40, 750);
+        font-size: rem-calc(24, 750);
+        line-height: 1.7em;
+        color: #b26b1f;
+        ol {
+            list-style: decimal;
+            margin-left: 1em;
+            margin-bottom: 1em;
+        }
+    }
+    .warning {
+        margin: 0 auto;
+        font-size: rem-calc(24, 750);
+        line-height: 1.7em;
+        color: #B26B1F;
+        opacity: 0.55;
+        filter: alpha(opacity=55) progid:DXImageTransform.Microsoft.Alpha(opacity=55);
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+.hy-hongbaoyu {
+    width: 100%;
+    background: linear-gradient(top, #dc4849, #e63315);
+    font-size: rem-calc(24, 750);
+    color: #ffffff;
+    position: relative; // margin-bottom: rem-calc(100, 750);
+    >div {
+        width: 100%;
+        position: relative;
+    }
+    .header {
+        margin-bottom: -9.066666666666667%;
+        z-index: 1;
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+    .page {
+        width: 91.73333333333333%;
+        min-height: rem-calc(404, 750);
+        margin: 0 auto;
+        border-radius: rem-calc(20, 750);
+        background-color: #356bb0;
+        box-shadow: rem-calc(0 5 9 0, 750) rgba(0, 0, 0, 0.56);
+        padding: rem-calc(0 35 40, 750);
+        box-sizing: border-box;
+        h3 {
+            font-size: rem-calc(30, 750);
+            text-align: center;
+            line-height: rem-calc(80, 750);
+        }
+        p {
+            width: 93.4593023255814%;
+            background-color: #164d95;
+            padding: rem-calc(20, 750);
+            border-radius: rem-calc(8, 750);
+            box-shadow: inset rem-calc(0 0 8 0) rgba(0, 0, 0, 0.29);
+            margin: 0 auto;
+            span {
+                color: #ffe400;
+            }
+            .number {
+                font-size: rem-calc(27, 750);
+            }
+        }
+        .text {
+            margin: rem-calc(40 auto 30, 750);
+            width: rem-calc(423, 750);
+            height: rem-calc(40, 750);
+            background: url('../../images/hyactivity/hongbaoyu-text.png') no-repeat top center;
+            background-size: cover;
+        }
+        .gift-btn-wrapper {
+            margin: 0 auto;
+            width: rem-calc(346, 750);
+            height: rem-calc(79, 750);
+            border: #9e1a18 solid rem-calc(3, 750);
+            border-radius: rem-calc(15, 750);
+            background-color: #dc4a48;
+            position: relative;
+            .gift-btn {
+                position: absolute;
+                top: rem-calc(-3, 750);
+                left: rem-calc(-3, 750);
+                width: rem-calc(339, 750);
+                height: rem-calc(72, 750);
+                border: #9e1a18 solid rem-calc(3, 750);
+                border-radius: rem-calc(10, 750);
+                background-color: #dc4a48;
+                display: block;
+                text-align: center;
+                font-size: rem-calc(32, 750);
+                line-height: rem-calc(72, 750);
+            }
+            &.overDue {
+                border-color: #5c5c5c;
+                background-color: #959595;
+                .gift-btn {
+                    border-color: #5c5c5c;
+                    background-color: #959595;
+                }
+            }
+        }
+        .table-wrapper {
+            width: 100%; // height: 520px;
+            // overflow: hidden;
+            margin: 0 auto;
+            background-color: #164d95;
+            border-radius: 8px;
+            box-shadow: inset rem-calc(0 0 8 0) rgba(0, 0, 0, 0.29);
+            .table-body {
+                width: 84.375%;
+                margin: 0 auto;
+                border-top: 1px solid rgba(255, 255, 255, 0.34);
+                height: rem-calc(270, 750);
+                overflow: hidden;
+            }
+            table {
+                width: 100%;
+                margin: 0 auto;
+                th,
+                td {
+                    text-align: center;
+                }
+                th {
+                    line-height: rem-calc(55, 750);
+                }
+                td {
+                    line-height: rem-calc(45, 750);
+                }
+            }
+        }
+    }
+    .connecter {
+        width: 91.73333333333333%;
+        height: rem-calc(131, 750);
+        margin: rem-calc(-38 auto -52, 750);
+        position: relative;
+        >div {
+            width: rem-calc(64, 750);
+            height: rem-calc(131, 750);
+            background: url('../../images/hyactivity/hongyaoyu-connecter.png') no-repeat top center;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            &.left-connecter {
+                left: rem-calc(120, 750);
+            }
+            &.right-connecter {
+                right: rem-calc(120, 750);
+            }
+        }
+    }
+    .tel {
+        line-height: 1.5em;
+        text-align: center;
+        padding-top: rem-calc(30, 750);
+        letter-spacing: 1px;
+    }
+    .warning {
+        line-height: 1.5em;
+        opacity: 0.38;
+        filter: alpha(opacity=38) progid:DXImageTransform.Microsoft.Alpha(opacity=38);
+        text-align: center;
+        padding-bottom: rem-calc(10, 750);
+        letter-spacing: 1px;
+    }
+    .tdHeight {
+        height: rem-calc(43, 750);
+        display: none;
+    }
+    .hongbaoyu-dialog-wrap {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.58);
+        .hongbaoyu-box {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin: auto;
+            width: 68%; // height: 520px;
+            position: relative;
+            box-sizing: border-box;
+            transform: translateY(-50%);
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.hy-august {
+    $yellow-color: #fdef73;
+    width: 100%;
+    background: #71cafa;
+    font-size: rem-calc(24, 750);
+    color: #ffffff;
+    position: relative; // margin-bottom: rem-calc(100, 750);
+    >div {
+        width: 100%;
+        position: relative;
+    }
+    .header {
+        margin-bottom: -18.5%;
+        z-index: 1;
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+    .box {
+        width: 80%;
+        border: rem-calc(4.5, 750) #231f5d solid;
+        border-radius: rem-calc(10, 750);
+        margin: 0 auto;
+        position: relative; // box-sizing: border-box;
+        i.header {
+            position: absolute;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+            line-height: rem-calc(104, 750);
+            left: 0;
+            right: 0;
+            top: rem-calc(-62, 750);
+            &.header-a {
+                @include rem-sprite("hyactivity/august/*.png",
+                header-a,
+                $spacing: 4px, $rem-base:750px);
+            }
+            &.header-b {
+                @include rem-sprite("hyactivity/august/*.png",
+                header-b,
+                $spacing: 4px, $rem-base:750px);
+            }
+            &.header-c {
+                @include rem-sprite("hyactivity/august/*.png",
+                header-c,
+                $spacing: 4px, $rem-base:750px);
+            }
+            &.header-d {
+                @include rem-sprite("hyactivity/august/*.png",
+                header-d,
+                $spacing: 4px, $rem-base:750px);
+            }
+        }
+        .header-desc {
+            height: rem-calc(80, 750);
+            background: #318aff;
+            margin-bottom: rem-calc(12, 750);
+            border-top-left-radius: rem-calc(5, 750);
+            border-top-right-radius: rem-calc(5, 750);
+            border-bottom: rem-calc(4.5, 750) #231f5d solid;
+            padding-top: rem-calc(10, 750);
+            font-size: rem-calc(41, 750);
+            text-align: center;
+            line-height: rem-calc(80, 750);
+            letter-spacing: 1px;
+            b {
+                font-size: rem-calc(48, 750);
+                line-height: rem-calc(80, 750);
+                font-weight: bold;
+                color: $yellow-color;
+                vertical-align: bottom;
+            }
+        }
+        .redbag {
+            position: relative;
+            margin: rem-calc(40, 750) auto 0;
+            display: inline-block;
+            @include rem-sprite("hyactivity/august/*.png",
+            redbag,
+            $spacing: 4px, $rem-base:750px);
+            .money {
+                font-size: rem-calc(56, 750);
+                font-weight: bold;
+                text-align: center;
+                color: #ffffff;
+                line-height: rem-calc(70, 750);
+                white-space: nowrap;
+                &.yellow {
+                    color: $yellow-color;
+                }
+            }
+            .desc {
+                margin-top: rem-calc(70, 750);
+                font-size: rem-calc(18, 750);
+                text-align: center;
+                color: rgba(255, 255, 255, 0.75);
+                line-height: 1.333;
+                white-space: nowrap;
+            }
+            .cond {
+                width: 91.78743961352657%;
+                height: rem-calc(30, 750);
+                position: absolute;
+                top: rem-calc(-38, 750);
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                padding-top: rem-calc(10, 750);
+                background-color: #318aff;
+                border-top-left-radius: rem-calc(10, 750);
+                border-top-right-radius: rem-calc(10, 750);
+                font-size: rem-calc(24, 750);
+                color: #ffffff;
+                text-align: center;
+                line-height: rem-calc(30, 750);
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            &.no-cond {
+                margin-top: 0;
+            }
+        }
+        .remark {
+            font-size: rem-calc(24, 750);
+            text-align: center;
+            line-height: 1.5em;
+            margin: rem-calc(0 40 15, 750);
+            b {
+                font-size: rem-calc(30, 750);
+                color: $yellow-color;
+            }
+        }
+        .btn-a,
+        .btn-b {
+            margin: 0 auto;
+            color: #231f5d;
+            font-size: rem-calc(32, 750);
+            text-align: center;
+            line-height: rem-calc(70, 750);
+            cursor: pointer;
+            display: block;
+            &.btn-a {
+                @include rem-sprite("hyactivity/august/*.png",
+                btn-a,
+                $spacing: 4px, $rem-base:750px);
+            }
+            &.btn-b {
+                @include rem-sprite("hyactivity/august/*.png",
+                btn-b,
+                $spacing: 4px, $rem-base:750px);
+            }
+        }
+        .ico-a {
+            position: absolute;
+            display: block;
+            bottom: rem-calc(-30, 750);
+            right: rem-calc(-2, 750);
+            @include rem-sprite("hyactivity/august/*.png",
+            ico-a,
+            $spacing: 4px, $rem-base:750px);
+        }
+        .ico-b {
+            margin: 0 auto;
+            display: block;
+            margin-top: rem-calc(15, 750);
+            margin-bottom: rem-calc(-2, 750);
+            @include rem-sprite("hyactivity/august/*.png",
+            ico-b,
+            $spacing: 4px, $rem-base:750px);
+        }
+        .weekend-box {
+            width: 77.96610169491526%;
+            margin: rem-calc(0 auto 30, 750);
+            border: rem-calc(5, 750) #231f5d solid;
+            background-color: #ccedff;
+            text-align: center;
+            padding: rem-calc(15 0, 750);
+            .tit {
+                margin: 0 auto;
+                font-size: rem-calc(24, 750);
+                color: #231f5d;
+            }
+            .num {
+                margin: rem-calc(10 auto);
+                font-size: rem-calc(56, 750);
+                color: #231f5d;
+                font-weight: bold;
+            }
+        }
+        .coming {
+            height: rem-calc(73, 750);
+            margin: 0 auto;
+            background: #4a74ac;
+            border: rem-calc(2, 750) #231f5d solid;
+            border-radius: rem-calc(10, 750);
+            font-size: calc(32, 750);
+            line-height: rem-calc(73, 750);
+            text-align: center;
+            cursor: default;
+            color: #ffffff;
+        }
+        .finished {
+            height: rem-calc(73, 750);
+            margin: 0 auto;
+            background: #959595;
+            border: rem-calc(2, 750) #5c5c5c solid;
+            border-radius: rem-calc(10, 750);
+            font-size: calc(32, 750);
+            line-height: rem-calc(73, 750);
+            text-align: center;
+            cursor: default;
+            color: #ffffff;
+        }
+        table {
+            width: 100%;
+            tr {
+                td {
+                    text-align: center;
+                    padding-bottom: rem-calc(20, 750);
+                }
+            }
+        }
+    }
+    .next {
+        margin: rem-calc(20 auto 70, 750);
+        @include rem-sprite("hyactivity/august/*.png",
+        next,
+        $spacing: 4px, $rem-base:750px);
+    }
+    footer {
+        padding-top: rem-calc(30, 750);
+        padding-bottom: rem-calc(10, 750);
+        .tel {
+            line-height: 1.5em;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .warning {
+            line-height: 1.5em;
+            opacity: 0.38;
+            filter: alpha(opacity=38) progid:DXImageTransform.Microsoft.Alpha(opacity=38);
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    }
+    .pop-btn {
+        width: rem-calc(108, 750);
+        height: rem-calc(108, 750);
+        border: rem-calc(2, 750) rgb(35, 31, 93) solid;
+        border-radius: 50%;
+        background-color: rgb(49, 138, 255);
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        font-size: rem-calc(24, 750);
+        cursor: pointer;
+        box-shadow: rem-calc(0 15 15 -2, 750) #6293de;
+        span {
+            margin-top: rem-calc(54, 750);
+            margin-left: rem-calc(54, 750);
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            line-height: 1.25;
+            white-space: nowrap;
+        }
+        &.left {
+            margin-left: rem-calc(-310, 750);
+        }
+        &.right {
+            margin-left: rem-calc(310, 750);
+        }
+    }
+    .hyAugust-dialog-wrap {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.58);
+        .august-box {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin: auto;
+            width: 68%;
+            position: relative;
+            box-sizing: border-box;
+            transform: translateY(-50%);
+            img {
+                width: 100%;
+            }
+            .august-result {
+                position: relative;
+                width: 100%;
+                p {
+                    position: absolute;
+                    top: 42%;
+                    left: 0;
+                    right: 0;
+                    font-size: rem-calc(96, 750);
+                    text-align: center;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+            .august-rule {
+                background: #71cafa;
+                border: rem-calc(4.5, 750) #231f5d solid;
+                border-radius: 10px;
+                ol {
+                    font-size: rem-calc(24, 750);
+                    line-height: 1.5;
+                    color: #231f5d;
+                    list-style: decimal;
+                    padding-left: 1.5em;
+                    padding-right: 0.5em;
+                }
+                .warning {
+                    font-size: rem-calc(18, 750);
+                    color: rgba(35, 31, 93, 0.678);
+                    line-height: 2;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.hy-xmyd {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: rem-calc(155);
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    >div {
+        width: 100%;
+        position: relative;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.hy-xmyd-fixed-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    height: rem-calc(155);
+    color: #FFFFFF;
+    text-align: center;
+    border-top: 1px solid #feb57a;
+    input {
+        display: block;
+        width: 67%;
+        height: rem-calc(155);
+        float: left;
+        font-size: rem-calc(45);
+        line-height: rem-calc(155);
+        text-align: center;
+        color: #ffffff;
+        &::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        &::-moz-input-placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        &:-moz-input-placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        &:-ms-input-placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+    span {
+        display: block;
+        width: 32%;
+        height: rem-calc(155);
+        float: right;
+        font-size: rem-calc(48);
+        line-height: rem-calc(155);
+    }
+    &.v1 {
+        background-color: #ff4a19;
+        input {
+            border-right: 1px solid #ff4a19;
+            background-color: #ff7538;
+        }
+        span {}
+    }
+    &.v2 {
+        background-color: #ff6a19;
+        input {
+            border-right: 1px solid #fe9753;
+            background-color: #3883ff;
+        }
+        span {}
+    }
+}
+
+.hy-qixi {
+    width: 100%;
+    background: #2e2359;
+    font-size: rem-calc(24, 750);
+    color: #ffffff;
+    position: relative; // margin-bottom: rem-calc(100, 750);
+    >div {
+        width: 100%;
+        position: relative;
+    }
+    .header {
+        margin-bottom: rem-calc(-100, 960);
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+    i {
+        display: inline-block;
+    }
+    .box {
+        border-radius: rem-calc(10, 750);
+        background-color: #513e8f;
+        width: 88%;
+        margin: rem-calc(60, 750) auto 0;
+        overflow: hidden;
+        text-align: center;
+        .qixi-box-header {
+            width: 100%;
+            background-size: cover;
+            position: relative;
+            .qixi-no-a,
+            .qixi-no-b,
+            .qixi-no-c {
+                position: absolute;
+                top: rem-calc(30, 960);
+                left: rem-calc(60, 960);
+            }
+            .hearts {
+                position: absolute;
+                top: rem-calc(12, 960);
+                left: rem-calc(350, 960);
+                .qixi-heart {
+                    margin-right: rem-calc(-40, 960);
+                }
+            }
+            .qixi-heart-shaking {
+                animation-duration: 200ms;
+                animation-iteration-count: infinite;
+                animation-name: shaking-heart;
+                animation-timing-function: ease-in-out;
+            }
+            @keyframes shaking-heart {
+                25% {
+                    transform: rotate(-5deg);
+                }
+                75% {
+                    transform: rotate(5deg);
+                }
+                0%,
+                50%,
+                100% {
+                    transform: rotate(0);
+                }
+            }
+        }
+        .box-content {
+            h3 {
+                font-size: rem-calc(36, 750);
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: rem-calc(25, 750);
+            }
+            .desc {
+                color: rgba(255, 255, 255, 0.53);
+                text-align: justify;
+                margin: 0 1.5em rem-calc(20, 960);
+            }
+            .qixi-ticket {
+                text-align: center;
+                color: #2e2359;
+                margin: rem-calc(0 auto 90, 960);
+                cursor: pointer;
+                .rate {
+                    color: #f55151;
+                    font-size: rem-calc(80, 750);
+                    font-weight: bold;
+                }
+            }
+            .table-yhj {
+                width: 95%;
+                margin: 0 auto;
+                tr>td {
+                    text-align: center;
+                    padding-bottom: rem-calc(50, 960);
+                    i.qixi-yhj-a {
+                        transform: translateX(rem-calc(2.5, 960));
+                    }
+                    i.qixi-yhj-b {
+                        transform: translateX(rem-calc(15, 960));
+                    }
+                    i.qixi-yhj-c {
+                        transform: translateX(rem-calc(14.5, 960));
+                    }
+                    i.qixi-yhj-d {
+                        transform: translateX(rem-calc(28.5, 960));
+                    }
+                }
+            }
+            .lottery-wrapper {
+                margin: rem-calc(0 auto 15, 750);
+                border-radius: rem-calc(10, 750);
+                background-color: #3c2e6a;
+                display: inline-block;
+                padding: rem-calc(10, 750);
+                #lottery {
+                    margin: 0 auto;
+                    border-radius: rem-calc(10, 750);
+                    background-color: #f55151;
+                    padding: rem-calc(10, 750);
+                    table {
+                        td {
+                            text-align: center;
+                            width: rem-calc(189, 960);
+                            height: rem-calc(189, 960);
+                            overflow: hidden;
+                            i {
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+            .qixi-button {
+                display: inline-block;
+                line-height: rem-calc(85, 960);
+                font-size: rem-calc(30, 960);
+                text-align: center;
+                cursor: pointer;
+            }
+            .qixi-gift-btn {
+                cursor: pointer;
+                padding: 0 1em;
+                box-sizing: border-box;
+                div:first-child {
+                    font-size: rem-calc(40, 960);
+                    line-height: rem-calc(80, 960);
+                    margin-top: rem-calc(60, 960);
+                }
+                div:last-child {
+                    font-size: rem-calc(30, 960);
+                    line-height: rem-calc(70, 960);
+                    b {
+                        font-size: rem-calc(55, 750);
+                        vertical-align: middle;
+                    }
+                }
+                &.default {
+                    cursor: default;
+                }
+                &.overDue {
+                    cursor: not-allowed;
+                    color: #cccccc;
+                    div:first-child {
+                        margin-top: rem-calc(90, 750);
+                    }
+                }
+            }
+            .btns-wrapper {
+                margin: rem-calc(10 45, 750);
+                text-align: left;
+                .qixi-button:last-child {
+                    float: right;
+                }
+            }
+        }
+    }
+    .page {
+        width: 88%;
+        margin: 0 auto;
+        margin-top: rem-calc(34, 750);
+        h3 {
+            margin-bottom: rem-calc(26, 750);
+            text-align: center;
+            line-height: 2.4em;
+            i {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        .gift-list-header {
+            height: rem-calc(56, 750);
+            background-color: #3c2e6a;
+            border-radius: rem-calc(10, 750);
+            margin-bottom: rem-calc(17, 750);
+            line-height: rem-calc(56, 750);
+            overflow: hidden;
+            >div {
+                width: 33%;
+                float: left;
+                text-align: center;
+            }
+        }
+        .gift-list-wrapper {
+            height: rem-calc(340, 750);
+            overflow: hidden;
+            clear: both;
+            .gift-list {
+                li {
+                    width: 100%;
+                    height: rem-calc(45, 750);
+                    background-color: #3c2e6a;
+                    border-radius: rem-calc(10, 750);
+                    margin-bottom: rem-calc(12, 750);
+                    line-height: rem-calc(45, 750);
+                    clear: both;
+                    >div {
+                        width: 33%;
+                        float: left;
+                        text-align: center;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+        .qixi-rule {
+            line-height: 1.5;
+            list-style: decimal;
+            padding-left: 3em;
+            padding-right: 2em;
+        }
+    }
+    footer {
+        .tel {
+            line-height: 1.5em;
+            text-align: center;
+            margin-top: rem-calc(50, 750);
+        }
+        .wechat-qrcode {
+            display: block;
+            margin: rem-calc(20, 750) auto 0;
+            width: 55%;
+        }
+        .warning {
+            font-size: rem-calc(18, 750);
+            line-height: 1.5em;
+            opacity: 0.38;
+            filter: alpha(opacity=38) progid:DXImageTransform.Microsoft.Alpha(opacity=38);
+            text-align: center;
+            padding-bottom: rem-calc(150, 750);
+        }
+    }
+    .fixed-wrapper {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: rem-calc(100, 960);
+        padding-bottom: 2px;
+        background-color: #2e2359;
+        z-index: 10;
+        i {
+            display: block;
+            margin: -2px auto 2px;
+        }
+        .qixi-button {
+            display: block;
+            line-height: rem-calc(85, 960);
+            font-size: rem-calc(30, 750);
+            margin: 0 auto;
+            text-align: center;
+            cursor: pointer;
+            &.overDue {
+                cursor: not-allowed;
+                color: #cccccc;
+            }
+        }
+    }
+    .qixi-dialog-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.58);
+        font-size: rem-calc(24, 750);
+        .qixi-box {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin: auto;
+            width: 68%; // height: 520px;
+            position: relative;
+            box-sizing: border-box;
+            transform: translateY(-50%);
+            img {
+                width: 100%;
+            }
+            .qixi-gift {
+                border-radius: rem-calc(10, 750);
+                background-color: #513e8f;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                .qixi-box-header {
+                    width: 100%;
+                    position: relative;
+                    font-size: rem-calc(36, 750);
+                    text-align: center;
+                    line-height: rem-calc(100, 750);
+                    font-weight: bold;
+                    letter-spacing: 0.05;
+                }
+                .table-wrapper {
+                    max-height: rem-calc(500, 750);
+                    overflow-y: scroll;
+                }
+                >table {
+                    margin-top: rem-calc(-40, 960);
+                }
+                table {
+                    width: 100%;
+                    z-index: 1;
+                    position: relative;
+                    tr {
+                        th {
+                            text-align: center;
+                            line-height: rem-calc(70, 750);
+                            font-weight: lighter;
+                            width: 50%;
+                        }
+                        td {
+                            text-align: center;
+                            line-height: rem-calc(50, 750);
+                            font-weight: lighter;
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+            .qixi-gift-pop {
+                width: 100%; // min-height: 520px;
+                background-color: #f55151;
+                border-radius: rem-calc(10, 750);
+                padding-top: rem-calc(15, 750);
+                padding-bottom: 1em;
+                .qixi-congratulation {
+                    margin: 0 auto;
+                }
+                .gift-wrapper {
+                    margin: rem-calc(40 0, 750);
+                    text-align: center;
+                    i {
+                        display: inline-block;
+                        &.qixi-gift-pop-i {
+                            margin-bottom: rem-calc(-20, 750);
+                        }
+                    }
+                }
+                .qixi-gift-bg {
+                    margin: 0 auto;
+                    padding-top: rem-calc(37, 750);
+                    text-align: center;
+                    box-sizing: border-box;
+                    i {
+                        display: inline-block;
+                    }
+                }
+                .gift-desc {
+                    font-size: rem-calc(24, 750);
+                    text-align: center;
+                    padding: 0 1.5em;
+                    margin-bottom: rem-calc(5, 750);
+                }
+                .qixi-btn-a,
+                .qixi-btn-b {
+                    font-size: rem-calc(30, 960);
+                    line-height: rem-calc(70, 960);
+                    text-align: center;
+                    cursor: pointer;
+                    color: rgb(255, 48, 48);
+                    margin: rem-calc(20 auto 0, 750);
+                }
+                .btn-wrapper {
+                    text-align: center;
+                    .qixi-btn-b {
+                        display: inline-block;
+                        margin: rem-calc(20 10 0, 750);
+                    }
+                }
+                .pop-header {
+                    font-size: rem-calc(36, 750);
+                    line-height: rem-calc(90, 750);
+                    margin-bottom: rem-calc(15, 750);
+                    text-align: center;
+                }
+                form {
+                    .input-box {
+                        margin-bottom: rem-calc(20, 750);
+                        padding: rem-calc(0 15, 750);
+                        overflow: hidden;
+                        position: relative;
+                        input {
+                            float: left;
+                            width: 100%;
+                            height: rem-calc(60, 750);
+                            line-height: rem-calc(60, 750);
+                            padding: 0 0.5em;
+                            font-size: rem-calc(30, 750);
+                            color: #5b5b5b;
+                            box-sizing: border-box;
+                            border: none;
+                            background: #ffffff;
+                        }
+                        textarea {
+                            @extend input;
+                            height: rem-calc(150, 750);
+                            resize: none;
+                        }
+                        .msg {
+                            position: absolute;
+                            right: rem-calc(15, 750);
+                            color: #e7362d;
+                            font-size: rem-calc(16, 750);
+                            top: 0px;
+                            line-height: rem-calc(60, 750);
+                        }
+                        &.address-box {
+                            .msg {
+                                bottom: 0px;
+                            }
+                        }
+                    }
+                }
+                .address-content {
+                    padding: rem-calc(0 15, 750);
+                    background-color: rgba(255, 255, 255, 0.85);
+                    height: rem-calc(320, 750);
+                    color: #5c5c5c;
+                    font-size: rem-calc(30, 750);
+                    line-height: rem-calc(55, 750);
+                }
+            }
+            .address-ok {
+                height: rem-calc(200, 750); // margin-top: rem-calc(150, 750);
+                background-color: #f55151;
+                border-radius: rem-calc(10, 750);
+                font-size: rem-calc(80, 750);
+                text-align: center;
+                line-height: rem-calc(200, 750);
+            }
+        }
+    }
+    .tdHeight {
+        height: rem-calc(57, 750);
+        display: none;
+    }
+    .qixi-box-header {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        box-header,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-btn-a {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        btn-a,
+        $spacing: 4px, $rem-base:750px);
+    }
+    .qixi-btn-b {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        btn-b,
+        $spacing: 4px, $rem-base:750px);
+    }
+    .qixi-button {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        button,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-congratulation {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        congratulation,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-a {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-a,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-b {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-b,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-c {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-c,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-d {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-d,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-e {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-e,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-f {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-f,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-g {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-g,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-h {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-h,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-i {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-i,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-active {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-active,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-bg {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-bg,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-btn {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-btn,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-pop-a {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-pop-a,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-pop-b {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-pop-b,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-pop-c {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-pop-c,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-pop-d {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-pop-d,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-pop-e {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-pop-e,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-pop-f {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-pop-f,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-pop-g {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-pop-g,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-pop-h {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-pop-h,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-gift-pop-i {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        gift-pop-i,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-heart {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        heart,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-heart-shaking {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        heart-shaking,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-no-a {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        no-a,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-no-b {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        no-b,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-no-c {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        no-c,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-ticket {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        ticket,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-title-border {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        title-border,
+        $spacing: 4px, $rem-base:960px);
+        transform: translateX(rem-calc(50, 960));
+    }
+    .qixi-yhj-a {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        yhj-a,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-yhj-b {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        yhj-b,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-yhj-c {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        yhj-c,
+        $spacing: 4px, $rem-base:960px);
+    }
+    .qixi-yhj-d {
+        @include rem-sprite("hyactivity/qixi/*.png",
+        yhj-d,
+        $spacing: 4px, $rem-base:960px);
+    }
+}
+
+.hy-toutiao {
+    position: relative;
+    width: 100%;
+    >div {
+        width: 100%;
+        position: relative;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.hy-fan-a {
+    width: 100%;
+    background: linear-gradient(top, #02042f, #02042f);
+    font-size: rem-calc(24, 750);
+    color: #ffffff;
+    position: relative; // margin-bottom: rem-calc(100, 750);
+    >div {
+        width: 100%;
+        position: relative;
+    }
+    .header {
+        margin-bottom: rem-calc(35, 750);
+        z-index: 1;
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+    .content-wrapper {
+        width: rem-calc(580, 750);
+        margin: 0 auto;
+        .title {
+            font-size: rem-calc(30, 750);
+        }
+        .fan-redbag {
+            margin: rem-calc(-30 0 -40 -51, 750);
+            padding-top: rem-calc(240, 750);
+            box-sizing: border-box;
+        }
+        .fan-btn,
+        .fan-btn-grey {
+            display: block;
+            margin: 0 auto;
+            padding-top: rem-calc(13, 750);
+            box-sizing: border-box;
+            .fan-get,
+            .fan-invest,
+            .fan-finish,
+            .fan-coming {
+                margin: 0 auto;
+            }
+        }
+        .fan-table {
+            margin-left: rem-calc(-30, 750);
+        }
+        .fan-record {
+            position: relative;
+            margin-bottom: rem-calc(30, 750);
+            padding-left: rem-calc(265, 750);
+            box-sizing: border-box;
+            font-size: rem-calc(30, 750);
+            line-height: rem-calc(100, 750);
+            i {
+                position: absolute;
+                top: rem-calc(36, 750);
+                left: rem-calc(115, 750);
+                display: inline-block;
+            }
+        }
+    }
+    footer {
+        height: rem-calc(243, 750);
+        background: url('../../images/hyactivity/fan-a-footer.png') no-repeat bottom center;
+        background-size: cover;
+        padding-top: rem-calc(90, 750);
+        box-sizing: border-box;
+        .fan-contact {
+            margin: 0 auto;
+        }
+        .title {
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 0;
+            margin-top: rem-calc(20, 750);
+        }
+    }
+    .title {
+        text-align: center;
+        margin: rem-calc(50 auto 25, 750);
+        .fan-dot:first-child {
+            margin-right: 0.5em;
+        }
+        .fan-dot:last-child {
+            margin-left: 0.5em;
+        }
+    }
+    .invest-fixed {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        height: rem-calc(100, 750);
+        background: #ffb42f;
+        text-align: center;
+        line-height: rem-calc(110, 750);
+        i {
+            display: inline-block;
+        }
+        &.overDue {
+            background: #d9d9e0;
+        }
+    }
+    .fan-dot {
+        @include rem-sprite("hyactivity/fan-a/*.png",
+        dot,
+        $spacing: 4px, $rem-base:750px);
+        display: inline-block;
+    }
+    .fan-redbag {
+        @include rem-sprite("hyactivity/fan-a/*.png",
+        redbag,
+        $spacing: 4px, $rem-base:750px);
+    }
+    .fan-btn {
+        @include rem-sprite("hyactivity/fan-a/*.png",
+        btn,
+        $spacing: 4px, $rem-base:750px);
+    }
+    .fan-get {
+        @include rem-sprite("hyactivity/fan-a/*.png",
+        get,
+        $spacing: 4px, $rem-base:750px);
+    }
+    .fan-invest {
+        @include rem-sprite("hyactivity/fan-a/*.png",
+        invest,
+        $spacing: 4px, $rem-base:750px);
+    }
+    .fan-rule {
+        @include rem-sprite("hyactivity/fan-a/*.png",
+        rule,
+        $spacing: 4px, $rem-base:750px);
+    }
+    .fan-remark {
+        @include rem-sprite("hyactivity/fan-a/*.png",
+        remark,
+        $spacing: 4px, $rem-base:750px);
+    }
+    .fan-table {
+        @include rem-sprite("hyactivity/fan-a/*.png",
+        table,
+        $spacing: 4px, $rem-base:750px);
+    }
+    .fan-contact {
+        @include rem-sprite("hyactivity/fan-a/*.png",
+        contact,
+        $spacing: 4px, $rem-base:750px);
+    }
+    .fan-record {
+        @include rem-sprite("hyactivity/fan-a/*.png",
+        record,
+        $spacing: 4px, $rem-base:750px);
+    }
+    .fan-sum {
+        @include rem-sprite("hyactivity/fan-a/*.png",
+        sum,
+        $spacing: 4px, $rem-base:750px);
+    }
+    .fan-gift {
+        @include rem-sprite("hyactivity/fan-a/*.png",
+        gift,
+        $spacing: 4px, $rem-base:750px);
+    }
+    .fan-btn-grey {
+        @include rem-sprite("hyactivity/fan-a/*.png",
+        btn-grey,
+        $spacing: 4px, $rem-base:750px);
+    }
+    .fan-finish {
+        @include rem-sprite("hyactivity/fan-a/*.png",
+        finish,
+        $spacing: 4px, $rem-base:750px);
+    }
+    .fan-coming {
+        @include rem-sprite("hyactivity/fan-a/*.png",
+        coming,
+        $spacing: 4px, $rem-base:750px);
+    }
+    .fan-dialog-wrap {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.58);
+        .fan-box {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin: auto;
+            width: 68%; // height: 520px;
+            position: relative;
+            box-sizing: border-box;
+            transform: translateY(-50%);
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.hy-yuandan{
+    width:100%;
+    .hy-yuandan-container{
+        width:100%;
+        position: relative;
+        .hy-yuandan-head{
+            background:url(../../images/activity/yuandan/ydhead.png) top center no-repeat;
+            background-size:100%;
+            width:100%;
+            height:rem-calc(488,750);
+        }
+        .hy-yuandan-content{
+            position: relative;
+            width:100%;
+            height:rem-calc(816,750);
+            .hy-yuandan-bg{
+                background:url(../../images/activity/yuandan/shape.png) top center no-repeat;
+                background-size:100%;
+                width:100%;
+                height:rem-calc(659,750);
+                position: absolute;
+                top:rem-calc(-55,750);
+            }
+            .hy-ydhb{
+                width:100%;
+                height:rem-calc(816,750);
+                position: absolute;
+                top:rem-calc(-20,750);
+                img{
+                    width:100%;
+                    position: absolute;
+                    top:0;
+                }
+                .hy-getAll{
+                    background:url(../../images/activity/yuandan/getAll.png) top center no-repeat;
+                    background-size:100%;
+                    width:rem-calc(352,750);
+                    height:rem-calc(87,750);
+                    position: absolute;
+                    bottom:rem-calc(55,750);
+                    left:50%;
+                    transform: translateX(-50%);
+                    -webkit-transform: translateX(-50%);
+                }
+            }
+        }
+        .hy-calcScore{
+            background:url(../../images/activity/yuandan/score.png) top center no-repeat; 
+            background-size:100%;
+            width:100%;
+            height:rem-calc(608,750);
+            position: relative;
+            div{
+                position: absolute;
+                &.money{
+                    top:rem-calc(280,750);
+                    left:rem-calc(140,750);
+                    width:rem-calc(155,750);
+                    height:rem-calc(40,750);
+                    input{
+                        width:100%;
+                        height:100%;
+                        padding-left:rem-calc(10,750);
+                    }
+                }
+                &.timeN{
+                    top:rem-calc(280,750);
+                    left:rem-calc(330,750);
+                    width:rem-calc(130,750);
+                    height:rem-calc(40,750);
+                    select{
+                        width:100%;
+                        height:100%;
+                        padding-left:rem-calc(10,750);
+                    }
+                }
+                &.score{
+                    top:rem-calc(280,750);
+                    right:rem-calc(160,750);
+                    width:50px;
+                    height:rem-calc(40,750);
+                    text-align: center;
+                    color:#fc764d;
+                }
+                &.addScore{
+                    top:rem-calc(348,750);
+                    left:rem-calc(230,750);
+                    font-size:14px;
+                    padding-left:rem-calc(10,750);
+                }
+                &.calc-btn{
+                    background:#fe632c;
+                    width:rem-calc(200,750);
+                    height:rem-calc(60,750);
+                    line-height: rem-calc(60,750);
+                    border-radius: rem-calc(30,750);
+                    text-align: center;
+                    color:#fff;
+                    top:rem-calc(350,750);
+                    right:rem-calc(120,750); 
+                }
+            }
+            
+        }
+        .hy-prize{
+            box-sizing: border-box;
+            width:100%;
+            height:rem-calc(1390,750);
+            padding:0 rem-calc(40,750);
+            margin-top:rem-calc(40,750);
+            position: relative;
+            .prize-content{
+                height:100%;
+                background:url(../../images/activity/yuandan/prize.png) top center no-repeat;
+                background-size:100%;
+                position: relative;
+                div{
+                    position: absolute;
+                    width:rem-calc(285,750);
+                    height:rem-calc(40,750);
+                    background-color:#fc764d;
+                    color:#fff;
+                    text-align: center;
+                    line-height:rem-calc(40,750); 
+                    &.left{
+                        left:rem-calc(34,750);
+                    }
+                    &.right{
+                        right:rem-calc(0,750);
+                    }
+                    &.top{
+                        top:rem-calc(284,750);                    
+                    }
+                    &.topTwo{
+                        top:rem-calc(535,750); 
+                    }
+                    &.center{
+                        top:rem-calc(788,750); 
+                    }
+                    &.bottomTwo{
+                        bottom:rem-calc(304,750);
+                    }
+                    &.bottom{
+                        bottom:rem-calc(45,750);
+                    }
+                }
+            }
+            // img{
+            //     width:100%;
+            // }
+            
+        }
+        .hy-duihuan{
+            width:100%;
+            height:rem-calc(300,750);
+            position: relative;
+            background:url(../../images/activity/yuandan/shape.png) top center;
+            background-size: 100%;
+            padding-top:rem-calc(60,750);
+            img{
+                width:100%;
+            }
+            div{
+                position: absolute;
+                &.tip{
+                    top:rem-calc(235,750);
+                    left:rem-calc(160,750);
+                    font-size:rem-calc(14,750);
+                }
+                &.inp-score{
+                    width:rem-calc(160,750);
+                    height:rem-calc(40,750);
+                    top:rem-calc(226,750);
+                    left:rem-calc(326,750);
+                    input{
+                        width:100%;
+                        height:100%;
+                        padding-left:rem-calc(10,750);
+                    }
+                }
+                &.getmoney{
+                    top:rem-calc(226,750);
+                    right:rem-calc(60,750);
+                    text-align: center;
+                }
+                &.dh-btn{
+                    background:url(../../images/activity/yuandan/duihuan.png) top center no-repeat;
+                    background-size:100%;
+                    width:rem-calc(300,750);
+                    height:rem-calc(57,750);
+                    position: absolute;
+                    bottom:rem-calc(20,750);
+                    left:50%;
+                    transform: translateX(-50%);
+                    -webkit-transform: translateX(-50%);
+                }
+                &.myRecord{
+                    width:70px;
+                    height:rem-calc(57,750);
+                    line-height: rem-calc(57,750);
+                    position: absolute;
+                    bottom:rem-calc(20,750);
+                    right:rem-calc(60,750);
+                    color:#fc764d;
+                }
+                &.recordAll{
+                    width:100%;
+                    height:rem-calc(480,750);
+                    padding:rem-calc(10,750) rem-calc(40,750) 0;
+                    box-sizing: border-box;
+                    position: absolute;
+                    bottom:rem-calc(60,750);
+                    right:0;
+                    background:url(../../images/activity/yuandan/duiTip.png) top center no-repeat;
+                    background-size:100%;
+                    img{
+                        width:rem-calc(30,750);
+                        position: absolute;
+                        right:rem-calc(15,750);
+                        top:rem-calc(10,750);
+                    }
+                    .record-title{
+                        width:100%;
+                        height:22px;
+                        font-size:rem-calc(14,750);
+                        text-align: center;
+                        font-weight: bold;
+                        color:#fc764d;
+                        float:right;
+                        li{
+                            width:25%;
+                            height:100%;
+                            float:left;
+                        }
+                    }
+                    .record-content{
+                        width:rem-calc(700,750);
+                        height:rem-calc(370,750);
+                        position: absolute;
+                        bottom:rem-calc(60,750);
+                        left:50%;
+                        transform: translateX(-50%);
+                        -webkit-transform: translateX(-50%);
+                        overflow: scroll;
+                        padding:0 10px;
+                        table{
+                            width:100%;
+                            text-align: center;
+                            tr{
+                                width:100%;
+                                td{
+                                    width:25%;
+                                    height:100%;
+                                }
+                            }
+                        }
+                        .record-tips{
+                            text-align:center;
+                            color: #999999;
+                        }
+                    }
+                }
+            }
+            
+
+        }
+        .bottom-tip{
+            background:url(../../images/activity/yuandan/shape.png) top center no-repeat;
+            background-size:100%;
+            width:100%;
+            margin-top:rem-calc(-40,750);
+            padding-top:rem-calc(55,750);
+            padding-right:rem-calc(40,750);
+            padding-left:rem-calc(40,750);
+            box-sizing: border-box;
+            .wxTip{
+                font-size:16px;
+                text-align: center;
+                font-weight:bold;
+            }
+        }
+        .changePanel{
+            width:80%;
+            height:rem-calc(400,750);
+            color:#fff;
+            background:rgba(0,0,0,.8);
+            padding:10px;
+            position: fixed;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            .close-icon{
+                position: absolute;
+                top:10px;
+                right:10px;
+            }
+            .title{
+                text-align: center;
+                font-size: 14px;
+            }
+            .text{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                -webkit-transform: translate(-50%,-50%);
+                font-size:14px;
+                text-align: center;
+            }
+            .btn{
+                position: absolute;
+                bottom:rem-calc(100,750);
+                div{
+                    width:rem-calc(100,750);
+                    height:rem-calc(60,750);
+                    position: absolute;
+                    font-size:14px;
+                    text-align: center;
+                    line-height: rem-calc(60,750);
+                    &.btn-success{
+                        background:#fff;
+                        color:#333;
+                        left:rem-calc(100,750);
+                    }
+                    &.btn-cancel{
+                        background:#fc1a4a;
+                        color:#fff;
+                        left:rem-calc(400,750);
+                    }
+                }
+            }
+        }
+    }
+}

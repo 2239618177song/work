@@ -1,0 +1,10 @@
+<div class='swiper-container active-swiper'>
+    <div class='swiper-wrapper'>
+        <div class='swiper-slide' ng-repeat='item in data' repeat-finish='listFinish()'>
+            <a href="{{item.appUrl}}?wap=true">
+                <img ng-src="{{item.appPic}}" width="100%">
+            </a>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>

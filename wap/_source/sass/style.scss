@@ -1,0 +1,403 @@
+$reset:true; // 是否开启样式重置,默认false
+$rem-base: 1080px;
+$Response:true;
+$base-color: #FFA536; //$base-color
+$base-text-color: #FFA536; //#E45E3A; //#E84034
+@import "compass",
+"mobile-mixin";
+// @import "compass/reset";
+// @import "compass/CSS3";
+// @import "compass/typography/lists";
+// @import "compass/utilities/sprites";
+// @import "compass/utilities/general/clearfix";
+body {
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    font: 12px/1.5 "Microsoft Yahei", arial, tahoma, "Hiragino Sans GB";
+    color: #323232;
+    background: #f2f2f2;
+}
+
+.sign_box_bottom {
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    max-width: 750px;
+    @include clearfix;
+    @include top-border(#e4e4e4);
+    .button {
+        width: 25%;
+        float: left;
+        height: rem-calc(128);
+        padding: rem-calc(10 0 10);
+        text-align: center;
+        font-size: 0;
+        position: relative;
+        .icon-wrapper {
+            height: rem-calc(30, 375);
+            position: relative;
+            i {
+                @include center();
+                &.ico_home {
+                    display: inline-block;
+                    width: rem-calc(20, 375);
+                    height: rem-calc(18, 375);
+                    background: url('../images/bottom-bar-icon/home.png') center center no-repeat;
+                    background-size: 100%; // @include rem-sprite("bottom-bar-icon/*.png", home);
+                }
+                &.ico_account {
+                    display: inline-block;
+                    width: rem-calc(20, 375);
+                    height: rem-calc(19, 375);
+                    background: url('../images/bottom-bar-icon/account.png') center center no-repeat;
+                    background-size: 100%; // @include rem-sprite("bottom-bar-icon/*.png", account);
+                }
+                &.ico_fund {
+                    display: inline-block;
+                    width: rem-calc(20, 375);
+                    height: rem-calc(20, 375);
+                    background: url('../images/bottom-bar-icon/invest.png') center center no-repeat;
+                    background-size: 100%; // @include rem-sprite("bottom-bar-icon/*.png", invest);
+                } // &.ico_more {
+                //     @include rem-sprite("bottom-bar-icon/*.png", ico_more);
+                // }
+                &.ico_found {
+                    display: inline-block;
+                    width: rem-calc(22, 375);
+                    height: rem-calc(19, 375);
+                    background: url('../images/bottom-bar-icon/find.png') center center no-repeat;
+                    background-size: 100%; // @include rem-sprite("bottom-bar-icon/*.png", find);
+                }
+            }
+        }
+        .ico_title {
+            font-size: rem-calc(10, 375);
+            color: #999999;
+            transform: scale(.8);
+            transform-origin: 50% 50%;
+            -webkit-transform-origin: 50% 50%;
+            position: absolute;
+            left: 50%;
+            bottom: rem-calc(4, 375);
+            -webkit-transform: translate(-50%) scale(.8);
+        }
+        &:hover,
+        &.active {
+            i {
+                &.ico_home {
+                    display: inline-block;
+                    width: rem-calc(24, 375);
+                    height: rem-calc(24, 375);
+                    background: url('../images/bottom-bar-icon/home-active.png') center center no-repeat;
+                    background-size: 100%; // @include rem-sprite("bottom-bar-icon/*.png", home-active);
+                }
+                &.ico_account {
+                    display: inline-block;
+                    width: rem-calc(24, 375);
+                    height: rem-calc(24, 375);
+                    background: url('../images/bottom-bar-icon/account-active.png') center center no-repeat;
+                    background-size: 100%; // @include rem-sprite("bottom-bar-icon/*.png", account-active);
+                }
+                &.ico_fund {
+                    display: inline-block;
+                    width: rem-calc(24, 375);
+                    height: rem-calc(24, 375);
+                    background: url('../images/bottom-bar-icon/invest-active.png') center center no-repeat;
+                    background-size: 100%; // @include rem-sprite("bottom-bar-icon/*.png", invest-active);
+                } // &.ico_more {
+                //     @include rem-sprite("bottom-bar-icon/*.png", home-active);
+                // }
+                &.ico_found {
+                    display: inline-block;
+                    width: rem-calc(24, 375);
+                    height: rem-calc(24, 375);
+                    background: url('../images/bottom-bar-icon/find-active.png') center center no-repeat;
+                    background-size: 100%;
+                }
+            }
+            .ico_title {
+                color: #fc764d;
+            }
+        }
+        &.selected {
+            i {
+                &.ico_home {
+                    @include rem-sprite("nav/selected/*.png",
+                    ico_home);
+                }
+                &.ico_account {
+                    @include rem-sprite("nav/selected/*.png",
+                    ico_account);
+                }
+                &.ico_fund {
+                    @include rem-sprite("nav/selected/*.png",
+                    ico_fund);
+                }
+                &.ico_more {
+                    @include rem-sprite("nav/selected/*.png",
+                    ico_more);
+                }
+            }
+        }
+    }
+}
+
+.sign_box_top {
+    background: #fff;
+    border-top: 0px solid #d2d2d2;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    max-width: 750px;
+    @include clearfix;
+    .button {
+        width: 25%;
+        float: left;
+        height: rem-calc(128);
+        padding: rem-calc(10 0 10);
+        text-align: center;
+        i {
+            display: block;
+            margin: 0 auto;
+            &.ico_home {
+                @include rem-sprite("nav/default/*.png",
+                ico_home);
+            }
+            &.ico_account {
+                @include rem-sprite("nav/default/*.png",
+                ico_account);
+            }
+            &.ico_fund {
+                @include rem-sprite("nav/default/*.png",
+                ico_fund);
+            }
+            &.ico_more {
+                @include rem-sprite("nav/default/*.png",
+                ico_more);
+            }
+            &.ico_found {
+                @include rem-sprite("nav/default/*.png",
+                ico_found);
+            }
+        }
+        .ico_title {
+            font-size: rem-calc(10, 375);
+            letter-spacing: 0.1em;
+            color: #999999;
+        }
+        &:hover,
+        &.active {
+            i {
+                &.ico_home {
+                    @include rem-sprite("nav/big/*.png",
+                    ico_home);
+                }
+                &.ico_account {
+                    @include rem-sprite("nav/big/*.png",
+                    ico_account);
+                }
+                &.ico_fund {
+                    @include rem-sprite("nav/big/*.png",
+                    ico_fund);
+                }
+                &.ico_more {
+                    @include rem-sprite("nav/big/*.png",
+                    ico_more);
+                }
+                &.ico_found {
+                    @include rem-sprite("nav/big/*.png",
+                    ico_found);
+                }
+            }
+            .ico_title {
+                color: #FFB637;
+            }
+        }
+        &.selected {
+            i {
+                &.ico_home {
+                    @include rem-sprite("nav/selected/*.png",
+                    ico_home);
+                }
+                &.ico_account {
+                    @include rem-sprite("nav/selected/*.png",
+                    ico_account);
+                }
+                &.ico_fund {
+                    @include rem-sprite("nav/selected/*.png",
+                    ico_fund);
+                }
+                &.ico_more {
+                    @include rem-sprite("nav/selected/*.png",
+                    ico_more);
+                }
+            }
+        }
+    }
+}
+
+.novice-sign-in-dialog-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(51, 51, 51, .6);
+    z-index: 999;
+    .dialog-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        .dialog-bg {
+            width: rem-calc(299, 375);
+            height: rem-calc(466, 375);
+            background: url('../../images/novice-dialog-icon/bg.png') center center no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+            i {
+                position: absolute;
+                display: inline-block;
+                width: rem-calc(140, 375);
+                height: rem-calc(40, 375);
+            }
+            .sign-in {
+                bottom: rem-calc(27, 375);
+                left: 50%;
+                transform: translate(-50%, 0);
+                background: url('../../images/novice-dialog-icon/login.png') center center no-repeat;
+                background-size: 100%;
+            }
+            .sign-up {
+                bottom: rem-calc(70, 375);
+                left: 50%;
+                transform: translate(-50%, 0);
+                background: url('../../images/novice-dialog-icon/signup.png') center center no-repeat;
+                background-size: 100%;
+            }
+        }
+        .close-wrapper {
+            text-align: center;
+            .close-icon {
+                display: inline-block;
+                width: rem-calc(26, 375);
+                height: rem-calc(26, 375);
+                background: url('../../images/novice-dialog-icon/close-dialog.png') center center no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+}
+
+.coupon-kefu-wrapper {
+    text-align: center;
+    line-height: normal;
+    margin-top: rem-calc(70, 375);
+    margin-bottom: rem-calc(30, 375);
+    a {
+        i {
+            display: inline-block;
+            width: 26px;
+            height: 24px;
+            background: url('../../images/kefu-icon/kefu.png') center center no-repeat;
+            background-size: 100%;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        span {
+            font-size: 14px;
+            color: #333;
+            vertical-align: middle;
+            position: relative;
+            top: 2px;
+        }
+    }
+}
+
+.kefu-wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 90px;
+    left: 0;
+    text-align: center;
+    line-height: normal;
+    a {
+        i {
+            display: inline-block;
+            width: 26px;
+            height: 24px;
+            background: url('../../images/kefu-icon/kefu.png') center center no-repeat;
+            background-size: 100%;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        span {
+            font-size: 14px;
+            color: #333;
+            vertical-align: middle;
+            position: relative;
+            top: 2px;
+        }
+    }
+}
+
+@import "common";
+@import "home";
+@import "newhand";
+@import "list";
+@import "login";
+@import "myaccount";
+@import "recharge";
+@import "coupon";
+@import "minXiLee";
+@import "smrzLee";
+@import "my";
+@import "dlog";
+// @import "weixinLogin";
+// @import "triple";
+// @import "downloadApp";
+// @import "CP080";
+// @import "spider";
+// @import "rechargegift";
+// @import "invite";
+// @import "sendmask";
+// @import "cp117";
+// @import "telecom";
+@import "aqbz";
+@import "newcomer";
+@import "flwhz";
+@import "mycashed";
+@import "special";
+@import "activity";
+@import "activity2";
+@import "activityhy";
+@import "appdownload";
+@import "carReg";
+@import 'inviteCenter';
+@import 'zm-active';
+@import 'xxpl';
+.active-swiper {
+    position: relative;
+    // padding-bottom: 12px;
+    .swiper-pagination {
+        position: absolute;
+        bottom: 10px !important;
+        font-size: 0;
+    }
+    .swiper-pagination-bullet {
+        width: 6px;
+        height:6px;
+        background: #d5d5d5;
+        border-radius: 50%;
+    }
+    .swiper-pagination-bullet-active {
+        background: #f8ca63;
+    }
+    img {
+        height: rem-calc(190, 375);
+        display: block;
+    }
+}

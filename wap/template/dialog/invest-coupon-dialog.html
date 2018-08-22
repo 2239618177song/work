@@ -1,0 +1,8 @@
+<div class="border-dialog">
+    <div class="title">温馨提示</div>
+    <div class="content">您有{{cop.length}}张优惠券未使用，是否现在使用？</div>
+    <div class="btns">
+        <span ng-click="closeDialog();topay();" class="cancel">暂不使用</span>
+        <span ng-click="closeDialog()" ui-sref="coupon({amt: amount})" tabindex="-1" style="outline: 0px;">立即使用</span>
+    </div>
+</div>

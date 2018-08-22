@@ -1,0 +1,79 @@
+<style type="text/css">
+	.wrap{
+		margin-bottom:0;
+	}
+	.shuang-container{
+		position:relative;
+	}
+	.shuang-container .nowInvest{
+		position:absolute;
+		text-align: center;
+		font-size:12px;
+		color:#ff0000;
+		background:url(../../images/activity/shuang-btn.png) center no-repeat;
+		background-size:100%;
+		width:150px;
+		height:3rem;
+		line-height: 2.5rem;
+		left:50%;
+		transform: translateX(-75px);
+		-webkit-transform: translateX(-75px);
+	}
+
+	.shuang-container .invest-first{
+		top:52.5%;
+	}
+	.shuang-container .invest-second{
+		bottom:7%;
+	}
+	.shuang-container .table{
+		width:17rem;
+		height:15rem;
+		margin:0 auto;
+		position:absolute;
+		left:50%;
+		transform: translateX(-8.5rem);
+		-webkit-transform: translateX(-8.5rem);
+		bottom:22%;
+	}
+	.shuang-container .table table{
+		width:100%;
+		text-align:center;
+	}
+	.shuang-container .table tr{
+		height:1.3rem;
+	}
+	.shuang-container .table table tr:nth-child(odd){
+		background:#ee513d;
+		color:#facac4;
+	}
+	.shuang-container .table table tr:nth-child(even){
+		background:#facac4;
+		color:#ee513d;
+	}
+</style>
+<div class="wrap activity-wrap" ng-controller="shuangCtrl">
+	<div class="shuang-container">
+		<div class="nowInvest invest-first" ui-sref="main.bankBillList" ng-if="!app">立即投资</div>
+		<a class="nowInvest invest-first" href="jsmp://page=2" ng-if="app">立即投资</a>
+		<div class="table">
+			<table cellspacing="0" cellpadding="0">
+				<tr>
+					<td>排名</td>
+					<td>手机号</td>
+					<td>金额</td>
+				</tr>
+				<tr ng-repeat="list in userList track by $index">
+					<td>{{$index + 1}}</td>
+					<td>{{list.mobilePhone}}</td>
+					<td>{{list.amount}}</td>
+				</tr>
+			</table>
+		</div>
+		<div class="nowInvest invest-second" ui-sref="main.bankBillList" ng-if="!app">立即投资</div>
+		<a class="nowInvest invest-second" href="jsmp://page=2" ng-if="app">立即投资</a>
+		<img src="images/activity/shuang12.png" alt="" style="width:100%;"/>
+	</div>
+</div>
+
+

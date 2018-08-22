@@ -1,0 +1,38 @@
+<div class="wap-cjwt-box" ng-controller="RZZCCtrl">
+    <div class="common-head" ng-click="toback()" ng-if="wap">
+        <i></i>
+        <p>{{title}}</p>
+    </div>
+    <div class="content">
+            <div class="question-box">
+                <div class="question-title" ng-click="onClick(0)">
+                    <p>如何成为汇元金服的注册用户？</p>
+                    <i></i>
+                </div>
+                <div class="question-content" ng-show="num1">
+                    <p>进入汇元金服网站首页（https://pc.huiyuanjinfu.com）,点击“快速注册”，按照网站注册流程填写手机号码、登录密码、手机验证码等，选择立即注册，即可成为汇元投资成员。</p>
+                </div>
+            </div>
+            <div class="question-box">
+                <div class="question-title" ng-click="onClick(1)">
+                    <p>为什么实名认证会失败？</p>
+                    <i></i>
+                </div>
+                <div class="question-content" ng-show="num2">
+                    <p>（1） 您的身份证号码或者姓名输入有误；</p>
+                    <p>（2） 您近期变更过身份证信息；</p>
+                    <p>（3） 您已经注册过身份信息；</p>
+                    <p>（4） 军警身份证，军人证，港澳台IDCard；</p>
+                </div>
+            </div>
+            <div class="question-box">
+                <div class="question-title" ng-click="onClick(2)">
+                    <p>如何完成认证？</p>
+                    <i></i>
+                </div>
+                <div class="question-content" ng-show="num3">
+                    <p>登录您的账户，点击“个人账户”，按步骤进行“实名认证”、“手机认证”、“邮箱认证”即可完成认证，进行投资</p>
+                </div>
+            </div>
+        </div>
+</div>

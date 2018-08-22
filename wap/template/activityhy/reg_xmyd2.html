@@ -1,0 +1,17 @@
+<div  ng-controller="hongyaXmydCtrl">
+	<div class="hy-xmyd">
+		<div>
+			<img src="images/market/xmyd-v3-a.jpg" />		
+			<img src="images/market/xmyd-v3-b.jpg" />		
+			<img src="images/market/xmyd-v3-c.jpg" />		
+			<img src="images/market/xmyd-v3-d.jpg" />		
+		</div>
+	</div>
+	<span class="hy-xmyd-fixed-bar v2" style="border-top: none;">
+		<input type="text" ng-model="phone" placeholder="请输入手机号立即参加活动" ng-pattern="/^1[3|4|5|7|8][0-9]{9}$/" onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')" ng-blur="blurID('focusMobilephone',myForm)" minlength="11"
+	                    maxlength="11">
+		<span ng-click="goReg()">立即领取</span>
+	</span>
+</div>
+<div class="share-ios"><img ng-click="closethis()" src="images/share-ios.png" /></div>
+<div class="share-android"><img ng-click="closethis()" src="images/share-android.png" /></div>

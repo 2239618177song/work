@@ -1,0 +1,172 @@
+#quickInvestPsw{
+    z-index:9999999;
+    position:fixed;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    overflow:hidden;
+    display: none;
+    transition: transform 0.2s;
+}
+
+#quickInvestPsw.show{
+    display: block;
+}
+
+@keyframes fadeInForKeyBoard {
+    from{
+        opacity: 0
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes slideInForKeyBoard {
+    from{
+        transform: translateY(100%)
+    }
+
+    to{
+        transform: translateY(0%)
+    }
+}
+
+#quickInvestPsw .mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index:9999;
+    opacity: 0;
+
+}
+
+#quickInvestPsw.show .mask{
+    animation: fadeInForKeyBoard 0.3s;
+    animation-fill-mode: forwards;
+}
+
+
+#quickInvestPsw .wrap{
+    height: 330px;
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index:99999;
+    transform: translateY(100%);
+}
+
+#quickInvestPsw.show .wrap{
+    animation: slideInForKeyBoard 0.3s;
+    animation-fill-mode: forwards;
+}
+
+#quickInvestPsw .wrap .title{
+    height:40px;
+    line-height:40px;
+    color:#6f6f6f;
+    font-size:0.36rem;
+    overflow:hidden;
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
+
+#quickInvestPsw .wrap .title > .close{
+    width:17px;
+    height:17px;
+    float:left;
+    margin-top: 10px;
+    margin-left: 10px;
+    background:url('./images/icon_pay_close.png') no-repeat 0 0;
+    background-size:cover;
+}
+
+#quickInvestPsw .wrap .inputWrap{
+    margin:20px auto;
+    width:270px;
+    height:45px;
+    background:url('./images/icon_input_bg.png') no-repeat 0 0;
+    background-size:270px  45px;
+    line-height:45px;
+    font-size:20px;
+    margin-top:20px;
+    overflow:hidden;
+    position:relative;
+}
+
+#quickInvestPsw .wrap .inputWrap span{
+    width:45px;
+    height:45px;
+    float:left;
+    color:#666;
+}
+
+#quickInvestPsw .wrap .inputWrap > input{
+    width:270px;
+    height:45px;
+    background-color:#eee;
+    opacity:0;
+    padding:0;
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+#quickInvestPsw .wrap  .forgetPsw{
+    display:block;
+    width:260px;
+    text-align:right;
+    margin:15px auto;
+    font-size:1.4rem;
+}
+
+
+.lrKeyboard{
+    position:absolute;
+    width:100%;
+    bottom:0;
+    background-color: #fff;
+
+}
+
+.lrKeyboard > table{
+    width:100%;
+    /* height:300px; */
+}
+
+.lrKeyboard > table td{
+    width:33.333%;
+    border:1px solid #ddd;
+    vertical-align:middle;
+    padding:0;
+}
+.lrKeyboard > table td.disabled{
+    background-color:#d1d5da;
+}
+
+.lrKeyboard > table td > a{
+    display:block;
+    width:100%;
+    height:50px;
+    line-height:50px;
+    font-size:0.5rem;
+    color:#000;
+}
+
+.lrKeyboard > table td > a.backspace{
+    background:url(./images/icon_keyboard_backspace.png) no-repeat 50% 50%;
+    background-size:21px 15px;
+    background-color:#d1d5da;
+}
+
+.lrKeyboard > table td > a:active{
+    background-color:#aaa;
+}

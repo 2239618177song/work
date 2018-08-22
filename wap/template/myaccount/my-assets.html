@@ -1,0 +1,31 @@
+<div class="wrap pb3 myassets-wrapper newhand-wrapper" ng-controller="myAssetsCtrl">
+	
+	<div class="common-head" ng-click="toback()"><i></i><p>{{title}}</p></div>
+
+	<div class="all">
+		<i></i>
+		<div class="mod">
+			<div>累计投资金额</div>
+			<p>{{user.investAmount | currency:''}}</p>
+		</div>
+		<div class="mod">
+			<div>累计收益金额</div>
+			<p>{{user.investProfit+user.spreadProfit | currency:''}}</p>
+		</div>
+	</div>
+	<div class="assets-box">
+		<div class="title">我的资产</div>
+		<ul>
+			<li><span class="stitle">可用余额(元)</span><span class="amount">{{user.balance | currency:''}}</span></li>
+			<li><span class="stitle">冻结金额(元)</span><span class="amount">{{user.freeze | currency:''}}</span></li>
+			<li><span class="stitle">待收本金(元)</span><span class="amount">{{user.wprincipal | currency:''}}</span></li>
+			<li><span class="stitle">资产总额(元)</span><span class="amount allassets">{{user.balance + user.freeze + user.wprincipal| currency:''}}</span></li>
+		</ul>
+	</div>
+	<div class="assets-wrap">
+		<div class="assets-bot">
+			<div><span><i></i></span></div>
+			<p>（资产总额=可用余额+冻结金额+待收本金）</p>
+		</div>
+	</div>
+</div>

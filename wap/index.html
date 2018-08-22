@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <style type="text/css">
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak {
+            display: none !important;
+        }
+        /* .novice-sign-in-dialog-wrapper .dialog-wrapper .dialog-bg i{
+        	width:10.15556rem !important;
+        } */
+        /* .novice-sign-in-dialog-wrapper .dialog-wrapper .dialog-bg .sign-up{
+        	bottom:5.11111rem !important;
+        } */ 
+        /* .novice-sign-in-dialog-wrapper .dialog-wrapper .dialog-bg .sign-in{
+        	bottom:2.34222rem !important;
+        } */
+    </style>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0, width=device-width">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="favicon" href="/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="dist/style.93C77ABCAB5B72786FC49BEF68B3377D.min.css">
+    <title ng-bind="title">汇元金服-投资理财,P2P理财，P2P网贷,个人理财【官网】</title>
+    <meta name="keywords" content="汇元金服,投资理财,P2P理财，P2P网贷,个人理财,民间借贷网,房产抵押，汽车金融,汽车质押,汽车抵押网,投资理财网,投资理财公司,网贷平台,债权转让,汇元
+">
+    <meta name="description" content="汇元,汇元金服,利用先进的互联网信息技术，致力于为投资者提供最真实可靠的融资企业及个人信息、最详尽专业的抵押物风控、最阳光透明的借贷操作流程，为投资理财客户提供安全、可靠、高效的互联网金融服务。客户通过汇元金服进行投资理财、个人理财，获得稳健的投资高收益。
+">
+    <!-- <meta name="baidu-site-verification" content="XTSMeCfnJb" /> -->
+    <!-- 百度买点 -->
+    <script>
+        // var _hmt = _hmt || [];
+        // (function () {
+        //     var hm = document.createElement("script");
+        //     hm.src = "https://hm.baidu.com/hm.js?660a45192b39b82aaf0a626ee60cb02a";
+        //     var s = document.getElementsByTagName("script")[0];
+        //     s.parentNode.insertBefore(hm, s);
+        // })();
+    </script>
+</head>
+
+<body>
+    <div ng-show="maskHidde" class="loading">
+        <div>
+            <img style="width: 3em;height: 3em;" src="images/loading.gif">
+        </div>
+    </div>
+    <div ng-show="maskError" ng-click="maskError=false" class="maskError ng-cloak">
+        <div class="maskError-box">
+            <p>{{errorText}}</p>
+            <p class="luckText" ng-if="luckCodeCount" style=" font-size: 1.2rem;">恭喜您获得
+                <font color="red" style=" font-size: 1.2rem;">{{luckCodeCount}}</font>个中奖码</p> 
+            <a ng-if="luckCodeCount" class="luckText" ui-sref="myActivity">
+                <font style=" font-size: 1rem;" color='blue'>点击查看</font>
+            </a>
+        </div>
+    </div>
+    <div ng-show="isShowMaskError" class="maskErrorDl ng-cloak">
+        <div class="maskErrorDl-box">
+            <p>{{errorText}}</p>
+            <a ng-click="isShowMaskError=false" href="">知道了</a>
+        </div>
+    </div>
+    <div class='novice-sign-in-dialog-wrapper ng-cloak' ng-show='noviceDialogShow'>
+        <div class='dialog-wrapper'>
+            <div class='dialog-bg'>
+                <i class='sign-up' ng-click='signUp()'></i>
+                <i class='sign-in' ng-click='signIn()'></i>
+            </div>
+            <div class='close-wrapper'>
+                <i class='close-icon' ng-click='noviceClose()'></i>
+            </div>
+        </div>
+    </div>
+    <div ui-view class="ng-cloak"></div>
+    <script type="text/javascript" src="framework/require.js" data-main="dist/main-built-731BED79E4A155DACFB9B6F1A2894E34"></script>
+    <!-- <script src="https://www.zhiyishow.com/xmyd2017/05/api.20170825.js"></script> -->
+</body>
+
+</html>

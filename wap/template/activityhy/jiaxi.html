@@ -1,0 +1,11 @@
+<div class="hy-jiaxi" ng-controller="hongyaJiaxiCtrl">
+	<div>
+		<img src="images/hyactivity/jiaxi.png" />		
+		<span ng-if="wap" class="invest-btn" ui-sref="main.bankBillList"></span>
+		<a ng-if="!wap"  class="invest-btn" href="jsmp://page=2"></a>
+	</div>
+	<span ng-if="wap" class="invest-fixed" ui-sref="main.bankBillList" ng-show="showFixedbtn">立即投资</span>
+	<a ng-if="!wap" href="jsmp://page=2"><span  class="invest-fixed" ng-show="showFixedbtn">立即投资</span></a>
+</div>
+<div class="share-ios"><img ng-click="closethis()" src="images/share-ios.png" /></div>
+<div class="share-android"><img ng-click="closethis()" src="images/share-android.png" /></div>

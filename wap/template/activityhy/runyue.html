@@ -1,0 +1,45 @@
+<div class="hy-runyue" ng-controller="hongyaRunyueCtrl">
+	<div>
+		<img src="images/hyactivity/runyue-header.png" />
+	</div>
+	<div class="content">
+		<!-- <img src="../../images/hyactivity/runyue-content.png"> -->
+		<div class="board">
+			<h3>活动福利</h3>
+			<table>
+				<tr><th>单笔金额（元）</th><th>红包金额（元）</th></tr>
+				<tr><td>6000及以上</td><td>118</td></tr>
+				<tr><td>10000及以上</td><td>188</td></tr>
+				<tr><td>30000及以上</td><td>618</td></tr>
+			</table>
+
+			<!-- <div class="act-info">
+				<span><b>168</b>元<strong>33</strong>个</span>
+				<span><b>998</b>元<strong>33</strong>个</span>
+			</div> -->
+			<div class="user-info">您已获得返现{{userData.userValue || 0}}元</div>
+			<span class="invest-btn" ng-click="goInvest()" ng-if="!overDue">领取红包</span>
+			<span class="invest-btn overDue" ng-if="overDue">活动已结束</span>
+			
+		</div>
+	</div>
+	<div class="details">
+		<div class="details-header"></div>
+		<div class="details-body">
+			<b>活动时间：</b>7.28-8.21（农历闰六月）<br>
+			<b>活动对象：</b>汇元金服理财新老用户均可参与<br>
+			<b>活动内容：</b>活动期间，用户购买汇元金服【企融计划66】产品，投资金额单笔达到一定额度即可获得返现红包，返现金额直接打入账户余额。
+		</div>			
+	</div>
+	<div class="rules">
+		活动规则：<br>
+		<ol>
+			<li>本活动产品无法与加息券、红包等其他优惠券共同使用。</li>
+			<li>用户所获返现红包以满足额度的最高金额发放，单笔只可获一次。</li>
+			<li>活动期间，用户可重复投资本活动产品，次数及红包金额不受限制。</li>
+		</ol>
+		如有疑问，请拨打客服热线：400-872-9577（9:30-17:30）或添加官方QQ：4008729577（9:30-17:30）。<br>
+		汇元金服在法律范围内拥有最终解释权。
+	</div>
+	<p class="warning">投资有风险，理财需谨慎</p>		
+</div>

@@ -1,0 +1,68 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>一马当先更要一锤定音</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<style>
+		body{
+			padding:0;
+			margin:0;
+			background-color:#ec703a;
+		}
+		.section{
+			position: relative;
+		}
+		.section #goInvest{
+			position: absolute;
+			top:67%;
+			left: 0;
+			right: 0;
+			margin: auto;
+
+		}
+		body .section img{
+			display: block;
+			width: 100%;
+		}
+	</style>
+	<script src="/common/js/jquery-1.10.2.min.js"></script>
+	<script src="/common/js/native.js"></script>
+	<script src="/common/js/tool.js"></script>
+</head>
+<body>
+	<div class="section">
+		<img src="/acts/headTail/images/act_ycdy_wap.jpg" alt="">
+		<a href="javascript:void(0)" id="goInvest"><img src="/acts/headTail/images/hy_head_tail_05.png" alt=""></a>
+	</div>
+	<!--<div class="section"><img src="/acts/headTail/images/hy_head_tail_02.png" alt=""></div>-->
+	<!--<div class="section"><img src="/acts/headTail/images/hy_head_tail_03.png" alt=""></div>-->
+	<!--<div class="section"><img src="/acts/headTail/images/hy_head_tail_04.png" alt=""></div>-->
+	<!--<div class="section"><a href="javascript:void(0)" id="goInvest"><img src="/acts/headTail/images/hy_head_tail_05.png" alt=""></a></div>-->
+	<!--<div class="section"><img src="/acts/headTail/images/hy_head_tail_06.png" alt=""></div>-->
+	<!-- <div class="section"><img src="/acts/headTail/images/bg1.jpg" alt=""></div>
+	<div class="section"><img src="/acts/headTail/images/bg2.jpg" alt=""></div>
+	<div class="section"><img src="/acts/headTail/images/bg3.jpg" alt=""></div>
+	<div class="section"><img src="/acts/headTail/images/bg4.jpg" alt=""></div>
+	<div class="section"><a href="javascript:void(0)" id="goInvest"><img src="/acts/headTail/images/bg5.jpg" alt=""></a></div>
+	<div class="section"><img src="/acts/headTail/images/bg6.jpg" alt=""></div> -->
+	<script>
+		var userAgent = window.navigator.userAgent;
+		var $btn = document.getElementById('goInvest');
+
+		$btn.onclick = function(){
+			if(userAgent.indexOf('LRAPP') !== -1){
+				console.log('是在app的webview中打开的');
+				lrNative.toAppJumpTo({
+					type:'investList',
+					pram:'0'
+				})
+			}else{
+ 				console.log('外部浏览器打开的');
+				window.location.href = _config.mainIP+'/invest/list';
+			}
+		}
+		
+	</script>
+</body>
+</html>

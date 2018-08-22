@@ -1,0 +1,415 @@
+<!-- <style type="text/css">
+	.account-wrapper .account-btn div.item{
+		line-height: 2rem;
+	}
+	.account-wrapper .account-btn div.rechange{
+		border-width: 1px;
+	}
+</style> -->
+<div class="wrap account-wrapper wrapper-mode" ng-controller="accountHomeCtrl">
+	<div class="home-header">
+		<div class="home-info">
+			<div class="my-name">
+				<i class="my-name-icon setting-icon" ui-sref="myInfo"></i>
+				<!-- {{user.mobilephone | limitTo:3}}*****{{user.mobilephone | limitTo:-3}} -->
+				<i class="my-name-icon message-icon" ui-sref="myMessage"></i>
+			</div>
+			<div class="my-asset-title">总资产(元)</div>
+			<div class="my-asset-num" ng-show="showAsset">
+				
+				<!-- <span>	{{accunt.wprincipal + accunt.balance + user.free | isNumber2}} -->
+					
+				<div> {{(accunt.balance*100+accunt.wprincipal*100 +accunt.free*100)/100 | isNumber2}}
+					<i class='eye-icon open' ng-click="showAsset = !showAsset"></i>
+				</div>
+			</div>
+			<div class="my-asset-num" ng-show="!showAsset">
+				<div>
+					***
+					<i class='eye-icon close' ng-click="showAsset = !showAsset"></i>
+				</div>
+			</div>
+			<!--<div class="my-asset-title">可用余额(元)</div>-->
+			<!--<div class="my-asset-num" ng-show="showAsset">-->
+				
+				<!-- <span>	{{accunt.wprincipal + accunt.balance + user.free | isNumber2}} -->
+					
+				<!--<div> {{accunt.balance | isNumber2}}
+					<i class='eye-icon open' ng-click="showAsset = !showAsset"></i>
+				</div>
+			</div>-->
+			<!--<div class="my-asset-num" ng-show="!showAsset">
+				<div>
+					***
+					<i class='eye-icon close' ng-click="showAsset = !showAsset"></i>
+				</div>
+			</div>-->
+			<div class='account-info'>
+				<div class='item'>
+					<div class='left-item'>
+						<div>已赚取(元)</div>
+						<div class='number' ng-show="showAsset">{{accunt.accumulatedIncome | isNumber2}}</div>
+						<div class='number' ng-show="!showAsset">***</div>
+					</div>
+					<div>待收收益(元)</div>
+					<div class='number' ng-show="showAsset">{{accunt.winterest | isNumber2}}</div>
+					<div class='number' ng-show="!showAsset">***</div>
+					<div class='right-item'>
+						<div>账户余额(元)</div>
+						<div class='number' ng-show="showAsset">{{accunt.balance | isNumber2}}</div>
+						<div class='number' ng-show="!showAsset">***</div>
+					</div>
+				</div>
+			</div>
+			<!--<div class='account-info'>
+				<div class='item'>
+					<div class='left-item'>
+						<div>总资产(元)</div>
+						<div class='number' ng-show="showAsset">{{(accunt.balance*100+accunt.wprincipal*100 +accunt.free*100)/100 | isNumber2}}</div>
+						<div class='number' ng-show="!showAsset">***</div>
+					</div>
+					<div>已收收益(元)</div>
+					<div class='number' ng-show="showAsset">{{accunt.accumulatedIncome | isNumber2}}</div>
+					<div class='number' ng-show="!showAsset">***</div>
+					<div class='right-item'>
+						<div>待收收益(元)</div>
+						<div class='number' ng-show="showAsset">{{accunt.winterest | isNumber2}}</div>
+						<div class='number' ng-show="!showAsset">***</div>
+					</div>
+				</div>
+			</div>-->
+			<!--<div class='account-btn'>
+				<div class='item rechange' ng-if="accunt.realVerify==0" ui-sref="certification">
+					<i></i>
+					<span>充值</span>
+				</div>
+				<div class='item rechange' ng-if="accunt.realVerify==1" ui-sref="recharge({from:'home'})">
+					<i></i>
+					<span>充值</span>
+				</div>
+				<div class='item withdraw' ng-if="accunt.realVerify==0" ui-sref="certification">
+					<i></i>
+					<span>提现</span>
+				</div>
+				<div class='item withdraw' ng-if="accunt.realVerify==1" ng-click="openredpackets2()">
+					<i></i>
+					<span>提现</span>
+				</div>
+			</div>-->
+			<!-- <div class="my-assets">
+				<div>
+					<div>可用余额（元）</div>
+					<div ng-show="showAsset">{{accunt.balance | isNumber2}}</div>
+					<div ng-show="!showAsset">******</div>
+				</div>
+				<div>
+					<div>累计收益（元）</div>
+					<div ng-show="showAsset">{{accunt.accumulatedIncome | isNumber2}}</div>
+					<div ng-show="!showAsset">******</div>
+				</div>
+			</div> -->
+		</div>
+		
+		
+		<!--充值/提现-->
+
+		<div class='account-btn'>
+				<div class='item rechange' ng-if="accunt.realVerify==0" ui-sref="certification">
+					<!--<i></i>-->
+					<span>充值</span>
+				</div>
+				<div class='item rechange' ng-if="accunt.realVerify==1" ui-sref="recharge({from:'home'})">
+					<!--<i></i>-->
+					<span>充值</span>
+				</div>
+				<div class='item withdraw' ng-if="accunt.realVerify==0" ui-sref="certification">
+					<!--<i></i>-->
+					<span>提现</span>
+				</div>
+				<div class='item withdraw' ng-if="accunt.realVerify==1" ng-click="openredpackets2()">
+					<!--<i></i>-->
+					<span>提现</span>
+				</div>
+			</div>
+		
+		<!--btn-->
+		<!-- <table class="btns">
+			<tr>
+				<td class="payback-btn" ui-sref="certification" ng-if="accunt.realVerify==0"><a class="btn default">我要充值</a></td> -->
+		<!-- ng-if="userOBJ.user.certification == undefined"  -->
+
+		<!-- <td ng-if="accunt.realVerify==1" ui-sref="recharge({from:'home'})" class="payback-btn"><a class="btn default">我要充值</a></td>
+
+				<td class="xieyi-btn" style="position: relative;" ng-if="accunt.realVerify==0">
+					<a class="btn orange" ui-sref="certification">我要提现</a> -->
+		<!-- <img ng-if="iconhongbao==true && hongbaoicon==1" ng-click="openredpackets()" src="images/activity/redPackets/hongbao.png"
+						class="hongbao" />
+					<img ng-if="iconhongbao==true && hongbaoicon==2" ng-click="openredpackets()" src="images/activity/redPackets/hongbao2.png"
+						class="hongbao" /> -->
+		<!-- </td>
+				<td class="xieyi-btn" style="position: relative;" ng-if="accunt.realVerify==1">
+					<a class="btn orange" ng-click="openredpackets2()">我要提现</a> -->
+		<!-- <img ng-if="iconhongbao==true && hongbaoicon==1" ng-click="openredpackets()" src="images/activity/redPackets/hongbao.png"
+						class="hongbao" />
+					<img ng-if="iconhongbao==true && hongbaoicon==2" ng-click="openredpackets()" src="images/activity/redPackets/hongbao2.png"
+						class="hongbao" /> -->
+		<!-- </td>
+			</tr>
+		</table> -->
+		
+		<!--我的投资-->
+		<!--<div class='my-invest' ui-sref="myInvest">
+			<div class='left-wrapper'>
+				<span class='title'>我的投资</span>
+				<span class='arrow'>&gt;</span>
+			</div>
+			<div class='right-wrapper'>
+				<div class='hold' ui-sref="myInvest({tab:1})">
+					<div><span>{{accunt.repayingCount}}</span>笔</div>
+					<div>持有中</div>
+				</div>
+				<div class='ransom' ui-sref="myInvest({tab:2})">
+					<div><span>{{accunt.repayedCount}}</span>笔</div>
+					<div>已赎回</div>
+				</div>
+			</div>
+		</div>-->
+
+		<div class='features'>
+			<div class='my-invest' ui-sref="myInvest">
+				<i></i>
+				<div class='item'>
+					<div>我的投资</div>
+					<!--<div><span>{{allHongBaoLength}}张</span>可用</div>-->
+				</div>
+				<span class="go"></span>
+			</div>
+			<div class='coupon' ui-sref="myCoupon">
+				<i></i>
+				<div class='item'>
+					<div>优惠券</div>
+				</div>
+				<span><span>{{allHongBaoLength}}张</span>可用</span>
+				<span class="go"></span>
+			</div>
+			<div class='ex-money' ui-sref="myTyj">
+				<i></i>
+				<div class='item'>
+					<div>体验金</div>
+					<!--<div><span>{{allTYJ}}元</span>可用</div>-->
+				</div>
+				<span><span>{{allTYJ}}元</span>可用</span>
+				<span class="go"></span>
+			</div>
+			<div class='invite' ui-sref="inviteCenter">
+				<!-- <a href="/myInvitation" target="_blank"> -->
+				<i></i>
+				<div class='item'>
+					<div>我的邀请</div>
+					<!--<div>已邀请<span>{{accunt.recommendedCount}}人</span>投资<span>{{accunt.firstInvestCount}}人</span></div>-->
+				</div>
+				<span>已邀请<span>{{accunt.recommendedCount}}人</span>投资<span>{{accunt.firstInvestCount}}人</span></span>
+				<span class="go"></span>
+				<!-- </a> -->
+			</div>
+			<div class='safe-center' ui-sref="myInfo">
+				<i></i>
+				<div class='item'>
+					<div>安全中心</div>
+					
+				</div>
+				<span>密码重置</span>
+				<span class="go"></span>
+			</div>
+		</div>
+		<!-- <div class="my-links">
+			<div ui-sref="myInvest"><i class="my-link-icon ico-my-invest"></i><a>我的投资</a>
+				<p><span>></span></p>
+			</div>
+			<div ui-sref="myCoupon"><i class="my-link-icon ico-my-coupon"></i><a>优惠券</a>
+				<p><span>></span></p>
+			</div>
+			<div ui-sref=" myTyj"><i class="my-link-icon ico-my-tyj"></i><a>体验金</a>
+				<p><span>></span></p>
+			</div>
+			<div><i class="my-link-icon ico-my-invite"></i><a href="/myInvitation" target="_blank">我的邀请</a>
+				<p><span>></span></p>
+			</div> -->
+		<!-- <div ui-sref="myInvitation"><i class="my-link-icon ico-my-invite"></i><a>我的邀请</a><p><span>></span></p></div> -->
+		<!-- <div ui-sref="myInfo"><i class="my-link-icon ico-my-safe"></i><a>安全中心</a>
+				<p><span>></span></p>
+			</div> -->
+		<!-- <div ng-click="out('out')"><a>退出</a></div> -->
+		<!-- </div> -->
+
+		<!-- to delete -->
+		<table ng-if="false" class="myaccount-mod">
+			<tr>
+				<!--<td width="33%" ui-sref="myAssets">
+					<img src="images/myaccount/ico_property.png">
+					<p>我的资产</p>
+				</td>-->
+				<td width="33%" ui-sref="myCoupon">
+					<img src="images/myaccount/ico_red.png">
+					<p>我的红包</p>
+				</td>
+				<td width="34%" ui-sref="myTyj">
+					<img src="images/myaccount/ico_tyj.png" style="width: 30%;margin-top: -2.5rem;padding: 2rem 0;">
+					<p>体验金<br ng-if="accunt.experienceAmount>0"><span ng-if="accunt.experienceAmount>0" style="color:#E84034;font-size:0.9rem;">{{accunt.experienceAmount | number:0 }}元</span></p>
+				</td>
+				<td width="33%" ui-sref="myInvitation">
+					<img src="images/myaccount/ico_invite.png">
+					<!--<img src="images/myaccount/yaoqingfanxian.png" style="position:absolute;width:4rem;top:0.5rem;right:0.5rem;">-->
+					<p>我的邀请</p>
+				</td>
+			</tr>
+			<tr>
+				<td ui-sref="myInfo">
+					<img src="images/myaccount/ico_data.png">
+					<p>我的信息</p>
+				</td>
+				<td ui-sref="myInvest">
+					<img src="images/myaccount/ico_invest.png">
+					<p>我的投资</p>
+				</td>
+				<td ui-sref="minxi">
+					<img src="images/myaccount/ico_detail.png">
+					<p>我的明细</p>
+				</td>
+			</tr>
+			<tr>
+				<td ui-sref="myActivity">
+					<img src="images/myaccount/ico-gift.png" style="width: 30%;margin-top: -2.5rem;padding: 2rem 0;">
+					<p>中奖记录</p>
+				</td>
+				<!--<td ui-sref="myMission">
+					<img src="images/myaccount/ico-mission.png" style="width: 25%;margin-top: -2.5rem;padding: 2rem 0;">
+					<p>赚钱任务</p>
+				</td>-->
+				<td ui-sref="actList({wap:true})">
+					<img src="images/myaccount/ico-activity.png" style="width: 25%;margin-top: -2.5rem;padding: 2rem 0;">
+					<p>活动专区</p>
+				</td>
+				<!--<td>
+					<img src="images/myaccount/ico_wait.png" style="width: 25%;margin-top: -2.5rem;padding: 2rem 0;">
+					<p style="color:#bdbdbd;">敬请期待</p>
+				</td>-->
+
+				<!--年末投即送活动-->
+				<td ui-sref="mytjs({wap:true})">
+					<img src="images/activity/tjs/ico-tjs.png" style="width: 25%;margin-top: -2.5rem;padding: 2rem 0;">
+					<p>投资即送</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<!--<div class="yaoqing" ng-if="unclaimed&&unclaimed>0">
+		<p>您有<span>{{unclaimed | number:2}}</span>元任务奖励未领取<a ui-sref="myInvitation">立即领取</a></p>
+	</div>-->
+	<!--<div class="activity-firend-hongbao">
+		<div class="hongbaobg">
+			<img src="images/activity/firend/hongbao.png" />
+			<div class="hongbaotext">
+				<p class="money">领取了奖金<br />{{hongbao.amount}}元</p>
+				<p class="text">奖金已转入您的账户请及时查收</p>
+				<a class="sharebtn" ng-click="lijiyaoqing()">分享赚更多</a>
+				<a class="cancel" ng-click="closehongbao()">放弃机会</a>
+			</div>
+		</div>
+	</div>-->
+	<div class="activity-firend-boxh5" ng-click="closeshareh5()">
+		<div class="h5share" ng-click="default($event)">
+			<p>复制以下网址，发送给您的好友注册并投资</p>
+			<textarea id="shareurl" ng-model="shareUrl" class="shareurl">{{shareUrl}}</textarea>
+			<a ng-click="copyShare()" ng-show="!isCopy">复制链接</a>
+			<a ng-show="isCopy" style="color:#999;">{{isCopytext}}</a>
+		</div>
+	</div>
+	<div class="activity-firend-boxweixin" ng-click="closeshareweixin()">
+		<img src="images/activity/firend/sharetext.png" class="sharetext" />
+	</div>
+	<div class="hongbaoBox" ng-show="hongbaoShow">
+		<div class="hongbaoBox">
+			<div class="hongbaoBoxCenter">
+				<div ng-if="accunt.isPayment==true">
+					<img src="images/activity/redPackets/hongbaobg.png" class="bg" />
+					<img src="images/activity/redPackets/jinbi.png" class="jinbi" alt="" />
+					<img src="images/activity/redPackets/close.png" class="closeico" ng-click="closeredpackets()" />
+					<div class="hongbao-link" ui-sref="hbopen"></div>
+				</div>
+
+				<div ng-if="accunt.isPayment==false">
+					<img src="images/activity/redPackets/hongbaobg2.png" class="bg" />
+					<img src="images/activity/redPackets/close.png" class="closeico" ng-click="closeredpackets()" />
+					<div class="hongbaotext">
+						<div class="hongbaotitle">
+							<h2 ng-if="hongbaoData.returnedCount!=0">您有<span>{{hongbaoData.returnedCount}}笔</span>投资即将到期回款</h2>
+							<h2 ng-if="hongbaoData.returnedCount==0">钱都给你了，还不提走</h2>
+							<p ng-if="hongbaoData.returnedCount!=0">我们提前为您准备了另一份惊喜</p>
+							<p ng-if="hongbaoData.returnedCount==0">还有现金红包未变现哦！</p>
+						</div>
+						<div class="hongbaolist">
+							<div class="hongbaobd">
+								<div class="hongbaoitem" ng-repeat="item in hongbaoData.redPacketList">
+									<img src="images/activity/redPackets/quanbg.png" class="hongbaobg" />
+									<div class="hongbaoCont">
+										<div class="hongbaoCont-left">
+											<div><span>￥</span>{{item.amount}}
+												<p>未使用</p>
+											</div>
+										</div>
+										<div class="hongbaoCont-right">
+											<p>投资金额：单笔满 {{item.enableAmount}}元</p>
+											<p>投资期限：≥{{item.productDeadline}}天</p>
+											<p>有效期至：{{item.expireDate|date:"yyyy.MM.dd"}}</p>
+											<div class="hongbaobtn">
+												<hr />
+												<img src="images/activity/redPackets/hongbaobtn.png" ng-click="gotoInvest(item)" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hongbaoBox hongbaoBox2" ng-show="hongbaoShow2">
+		<div class="hongbaoBoxCenter">
+			<img src="images/activity/redPackets/hongbaobg2.png" class="bg" />
+			<img src="images/activity/redPackets/close.png" class="closeico" ng-click="closeredpackets2()" />
+			<div class="hongbaotext">
+				<div class="hongbaotitle">
+					<h2>红包都不要了？</h2>
+					<p>还有现金红包未变现哦！</p>
+				</div>
+				<div class="hongbaolist">
+					<div class="hongbaobd">
+						<div class="hongbaoitem" ng-repeat="item in hongbaoData.redPacketList">
+							<img src="images/activity/redPackets/quanbg.png" class="hongbaobg" />
+							<div class="hongbaoCont">
+								<div class="hongbaoCont-left">
+									<div><span>￥</span>{{item.amount}}
+										<p>未使用</p>
+									</div>
+								</div>
+								<div class="hongbaoCont-right">
+									<p>投资金额：单笔满 {{item.enableAmount}}元</p>
+									<p>投资期限：≥{{item.productDeadline}}天</p>
+									<p>有效期至：{{item.expireDate|date:"yyyy.MM.dd"}}</p>
+									<div class="hongbaobtn">
+										<hr />
+										<img src="images/activity/redPackets/hongbaobtn.png" ng-click="gotoInvest(item)" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="hongbaoclose" ng-click="closepackets2()">放弃机会，继续提现</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,138 @@
+/*表单样式*/
+.formBox{
+    width: 5.5rem;
+    /*height:450px;*/
+    margin: .65rem auto 0;
+}
+
+.form_item{
+    width: 5.5rem;
+}
+
+.form_label{
+    float: left;
+    width: 25%;
+    text-align: right;
+    height: 40px;
+    line-height: 40px;
+    color: #a77000;
+}
+
+.form_component{
+    width: 70%;
+    height: 1rem;
+    width: 5.5rem;
+    box-sizing: border-box;
+    text-align: left;
+    float: left;
+}
+
+.form_component.style2{
+    /*width: 200px;*/
+}
+
+.form_component.style2 .vcode{
+    width: 2rem;
+    margin-left: 0.2rem;
+    height: 0.8rem;
+    display: inline-block;
+    height:0.8rem;
+    vertical-align: middle;
+}
+
+.form_component.style2 .vcode img{
+    width: 100%;
+    height: 100%;
+}
+
+#registerForm  .form_component.style2 input{
+    width: 3rem;
+    box-sizing: border-box;
+}
+
+#registerForm input[type=text],
+#registerForm input[type=password]{
+    outline: none;
+    box-shadow: none;
+    padding-left: 15px;
+     border: 1px solid #676767; 
+    line-height: 1;
+    height: 0.8rem;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 100%;
+    font-size: 0.3rem;
+    color: #000;
+    box-sizing: border-box;
+}
+
+input::-webkit-input-placeholder{
+    color: #000;
+}
+
+.form_item{
+
+}
+
+#registerForm .btn{
+    display: inline-block;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    background-color: #ff5f08;
+    color: #1b1b1b;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 0.2rem;
+    width: 2rem;
+    text-align: center;
+}
+
+#registerForm .btn.registerBtn{
+    width: 100%;
+    margin: 0;
+    font-size: .33rem;
+    font-weight: 600;
+}
+
+
+#cpsRegSec .CN_tips ._btn_area .btn{
+    background: #CC9016;
+}
+
+#registerForm  #checkProtocol{
+    float: left;
+}
+
+input[type=checkbox]{
+    background-color: transparent;
+}
+#registerForm  #checkProtocol:after{
+    content:'';
+    display:inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    vertical-align: TEXT-BOTTOM;
+    border-radius:50%;
+    float:left;
+     background-color: #da9303;
+     background:url('../images/icon_check.png') no-repeat 10% 100%;
+     background-size:0.4rem 0.4rem;
+    background-color: #da9303;
+}
+
+#registerForm  #checkProtocol:checked:after{
+    background-image:url('../images/icon_checked.png')
+
+}
+
+#registerForm  .checkProtocol label{
+    display: block;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    margin-left: 0.8rem;
+    font-size: 0.3rem;
+}
+
+#registerForm  .checkProtocol label a{
+    color:#666;
+}

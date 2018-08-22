@@ -1,0 +1,28 @@
+<div class='zm-active-invite-wrapper' ng-controller="zmInviteController">
+    <div class='top-wrapper'>
+        <div class='notice-box'>
+            <div scroll></div>
+        </div>
+    </div>
+    <div class='first-title'>
+        <div class='title'></div>
+        <div class='content'>活动期间，用户投资30天标的（首投除外），单笔满一定金额即可获得现金返现，最高可得888元，多投多得。</div>
+    </div>
+    <div class='table'></div>
+    <div class='table-content'>
+        活动规则<br/> 1. 用户注册后首笔投资无法参与本次活动。<br/> 2. 活动支持红包等优惠券。<br/> 3. 现金奖励将以满足条件的最高金额发放，单笔投资只能获得一次。<br/> 4. 现金奖励将实时充值至账户余额。<br/>
+    </div>
+    <div class='second-title'>
+        <div class='title'></div>
+        <div class='content'>活动期间，邀请好友注册并单笔首投满10000元，除了能获得【邀豪友】的18元奖励外，还能获得100元额外奖励，一共118元！</div>
+    </div>
+    <div class='small-tips'>
+        客服热线：400-872-9577（9:30-17:30）<br/>官方QQ：4008729577
+    </div>
+    <div class='active-btns'>
+        <span class='start' ng-if='isActiveTime===1'></span>
+        <span class='invest' ng-click='goInvestList()' ng-if='isActiveTime===2'>立即投资</span>
+        <span class='invite' ng-click='gofriend()' ng-if='isActiveTime===2'>呼朋唤友</span>
+        <span class='end' ng-if='isActiveTime===3'></span>
+    </div>
+</div>

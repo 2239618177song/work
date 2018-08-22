@@ -1,0 +1,38 @@
+<div class="tradepwd-wrapper" ng-controller="pwdCtrl">
+	<div class="common-head" ng-click="toback()"><i></i>
+		<p>{{title}}</p>
+	</div>
+	<form name="pwdSetForm" novalidate ng-submit="submitForm(pwdSetForm.$valid)" autocomplete="off" class='pwd-form'>
+		<div class="pwd-box" ng-if="!userOBJ.register">
+			<span class='title'></span>
+			<input name="mobilephone" type="text" ng-pattern="/^1[3|4|5|7|8][0-9]{9}$/" placeholder="请输入手机号" id="mobilephone" ng-model="mobilephone"
+			 onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')" minlength="11" maxlength="11" required>
+		</div>
+		<!-- <input style="display:none">
+		<input type="password" style="display:none"> -->
+		<div class="pwd-box code-box">
+			<span class='title code'></span>
+			<a href="" ng-click="getCode()" ng-if="isGetCode == false" class="right">获取验证码</a><span class="right" ng-if="isGetCode == true">{{times}}s重新获取</span>
+			<input
+			 type="text" class="text" placeholder="请输入短信验证码" name="code" ng-model="pwd.code" required onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')"
+			 ng-blur="setInput('code')" maxlength="6" style='padding-right:90px;'>
+		</div>
+		<div class="pwd-box" ng-show="showCode == false">
+			<span class='title icon'></span>
+			<input type="password" name="pwd" class="text" placeholder="6-18位数字与字母组合"
+			 required ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/" ng-model="pwd.pwd" autocomplete="off" ng-blur="setInput('pwd')"
+			 maxlength="20">
+			 <a href="" class="eye-icon close" ng-click="showCode = true"></a>
+		</div>
+		<div class="pwd-box" ng-show="showCode == true">
+			<span class='title icon'></span>
+			<input type="text" name="repwd" class="text" placeholder="6-18位数字与字母组合"
+			 required ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/" ng-model="pwd.pwd" autocomplete="off" ng-blur="setInput('repwd')"
+			 maxlength="20">
+			 <a href="" class="eye-icon open" ng-click="showCode = false"></a>
+		</div>
+		<!-- <div class="little-tip">登录密码为6-18位数字与字母组合</div> -->
+		<div class="sub-box" ng-if="forget == false"><input type="submit" value="修改" class="sub" ng-disabled="pwdSetForm.$invalid"></div>
+		<div class="sub-box" ng-if="forget == true"><input type="submit" value="提交" class="sub" ng-disabled="pwdSetForm.$invalid"></div>
+	</form>
+</div>

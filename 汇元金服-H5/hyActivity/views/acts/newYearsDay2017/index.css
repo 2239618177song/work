@@ -1,0 +1,358 @@
+.section{
+    width: 100%;
+    position: relative;
+}
+.section img{
+    width: 100%;
+    display: block;
+}
+.section.section1{
+    background-color: #fdf0cb;
+}
+a.receive_btn{
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+.calculate_box{
+    position: absolute;
+    top:2.45rem;
+    width: 5.26rem;
+    height:2.14rem;
+    left:0;
+    right: 0;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.calculate_box .form_box{
+padding: .36rem 0 0 .28rem;
+}
+.calculate_box .form_box .item{
+    width: 33%;
+    float: left;
+}
+
+.item1 input{
+	font-size: .2rem;
+	width: 1.56rem;
+	height: .43rem;
+	border: 2px solid #fd2734;
+	display: block;
+}
+
+.calculate_box .form_box .item span{
+    display: block;
+    height:0.3rem;
+    margin: auto;
+}
+
+.form_box2 .part1{
+    position: absolute;
+    bottom: .36rem;
+    left: .3rem;
+    text-align: left;
+}
+
+.part2{
+    position: absolute;
+    bottom: .24rem;
+    right: .14rem;
+}
+
+.part2 a.calBtn1{
+    display: block;
+    width: 1.74rem;
+    height:0.53rem;
+    background: url(/acts/newYearsDay2017/images/part_btn.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.score{
+	font-size: .28rem;
+	color: #333232;
+}
+
+.exchange_box{
+    position: absolute;
+    width: 6.54rem;
+    top: 0.9rem;
+    left: 0;
+    right:0;
+    margin: auto;
+}
+.exchange_box a{
+    display: inline-block;
+    width: 3rem;
+        height: 2.6rem;
+}
+/*活动用model框*/
+.fl {
+    display: inline-block;
+    float: left;
+}
+.fr {
+    display: inline-block;
+    float: right;
+}
+.alert_model_mask{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
+    z-index: 90;
+}
+.alert_model{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    top: 0;
+    z-index: 100;
+    width: 5rem;
+    height: 2.32rem;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+.alert_model .alert_title{
+    text-align: center;
+    font-size: 0.18rem;
+    color: #fff;
+    line-height: .3rem;
+    padding: 0.15rem 0 0rem;
+}
+.alert_model .alert_close{
+    color: #fff;
+    position: absolute;
+    right: 0.17rem;
+    top: 0.12rem;
+    font-size: 0.26rem;
+    display: block;
+    width: 0.3rem;
+    height: 0.3rem;
+}
+.alert_model .alert_text{
+    margin: auto;
+    width: 100%;
+    padding: 0.45rem 0;
+    justify-content: center;
+}
+.alert_model .alert_text p{
+    text-align: center;
+    font-size: 0.18rem;
+    color: #fff;
+    line-height: 1.5;
+}
+.alert_model .btns{
+    width: 3.4rem;
+    height: .42rem;
+    margin: auto;
+}
+.alert_model .btns .btn_s{
+    width: 1rem;
+    line-height: 0.36rem;
+    font-size: 0.15rem;
+    text-align: center;
+    color: #fff;
+    margin: 0 0.32rem;
+    display: inline-block;
+}
+.alert_model .btns .btn_l{
+    width: 3.4rem;
+    line-height: 0.44rem;
+    font-size: 0.24rem;
+    text-align: center;
+    color: #fff;
+}
+.alert_model .btns .btn_yes{
+    background-color: #fff;
+    color: #000;
+}
+.alert_model .btns .btn_no{
+    background-color: #fc1a4a;
+    color: #fff;
+}
+
+.item1 input:input-placeholder { /* Internet Explorer 10+ */
+　　color:#cfcece;
+	font-size:.18rem;
+}
+
+.item1 input::-webkit-input-placeholder{
+	color:#cfcece;
+	font-size:.18rem;
+}
+
+select{
+	margin-top: .07rem;
+    margin-left: .07rem;
+}
+
+.section4{
+	background: url(/acts/newYearsDay2017/images/wap_05.png) no-repeat;
+	background-size: 100% 100%;
+	height: 6.25rem;
+	padding-top: 1.76rem;
+	padding-left: .56rem;
+}
+
+.box_content{
+	height: .5rem;
+    line-height: .5rem;
+}
+
+.box_content div{
+	float: left;
+	text-align: left;
+	margin-right: .1rem;
+}
+
+.box_content div:last-child{
+	margin-right: 0;
+}
+
+.box_content div:nth-child(1){
+	font-size: .2rem;
+	color: #393939;
+}
+
+.box_content input{
+    font-size: .2rem;
+    width: 1.68rem;
+    height: .40rem;
+    border: 2px solid #fd2734;
+}
+
+.box_content input::input-placeholder { /* Internet Explorer 10+ */
+　　	color:#cfcece;
+	font-size: .18rem;
+}
+
+.box_content input::-webkit-input-placeholder{
+	color:#cfcece;
+	font-size: .18rem;
+}
+
+.item1 p{
+	margin-top: .08rem;
+	font-size: .28rem;
+	color: #fe2a33;
+}
+
+.my_awads{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.calculate_box2{
+	width: 7.09rem;
+	height: 4.71rem;
+	background: #fff;
+	position: absolute;
+    bottom: 5.72rem;
+	left: 3%;
+	box-shadow: 0 5px 8px #9b978d; /*底边阴影*/
+    padding: .26rem .3rem 0 .4rem;
+}
+
+.calculate_box2:after{
+    position: absolute;
+    right: 1.08rem;
+    bottom: -.46rem;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: .4rem solid transparent;
+    border-right: .4rem solid transparent;
+    border-top: .46rem solid #fff;
+}
+
+.calculate_box2 li{
+	list-style: none;
+	height: .38rem;
+}
+
+.calculate_box2 li:nth-child(1){
+	color: #fe632c;
+	font-size: .2rem;
+	font-weight: 700;
+}
+
+.calculate_box2 li span{
+	width: 22%;
+    display: block;
+    float: left;
+}
+
+.calculate_box2 #cal_content li{
+	color: #2e2e2d;
+	font-size: .16rem;
+	height: .5rem;
+	font-weight: normal;
+}
+
+.calculate_box2 li span:nth-child(2){
+	width: 33%;
+}
+
+#cal_content{
+	overflow: auto;
+    height: 4rem;
+}
+
+#cal_content::-webkit-scrollbar{
+	width: 5px;  
+    height: 13px;  
+    -webkit-border-radius: 5px;  
+    -moz-border-radius: 5px;  
+    border-radius: 5px;  
+    scrollbar-face-color:#F00;
+	scrollbar-track-color:#FFF;
+	scrollbar-arrow-color:#FFF;
+	-webkit-overflow-scrolling: touch;
+    overflow: hidden;
+}
+
+.section3{
+	height: 14.59rem;
+	background: url(/acts/newYearsDay2017/images/wap_04.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#exchange_btn{
+	display: block;
+	width: 2.30rem;
+	height: .36rem;
+	line-height: .36rem;
+	background: #fe632c;
+	position: absolute;
+	left: 50%;
+	margin-left: -1.15rem;
+	bottom: 3.54rem;
+	border-radius: 15px;
+	color: #fff;
+	font-size: .24rem;
+}
+
+#my_exchange{
+	display: block;
+	position: absolute;
+    right: .56rem;
+    bottom: 3.58rem;
+	color: #fe632c;
+	font-size: .16rem;
+}
+
+input{
+    text-align: center;
+}
+
+#alertModal{
+	display: none;
+}

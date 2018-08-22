@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>邀请好友</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="/common/css/common.css">
+	<script src="/common/js/autoFixedLayout.js"></script>
+	<style>	
+		body.inviteSec{
+			background-image: url(/acts/inviteFriends/images/shading@2x.png);
+			background-repeat: no-repeat;
+			background-color: #fda402;
+			background-position: 20% 100%;
+			background-size: 100%;
+			background-attachment: fixed;
+			padding-bottom: 1rem;
+		}
+
+		.inviteSec .phone{
+			background-color: #fff;
+			padding-top: 1px;
+			height: 8rem;
+			border-radius:0.5rem;
+			margin:1rem auto;
+			background: url(/acts/inviteFriends/images/invite_friends_phone.png) no-repeat 50% 50%;
+			background-size: 100%;
+		}
+
+		.inviteSec .phone .content{
+			width:3rem;
+			height: 3rem;
+			margin: 1.6rem auto 0;
+			border:2px solid #fe6f06;
+			padding:0.1rem;
+			background-color: #fff;
+		}
+
+		.inviteSec .phone .content canvas{
+			width:100%;
+		}
+
+		.inviteSec .phone .invite_btn_area{
+			margin: 0.2rem auto;
+		}
+
+		.inviteSec .phone .invite_btn_area .btn{
+			display: block;
+			width:3rem;
+			height: 0.8rem;
+			background: url(/acts/inviteFriends/images/invite_btn.png) no-repeat 50% 50%;
+			background-size: 100%;
+			border-radius: 0;
+			margin:0 auto;
+		}
+
+		.inviteSec .phone .invite_code{
+			margin-top: 0.6rem;
+			font-size: 0.24rem;
+		}
+
+		.inviteSec .phone .invite_code .content_text{
+			margin-top: 0.1rem;
+			display: inline-block;
+			width:2rem;
+			height: 0.4rem;
+			line-height: 0.4rem;
+			color:#fe6f06;
+			font-weight: 700;
+			border:1px solid #fe6f06;
+			border-radius: 0.05rem;
+			font-size:0.28rem;
+		}
+
+		.inviteSec .explain{
+			color:#fff;
+			font-size:0.24rem;
+			width:4.8rem;
+			margin:0 auto;
+			text-align: left;
+		}
+
+		.inviteSec .explain .title{
+			font-size: 0.32rem;
+			margin-bottom: 0.2rem;
+			text-align: center;
+		}
+
+		.inviteSec .explain  .content{
+			line-height: 0.32rem;
+			text-shadow: 1px 1px 2px #fe6f06;
+		}
+		
+		.inviteSec .share_mask{
+			position: fixed;
+			width:100%;
+			height:100%;
+			left:0;
+			top:0;
+			background: url(/acts/inviteFriends/images/share_mask.png) no-repeat 0 0;
+			background-size: 100% 100%;
+			z-index:9999;
+			display: none;
+		}
+		.rule{
+			background-color: rgb(253, 164, 2);
+			padding: 12px;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body class="inviteSec">
+	<div class="phone scaleIn">
+		<div class="content" id="d2code">
+		</div>
+		
+		<div class="invite_btn_area">
+			<a href="javascript:void(0)" class="btn" id=inviteBtn></a>
+		</div>
+
+		<div class="invite_code" >
+			<div class="title">
+				邀请好友
+			</div>
+			<div class="content_text" id="d2codeText">
+				邀请好友
+			</div>
+
+		</div>
+	</div>
+
+	<div class="explain">
+		<div class="title">
+			活动规则
+		</div>
+		<div class="content rule">
+			<p>1，点击分享给好友，好友注册即可完成邀约。</p>
+			<p>2，好友注册并投资（期限需≥60天），邀请人即可获得红包/加息券奖励，邀请人数越多，奖励越丰厚</p>
+			<p>3，每个自然月内，累计投资金额满足条件，邀请人及被邀请人均可获得相应的现金奖励，多投多得，奖励上不封顶！（详情请参见活动海报）</p>
+			<br>
+			<p>温馨提示</p>
+			<br>
+			<p>1，红包、加息券将在好友投资完成后发放至邀请人账户中，用户可在“个人中心”处查看红包/加息券，单笔投资不可叠加使用红包及加息券；</p>
+			<p>2，现金奖励将于次月结算，15个工作日内发放；</p>
+			<p>3，以上活动仅限投资期限≥60天参与（不含新手标及体验标以及30天标）；</p>
+			<p>本活动最终解释权归汇元金服所有。</p>
+		</div>
+	</div>
+	<div class="share_mask"></div>
+
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/common/js/jquery-1.10.2.min.js"></script>
+	<script src="/common/js/jquery.qrcode.min.js"></script>
+	<script src="/common/js/native.js"></script>
+	<script src="/common/js/tool.js"></script>
+	<script src="/common/js/shareConfig.js"></script>
+	<script>
+		var Invite = (function(){
+			//获取邀请码
+			var getInviteCode = function(fn){
+				TL.Ajax({
+					url:'getInvitationCode'
+				}).done(function(data){
+					fn && fn(data);
+				});
+			};
+
+			//渲染二维码
+			var renderCode = function(data){
+				$('#d2code').qrcode({
+					width:200,
+					height:200,
+					background:'#fff',
+					foreground:'#000',
+					correctLevel:0,
+					text:'https://act.huiyuanjinfu.com/newRegister?iCode='+data
+				});  
+
+				$('#d2codeText').html(data);
+			};
+
+			//事件绑定函数
+			var bindEvent = function (data) {
+				var $mask = $('.share_mask');
+
+				$mask.bind('click',function () {
+					$mask.fadeOut('fast');
+				});
+
+				$('#inviteBtn').bind('click',function(){
+					TL.judePlatform(function(){
+						$.Alert('请在微信中打开本链接,或者直接扫描上方二维码邀请好友~')
+					},{
+						native:function(){
+							lrNative
+							.toAppShare({
+								title:'即日起，汇元金服壕送大放送！ 赶紧叫上小伙伴一起来拿！',
+								content:'活动期间，邀请好友注册首投 （首投金额≥1000元）邀请好友越多获得红包数量越多(*本活动最终解释权归汇元金服所有)',
+								url:'https://act.huiyuanjinfu.com/newRegister?iCode='+data,
+								imgUrl:'https://act.huiyuanjinfu.com/acts/inviteFriends/images/hy_yq.png',
+                                success:'shareSuccess',
+								cancel:'shareErr'
+							 });
+
+						},
+						wechat:function () {
+							$mask.fadeIn('fast');
+						}
+					});
+				});
+			};
+
+			return {
+				init:function(wechat){
+					TL.checkLogin(function () {
+						TL.toLogin();
+					},function () {
+						getInviteCode(function(data){
+							renderCode(data);
+							bindEvent(data);
+							var _success = function(){
+                                $.Alert('成功！')
+							}
+							if(wechat){
+								configWeixin({//设置微信分享
+									title:'即日起，汇元金服壕送大放送！ 赶紧叫上小伙伴一起来拿！',
+									link:'https://act.huiyuanjinfu.com/newRegister?iCode='+data,
+									imgUrl:'https://act.huiyuanjinfu.com/acts/inviteFriends/images/hy_yq.png',
+									desc:'活动期间，邀请好友注册首投 （首投金额不限）邀请好友越多获得红包数量越多(*本活动最终解释权归汇元金服所有)',
+                                    success:_success,
+                                    cancel:_success
+								});
+							}
+
+						});
+					});
+
+				}
+			}
+		})();
+
+		$(function(){
+			TL.judePlatform(function(){
+					Invite.init();
+				},
+				{
+					native:function(){
+						window.nativeInit = function () {//必须使用这样的方式
+							Invite.init();
+						};
+
+						lrNative.toAppGetArgs();//获取鉴权参数
+					},
+					wechat:function () {
+						Invite.init(true);
+					}
+			});
+		});
+	</script>
+</body>
+</html>

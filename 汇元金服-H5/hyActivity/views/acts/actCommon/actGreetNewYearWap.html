@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>迎接发财年</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/common/css/common.css">
+    <script src="/common/js/autoFixedLayout.js"></script>
+        <style>
+            .greetSec{
+                width: 100%;
+                height:100%;
+                background: url("/acts/actCommon/images/greetNewYear/bg_icon_04.png");
+                padding:1px;
+            }
+
+            .section{
+                width: 100%;
+            }
+            .section img{
+                display: block;
+                width: 100%;
+            }
+            .section1{
+            }
+            .section3{
+                /*height: 3430px;*/
+                /*background-image: url("/acts/actCommon/images/greetNewYear/pic_06.png");*/
+                /*background-position: center;*/
+                /*background-repeat:no-repeat ;*/
+                /*background-color: #c32c29;*/
+                /*overflow: hidden;*/
+                position: relative;
+            }
+            .section3 img{
+                position: absolute;
+                top:0;
+            }
+            .cal_pic{
+                width: 1207px;
+                height:633px;
+                margin: 0 auto;
+                background: url("/acts/actCommon/images/greetNewYear/pic_03.png") no-repeat center;
+            }
+            .cal_box{
+                width: 7.5rem;
+                /*height: 200px;*/
+                margin: 10px auto;
+            }
+            .cal_item{
+                width:30%;
+                display: inline-block;
+            }
+            .cal_item span{
+                display: block;
+                font-size: 0.3px;
+                color: #850814;
+                height: 0.4rem;
+                line-height: 0.4rem;
+            }
+            .cal_item input[type=text],
+            .cal_item input[type=tel],
+            .cal_item select{
+                width: 80%;
+                height: 0.45rem;
+                border:2px solid #f75a5a;
+                border-radius: 25px;
+                background-color: transparent;
+                font-size: 0.2rem;
+                /*text-indent: 10px;*/
+                text-align: center;
+            }
+            .cal_item select{
+                width: auto;
+                padding: 0 0.5rem;
+                margin: 0;
+                height: 0.54rem;
+            }
+            .cal_item.cal_item2{
+                width: 7.5rem;
+            }
+            .cal_item2 p{
+                color: #850814;
+                width: 100%;
+                margin: auto;
+                font-size: 0.2rem;
+                font-weight: bold;
+            }
+            .cal_item2 a.cal_btn{
+                /*display: block;*/
+                /*height: 0.45rem;*/
+                /*border: 0.02rem solid #f75a5a;*/
+                /*border-radius: 25px;*/
+                /*background-color: #f75a5a;*/
+                /*font-size: 0.25rem;*/
+                /*text-align: center;*/
+                /*line-height: 0.45rem;*/
+                /*width: 2rem;*/
+                /*margin: 0.2rem auto;*/
+                /*color: #fff;*/
+
+                display: block;
+                height: 0.7rem;
+                border: 0.02rem solid #f75a5a;
+                border-radius: 25px;
+                background-color: #f75a5a;
+                font-size: 0.25rem;
+                text-align: center;
+                line-height: 0.7rem;
+                width: 4rem;
+                margin: 0.6rem auto;
+                color: #fff;
+            }
+            .cal_item2 a.cal_btn.cal_btn2{
+                background-color: #fbec94;
+                border: none;
+                width: 4rem;
+                line-height: 0.70rem;
+                height: 0.70rem;
+                border-radius: 11rem;
+                box-shadow: 0 0.06rem 0 #cabf7e;
+                color: #b5251f;
+                font-size: 0.3rem;
+                margin-bottom: 0.65rem;
+                margin-top: 0.40rem;
+                font-weight: bold;
+            }
+            .invest_btn{
+                display: block;
+                width: 2.6rem;
+                height: 0.49rem;
+                top: 17.4rem;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+            .rule_box{
+                width: 920px;
+                margin: 0 auto;
+                margin-top: 2699px;
+                text-align: left;
+                font-size: 21px;
+                line-height: 1.9;
+                color: #fff;
+                /* font-weight: bold; */
+                font-family: "Microsoft YaHei";
+            }
+            .rule_box span{
+                color: #fbec94;
+            }
+        </style>
+        </head>
+<body>
+<div class="greetSec">
+    <div class="section section1">
+        <img src="/acts/actCommon/images/greetNewYear/facaiwap_01.png" alt="">
+    </div>
+    <div class="section">
+        <img src="/acts/actCommon/images/greetNewYear/facaiwap_02.png" alt="">
+    </div>
+    <div class="section section_main">
+        <div class="cal_box">
+            <form action="" id="calculateForm">
+                <div class="cal_item">
+                    <span>投资金额</span>
+                    <input type="tel" name="amount" id="amount" placeholder="≥5000" maxlength="8" value="" pattern="[0-9]*">
+                </div>
+                <div class="cal_item">
+                    <span>投资周期</span>
+                    <select name="" id="cycle">
+                        <option value="0.02">60天</option>
+                        <option value="0.032">90天</option>
+                        <option value="0.04">180天</option>
+                    </select>
+                </div>
+                <div class="cal_item">
+                    <span>预计返现</span>
+                    <input type="text" name="cash" id="cash" placeholder="" value="0" maxlength="8" readonly>
+                </div>
+            </form>
+            <div class="cal_item cal_item2">
+                <a href="javascript:void(0)" id="calBtn" class="cal_btn btn">计算</a>
+                <p> 注：现金返现将于投资成功后7个工作日内发放完毕</p>
+                <a href="javascript:void(0)" class="cal_btn cal_btn2 investBtn" >我要返现</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section section3">
+        <img src="/acts/actCommon/images/greetNewYear/facaiwap_03.png" alt="">
+        <a href="javascript:void(0)" class="invest_btn investBtn"></a>
+        <!--<div class="rule_box">-->
+            <!--<p>温馨提示：</p>-->
+            <!--<p>1.累计投资额仅统计投资周期≥30天投资项目，且渠道首投金额不计入累计投资额；<br>-->
+                <!--2.活动礼品颜色随机，可按8.8折折现，所有礼品均不提供发票；<br>-->
+                <!--3.礼品兑换用户请通过微信公众号【掌上汇元】联系在线客服登记收货地址/是否折现，礼品将在登记完成后7个工作日内寄送/折现；<br>-->
+                <!--4.折现金额将在登记后7个工作日内发放至用户的汇元金服账户中 <span>（2.8-2.22日活动奖励将在2.23日开始处理）;</span><br>-->
+                <!--5.礼品兑换时间截止到3月5日，逾期未联系客服<span>（2.9-2.14号在线时间：09:30-17:30，2.15-2.21日休息）</span> 登记兑奖视为自动放弃兑奖资格.<br>-->
+        <!--</div>-->
+
+    </div>
+</div>
+</body>
+
+<% include ../js.html %>
+<script>
+    $(function(){
+        var $amount = $('#amount'),
+            $cycle = $('#cycle'),
+            $cash = $('#cash');
+
+        var $calBtn = $('#calBtn');
+
+        var calculateCash = function(amount,cycle){
+            var result = amount*cycle;
+            $cash.val(result);
+        }
+
+        /**
+         * 投资按钮
+         */
+        var goInvest = function(){
+            var $goInvest = $('.investBtn');
+
+            $goInvest.click(function(){
+                if(window.navigator.userAgent.indexOf('LRAPP') != -1){//在app中
+                    lrNative.toAppJumpTo({
+                        type:'investList',
+                        pram:'0'
+                    })
+                }else{//app外部
+                    window.location.href = _config.mainIP+'/invest/list';
+                }
+            });
+        };
+
+        var bindEvent = function(){
+            $calBtn.on('click',function(){
+                var _amount = $amount.val(),
+                    _cycle = $cycle.val();
+
+                if(!/^[0-9]*$/.test(_amount)){
+                    $.Alert('请输入正确格式的金额！');
+                    $cash.val(0);
+                    return
+                }
+                if(_amount*1 < 5000){
+                    $.Alert('单笔投资金额≥5000元才可获得现金返现');
+                    $cash.val(0);
+                    return
+                }
+
+                calculateCash(_amount*1,_cycle*1);
+
+            })
+        }
+
+        bindEvent()
+
+        TL.judePlatform(function(){
+                goInvest();
+            },
+            {
+                native:function(){
+                    window.nativeInit = function () {//必须使用这样的方式
+                        goInvest();
+                    };
+
+                    lrNative.toAppGetArgs();//获取鉴权参数
+                },
+                wechat:function(){
+                    goInvest();
+                }
+            });
+
+
+    })
+
+</script>
+</html>

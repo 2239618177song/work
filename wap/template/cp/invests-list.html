@@ -1,0 +1,266 @@
+<div class="wrap list-wrapper" ng-controller="controllerCpList">
+	<div class="common-head" >
+		<p>{{title}}</p>
+	</div>
+	<!-- 新手标倒计时 -->
+	<div class='novice2'ng-repeat="item in perList track by $index" ng-if="item.type == 1&&newHandShow">
+		<div class='title'>
+			<span class='name'>{{item.fullName}}</span>
+		</div>
+		<div class='novice-content'>
+			<div class='rate'>预计年化收益</div>
+			<div class='rate-num'>
+				<span class='f36'>{{(item.rate*100+item.activityRate*100)/100}}</span>%
+			</div>
+		</div>
+		<div class='new-hand-progress-wrapper'>
+			<div data-progress="{{item.pert}}" data-color="blue" new-hand-progress-line></div>
+		</div>
+		<div class='money'>
+			<span>{{item.leastaAmount}}元起投</span>
+			<!-- <span>100元起投</span> -->
+		</div>
+		<div class="nowTime">倒计时：{{time[$index] * 1000 | date:'mm:ss'}}</div>
+		<div class='time'>
+			<span>投资期限{{item.deadline}}天</span>
+			<!-- <span>投资期限30天</span> -->
+		</div>
+	</div>
+	<!-- 新手标 -->
+	<div class='novice' ng-if="newHandShow" ng-repeat="item in newHandList" ui-sref="cpDetail({pid:item.id})">
+		<div class='title'>
+			<span class='name'>{{item.fullName}}</span>
+		</div>
+		<div class='novice-content'>
+			<div class='rate'>预计年化收益</div>
+			<div class='rate-num'>
+				<span class='f36'>{{(item.rate*100+item.activityRate*100)/100}}</span>%
+			</div>
+		</div>
+		<div class='new-hand-progress-wrapper'>
+			<div data-progress="{{item.pert}}" data-color="blue" new-hand-progress-line></div>
+		</div>
+		<div class='money'>
+			<!--<i></i>-->
+			<span>{{item.leastaAmount}}元起投</span>
+		</div>
+		<div class='time'>
+			<!--<i></i>-->
+			<span>投资期限{{item.deadline}}天</span>
+		</div>
+	</div>
+	<div class='invest-list-wrapper'>
+		<!-- 新手标 -->
+		<!-- <div class='list-item' ng-repeat="item in perList">
+				<div class='item-title'>
+					<span class='title'>{{item.fullName}}</span>
+					<span class='title-tips' ng-if="item.isCash==1">红包</span>
+					<span class='title-tips' ng-if="item.isInterest==1">加息券</span>
+					<span class='title-tips' ng-if="item.isDouble==1">翻倍券</span>
+				</div>
+				<div class='item-content'>
+					<div class='rate'>
+						<div class='num-wrapper'>
+							<span class='num'>{{(item.rate*100+item.activityRate*100)/100 | number:2}}</span>
+							<span class='percent'>%</span>
+						</div>
+						<div class='num-text'>预计年化收益率</div>
+					</div>
+					<div class='info'>
+						<div class='orange'>{{item.deadline}}天</div>
+						<div class='gray pdb-6'>投资期限</div>
+					</div>
+					<div class="info">
+						<div class='orange'>{{item.leastaAmount}}元起</div>
+						<div class='gray'>起投金额</div>
+					</div>
+				</div>
+				<div class='ring'>
+					<div data-progress="{{item.pert}}" data-color="blue" progress-line></div>
+				</div>
+			</div> -->
+		<!-- 体验标倒计时 -->
+		<div class='list-item' ng-repeat="item in perList track by $index" ng-if="item.type == 2">
+			<div class='item-title'>
+				<!-- <span class='title'>{{item.fullName}}</span> -->
+				<span class='title tips'>{{item.fullName}}</span>
+				<span class='title-tips tips' ng-if="item.isCash==1">红包</span>
+				<span class='title-tips tips' ng-if="item.isInterest==1">加息券</span>
+				<span class='title-tips tips' ng-if="item.isDouble==1">翻倍券</span>
+				<div class="item-time">
+					<div class="item-img"></div>
+					<div class="time">{{time[$index] * 1000 | date:'mm:ss'}}</div>
+				</div>
+			</div>
+			<div class='item-content-time'>
+				<div class='rate'>
+					<div class='num-wrapper'>
+						<span class='num'>{{(item.rate*100+item.activityRate*100)/100}}</span>
+						<!-- <span class='num'>15</span> -->
+						<span class='percent'>%</span>
+					</div>
+					<div class='num-text'>预计年化收益率</div>
+				</div>
+				<div class='info'>
+					<div class='orange'>{{item.deadline}}天</div>
+					<!-- <div class='orange'>15天</div> -->
+					<div class='gray pdb-6'>投资期限</div>
+				</div>
+				<div class="info">
+					<div class='orange'>{{item.leastaAmount}}元起</div>
+					<!-- <div class='orange'>500元起</div> -->
+					<div class='gray'>起投金额</div>
+				</div>
+			</div>
+			<div class='ring'>
+				<div data-progress="{{item.pert}}" data-color="blue" progress-line></div>
+			</div>
+		</div>
+		<!-- 体验标 -->
+		<div class='list-item' ng-repeat="item in cpList" ui-sref="cpDetail({pid:item.id})">
+			<div class='item-title'>
+				<span class='title title-title'>{{item.fullName}}</span>
+				<span class='title-tips' ng-if="item.isCash==1">红包</span>
+				<span class='title-tips' ng-if="item.isInterest==1">加息券</span>
+				<span class='title-tips' ng-if="item.isDouble==1">翻倍券</span>
+			</div>
+			<div class='item-content'>
+				<div class='rate'>
+					<div class='num-wrapper'>
+						<span class='num'>{{(item.rate*100+item.activityRate*100)/100}}</span>
+						<span class='percent'>%</span>
+					</div>
+					<div class='num-text'>预计年化收益率</div>
+				</div>
+				<div class='info'>
+					<div class='orange'>{{item.deadline}}天</div>
+					<div class='gray pdb-6'>投资期限</div>
+				</div>
+				<div class="info">
+					<div class='orange'>{{item.leastaAmount}}元起</div>
+					<div class='gray'>起投金额</div>
+				</div>
+			</div>
+			<div class='ring'>
+				<div data-progress="{{item.pert}}" data-color="blue" progress-line></div>
+			</div>
+		</div>
+		<div class='sold-out' ng-click="goNext()" ng-if="raisedNum!=undefined && raisedNum!=undefined">
+			已募集{{raisedNum || 0}}个项目，已还款{{repayedNum || 0}}个项目
+		</div>
+		<div class="sold-in">———市场有风险，投资需谨慎———</div>
+	</div>
+	<div class="hyactivity-dialog-wrap" ng-show="showActivityDialog" ng-if="dialogObj!=undefined">
+		<a href="" class="hyactivity-box" ng-click="closeActivityDialog()" ui-sref="{{dialogObj.href}}({wap:true})" target="_blank"
+		 ng-class="dialogObj.className">
+			<span class="money" ng-if="dialogObj.className == 'august-hongbao'">{{dialogObj.redbag}}</span>
+		</a>
+		<a href="" class="close" ng-click="closeActivityDialog()"></a>
+	</div>
+
+	<div class="cplist-content" ng-if="cp.jhsFlag==true && false">
+		<header ui-sref="jhscplist">
+			<img src="images/index/ju-icon.png" alt="企融计划">聚划算
+			<p ng-if="jhsList.length==0">还款方式等本等息</p>
+			<span>查看更多
+				<span>></span>
+			</span>
+		</header>
+		<div ng-if="jhsList.length>0" ui-sref="cpDetail({pid:item.id})" class="detail-typea" ng-repeat="item in jhsList">
+			<h2>{{item.fullName}}
+				<span ng-if="item.repayType==3">等本等息 按周回款</span>
+				<span ng-if="item.repayType==4">等本等息 按月回款</span>
+			</h2>
+			<main>
+				<div class="part-a">{{item.rate | number:2}}
+					<span>%</span>
+					<sup ng-if="item.activityRate>0">+{{item.activityRate | number:2}}
+						<span>%</span>
+					</sup>
+				</div>
+				<div class="part-b">{{item.deadline}}
+					<span> 天</span>
+				</div>
+				<div class="part-c">
+					<div data-progress="{{item.pert}}" progress-circle></div>
+					<p>去抢购</p>
+				</div>
+			</main>
+		</div>
+		<div ng-if="jhsList.length==0" class="detail-typec">
+			<h2>有多划算？收益更高、风险更低、回款更灵活</h2>
+			<main>
+				<div class="part-a">
+					<p>{{cp.maxRate}}
+						<span>%</span>
+					</p>
+					<footer>历史最高年化收益</footer>
+				</div>
+				<div class="part-b">
+					<p>{{cp.periodProInvestCount}}
+						<span> 人</span>
+					</p>
+					<footer>瓜分了上期聚划算</footer>
+				</div>
+				<div class="part-c">
+					<div>
+						<p>敬请</p>
+						<p>期待</p>
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+	<div class="cplist-content" ng-if="false">
+		<header ui-sref="normalcplist">
+			<!-- <img src="images/index/you-icon.png" alt="企融计划"> -->企融计划
+			<span>查看更多
+				<span>></span>
+			</span>
+		</header>
+		<div ui-sref="cpDetail({pid:item.id})" class="detail-typea" ng-repeat="item in cpList">
+			<h2>{{item.fullName}}
+				<span ng-if="item.isCash==1">红包</span>
+				<span ng-if="item.isInterest==1">加息券</span>
+				<span ng-if="item.isDouble==1">翻倍券</span>
+			</h2>
+			<main>
+				<div class="part-a">{{item.rate | number:2}}
+					<span>%</span>
+					<sup ng-if="item.activityRate>0">+{{item.activityRate | number:2}}
+						<span>%</span>
+					</sup>
+				</div>
+				<div class="part-b">{{item.deadline}}
+					<span> 天</span>
+				</div>
+				<div class="part-c">
+					<div data-progress="{{item.pert}}" progress-circle></div>
+					<p>去抢购</p>
+				</div>
+			</main>
+		</div>
+	</div>
+	<div ui-sref="activitycplist" class="cplist-content" ng-if="false">
+		<header>
+			<img src="images/index/act-icon.png" alt="企融计划">活动专享
+			<span>查看更多
+				<span>></span>
+			</span>
+		</header>
+		<div class="detail-typeb">
+			<main>
+				<div class="part-a">
+					{{activityProduct.rate | number:2}}
+					<span>%~</span>{{activityProduct.maxRate | number:2}}
+					<span>%</span>
+				</div>
+				<div class="part-b">{{activityProduct.deadline}}
+					<span> 天起</span>
+				</div>
+				<div class="part-c">{{activityProduct.count}}</div>
+			</main>
+		</div>
+	</div>
+	<div class="rem-rule"></div>
+</div>

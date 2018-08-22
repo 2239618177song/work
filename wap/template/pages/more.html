@@ -1,0 +1,220 @@
+<div class="wrap wap-more-box" ng-controller="moreController">
+	<div class="common-head">
+		<p>{{title}}</p>
+	</div>
+	<!-- <div class="more-banner">
+		<img src="" alt="">
+	</div> -->
+	<!-- <scroll data='activeList'>
+
+	</scroll> -->
+	<div class='more-tab'>
+		<!-- <div class='item' ng-click="copyWechat()">
+			<div><i class='ico-found-wechat'></i></div>
+			<p>汇元官微</p>
+		</div> -->
+		<!--<div class='item' ui-sref="myInvitation">
+			<div><i class='ico-found-invite'></i></div>
+			<p>邀请返利</p>
+		</div>-->
+		<div class='item' ui-sref="GYWM.ZJHY({wap:true,active:0})">
+			<div>
+				<i class='ico-found-about'></i>
+			</div>
+			<p>信息披露</p>
+		</div>
+		<div class='item' ui-sref="actList({wap:true})">
+			<div>
+				<i class='ico-found-active'></i>
+			</div>
+			<p>活动中心</p>
+		</div>
+		<!-- <div class='item' ng-click="hint('server')">
+			<div>
+				<i class='ico-found-server'></i>
+			</div>
+			<p>常见问题</p>
+		</div> -->
+		<div class='item' ui-sref="CJWT({wap:true})">
+				<div>
+					<i class='ico-found-server'></i>
+				</div>
+				<p>常见问题</p>
+			</div>
+
+		<div class='item'>
+			<a href="{{protocol}}//pc.huiyuanjinfu.com">
+				<div>
+					<i class='ico-found-web'></i>
+				</div>
+				<p>汇元官网</p>
+			</a>
+		</div>
+		<!--<div class='item' ui-sref="myInvitation">
+			<div><i class='ico-found-invite'></i></div>
+			<p>邀请返利</p>
+		</div>-->
+		<!--<div class='item' ng-click="copyWechat()">
+			<div><i class='ico-found-wechat'></i></div>
+
+			<p>汇元官微</p>
+		</div>
+		-->
+	</div>
+	<table class="myaccount-mod" ng-if='false'>
+		<tr>
+			<!--<td width="34%" ui-sref="myInvitation">
+				<i class="ico-found ico-found-invite"></i>
+				<p>邀请返利</p>
+			</td>-->
+			<!-- <td width="34%" ng-click="copyWechat()">
+				<i class="ico-found ico-found-wechat"></i>
+				<p>汇元官微</p>
+			</td> -->
+			<td width="33%" ui-sref="GYWM.ZJHY({wap:true,active:0})">
+				<i class="ico-found ico-found-about"></i>
+				<p>信息披露</p>
+			</td>
+			<td width="33%" ui-sref="actList({wap:true})">
+				<i class="ico-found ico-found-active"></i>
+				<p>活动中心</p>
+			</td>
+			<!-- <td width="33%" ng-click="hint('server')">
+				<i class="ico-found ico-found-server"></i>
+				<p>常见问题</p>
+			</td> -->
+			<td width="33%" ui-sref="CJWT({wap:true})">
+					<i class="ico-found ico-found-server"></i>
+					<p>常见问题</p>
+				</td>
+
+		</tr>
+		<tr>
+
+			<td width="33%">
+				<!-- ng-click="hint('coming')" -->
+				<a href="http://pc.huiyuanjinfu.com">
+					<i class="ico-found ico-found-web"></i>
+					<p>汇元官网</p>
+				</a>
+			</td>
+			<!--<td width="34%" ng-click="copyWechat()">
+				<i class="ico-found ico-found-wechat"></i>
+				<p>汇元官微</p>
+			</td>-->
+
+		</tr>
+
+		<tr ng-if="false">
+			<!--<td width="33%" ui-sref="myAssets">
+				<img src="images/myaccount/ico_property.png">
+				<p>我的资产</p>
+			</td>-->
+			<td width="33%" ui-sref="myCoupon">
+				<img src="images/myaccount/ico_red.png">
+				<p>优惠券</p>
+			</td>
+
+			<td width="34%" ui-sref="myTyj">
+				<img src="images/myaccount/ico_tyj.png" style="width: 30%;margin-top: -2.5rem;padding: 2rem 0;">
+				<p>体验金
+					<br ng-if="accunt.experienceAmount>0">
+					<span ng-if="accunt.experienceAmount>0" style="color:#E84034;font-size:0.9rem;">{{accunt.experienceAmount | number:0 }}元</span>
+				</p>
+			</td>
+			<td width="33%" ui-sref="myInvitation">
+				<img src="images/myaccount/ico_invite.png">
+				<!--<img src="images/myaccount/yaoqingfanxian.png" style="position:absolute;width:4rem;top:0.5rem;right:0.5rem;">-->
+				<p>我的邀请</p>
+			</td>
+		</tr>
+		<tr ng-if="false">
+			<td ui-sref="myInfo">
+				<img src="images/myaccount/ico_data.png">
+				<p>我的信息</p>
+			</td>
+			<td ui-sref="myInvest">
+				<img src="images/myaccount/ico_invest.png">
+				<p>我的投资</p>
+			</td>
+			<td ui-sref="minxi">
+				<img src="images/myaccount/ico_detail.png">
+				<p>我的明细</p>
+			</td>
+		</tr>
+		<tr ng-if="false">
+			<td ui-sref="myActivity">
+				<img src="images/myaccount/ico-gift.png" style="width: 30%;margin-top: -2.5rem;padding: 2rem 0;">
+				<p>中奖记录</p>
+			</td>
+			<!--<td ui-sref="myMission">
+				<img src="images/myaccount/ico-mission.png" style="width: 25%;margin-top: -2.5rem;padding: 2rem 0;">
+				<p>赚钱任务</p>
+			</td>-->
+			<td ui-sref="actList({wap:true})">
+				<img src="images/myaccount/ico-activity.png" style="width: 25%;margin-top: -2.5rem;padding: 2rem 0;">
+				<p>活动专区</p>
+			</td>
+			<!--<td>
+				<img src="images/myaccount/ico_wait.png" style="width: 25%;margin-top: -2.5rem;padding: 2rem 0;">
+				<p style="color:#bdbdbd;">敬请期待</p>
+			</td>-->
+
+			<!--年末投即送活动-->
+			<td ui-sref="mytjs({wap:true})">
+				<img src="images/activity/tjs/ico-tjs.png" style="width: 25%;margin-top: -2.5rem;padding: 2rem 0;">
+				<p>投资即送</p>
+			</td>
+		</tr>
+	</table>
+
+	<!-- 汇元资讯 -->
+	<div class="article">
+		<p class="title">汇元资讯</p>
+		<div class="art-content" ng-repeat="item in articleList1 track by $index">
+			<div class="left">
+				<div class="left-title" ui-sref="GGXQ({wap:true,artiId:item.artiId,type:'汇元资讯',active:$index})">{{item.title}}</div>
+				<div class="left-tips" ui-sref="HYZX({wap:true,type:item.typeName,active:$index})">{{item.typeName}}</div>
+			</div>
+			<div class="right" ui-sref="GGXQ({wap:true,artiId:item.artiId,type:'汇元资讯',active:$index})">
+				<div class="right-img">
+					<img src="{{item.litpic}}" alt="" ng-if="item.litpic">
+					<img src="images/find-icon/logo_default.png" alt="" ng-if="!item.litpic">
+				</div>
+				<p class="right-time">{{item.createTime | date : 'yyyy-MM-dd HH:mm'}}</p>
+			</div>
+		</div>
+		<!-- 查看更多 -->
+		<div class="more-btn" ui-sref="HYZX({wap:true,type:'汇元资讯',active:0})">查看更多</div>
+	</div>
+	<div class="article">
+		<p class="title">理财课堂</p>
+		<div class="art-content" ng-repeat="item in articleList2 track by $index">
+			<div class="left">
+				<div class="left-title" ui-sref="GGXQ({wap:true,artiId:item.artiId,type:'理财课堂',active:$index+4})">{{item.title}}</div>
+				<div class="left-tips" ui-sref="LCKT({wap:true,type:item.typeName,active:$index+4})">{{item.typeName}}</div>
+			</div>
+			<div class="right" ui-sref="GGXQ({wap:true,artiId:item.artiId,type:'理财课堂',active:$index+4})">
+				<div class="right-img">
+					<img src="{{item.litpic}}" alt="新闻图" ng-if="item.litpic">
+					<img src="images/find-icon/logo_default.png" alt="" ng-if="!item.litpic">
+				</div>
+				<p class="right-time">{{item.createTime | date : 'yyyy-MM-dd HH:mm'}}</p>
+			</div>
+		</div>
+		<div class="more-btn" ui-sref="LCKT({wap:true,type:'理财课堂',active:4})">查看更多</div>
+	</div>
+	<div class='tips'>
+		<span ng-click="yjfk()">意见反馈</span>
+		<a href='tel:400-872-9577'>电话咨询</a>
+	</div>
+	<!-- <div class="more-bg"> -->
+	<!-- <a href="/GYWM?wap=true"><div><i class="txt">信息披露</i><p><span>></span></p></div></a> -->
+	<!-- <div style="height:auto;overflow: hidden;"><a>客服热线</a><p class="time">400-819-8282</br><font>工作日：9:00 - 21:00<br />周末及节假日：9:00 - 18:00</font></p></div> -->
+	<!-- <div ui-sref="YJFK"><a>意见反馈</a><p><span>></span></p></div>
+		<div><a>版本号</a><p>v {{version}}</p></div> -->
+	<!-- <div ng-click="out('out')">
+	             <a>   退出</a>
+	    </div> -->
+	<!-- </div> -->
+</div>

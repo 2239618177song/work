@@ -1,0 +1,109 @@
+// 邀请活动
+.zm-active-invite-wrapper {
+    background: #120d3d;
+    .top-wrapper {
+        height: rem-calc(284, 375);
+        background: url('../../images/zmActive/top.png') center center no-repeat;
+        background-size: 100% 100%;
+        .notice-box {
+            height: 25px;
+            overflow: hidden;
+            position: relative;
+            span {
+                display: block;
+                text-align: center;
+                height: 25px;
+                color: #fff;
+                font-size: 12px;
+                position: absolute;
+                width: 100%;
+            }
+        }
+    }
+    .first-title {
+        margin-bottom: 30px;
+        .title {
+            width: rem-calc(300, 375);
+            height: rem-calc(27, 375);
+            background: url('../../images/zmActive/first-title.png') center center no-repeat;
+            background-size: 100% 100%;
+            margin: 0 auto;
+        }
+        .content {
+            margin-top: 20px;
+            padding: rem-calc(0 60);
+            font-size: 12px;
+            color: #fff;
+        }
+    }
+    .table {
+        width: rem-calc(327, 375);
+        height: rem-calc(250, 375);
+        margin: 0 auto;
+        background: url('../../images/zmActive/table.png') center center no-repeat;
+        background-size: 100% 100%;
+    }
+    .table-content {
+        margin: 15px 0 25px 0;
+        padding: rem-calc(0 60);
+        font-size: 12px;
+        color: #fff;
+    }
+    .second-title {
+        .title {
+            width: rem-calc(300, 375);
+            height: rem-calc(27, 375);
+            background: url('../../images/zmActive/second-title.png') center center no-repeat;
+            background-size: 100% 100%;
+            margin: 0 auto;
+        }
+        .content {
+            margin-top: 20px;
+            padding: rem-calc(0 60);
+            font-size: 12px;
+            color: #fff;
+        }
+    }
+    .small-tips {
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+        transform: scale(.7);
+        -webkit-transform: scale(.7);
+    }
+    .active-btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10px;
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 4px;
+            flex: 0 0 rem-calc(123, 375);
+            height: rem-calc(35, 375);
+        }
+        .start {
+            flex: 0 0 rem-calc(125, 375);
+            height: rem-calc(40, 375);
+            background: url('../../images/zmActive/start.png') center center no-repeat;
+            background-size: 100% 100%;
+        }
+        .end {
+            flex: 0 0 rem-calc(125, 375);
+            height: rem-calc(40, 375);
+            background: url('../../images/zmActive/end.png') center center no-repeat;
+            background-size: 100% 100%;
+        }
+        .invest {
+            background: #3877d4;
+            margin-right: rem-calc(90, 375);
+        }
+        .invite {
+            background: #ee46a2;
+        }
+    }
+}

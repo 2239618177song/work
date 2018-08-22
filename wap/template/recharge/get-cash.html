@@ -1,0 +1,110 @@
+﻿<style type="text/css">
+	.recharge-wrapper .recharge-tips{
+		margin-bottom:7rem;
+	}
+	.recharge-wrapper .cash-box.input-box.setPwd-box{
+		height:50px;
+	}
+	.recharge-wrapper .setPwd-box input{
+		height:50px;
+	}
+	.recharge-wrapper .cash-box .setPwd{
+		line-height: 50px;
+	}
+	.kefu-wrapper,.recharge-wrapper .sub-box{
+		position:static;
+	}
+</style>
+<div ng-view class="recharge-wrapper cash-wrapper" ng-controller="getcashCtrl" ng-style='height'>
+    <div class="common-head" ng-click="toback()"><i></i>
+        <p>{{title}}</p>
+    </div>
+    <!--<div class='cash'>
+                      可提现<span>{{cash.funds | currency:'':0}}</span>元
+    </div>-->
+    <div class="recharge-wrap">
+        <form name="cashForm" ng-submit="submitForm(cashForm.$valid)" novalidate>
+            <div class="card-box">
+                <img src="images/bankIcon/{{cash.bankCode}}.png" />
+                <div class="card-info">
+                    <div class="card-name">{{cash.bankName}}<span>({{cash.bankNum}})</span></div>
+                    <div class="card-limit">单笔限额 5,000,000 元</div>
+                </div>
+            </div>
+
+            <!-- <div class="rest-box">
+                <p class="name">账户余额</p>
+                <p class="count">{{cash.funds | currency:'':0}} 元</p>
+            </div> -->
+
+            <div class="input-box cash-box">
+                <span class='title'>提现金额(元)</span>
+                <div class="content-box">
+                	<span class="rmb">￥</span>
+                <input class="text" type="text" class="cash" ng-model="cash.amount" name="cash" placeholder="请输入提现金额" value="" onkeyup="this.value=this.value.replace(/^\D*(\d*(?:\.\d{0,2})?).*$/g, '$1')"
+                    required autocomplete="off" ng-blur="setAmount($event)" ng-pattern="/^[0-9]+([.]{1}[0-9]+){0,1}$/" morethan
+                    withdrawlimit maxlimit ng-if="cash.isChargeFlag == 0" />
+                <input class="text" type="text" class="cash" ng-model="cash.amount" name="cash" placeholder="请输入提现金额" value="" onkeyup="this.value=this.value.replace(/^\D*(\d*(?:\.\d{0,2})?).*$/g, '$1')"
+                    required autocomplete="off" ng-blur="setAmount($event)" ng-pattern="/^[0-9]+([.]{1}[0-9]+){0,1}$/" morethan3
+                    withdrawlimit maxlimit ng-if="cash.isChargeFlag == 1" />
+
+                </div>
+                <div class="end-box">
+                	<span>可提现<span>{{cash.funds | currency:'':0}}</span>元</span>
+                	<span class='all-btn' ng-click="setAll()">全部提现</span>
+                </div>
+
+                <!-- <div class="all"><span ng-click="setAll()" class="circlebtn"><i></i></span>全部</div> -->
+
+            </div>
+
+
+            <!-- <div class="cash-info">
+                <table>
+                    <tr>
+                        <td>
+                            <p class="cost">提现费用 {{cash.cost}}.00 元</p>
+                            <p ng-if="cash.amount - cash.cost < 0" class="myrest">预估到账金额 0.00 元</p>
+                            <p ng-if="cash.amount - cash.cost >= 0">预估到账金额 <span>{{(cash.amount - cash.cost) | isNumber2}}</span> 元</p>
+                        </td>
+                    </tr>
+                </table>
+            </div> -->
+            <!--<div class="input-box cash-box" style="height:50px;">
+                <input class="text" type="password" placeholder="请输入交易密码" ng-disabled="user.tpwdFlag == 0" value="" required ng-model="cash.tradepwd"
+                    autocomplete="off" /><a class="setPwd" href="" ui-sref="resetTradePwd({firstset:true})" ng-if="user.tpwdFlag == 0">设置交易密码</a>
+            </div>-->
+             <div class="input-box cash-box setPwd-box" style="height:50px">
+                <input class="text" type="password" ng-if="user.tpwdFlag == 1" placeholder="请输入交易密码" ng-disabled="user.tpwdFlag == 0" value="" required ng-model="cash.tradepwd"
+                    autocomplete="off"/>
+                    <a class="setPwd" href="" ui-sref="resetTradePwd({firstset:true})" ng-if="user.tpwdFlag == 0">设置交易密码</a>
+            </div>
+            <!--<div class="sub-box"><input type="submit" value="提现到银行卡" class="sub-btn sub cash-btn" ng-disabled="cashForm.$invalid" /></div>-->
+            <div class="recharge-tips">
+                <div>温馨提醒</div>
+                <p>1.每位用户每月可享受2次免费提现，超出后提现手续费为2元/笔，手续费将从您的提现金额中扣除；</p>
+                <p>2.每位用户提现最高单笔500W,单日单月无上限，每月前两笔提现1元起提，后续每笔提现3元起提；</p>
+                <!-- <p><i></i>啄米理财用户提现支持7*24h实时提现（具体到账时间以银行处理提现时间为准）；</p> -->
+                <p>3.提现后24小时内到账，具体到账时间视银行而定；</p>
+                <!-- <p><i></i>工作日：9:00-17:00（2小时内到账），<br/>工作日：17:00-次日9:00 (次日11:00前到账），<br/>周末及节假日顺延至工作日第一天11:00前到账，<br/>具体到账时间视银行而定；</p> -->
+                <p>4.体验金收益需要完成一次真实投资后才可提现；</p>
+                <p>5.返现或体验金收益需要完成一次真实投资后才可提现；</p>
+                <p>6.若提现过程中遇到任何问题，请及时联系我们:400-872-9577</p>
+            </div>
+            <div class='kefu-wrapper'>
+                <a href='tel:400-872-9577'>
+                    <i class='kefu'></i>
+                    <span>联系客服</span>
+                </a>
+            </div>
+        	<div class="sub-box"><input type="submit" value="提现到银行卡" class="sub-btn sub cash-btn" ng-disabled="cashForm.$invalid" /></div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+</div>

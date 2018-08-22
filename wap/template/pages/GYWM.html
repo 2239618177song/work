@@ -1,0 +1,34 @@
+<div class="wrap wap-more-box" ng-controller="GYWMCtrl">
+	<div class="common-head" ng-click="toback()" ng-if="wap"><i></i>
+		<p>{{title}}</p>
+		<!-- <p>关于汇元</p> -->
+	</div>
+	<!-- <div class='logo-wrapper'>
+			<div><i class='logo'></i></div>
+		</div> -->
+	<div class="more-bg" ng-if="wap">
+		<ul>
+			<li ng-class="{0:'active',1:'',2:''}[active]" ng-click="onClick(0)" ui-sref="GYWM.ZJHY({wap:true,active:0})">走进汇元</li>
+			<li ng-class="{0:'',1:'active',2:''}[active]" ng-click="onClick(1)" ui-sref="GYWM.HYSJ({wap:true,active:1})">汇元大事件</li>
+			<li ng-class="{0:'',1:'',2:'active'}[active]" ng-click="onClick(2)" ui-sref="GYWM.LXWM({wap:true,active:2})">联系我们</li>
+		</ul>
+			<!-- <div ng-click="goto('公司介绍')"><i class="gywm-txt txt">走进汇元</i>
+				<p><span>></span></p>
+			</div>
+			<div ng-click="goto('公司资质')"><i class="gywm-txt txt">公司资质</i>
+				<p><span>></span></p>
+			</div>
+			<div ng-click="goto('网站公告')"><i class="gywm-txt txt">网站公告</i>
+				<p><span>></span></p>
+			</div> -->
+	</div>
+	<div ng-cloak class="ng-scope ng-cloak" ui-view=""></div>
+	<!-- <div class='about-info'>
+		<div>客服电话:400-872-9577</div>
+		<div>服务时间：09:30-17:30 (工作日)</div>
+		<div>官方QQ：4008729577
+</div>
+		<div></div>
+	</div> -->
+	<!--<div class="banner"><img style="width: 100%;" src="images/more/ico_aboutus.png"></div>-->
+</div>

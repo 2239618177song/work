@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新手好礼</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="/common/css/common.css">
+    <link rel="stylesheet" href="/acts/newRegister/css/style.css"/>
+    <script src="/common/js/autoFixedLayout.js"></script>
+
+</head>
+<body class="newRegSec">
+    <div class="form_panel">
+        <div class="form_item">
+            <div class="input">
+                <input type="text"
+                       placeholder="请输入手机号"
+                       name="mobile"
+                       maxlength="11"
+                       pattern="[0-9]*"
+                        />
+            </div>
+        </div>
+
+        <div class="form_item">
+            <div class="input short">
+                <input type="text"
+                       placeholder="图形验证码"
+                       name="imgVCodeInput"
+                       maxlength="4"
+                        />
+            </div>
+            <a href="javascript:void(0)" class="v_img">
+                <img id="imgVCode" src="" alt=""/>
+            </a>
+        </div>
+
+        <div class="form_item">
+            <div class="input short">
+                <input type="text"
+                       placeholder="手机验证码"
+                       name="vCode"
+                       maxlength="4"
+                       pattern="[0-9]*"
+                        />
+            </div>
+            <a href="javascript:void(0)" class="v_btn" id="vCode">获取验证码</a>
+        </div>
+
+        <div class="form_item">
+            <div class="input">
+                <input type="password"
+                       name="password"
+                       placeholder="6-18位，包含数字和字母"
+                       maxlength="20"
+                        />
+            </div>
+        </div>
+
+        <input type="hidden" name="imgVCodeInput"/>
+
+        <!--<div class="form_item">-->
+            <!--<div class="input">-->
+                <!--<input type="text" placeholder="请输入邀请码(选填)" name="inviteCode"/>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+
+    <div class="check_protocol">
+        <label for="checkProtocol">
+            <input id="checkProtocol" type="checkbox" checked/>
+            我已阅读《<a href="javascript:void(0)" id="openProtocol">用户注册协议</a>》
+        </label>
+    </div>
+
+    <div class="btn_area">
+        <a href="javascript:void(0)" class="btn" id="btnSubmit">注册领取5188元红包</a>
+    </div>
+
+    <!--<div class="invite_area">-->
+        <!--<a href="javascript:void(0)" class="btn">邀请好友</a>-->
+    <!--</div>-->
+
+    <%include ../js.html%>
+    <script src="/acts/newRegister/js/script.js"></script>
+</body>
+</html>

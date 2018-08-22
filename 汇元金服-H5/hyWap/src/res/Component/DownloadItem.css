@@ -1,0 +1,55 @@
+.appdown {
+    position: relative;
+    height: 3.4rem;
+    background: #2d2d2d;
+    line-height: 3.4rem;
+    padding: 0 .5rem 0 1.2rem;
+    color: #fff;
+    font-size: 0;
+    text-align: left;
+}
+
+.appdown.hide{
+    display: none;
+}
+
+.appdown span {
+    display: inline-block;
+    vertical-align: top
+}
+
+.appdown span small {
+    display: block;
+    font-size: .8rem
+}
+
+.appdown .info {
+    font-size: 1.1rem;
+    text-decoration: underline
+}
+
+.appdown img.applogo {
+    width: 2.97872rem;
+    height: 2.97872rem;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.appdown img.xx {
+    width: 1.36rem;
+    height: 1.36rem;
+    display: block;
+    margin: 1rem auto
+}
+
+.appdown a {
+    color: #fff
+}
+
+.appdown .close-x {
+    position: absolute;
+    top: 0;
+    right: .5rem;
+    height: 3.4rem;
+    width: 3rem
+}

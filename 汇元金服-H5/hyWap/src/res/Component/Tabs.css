@@ -1,0 +1,52 @@
+/*
+tab切换样式
+*/
+.CPT_tabs{
+  /*height:45px;
+  line-height: 45px;*/
+  height: 3.7446rem;
+  line-height: 3.7446rem;
+  overflow: hidden;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+  background-color: #Fff !important;
+}
+
+.CPT_tabs .tabItem{
+  float: left;
+  display: block;
+  height:100%;
+  position: relative;
+  font-size: 1.1914rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  background-color: #fff;
+}
+
+.CPT_tabs .tabItem.active{
+  color:#f90;
+}
+
+.CPT_tabs .tabItem.active:after{
+  position: absolute;
+  width:5px;
+  height:1px;
+  bottom:0;
+  left:0;
+  margin-left: -2px;
+  background-color: #f90;
+  content:'';
+  animation: tabs_open 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes tabs_open {
+  from{
+    width:5px;
+  }
+
+  to{
+    width:100%;
+  }
+}

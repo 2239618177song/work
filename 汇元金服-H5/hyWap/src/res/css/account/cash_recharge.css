@@ -1,0 +1,104 @@
+._a_cash_rechargeSec{
+    padding-top: 1rem;
+    padding-bottom: 1.6rem;
+}
+
+._a_cash_rechargeSec .card_info{
+    background-color:#fff;
+    padding:0 0.4rem;
+    height: 1.4rem;
+    position: relative;
+}
+
+._a_cash_rechargeSec .card_info .card_icon{
+    width:1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border:1px solid #ccc;
+    position: absolute;
+    top:0.2rem;
+}
+
+._a_cash_rechargeSec .card_info .card_name{
+    position: absolute;
+    left:1.6rem;
+    font-size:0.30rem;
+    top:0.3rem;
+}
+
+._a_cash_rechargeSec .card_info .card_no{
+    position: absolute;
+    color:#999;
+    left:1.6rem;
+    font-size:0.30rem;
+    top:0.8rem;
+}
+
+._a_cash_rechargeSec .card_info .arrow{
+    position: absolute;
+    right:0.3rem;
+    background: url(../../images/arrow_right.png) no-repeat 0 0;
+    width:0.4rem;
+    background-size: 0.4rem;
+    height: 0.4rem;
+    top:0.5rem;
+}
+
+._a_cash_rechargeSec .value_info{
+    height: 0.8rem;
+    line-height: 0.8rem;
+    color:#999;
+    font-size:0.32rem;
+    text-align: left;
+    padding:0 0.4rem;
+}
+
+._a_cash_rechargeSec .tips_info{
+    text-align: left;
+    padding:0 0.4rem;
+    font-size: 0.28rem;
+    line-height: 0.4rem;
+    color:#999;
+}
+
+._a_cash_rechargeSec .tips_info p.title{
+    margin-top: 0.4rem;
+    color:#333;
+}
+
+._a_cash_rechargeSec .btn_area{
+    padding:0 0.5rem;
+    margin-top: 0.6rem;
+}
+
+._a_cash_rechargeSec .btn_area.fixed{
+    position: fixed;
+    width:100%;
+    padding:0.4rem;
+    bottom:0;
+    left:0;
+    margin:0;
+
+}
+
+._a_cash_rechargeSec .select_type{
+    margin-top:1.6rem;
+}
+
+._a_cash_rechargeSec .select_type .type{
+    width:3rem;
+    height: 1rem;
+    display: inline-block;
+    margin: 0 0.3rem;
+    background-position: 0 0 ;
+    background-size: 3rem 1rem;
+    background-repeat: no-repeat;
+}
+
+._a_cash_rechargeSec .select_type .type.quick{
+    background-image: url(../../images/quick.png);
+}
+
+._a_cash_rechargeSec .select_type .type.wangyin{
+    background-image: url(../../images/wangyin.png);
+}

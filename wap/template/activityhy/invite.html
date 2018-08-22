@@ -1,0 +1,54 @@
+<div class="hy-invite" ng-controller="hongyainviteCtrl">
+	<img src="/images/zmActive/invite-top.png">
+	<div class='invite-wrapper'>
+		<div class='content'>
+			<div class='title'>邀请奖励</div>
+			<div class='subtitle mgb-34'>
+				<div class='item'>邀请好友注册并首投单笔满10000元</div>
+				<div class='arrow'></div>
+				<div class='item'>双方获得
+					<span>18元</span>现金奖励
+				</div>
+			</div>
+			<div class='subtitle mgb-34'>
+				<div class='item'>每个自然月内邀请交易用户累计满5位</div>
+				<div class='arrow'></div>
+				<div class='item'>
+					<span>300元</span>现金奖励
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='invite-tips'>
+		备注
+		<br> 1. 18元现金奖励会实时发放至账户余额。
+		<br> 2. 300元奖励会在次月第一天发放至账户余额。
+	</div>
+	<div class='invite-wrapper'>
+		<div class='content'>
+			<div class='title'>邀请赚佣金</div>
+			<div class='subtitle mgb-34'>
+				<div class='text'>邀请好友注册并首投单笔满10000元后，还可获得对应好友后续一年内每笔投资收益的
+					<span>25%</span>作为邀请佣金（不包含募集期收益）。
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='info'>
+		客服热线：400-872-9577（9:30-17:30）
+		<br>官方QQ：4008729577（9:30-17:30）
+	</div>
+	<div class='invite-tips'>
+		本活动最终解释权归汇元金服所有
+	</div>
+	<span ng-if="wap" class="btn" ui-sref="myInvitation">立即邀请</span>
+	<a ng-if="!wap" href="jsmp://page=1">
+		<span class="btn">立即邀请</span>
+	</a>
+	<div class="share-ios">
+		<img ng-click="closethis()" src="images/share-ios.png" />
+	</div>
+	<div class="share-android">
+		<img ng-click="closethis()" src="images/share-android.png" />
+	</div>
+</div>

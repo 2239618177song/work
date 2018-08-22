@@ -1,0 +1,71 @@
+<div class="wap-more-box" ng-controller="hyzxCtrl">
+    <div class="common-head hyzx-head" ng-click="toback()">
+        <i></i>
+        <p>{{title}}</p>
+    </div>
+    <div class="hyzx-bg">
+        <ul class="hyzx">
+            <li class="hyzx-tabs" ng-class="{0:'active',1:'',2:'',3:''}[active]" ng-click="onClick(0)">官方公告</li>
+            <li class="hyzx-tabs" ng-class="{0:'',1:'active',2:'',3:''}[active]" ng-click="onClick(1)">汇元动态</li>
+            <li class="hyzx-tabs" ng-class="{0:'',1:'',2:'active',3:''}[active]" ng-click="onClick(2)">P2P网贷</li>
+            <li class="hyzx-tabs" ng-class="{0:'',1:'',2:'',3:'active'}[active]" ng-click="onClick(3)">网贷资讯</li>
+        </ul>
+
+    </div>
+    <div class="hyzx-body" ng-if="active == 0">
+        <div class="hyzx-content" ng-repeat="item in artList" infinite-scroll='loadMore(item)' infinite-scroll-distance='2' ui-sref="GGXQ({wap:true,artiId:item.artiId,active:0,type:'官方公告'})">
+            <div class="hyzx-left">
+                <div class="hyzx-title">{{item.title}}</div>
+                <div class="hyzx-time">{{item.createTime | date : 'yyyy-MM-dd HH:mm:ss'}}</div>
+            </div>
+            <div class="hyzx-right">
+                <div class="hyzx-img">
+                    <img src="{{item.litpic}}" alt="" ng-if="item.litpic">
+                    <img src="images/find-icon/logo_default.png" alt="" ng-if="!item.litpic">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hyzx-body" ng-if="active == 1">
+        <div class="hyzx-content" ng-repeat="item in artList" infinite-scroll='loadMore(item)' infinite-scroll-distance='2' ui-sref="GGXQ({wap:true,artiId:item.artiId,active:1,type:'汇元动态'})">
+            <div class="hyzx-left">
+                <div class="hyzx-title">{{item.title}}</div>
+                <div class="hyzx-time">{{item.createTime | date : 'yyyy-MM-dd HH:mm:ss'}}</div>
+            </div>
+            <div class="hyzx-right">
+                <div class="hyzx-img">
+                    <img src="{{item.litpic}}" alt="" ng-if="item.litpic">
+                    <img src="images/find-icon/logo_default.png" alt="" ng-if="!item.litpic">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hyzx-body" ng-if="active == 2">
+        <div class="hyzx-content" ng-repeat="item in artList" infinite-scroll='loadMore(item)' infinite-scroll-distance='2' ui-sref="GGXQ({wap:true,artiId:item.artiId,active:2,type:'P2P网贷'})">
+            <div class="hyzx-left">
+                <div class="hyzx-title">{{item.title}}</div>
+                <div class="hyzx-time">{{item.createTime | date : 'yyyy-MM-dd HH:mm:ss'}}</div>
+            </div>
+            <div class="hyzx-right">
+                <div class="hyzx-img">
+                    <img src="{{item.litpic}}" alt="" ng-if="item.litpic">
+                    <img src="images/find-icon/logo_default.png" alt="" ng-if="!item.litpic">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hyzx-body" ng-if="active == 3">
+        <div class="hyzx-content" ng-repeat="item in artList" infinite-scroll='loadMore(item)' infinite-scroll-distance='2' ui-sref="GGXQ({wap:true,artiId:item.artiId,active:3,type:'网贷资讯'})">
+            <div class="hyzx-left">
+                <div class="hyzx-title">{{item.title}}</div>
+                <div class="hyzx-time">{{item.createTime | date : 'yyyy-MM-dd HH:mm:ss'}}</div>
+            </div>
+            <div class="hyzx-right">
+                <div class="hyzx-img">
+                    <img src="{{item.litpic}}" alt="" ng-if="item.litpic">
+                    <img src="images/find-icon/logo_default.png" alt="" ng-if="!item.litpic">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

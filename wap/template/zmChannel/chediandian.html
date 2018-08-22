@@ -1,0 +1,46 @@
+<div class="hy-new-reg" ng-controller="zmChannelregCtrl">
+    <img src="images/zmChannel/cdd-a.png" width="100%" style="display:block;">
+    <div class='cdd-reg-form-wrapper'>
+        <div class="reg-form">
+            <form ng-model="fromregister" name="myForm" novalidate="" style="width: 90%;margin: 0 auto;">
+                <div style="margin:0;">
+                    <i class="reg-new-icon-phone"></i>
+                    <input name="mobilephone" type="text" ng-pattern="/^1[3|4|5|7|8][0-9]{9}$/" placeholder="请输入手机号（建议使用银行预留手机号）" ng-model="login.mobilephone"
+                        onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')" ng-blur="blurID('focusMobilephone',myForm)" minlength="11"
+                        maxlength="11" required>
+                    <span></span>
+                </div>
+                <div>
+                    <i class="reg-new-icon-msg"></i>
+                    <input id="imgcode" type="text" placeholder="请输入图形码" ng-model="login.picCode" name="picCode" minlength="4" maxlength="4"
+                        required autocomplete="off" />
+                    <span class="img-box">
+                        <img ng-click="clickInput($event)" src="login/validateCode2.dos">
+                    </span>
+                </div>
+                <div ng-disabled="true" class="part-wrap">
+                    <i class="reg-new-icon-msg"></i>
+                    <input ng-model="login.smsCode" name="smsCode" class="part-input" type="text" placeholder="请输入短信验证码" maxlength="4" required>
+                    <span class="get-msg" ng-click="getyzm(myForm)">{{nowTimer}}</span>
+                </div>
+                <div>
+                    <i class="reg-new-icon-pwd"></i>
+                    <input autocomplete="off" type="{{(passwordText|isShowPw).type}}" placeholder="密码为6-18位字母数字混合" ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/"
+                        ng-model="login.passWord" name="passWord" required/>
+                    <span></span>
+                </div>
+                <div class='invite-tip'>
+                    <i></i>
+                    <a href='{{protocol}}//www.zhuomilicai.com/zc'>注册视为同意《汇元金服协议》</a>
+                </div>
+                <div>
+                    <button class="reg-btn" ng-click="zuce(myForm)">立即注册</button>
+                </div>
+                <div class='invite-login' ui-sref='dl'>
+                    我已注册，立即登录
+                </div>
+            </form>
+        </div>
+    </div>
+    <img src="images/zmChannel/cdd-c.png" width="100%" style="display:block;">    
+</div>

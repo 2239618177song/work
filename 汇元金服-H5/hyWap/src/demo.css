@@ -1,0 +1,54 @@
+._LRSlider{
+    position: relative;
+    height: 4rem;
+    background: url(./res/images/zhanweitu_banner@2x.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+._LRSlider .sliderWrap{
+    overflow: hidden;
+    height: 100%;
+}
+
+._LRSlider .sliderWrap > div{
+    height: 100%;
+}
+
+._LRSlider .sliderWrap a.item{
+    display: block;
+    height: 100%;
+}
+
+._LRSlider .sliderWrap a.item img{
+    width:100%;
+    height: 100%;
+    display: block;
+}
+
+/* 轮播控制 */
+._LRSlider  aside{
+    width:100%;
+    position: absolute;
+    font-size:0.36rem;
+    bottom:10px;
+    left:0;
+    z-index: 99;
+}
+
+._LRSlider  aside > a{
+    color:#fff;
+    font-size:0.28rem;
+    margin:0 3px;
+}
+
+._LRSlider  aside > a:after{
+    content:'●';
+    font-size: 0.40rem;
+    text-shadow:0 0 1px #ccc;
+}
+
+._LRSlider aside > a.actived:after{
+    content:'●';
+    color:rgb(210,53,47);
+    text-shadow:0 0 2px #ccc;
+}

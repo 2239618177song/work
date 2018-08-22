@@ -1,0 +1,131 @@
+.wap-smrz-box{
+	font-size: rem-calc(48);
+	background:#ffffff;
+	form {
+		padding: rem-calc(40 0 0);
+		&.wap-shiming{
+			padding: 0 18px;
+			div{
+				background-color: #fff;
+				display: flex;
+				position: relative;
+				align-items: center;
+				border-bottom: 1px solid #f2f2f2;
+				&.city{
+					.search{
+						position: absolute;
+						top: 50%;
+						right: 1rem;
+						transform: translate(0, -50%);
+						-webkit-transform: translate(0, -50%);
+						background: url(../../images/search.png) center no-repeat;
+						background-size: 100%;
+						width: rem-calc(25,750);
+						height: rem-calc(25,750);
+					}
+				}
+				&.msg-box{
+					margin-bottom:rem-calc(150,750);
+				}
+				span.title{
+					width: rem-calc(230,750);
+					flex: 0 0 auto;
+					align-items: center;
+					font-size: 14px;
+					color: #333333;
+					margin: rem-calc(0 30,750);
+					display: flex;
+				}
+				span.code-box{
+					flex: 0 0 90px;
+					font-size: 1rem;
+					color: #fc764d;
+				}
+				&.bankName-box{
+					height:rem-calc(112);
+				}
+			}
+		}
+		input,select{
+			padding-left: rem-calc(56);
+			width:100%;
+			height:rem-calc(112);
+			background: #fff;
+			font-size: 12px;
+			flex: 1 1 auto;
+			box-sizing: border-box;
+		} 
+		.msg-btn{
+			float: right;
+			color: $base-color;
+			margin-top: rem-calc(-112/1.2);
+		    margin-right: rem-calc(30);
+		    position: relative;
+		    z-index: 99;
+
+		}
+		.placeholder{
+			color: #999;
+			option{
+				color: #000;
+			}
+		}
+		.city-box{
+			position: relative;
+			.city-list{
+				position: absolute;
+				top: rem-calc(152);
+				left: 0;
+				width: 100%;
+			    line-height: rem-calc(112);		
+		    	max-height: rem-calc(112) * 8;
+		    	overflow-y: auto;
+			    z-index: 100;
+			    display: block;
+			    background-color: #fff;    	
+			    border: 1px solid #dbdbdb;
+			    padding: 0;
+			    li{
+			    	height: rem-calc(112);
+			    	line-height: rem-calc(112);
+			    	padding: 0 rem-calc(56);
+			    	border-bottom: 1px solid #dbdbdb;
+			    	&:last-child{
+			    		border-bottom: none;
+			    	}
+			    }
+			}
+		}
+
+	} 
+	.wap-sub-btn{
+		width:rem-calc(980);
+		height:rem-calc(112);
+		background: $base-color;
+		color:#fff;
+		margin: rem-calc(0 56 0 56);
+		line-height:rem-calc(112);
+		font-size: rem-calc(48);
+		text-align:center;
+	}
+	.wap-smrz-help{
+		margin: rem-calc(144 56 0);
+		ul{
+			font-size: rem-calc(40);
+		}
+		li{
+			font-size: rem-calc(32);
+			color:#787878
+		}
+	}
+}
+	// width: 100%;
+ //    max-width: 750px;
+ //    height: 3.54167rem;
+ //    line-height: 3.54167rem;
+ //    text-align: center;
+ //    font-size: 1.25rem;
+ //    color: #fff;
+ //    background: #fe7634;
+ //    position: fixed;
+ //    bottom: 0;

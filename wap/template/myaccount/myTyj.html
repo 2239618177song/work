@@ -1,0 +1,120 @@
+<!--<style type="text/css">
+	.mytyj-body .tyj-btn span{
+		background-color:#fc764d;
+	}
+	.mytyj-body .tyj-detail-wrapper{
+		background-color:#fff;
+	}
+</style>-->
+<div class="newhand-wrapper cp-wrapper myTyj" style='padding-bottom:0;background:#fff;'>
+    <div class="mytyj-body" ng-style='height'>
+        <div class="common-head" ng-click="toback()" style='margin-bottom:0;'><i></i>
+            <p>{{title}}</p>
+        </div>
+        <!-- <div class="mytyj-info"> -->
+
+        <!-- <div class="mytyj-title">累计获得的体验金(元) -->
+        <!-- <i ng-class="'eye-icon' + (showAsset ? ' open':' close')" ng-click="showAsset = !showAsset"></i> -->
+        <!-- </div> -->
+        <!-- <div class="mytyj-num">{{amountSum | number}}</div> -->
+        <!-- </div> -->
+        <div class='tyj-detail-wrapper'>
+            <div class='tyj-detail'>
+                <div><span>累计获得体验金</span><i class='query' ng-click='queryDetail()'></i></div>
+                <div>{{amountSum | number}}元</div>
+            </div>
+        </div>
+        <div ng-repeat="coupon in coupons">
+            <div class='tyj-coupon-wrapper'>
+                <div class='top'>
+                    <div>
+                        <div class='item-title'>体验金{{coupon.amount}}元</div>
+                        <div class='item-subtitle'>{{(coupon.source==100?'投资≥5000时，可使用':'')}}</div>
+                    </div>
+                    <div class='item-title'>
+                        使用状态：{{coupon.status === 1?'已使用':coupon.status===2?'已过期':'未使用'}}
+                    </div>
+                </div>
+                <div class='bottom'>
+                    <div>来源：{{(coupon.source==100 || coupon.source==99)?'新手体验金':'普通体验金'}}</div>
+                    <div>获得日期：{{coupon.addtime|date:'yyyy-MM-dd'}}</div>
+                </div>
+            </div>
+            <div class='tyj-btn'>
+                <span class='unable' ng-if="coupon.status===1">已使用</span>
+                <span class='unable' ng-if="coupon.status===2">已过期</span>
+                <span ui-sref="tyjdetail" ng-if="coupon.status==0&&coupon.source!==100">立即使用</span>
+                <span ui-sref="main.bankBillList" ng-if="coupon.status==0&&coupon.source==100">立即激活</span>
+            </div>
+        </div>
+        <!-- <div class='tyj-btn'>
+            <span ng-if="!tyjFlag">已使用</span>
+            <span ui-sref="tyjdetail" ng-if="tyjFlag">立即使用</span>
+            <span ui-sref="main.bankBillList" ng-if="coupon.status==0&&coupon.source==100">立即使用</span>
+        </div> -->
+        <!-- <div class="h5-myTyj-coupon2" ng-class="{0:'myTyj-coupon',1:'used-coupon',2:'invalid-coupon'}">
+            <div class="myTyj-card" ng-repeat="coupon in coupons">
+                <div class="tit">体验金{{coupon.amount}}元</div>
+                <div class="condition" ng-if="coupon.source==100 || coupon.source==100">投资≥5000元（活动标除外）</div>
+                <div class="source">来源：<span ng-if="coupon.source==100 || coupon.source==99">新手体验金</span><span ng-if="coupon.source!=100 && coupon.source!=99">普通体验金</span></div>
+                <div class="btn-wrapper">
+                    <span class="btn">{{coupon.source!=100 ? '立即使用' : '立即激活'}}</span>
+                </div>
+                <a ui-sref="tyjdetail" ng-if="coupon.status==0&&coupon.source!=100"></a>
+                <a ui-sref="main.bankBillList" ng-if="coupon.status==0&&coupon.source==100"></a>
+                <div class="used" ng-if="coupon.status == 1"></div>
+                <div class="invalid" ng-if="coupon.status == 2"></div>
+            </div>
+        </div> -->
+    </div>
+
+
+
+    <div class='wap-body' style="margin-top: 0;" ng-if="false">
+        <ul class="nav nav-pills mb1 my-coupon">
+            <li role="presentation" style="width: 33%" ng-class="{0:'active',1:'',2:''}[active]" ng-click="onClick(0)"><a href="">未使用</a></li>
+            <li role="presentation" style="width: 33%" ng-class="{0:'',1:'active',2:''}[active]" ng-click="onClick(1)"><a href="">已使用</a></li>
+            <li role="presentation" style="width: 33%" ng-class="{0:'',1:'',2:'active'}[active]" ng-click="onClick(2)"><a href="">已失效</a></li>
+        </ul>
+        <!-- tab 0 -->
+        <div class="h5-coupon" ng-class="{0:'myTyj-coupon',1:'used-coupon',2:'invalid-coupon'}[active]">
+            <div class="coupon-card" ng-repeat="coupon in coupons">
+                <div class="card-name">
+                    <p>体验金</p>
+                    <b><span>￥</span>{{coupon.amount}}</b>
+                </div>
+                <div class="info">
+                    <p ng-class="{1:'fanxian'}[coupon.type]">使用说明</p>
+                    <ul>
+                        <li ng-if="coupon.source!=100 && coupon.source!=99">投资期限：{{coupon.productDeadline}}天以上（含{{coupon.productDeadline}}天）</li>
+                        <li ng-if="coupon.source==100 || coupon.source==100">投资条件：投资≥5000元（活动标除外）</li>
+                        <li>有效期至：{{coupon.expireDate | date:'yyyy.MM.dd'}}</li>
+                        <li>体验金类型：<span ng-if="coupon.source==100 || coupon.source==99">新手体验金</span><span ng-if="coupon.source!=100 && coupon.source!=99">普通体验金</span></li>
+                    </ul>
+                    <a ui-sref="tyjdetail" ng-if="active==0&&coupon.source!=100"></a>
+                    <a ui-sref="main.bankBillList" ng-if="active==0&&coupon.source==100"></a>
+                    <span ng-if="coupon.source!=100" class="showa">立即使用</span>
+                    <span ng-if="coupon.source==100" class="showa">立即激活</span>
+                </div>
+                <div class="used" ng-if="active == 1"></div>
+                <div class="invalid" ng-if="active == 2"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="download" ng-show="showDownload == true" ng-if="false">
+        <i class="close" ng-click="showDownload = false">×</i>
+        <div class="btn">
+            <a ng-click="downloadapp()" class="download-btn"></a>
+        </div>
+        <div class="logo">
+            <span class="download-logo"></span>
+            <div>
+                <span>汇元金服</span>
+                <p>国企背景平台</p>
+            </div>
+        </div>
+    </div>
+    <div class="share-ios"><img ng-click="closethis()" src="images/share-ios.png" /></div>
+    <div class="share-android"><img ng-click="closethis()" src="images/share-android.png" /></div>
+</div>

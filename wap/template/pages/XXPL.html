@@ -1,0 +1,167 @@
+<!-- 信息披露 -->
+<style>
+    .gsjj {
+        width: 100%;
+        position: relative;
+    }
+
+    .gsjj .line {
+        width: 40%;
+        height: 1px;
+        background: #333;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+
+    .gsjj .text {
+        width: 100px;
+        height: 30px;
+        background: #f2f2f2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+</style>
+<div ng-controller="xxplCtrl" class="xxpl">
+    <div class="common-head" ng-click="toback()">
+        <i></i>
+        <p>{{title}}</p>
+    </div>
+    <div class="xxpl-box">
+        <ul class="xxpl-tabs">
+            <li class="tab" ng-class="{0:'active',1:'',2:''}[active]" ng-click="onClick(0)">走进汇元</li>
+            <li class="tab" ng-class="{0:'',1:'active',2:''}[active]" ng-click="onClick(1)">汇元大事件</li>
+            <li class="tab" ng-class="{0:'',1:'',2:'active'}[active]" ng-click="onClick(2)">联系我们</li>
+        </ul>
+    </div>
+    <div class="xxpl-body">
+        <!-- 走进汇元 -->
+        <div ng-if="active == 0" class="zjhy">
+            <div class="img-head">
+                <img src="images/xxpl/imgHead.png" alt="">
+            </div>
+            <div class="gsjj">
+                <div class="gsjj-title">
+                    <div class="line"></div>
+                    <div class="text">公司简介</div>
+                </div>
+                <div class="gsjj-content">
+                    汇元金服，全称杭州大汇元网络科技有限公司，2009年4月10日成立，坐落于景色宜人的杭州，注册资金5000万人民币。 公司拥有强大的国资背景，是由多名国内金融投资、风险管理以及高新互联网技术领域的资深专家联合组建的专业金融信息服务平台。 目前，汇元金服已正式加入浙江省金融科技协会，顺利成为其会员单位，并且通过安全联盟行业验证，获得“安全联盟信誉企业”的称号。
+                </div>
+                <div class="img">
+                    <img src="images/xxpl/cpjs.png" alt="">
+                </div>
+            </div>
+            <div class="gsjj">
+                <div class="gsjj-title">
+                    <div class="line"></div>
+                    <div class="text">汇元团队</div>
+                </div>
+                <div class="gsjj-content">
+                    <img src="images/xxpl/hytd.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- 汇元大事件 -->
+        <div ng-if="active == 1" class="hysj">
+            <div class="hysj-content">
+                <i class="title-icon"></i>
+                <div class="title">
+                    <p class="head">营业执照</p>
+                    <p>2009年4月10日，杭州大汇元网络科技有限公司正式成立。</p>
+                </div>
+                <div class="img">
+                    <img src="images/xxpl/yyzz.png" alt="">
+                </div>
+            </div>
+            <div class="hysj-content">
+                <i class="title-icon"></i>
+                <div class="title">
+                    <p class="head">开户许可证</p>
+                    <p>2017年7月6日，在中国民生银行办理此证。</p>
+                </div>
+                <div class="img">
+                    <img src="images/xxpl/khxkz.png" alt="">
+                </div>
+            </div>
+            <div class="hysj-content ICP">
+                <i class="title-icon"></i>
+                <div class="title">
+                    <p class="head">ICP认证</p>
+                    <p>汇元金服已于2017年10月27日获得由浙江省通信管理局颁发的《中华人民共和国电信增值业务经营许可证》。（以下简称“ICP许可证”）。 ICP许可证是网站经营的许可证,根据国家《互联网信息服务管理办法》规定经营性网站必须办理中华人民共和国增值电信业务经营许可证，汇元金服一直坚守安全合规运营的原则，积极主动拥抱监管，
+                        现获得这一许可证，说明平台朝更加安全、合规、健康的发展道路上迈出了稳健的一步。
+                    </p>
+                </div>
+                <div class="img icpRZ">
+                    <img src="images/xxpl/ICP.png" alt="">
+                </div>
+            </div>
+            <div class="hysj-content">
+                <i class="title-icon"></i>
+                <div class="title">
+                    <p class="head">银行存管</p>
+                    <p>汇元金服与浙江民泰商业银行资金存管系统于2017年9月4日正式签署合作协议，此次汇元金服携手浙江民泰银行正式签署存管协议， 两者强强联手，不仅能有效的推动汇元金服合规化进程的步伐，成为行业中签订属地化银行存管的先行军，也将实现传统金融行业与互联网金融行业的优势互补、共创双赢的新局面。
+                    </p>
+                </div>
+                <div class="img yhcg">
+                    <img src="images/xxpl/cgxy_1.png" alt="">
+                    <img src="images/xxpl/cgxy_2.png" alt="">
+                </div>
+            </div>
+            <div class="hysj-content aqlm">
+                <i class="title-icon"></i>
+                <div class="title">
+                    <p class="head">安全联盟行业认证</p>
+                    <p>2017年8月29日，汇元金服已经成功通过“安全联盟”行业验证获“安全联盟信誉企业”的称号!说明汇元金服平台已被收录至安全联盟信誉档案库，并获得权威验证标识及信誉档案证明，可接受全国用户公开查询，有效提升网站信誉，建立一个更安全、透明的金融信息服务平台。
+                    </p>
+                </div>
+                <div class="img AQLM">
+                    <img src="images/xxpl/aqlm.png" alt="">
+                </div>
+            </div>
+            <div class="hysj-content jrkj">
+                <i class="title-icon"></i>
+                <div class="title">
+                    <p class="head">浙江省金融科技协会会员单位</p>
+                    <p>2017年8月3日，汇元金服正式成为浙江省金融科技协会的会员单位。浙江省金融科技协会，中国首个金融科技协会，宗旨为金融科技行业企业组织起来，在政府和企业之间起到桥梁和纽带作用，为企业的经营和行业的发展提供服务，
+                        协助政府部门进行行业管理和提供决策依据，从而以数据和技术为核心驱动力，实现金融科技的核心价值——为金融行业提供服务、提高金融效率、降低金融成本。
+                    </p>
+                </div>
+                <div class="img JRKJ">
+                    <img src="images/xxpl/jrkj.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- 联系我们 -->
+        <div ng-if="active == 2" class="lxwm">
+            <div class="lxwm-img">
+                <img src="images/xxpl/map.png" alt="">
+            </div>
+            <div class="lxdh">
+                <div class="left">
+                    <div>
+                        <i class="phone"></i>
+                        <strong>400-872-9577</strong>
+                    </div>
+                    <div>
+                        <i class="qq"></i>
+                        <strong>4008729577</strong>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="images/xxpl/code.png" alt="">
+                </div>
+            </div>
+            <div class="text">
+                <p>杭州大汇元网络科技有限公司</p>
+                <p>公司邮箱：service@huiyuanjinfu.com &nbsp;邮编：310000</p>
+                <p>公司地址：浙江省杭州市拱墅区绿地中央广场3幢907</p>
+            </div>
+        </div>
+    </div>
+</div>

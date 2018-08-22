@@ -1,0 +1,47 @@
+<div class="hy-hongbaoyu" ng-controller="hongyaHongbaoyuCtrl">
+	<div>
+		<img src="images/hyactivity/hongbaoyu-header.png" class="header" />
+	</div>
+	<div class="page">
+		<h3>活动规则</h3>
+		<p>活动期间，汇元金服用户均可领取3670元<span>夏日及时雨红包</span>组合一份，最高立返<span class="number">1888</span>元。</p>
+		<div class="text"></div>
+		<div class="gift-btn-wrapper" ng-click="getGift()" ng-if="!overDue"><span class="gift-btn">夏日及时雨红包</span></div>
+		<div class="gift-btn-wrapper overDue" ng-if="overDue"><span class="gift-btn">活动已结束</span></div>
+	</div>
+	<div class="connecter">
+		<div class="left-connecter"></div>
+		<div class="right-connecter"></div>
+	</div>
+	<div class="page">
+		<h3>他们已经领取啦</h3>
+		<div class="table-wrapper">
+			<table style="width: 84.375%;">
+				<tr>
+					<th width="50%">用户名</th>
+					<th width="50%">手机号</th> 
+				</tr>					
+			</table>
+			<div class="table-body">
+				<table>
+					<tr ng-repeat="item in userList">
+						<td width="50%">{{item.realName}}</td>
+						<td width="50%">{{item.mobilePhone}}</td> 
+					</tr>
+				</table>					
+			</div>
+		</div>
+	</div>
+	<p class="tel">投资热线：400-872-9577（9:30-17:30）</p>
+	<p class="warning">投资有风险，理财需谨慎</p>		
+	<div class="tdHeight"></div>
+
+
+	<div class="hongbaoyu-dialog-wrap" ng-show="showDialog" ng-click="$event.stopPropagation();showDialog = false;">
+	    <div class="hongbaoyu-box" ng-click="goInvest()" >
+	        <img src="../../images/hyactivity/hongaoyu-succ.png" ng-show="getGiftSuccess">
+	        <img src="../../images/hyactivity/hongaoyu-fail.png" ng-show="!getGiftSuccess">
+	    </div>
+	</div>    
+
+</div>

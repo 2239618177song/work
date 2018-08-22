@@ -1,0 +1,84 @@
+/*新加入的画廊插件样式表*/
+.lrGrallery{
+    position: fixed;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    overflow: hidden;
+    z-index: 99999999999;
+    display: none;
+    background-color: #000;
+}
+
+.lrGrallery  .hideBtn{
+    position:absolute;
+    width:0.8rem;
+    height:0.8rem;
+    right:0;
+    top:0;
+    /* background-color:#fff; */
+    z-index:999;
+    background:url(./images/lrgrallery_pic_close.png) no-repeat 0 0;
+    background-size:cover;
+}
+
+.lrGrallery ul{
+    position: absolute;
+    height:100%;
+    width:99999px;
+    background-color: #000;
+}
+
+.lrGrallery li{
+    float: left;
+    height:100%;
+    /*width:375px;*/
+    overflow-y:scroll;
+    position: relative;
+
+}
+
+.lrGrallery li img{
+    width:96%;
+    display: block;
+    position: absolute;
+    left:2%;
+}
+
+.lrGrallery li img.alignCenter{
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.lrGrallery li img.alignTop{
+    top:0;
+}
+
+.lrGrallery li .pageNum{
+    position: absolute;
+    width:100%;
+    top:0;
+    height:40px;
+    line-height:40px;
+    color:#fff;
+    text-shadow:0 0 2px #aaa;
+    text-align: left;
+    font-size: 0.24rem;
+    padding:0 10px;
+}
+
+.lrGrallery li  .title{
+    position: absolute;
+    width:100%;
+    text-align: left;
+    padding:0 10px;
+    bottom:0;
+    left:0;
+    height:30px;
+    line-height:30px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

@@ -1,0 +1,56 @@
+<div class="wap-more-box" ng-controller="lcktCtrl">
+    <div class="common-head lckt-head" ng-click="toback()">
+        <i></i>
+        <p>{{title}}</p>
+    </div>
+    <div class="lckt-bg">
+        <ul class="lckt">
+            <li class="lckt-tabs" ng-class="{4:'active',5:'',6:''}[active]" ng-click="onClick(4)">P2P理财</li>
+            <li class="lckt-tabs" ng-class="{4:'',5:'active',6:''}[active]" ng-click="onClick(5)">个人理财</li>
+            <li class="lckt-tabs" ng-class="{4:'',5:'',6:'active'}[active]" ng-click="onClick(6)">理财知识</li>
+        </ul>
+
+    </div>
+    <div class="lckt-body" ng-if="active == 4">
+        <div class="lckt-content" ng-repeat="item in artList" infinite-scroll='loadMore(item)' infinite-scroll-distance='2' ui-sref="GGXQ({wap:true,artiId:item.artiId,active:4,type:'P2P理财'})">
+            <div class="lckt-left">
+                <div class="lckt-title">{{item.title}}</div>
+                <div class="lckt-time">{{item.createTime | date : 'yyyy-MM-dd HH:mm:ss'}}</div>
+            </div>
+            <div class="lckt-right">
+                <div class="lckt-img">
+                    <img src="{{item.litpic}}" alt="" ng-if="item.litpic">
+                    <img src="images/find-icon/logo_default.png" alt="" ng-if="!item.litpic">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lckt-body" ng-if="active == 5">
+        <div class="lckt-content" ng-repeat="item in artList" infinite-scroll='loadMore(item)' infinite-scroll-distance='2' ui-sref="GGXQ({wap:true,artiId:item.artiId,active:5,type:'个人理财'})">
+            <div class="lckt-left">
+                <div class="lckt-title">{{item.title}}</div>
+                <div class="lckt-time">{{item.createTime | date : 'yyyy-MM-dd HH:mm:ss'}}</div>
+            </div>
+            <div class="lckt-right">
+                <div class="lckt-img">
+                    <img src="{{item.litpic}}" alt="" ng-if="item.litpic">
+                    <img src="images/find-icon/logo_default.png" alt="" ng-if="!item.litpic">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lckt-body" ng-if="active == 6">
+        <div class="lckt-content" ng-repeat="item in artList" infinite-scroll='loadMore(item)' infinite-scroll-distance='2' ui-sref="GGXQ({wap:true,artiId:item.artiId,active:6,type:'理财知识'})">
+            <div class="lckt-left">
+                <div class="lckt-title">{{item.title}}</div>
+                <div class="lckt-time">{{item.createTime | date : 'yyyy-MM-dd HH:mm:ss'}}</div>
+            </div>
+            <div class="lckt-right">
+                <div class="lckt-img">
+                    <img src="{{item.litpic}}" alt="" ng-if="item.litpic">
+                    <img src="images/find-icon/logo_default.png" alt="" ng-if="!item.litpic">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

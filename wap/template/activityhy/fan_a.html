@@ -1,0 +1,61 @@
+<div class="hy-fan-a" ng-controller="hongyaFanACtrl">
+    <div>
+        <img src="images/hyactivity/fan-a-header.png" class="header" />
+    </div>
+
+    <div class="content-wrapper">
+        <div class="title">
+            <div class="fan-dot"></div>月初领个“88”一路发到底<div class="fan-dot"></div>
+        </div>
+        <div class="fan-redbag">
+            <div class="fan-btn" ng-click="getGift()" ng-if="activityStatus == 0"><div class="fan-get"></div></div>
+            <div class="fan-btn-grey" ng-if="activityStatus == -1"><div class="fan-coming"></div></div>
+            <div class="fan-btn-grey" ng-if="activityStatus == 1"><div class="fan-finish"></div></div>
+        </div>
+        <div class="fan-rule"></div>
+
+        <div class="title">
+            <div class="fan-dot"></div>免费京东卡助你买买买<div class="fan-dot"></div>
+        </div>
+        <div class="detail">
+            活动期间，用户累计投资普通标(首投除外)满相应金额即可获得京东卡，最高奖励2000元！
+        </div>
+        <div class="fan-table"></div>
+
+        <div ng-if="wap && activityStatus == 0" class="fan-btn invest-btn" ui-sref="main.bankBillList"><div class="fan-invest"></div></div>
+        <a ng-if="!wap && activityStatus == 0" class="fan-btn invest-btn" href="jsmp://page=2"><div class="fan-invest"></div></a>
+        <div class="fan-btn-grey invest-btn" ng-if="activityStatus == -1"><div class="fan-coming"></div></div>
+        <div class="fan-btn-grey invest-btn" ng-if="activityStatus == 1"><div class="fan-finish"></div></div>
+        
+
+        <div class="title">
+            <div class="fan-dot"></div>我的奖励<div class="fan-dot"></div>
+        </div>
+        <div class="fan-record"><i class="fan-sum"></i>{{result || 0}}元</div>
+        <div class="fan-record"><i class="fan-gift"></i>{{gift || '无'}}</div>
+
+        <div class="fan-remark"></div>
+
+    </div>
+
+    <footer>
+        <div class="fan-contact"></div>
+        <div class="title">
+            <div class="fan-dot"></div>本次活动最终解释权归汇元金服所有<div class="fan-dot"></div>
+        </div>
+    </footer>
+
+    <span ng-if="wap && activityStatus == 0" class="invest-fixed" ui-sref="main.bankBillList" ng-show="showFixedbtn"><i class="fan-invest"></i></span>
+    <a ng-if="!wap && activityStatus == 0" href="jsmp://page=2"><span  class="invest-fixed" ng-show="showFixedbtn"><i class="fan-invest"></i></span></a>
+    <span class="invest-fixed overDue" ng-show="showFixedbtn" ng-if="activityStatus == -1"><i class="fan-coming"></i></span>
+    <span class="invest-fixed overDue" ng-show="showFixedbtn" ng-if="activityStatus == 1"><i class="fan-finish"></i></span>
+
+
+    <div class="fan-dialog-wrap" ng-show="showDialog" ng-click="$event.stopPropagation();showDialog = false;">
+        <div class="fan-box" ng-click="goInvest()" >
+            <img src="../../images/hyactivity/fan-a-pop-succ.png" ng-show="getGiftSuccess">
+            <img src="../../images/hyactivity/fan-a-pop-fail.png" ng-show="!getGiftSuccess">
+        </div>
+    </div>    
+
+</div>

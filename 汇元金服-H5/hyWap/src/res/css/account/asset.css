@@ -1,0 +1,51 @@
+._a_assetSec{
+    padding-bottom: 0.8rem
+}
+
+._a_assetSec .banner_info .title{
+    margin-top: 0.2rem;
+    position: relative;
+    z-index: 9;
+}
+
+._a_assetSec .banner_info .value{
+    margin-top: 0.3rem;
+    font-size: 0.6rem;
+    font-weight: 300;
+    position: relative;
+    z-index: 9;
+}
+
+._a_assetSec  .chart_view{
+    width:96%;
+    border-radius: 0.1rem;
+    box-shadow: 0 0.1rem 0.1rem #f5e5e3;
+    margin:-1rem auto 0 ;
+    height: 5rem;
+    background-color: #fff;
+    color:#333;
+    position: relative;
+    z-index:9;
+}
+
+._a_assetSec  .detail_list{
+    font-size: 0.32rem;
+    text-align: left;
+    width:4rem;
+    margin:0.8rem auto;
+    line-height: 0.8rem;
+}
+
+._a_assetSec  .detail_list span.icon{
+    width:0.26rem;
+    height: 0.26rem;
+    margin-right: 0.4rem;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #fff;
+}
+
+._a_assetSec  .detail_list span.title{
+    margin-right: 0.4rem;
+}

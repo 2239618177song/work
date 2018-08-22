@@ -1,0 +1,76 @@
+<div class="myinvestDetail-wrapper" ng-controller="myInvestDetailCtrl">
+    <div class="common-head">
+        <i ng-click="toback()" style='z-index:10;'></i>
+        <p>{{title}}</p>
+        <a class='xieyi' ng-if='info.type!=5&&info.status!=0' target="_blank" href='{{protocol}}//192.168.0.125/loan?pid={{info.pid}}&uid={{info.uid}}&investId={{info.id}}'>协议</a>
+    </div>
+    <div class='myinvestDetail-list'>
+        <div class='myinvestDetail-item'>
+            <span>{{info.fullName}}</span>
+            <span class='myinvestDetail-status'>{{info.status===0?'投资中':info.status===1?'回款中':'已还款'}}</span>
+        </div>
+    </div>
+    <div class='myinvestDetail-list'>
+        <div class='myinvestDetail-item'>
+            <span>预期年化收益率</span>
+            <span>{{info.rate+'%'}}{{info.activityRate>0?'+'+info.activityRate+'%':''}}</span>
+        </div>
+    </div>
+    <div class='myinvestDetail-list'>
+        <div class='myinvestDetail-item'>
+            <span>投资期限</span>
+            <span>{{info.deadline+'天'}}</span>
+        </div>
+    </div>
+    <div class='myinvestDetail-list'>
+        <div class='myinvestDetail-item'>
+            <span>还款方式</span>
+            <span>{{['到期还本付息','按月付息','到期还本'][info.repayType-1]}}</span>
+        </div>
+    </div>
+    <div class='myinvestDetail-list'>
+        <div class='myinvestDetail-item'>
+            <span>投资金额</span>
+            <span>{{info.amount}}</span>
+        </div>
+    </div>
+    <div class='myinvestDetail-list'>
+        <div class='myinvestDetail-item'>
+            <span>应收本金</span>
+            <span>{{info.factAmount}}</span>
+        </div>
+    </div>
+    <div class='myinvestDetail-list'>
+        <div class='myinvestDetail-item'>
+            <span>应收利息</span>
+            <span>{{info.factInterest}}</span>
+        </div>
+    </div>
+    <div class='myinvestDetail-list'>
+        <div class='myinvestDetail-item'>
+            <span>投资日期</span>
+            <span>{{info.investTime|date:'yyyy-MM-dd'}}</span>
+        </div>
+    </div>
+    <div class='myinvestDetail-list'>
+        <div class='myinvestDetail-item'>
+            <span>计息日期</span>
+            <span>{{info.interestTime|date:'yyyy-MM-dd'}}</span>
+        </div>
+    </div>
+    <div class='myinvestDetail-list'>
+        <div class='myinvestDetail-item'>
+            <span>回款日期</span>
+            <span>{{info.expireDate|date:'yyyy-MM-dd'}}</span>
+        </div>
+    </div>
+    <div class='myinvestDetail-list mgt10' ng-click='goProductionDetail()'>
+        <div class='myinvestDetail-item'>
+            <span>产品详情</span>
+            <span class='arrow'></span>
+        </div>
+    </div>
+    <div class='myinvestDetail-fixed' ng-click="goCashed()">
+        <span>查看回款记录</span>
+    </div>
+</div>

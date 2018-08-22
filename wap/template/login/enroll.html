@@ -1,0 +1,66 @@
+<div class="enroll-triplegift-wrapper" ng-controller='controllerH5Register' ng-init='isShowRecomm=false;isOpen=false;'>
+    <div class="banner">
+        <div class="topbg">
+            <div class="aaa"><img src="../../images/enroll/topbg.png" alt=""></div>
+            <!-- <img src="../../images/enroll/drlogo.png" alt=""> -->
+            <div class="drtext">
+                <p>大型国企中商投旗下互联网金融平台<br>专注企融计划，资产来源于银行与大型国企</p>
+            </div>
+        </div>
+    </div>
+    <div class="hongbao">
+        <!-- 未打开状态 -->
+        <div class="notOpen" ng-show="!isOpen">
+            <div class="open-btn" ng-click="isClickOpen()"></div>
+        </div>
+        <span ng-show="!isOpen">收益可提现</span>
+        <!-- 打开状态 -->
+        <div class="open" ng-show="isOpen"></div>
+    </div>
+    <!-- 注册 -->
+    <div class="login" ng-show="isOpen">
+        <form   name="myForm" novalidate>
+            <!-- 手机号 -->
+            <div>
+                <input placeholder="请输入手机号" name="mobilephone" type="text" ng-pattern="/^1[3|4|5|7|8][0-9]{9}$/" ng-model="login.mobilephone" onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')" minlength="11" maxlength="11" required>
+            </div>
+            <!-- 短信 -->
+            <div class="login-msm-box">
+                <table>
+                    <tr>
+                        <td><input name="smsCode" ng-disabled="!myForm.mobilephone.$valid"  ng-model="login.smsCode" class="fl" type="text"  placeholder="请输入短信验证码" maxlength="4" required></td>
+                        <td><span  ng-click="getyzm(myForm)" class="fr">{{nowTimer}}</span></td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 密码 -->
+            <div >
+                <!-- <label  ng-click="showPassword(passwordText)" ><i ng-class="{true:'icon icon-eye huang',false:'icon icon-eye'}[passwordText]"  ></i></label> -->
+                <input autocomplete="off" type="{{(passwordText|isShowPw).type}}"  placeholder="密码为6-18位字母数字混合" ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/" ng-model="login.passWord" name="passWord" required />
+            </div>
+            <div class="login-recomm-box" ng-click="isShowRecomm=true" >
+                <p ng-if="!isShowRecomm" >► 推荐人（选填）</p>
+            </div>
+            <div class="login-recomm-box" ng-click="isShowRecomm=false" >
+                <p ng-if="isShowRecomm">▼ 推荐人（选填）</p>
+            </div>
+            <!-- 推荐 -->
+            <div ng-if='isShowRecomm'>
+                <input type="text" ng-model="login.recommPhone" placeholder="推荐人手机号（可不填）" ng-disabled="webFormPath.recommCodes != undefined">
+            </div>
+            <a href=""  ng-click="zuce(myForm)">立即领取100,000元</a>
+            <!-- <a href="" style="background: #efd960;" ng-if="!myForm.$valid" >立即领取100,000元</a> -->
+        </form>
+    </div>
+    <div class="bottom">
+        <img src="images/bottom.png" alt="">
+    </div>
+    <div class="bot">
+        <!-- <div class="bottom"></div> -->
+        <div ng-if='isText' class="fengxian">
+            <p>预期收益不等于实际收益</p>
+        </div>
+        <p>投资有风险 理财需谨慎</p>
+    </div>
+    <div class="download-box" ng-show="isShow"><div class="download">下载App领取<span>10</span>万理财金<a target="_bank" href="/html/2weimaActivity.html">立即下载</a></div></div>
+</div>

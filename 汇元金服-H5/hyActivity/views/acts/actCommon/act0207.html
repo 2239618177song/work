@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>汇元金服_新年神助攻</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/common/css/common.css">
+    <script src="/common/js/autoFixedLayout.js"></script>
+    <style>
+        .actSec{
+            width: 100%;
+            height:100%;
+            background: url("/acts/actCommon/images/act0207/bg_icon_01.png");
+        }
+        .section{
+            width: 100%;
+            position: relative;
+        }
+        .section img{
+            display: block;
+            width: 100%;
+        }
+        .section.section2{
+            position: relative;
+        }
+        .section ._btn{
+            display: block;
+            width: 1.55rem;
+            height: 0.34rem;
+            top: 2.55rem;
+            position: absolute;
+        }
+        .section ._btn.invest_btn1{
+            left: 1.27rem;
+        }
+        .section ._btn.invest_btn2{
+            left: 4.81rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="actSec">
+        <div class="section">
+            <img src="/acts/actCommon/images/act0207/act0207wap_01.png" alt="">
+        </div>
+        <div class="section section2">
+            <img src="/acts/actCommon/images/act0207/act0207wap_02.png" alt="">
+            <a href="javascript:void(0)" class="invest_btn1 _btn investBtn"></a>
+            <a href="javascript:void(0)" class="invest_btn2 _btn investBtn"></a>
+        </div>
+        <div class="section">
+            <img src="/acts/actCommon/images/act0207/act0207wap_04.png" alt="">
+        </div>
+        <div class="section" style="width: 50%;margin: auto">
+            <a href="/actCommon/actGreetNewYearWap" class="act_btn">
+                <img src="/acts/actCommon/images/act0207/btn_0207.png" alt="">
+            </a>
+        </div>
+        <div class="section">
+            <img src="/acts/actCommon/images/act0207/act0207wap_06.png" alt="">
+        </div>
+    </div>
+</body>
+<% include ../js.html %>
+<script>
+    $(function(){
+
+        /**
+         * 投资按钮
+         */
+        var goInvest = function(){
+            var $goInvest = $('.investBtn');
+
+            $goInvest.click(function(){
+                if(window.navigator.userAgent.indexOf('LRAPP') != -1){//在app中
+                    lrNative.toAppJumpTo({
+                        type:'investList',
+                        pram:'0'
+                    })
+                }else{//app外部
+                    window.location.href = _config.mainIP+'/invest/list';
+                }
+            });
+        };
+        TL.judePlatform(function(){
+                goInvest();
+            },
+            {
+                native:function(){
+                    window.nativeInit = function () {//必须使用这样的方式
+                        goInvest();
+                    };
+
+                    lrNative.toAppGetArgs();//获取鉴权参数
+                },
+                wechat:function(){
+                    goInvest();
+                }
+            });
+
+
+    })
+
+</script>
+</html>

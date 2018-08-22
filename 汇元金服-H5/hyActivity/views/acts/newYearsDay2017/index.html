@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>【汇元金服】-年底加“薪”计划正式启动</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/common/css/common.css">
+    <link rel="stylesheet" href="/acts/newYearsDay2017/index.css">
+    <script src="/common/js/autoFixedLayout.js"></script>
+</head>
+<body class="newSec">
+<div class="content">
+    <div class="section section1">
+        <img src="/acts/newYearsDay2017/images/wap_01.png" alt="">
+        <a href="javascript:void(0)" class="receive_btn">
+            <img src="/acts/newYearsDay2017/images/wap_btn.png" alt="">
+        </a>
+    </div>
+    <div class="section section2">
+        <img src="/acts/newYearsDay2017/images/wap_03.png" alt="">
+        <div class="calculate_box">
+            <div class="form_box">
+                <div class="item item1">
+                    <span>投资金额</span>
+                    <input type="text" onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))" style="ime-mode:Disabled" placeholder="请输入金额" class="f_left" name="imgVCodeInput" maxlength="14"/>
+                </div>
+                <div class="item item1">
+                    <span>投资期限</span>
+                    <select name="" id="">
+                        <option value="30">30天</option>
+                        <option value="60">60天</option>
+                        <option value="90">90天</option>
+                        <option value="180">180天</option>
+                    </select>
+                </div>
+                <div class="item item1">
+                    <span>可得积分</span>
+                    <p id="get_in">0</p>
+                </div>
+            </div>
+            <div class="form_box2">
+                <div class="part1"><span>累计积分:</span><span class="score"></span></div>
+                <div class="part2"><a href="javascript:void(0)" class="calBtn1" id="calBtn1" data-type="1"></a></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="section section3">
+        <div class="exchange_box" style="display: block;">
+            <a href="javascript:void(0)" class="prize_item" data-id="24">
+            	<img src="/acts/newYearsDay2017/images/1.png"/>
+            </a>
+            <a href="javascript:void(0)" class="prize_item" data-id="25">
+            	<img src="/acts/newYearsDay2017/images/2.png"/>
+            </a>
+            <a href="javascript:void(0)" class="prize_item" data-id="26">
+            	<img src="/acts/newYearsDay2017/images/3.png"/>
+            </a>
+            
+            <a href="javascript:void(0)" class="prize_item" data-id="27">
+            	<img src="/acts/newYearsDay2017/images/4.png"/>
+            </a>
+            
+            <a href="javascript:void(0)" class="prize_item" data-id="28">
+            	<img src="/acts/newYearsDay2017/images/5.png"/>
+            </a>
+            
+            <a href="javascript:void(0)" class="prize_item" data-id="29">
+            	<img src="/acts/newYearsDay2017/images/6.png"/>
+            </a>
+            
+            <a href="javascript:void(0)" class="prize_item" data-id="30">
+            	<img src="/acts/newYearsDay2017/images/7.png"/>
+            </a>
+            
+            <a href="javascript:void(0)" class="prize_item" data-id="31">
+            	<img src="/acts/newYearsDay2017/images/8.png"/>
+            </a>
+            
+            <a href="javascript:void(0)" class="prize_item" data-id="32">
+            	<img src="/acts/newYearsDay2017/images/9.png"/>
+            </a>
+            
+            <a href="javascript:void(0)" class="prize_item" data-id="33">
+            	<img src="/acts/newYearsDay2017/images/10.png"/>
+            </a>
+        </div>
+    </div>
+    <div class="section section4">
+    	<div class="my_awads">
+    		<div class="calculate_box2">
+				<li>
+					<span>兑换时间</span>
+					<span>获得礼品</span>
+					<span>获得金额</span>
+					<span>使用积分</span>
+				</li>
+				<ul id="cal_content">
+					
+				</ul>
+	        </div>
+    	</div>
+        
+    	
+    	<div class="box_content">
+    		<div>剩余积分：<span id="surplus"></span></div><div style="margin-top: -.02rem;">兑换积分 <input type="text" onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))" style="ime-mode:Disabled" placeholder="输入兑换的积分" class="integral" maxlength="10" oninput="fun()" /></div><div>可得现金:<span id="money"></span></div>
+    	</div>
+    	<a href="javascript:void(0)" id="exchange_btn">兑换</a>
+    	
+    	<a href="javascript:void(0)" id="my_exchange">我的兑换记录 >></a>
+    	
+    </div>
+</div>
+<div class="alert_modal_wrap" id="alertModal">
+    <div class="alert_model_mask"></div>
+    <div class="alert_model scaleIn">
+        <div class="alert_title">温馨提示</div><span class="alert_close" onclick="$(this).closest('.alert_modal_wrap').fadeOut()">X</span>
+        <div class="alert_text">
+            <p>是否确认兑换，点击确认兑换后无法更改</p>
+        </div>
+        <div class="btns cle">
+            <a class="btn_yes btn_s" id="alertBtn1">是</a>
+            <a class="btn_no btn_s" id="alertBtn2">否</a>
+        </div>
+    </div>
+</div>
+
+</body>
+<%include ../js.html%>
+<script src="/acts/newYearsDay2017/index.js"></script>
+</html>

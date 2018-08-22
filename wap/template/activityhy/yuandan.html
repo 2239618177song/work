@@ -1,0 +1,92 @@
+<div class="hy-yuandan" ng-controller="yuandanCtrl">
+    <div class="hy-yuandan-container">
+        <div class="hy-yuandan-head"></div>
+        <div class="hy-yuandan-content">
+            <div class="hy-yuandan-bg"></div>
+            <div class="hy-ydhb">
+                <img src="images/activity/yuandan/ydhb.png" alt="">
+                <div class="hy-getAll" ng-click="getAll()"></div>
+            </div>
+
+        </div>
+        <div class="hy-calcScore">
+            <div class="money">
+                <input type="text" placeholder="请输入金额" onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')" ng-model="investMoney" ng-change="autoScore()">
+            </div>
+            <div class="timeN">
+                <select ng-model="selectDay" id="select" ng-change="getScore()">
+                    <option ng-repeat="item in days" value="{{item.name}}">{{item.name}}</option>
+                </select>
+            </div>
+            <div class="score">{{investScore | number : 1}}</div>
+            <div class="addScore" ng-if="!isLogin" style="cursor: pointer;" ng-click="a()">请登录</div>
+            <div class="addScore" ng-if="isLogin">{{point}}</div>
+            <div class="calc-btn" ng-click="onClick()" ng-if="!isLogin">登录</div>
+        </div>
+        <div class="hy-prize">
+            <div class="prize-content">
+                <div class="left top" ng-click="showGiftPanel('16',10000)">10000积分兑换</div>
+                <div class="right top" ng-click="showGiftPanel('17',20000)">20000积分兑换</div>
+                <div class="left topTwo" ng-click="showGiftPanel('18',30000)">30000积分兑换</div>
+                <div class="right topTwo" ng-click="showGiftPanel('19',70000)">70000积分兑换</div>
+                <div class="left center" ng-click="showGiftPanel('20',140000)">140000积分兑换</div>
+                <div class="right center" ng-click="showGiftPanel('21',200000)">200000积分兑换</div>
+                <div class="left bottomTwo" ng-click="showGiftPanel('22',260000)">260000积分兑换</div>
+                <div class="right bottomTwo" ng-click="showGiftPanel('23',400000)">400000积分兑换</div>
+                <div class="left bottom" ng-click="showGiftPanel('24',760000)">760000积分兑换</div>
+                <div class="right bottom" ng-click="showGiftPanel('25',960000)">960000积分兑换</div>
+            </div>
+        </div>
+        <div class="hy-duihuan">
+            <img src="images/activity/yuandan/addmoney.png" alt="">
+            <div class="tip" ng-if="!isLogin" ng-click="onClick()" style="cursor: pointer;">请登录</div>
+            <div class="tip" ng-if="isLogin">{{point}}</div>
+            <div class="inp-score">
+                <input type="text" placeholder="请输入积分" ng-model="changeScore" onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')" ng-change="is120()">
+            </div>
+            <div class="getmoney" ng-if="ishide">{{(changeScore / 120) | number:0}}元</div>
+            <!-- <div class="getmoney" ng-if="ishide"></div> -->
+            <div class="dh-btn" ng-click="changeMoney()"></div>
+            <div class="myRecord" ng-click="myRecord()">兑换记录>></div>
+            <div class="recordAll" ng-if="isShow">
+                <img src="images/activity/yuandan/close.png" alt="" ng-click="close()">
+                <ul class="record-title">
+                    <li>兑换时间</li>
+                    <li>获得礼品</li>
+                    <li>获得金额</li>
+                    <li>使用积分</li>
+                </ul>
+                <div class="record-content">
+                    <table ng-repeat="list in rescordList" ng-if="rescordList.length">
+                        <tr>
+                            <td>{{list.addTime | date:'yyyy-MM-dd'}}</td>
+                            <td>{{list.goodsName | limitTo : 6}}</td>
+                            <td>{{list.goodsValue}}</td>
+                            <td>{{list.point}}</td>
+                        </tr>
+                    </table>
+                    <p class="record-tips" ng-if="!rescordList.length">您还没有任何兑换记录哦~</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-tip">
+            <p class="wxTip">温馨提示</p>
+            <p>1.用户在兑换礼品或者现金后请通过微信公众号【掌上汇元】联系在线客服进行登记，并提供兑奖记录截图，核对无误后礼品将在5个工作日内寄出，现金将于3-5个工作日内默认发送到汇元金服投资账户。</p>
+            <p>2.所有礼品颜色随机，兑换后不可更改，且与渠道推广奖励仅限2选1，不可叠加；</p>
+            <p>3.本活动兑换有效截止时间为1月31日，逾期视为放弃兑换，积分作废；</p>
+            <p>4.在法律许可范围内最终解释权归汇元金服平台所有，如有发现违法违规参与活动的行为，将取消参与、获奖资格;</p>
+            <p>5.以上活动新手标及体验标不参与</p>
+            <p style="text-align:center;padding:5px 0;">本活动最终解释权归汇元金服所有</p>
+        </div>
+        <!-- 弹出框 -->
+        <div class="changePanel" ng-if="isShowChange">
+            <i class="close-icon" ng-click="close()">X</i>
+            <p class="title">温馨提示</p>
+            <p class="text">是否确认兑换，点击确认兑换后无法更改</p>
+            <div class="btn">
+                <div class="btn-success" ng-click="changeGift()">是</div>
+                <div class="btn-cancel" ng-click="close()">否</div>
+            </div>
+        </div>
+    </div>
+</div>

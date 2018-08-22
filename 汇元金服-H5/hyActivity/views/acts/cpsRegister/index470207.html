@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<!--WY3 0207-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>汇元金服-新手注册</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/acts/cpsRegister/css/cpsReg.css">
+    <script src="/common/js/autoFixedLayout.js"></script>
+    <style>
+        .semContent{
+            /*background-color: #f8f2e2;*/
+            width: 100%;
+            height:100%;
+            background: url("/acts/actCommon/images/greetNewYear/bg_icon_04.png");
+            padding:1px;
+        }
+        .semBanner{
+            width: 100%;
+        }
+        .semBox{
+            /*background:url('/acts/cpsRegister/images/bg_icon_04.png');*/
+            width: 100%;
+            background-size: contain;
+            padding-bottom: 0.9rem;
+        }
+        .semContent img{
+            width: 100%;
+            display: block;
+        }
+        .rule_box{
+            color: #fff;
+            padding: 0.3rem 0;
+            background-color: #da9303;
+        }
+        .rule_box h2{
+            font-size: 0.3rem;
+            margin: 0.2rem 0;
+        }
+        .rule_box p{
+            width: 5.6rem;
+            color: #fff;
+            margin: auto;
+            text-align: left;
+            line-height: 1.2;
+            font-size: 0.2rem;
+        }
+        .main_btn_color{
+            background-color: #ee4242 !important;
+            color: #fff !important;
+        }
+        /*input格式修改*/
+        .formBox {
+            width: 6.5rem;
+            /* height: 450px; */
+            margin: 0 auto 0;
+            padding-top: 0.5rem;
+        }
+        .form_item {
+            width: 100%;
+        }
+        .form_component{
+            width: 100%;
+        }
+        .cpsRegSec #registerForm input[type=text], #registerForm input[type=password] {
+            /*border: none;*/
+            border-radius: 0;
+            color: #000;
+            background-color: transparent;
+            border: 2px solid #000;
+        }
+        .cpsRegSec #registerForm .form_component.style2 input {
+            width: 65%;
+        }
+        .cpsRegSec .form_component.style2 .vcode ,
+        .cpsRegSec #registerForm .btn{
+            width: 30%;
+            font-size: 0.3rem;
+            border-radius: 0 !important;
+        }
+        .cpsRegSec input::-webkit-input-placeholder{
+            color: #c1bfbf;
+        }
+        .cpsRegSec #registerForm  #checkProtocol:after{
+            content:'';
+            display:inline-block;
+            width: 0.45rem;
+            height: 0.45rem;
+            vertical-align: TEXT-BOTTOM;
+            border-radius:0;
+            float:left;
+            background-color: none;
+            background:url('/acts/cpsRegister/images/check_xxqq.png') no-repeat 10% 100%;
+            background-size:0.4rem 0.4rem;
+        }
+
+        .cpsRegSec #registerForm  #checkProtocol:checked:after{
+            width: 0.45rem;
+            height: 0.45rem;
+            background-image:url('/acts/cpsRegister/images/checked_xxqq.png')
+
+        }
+        .cpsRegSec .form_item.checkProtocol{
+            width: 79%;
+            margin: auto;
+        }
+        .cpsRegSec #registerForm .checkProtocol label {
+            margin-left: 0;
+        }
+        .cpsRegSec .form_item.register_btn{
+            height: 0.94rem;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+            background-color: #ee4242;
+            color: #fff;
+        }
+        .cpsRegSec .form_component .registerBtn{
+            width: 100% !important;
+        }
+        .cpsRegSec #registerForm .checkProtocol{
+            color: #000;
+        }
+        .cpsRegSec #registerForm .checkProtocol label a {
+            color: #fff;
+        }
+        .cpsRegSec #registerForm .checkProtocol label {
+            line-height: 0.7rem;
+        }
+        .btnSubmit{
+            display: block;
+            width: 100%;
+            margin: auto;
+            line-height: 0.94rem;
+            height: 100%;
+            text-align: center;
+            font-size: 0.3rem;
+            color: #fff;
+        }
+
+        .fix_btn{
+            display: block;
+            width: 7.5rem;
+            height: 1rem;
+            background-color: #ee4242;
+            position: fixed;
+            bottom: 0;
+            color: #fff;
+            line-height: 1rem;
+            font-size: 0.4rem;
+            letter-spacing: .2rem;
+        }
+
+
+        .cal_pic{
+            width: 1207px;
+            height:633px;
+            margin: 0 auto;
+            background: url("/acts/actCommon/images/greetNewYear/pic_03.png") no-repeat center;
+        }
+        .cal_box{
+            width: 7.5rem;
+            /*height: 200px;*/
+            margin: 10px auto;
+        }
+        .cal_item{
+            width:30%;
+            display: inline-block;
+        }
+        .cal_item span{
+            display: block;
+            font-size: 0.3px;
+            color: #850814;
+            height: 0.4rem;
+            line-height: 0.4rem;
+        }
+        .cal_item input[type=text],
+        .cal_item input[type=tel],
+        .cal_item select{
+            width: 80%;
+            height: 0.45rem;
+            border:2px solid #f75a5a;
+            border-radius: 25px;
+            background-color: transparent;
+            font-size: 0.2rem;
+            /*text-indent: 10px;*/
+            text-align: center;
+        }
+        .cal_item select{
+            width: auto;
+            padding: 0 0.5rem;
+            margin: 0;
+            height: 0.54rem;
+        }
+        .cal_item.cal_item2{
+            width: 7.5rem;
+        }
+        .cal_item2 p{
+            color: #850814;
+            width: 100%;
+            margin: auto;
+            font-size: 0.2rem;
+            font-weight: bold;
+        }
+        .cal_item2 a.cal_btn{
+            /*display: block;*/
+            /*height: 0.45rem;*/
+            /*border: 0.02rem solid #f75a5a;*/
+            /*border-radius: 25px;*/
+            /*background-color: #f75a5a;*/
+            /*font-size: 0.25rem;*/
+            /*text-align: center;*/
+            /*line-height: 0.45rem;*/
+            /*width: 2rem;*/
+            /*margin: 0.2rem auto;*/
+            /*color: #fff;*/
+
+            display: block;
+            height: 0.7rem;
+            border: 0.02rem solid #f75a5a;
+            border-radius: 25px;
+            background-color: #f75a5a;
+            font-size: 0.25rem;
+            text-align: center;
+            line-height: 0.7rem;
+            width: 4rem;
+            margin: 0.6rem auto;
+            color: #fff;
+        }
+        .cal_item2 a.cal_btn.cal_btn2{
+            background-color: #fbec94;
+            border: none;
+            width: 4rem;
+            line-height: 0.70rem;
+            height: 0.70rem;
+            border-radius: 11rem;
+            box-shadow: 0 0.06rem 0 #cabf7e;
+            color: #b5251f;
+            font-size: 0.3rem;
+            margin-bottom: 0.65rem;
+            margin-top: 0.40rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="cpsRegSec">
+
+<div class="semContent">
+    <div class="semBanner"><img src="/acts/cpsRegister/images/wy0207_01.png"></div>
+    <div class="semBox semWrap ">
+        <div class="formBox">
+            <form action="" id="registerForm" class="clearfix">
+                <div class="form_item">
+                    <div class="form_component">
+                        <input type="text"
+                               placeholder="请输入手机号码"
+                               maxLength="11"
+                               name="mobile"
+                               pattern="[0-9]*"
+                        />
+                    </div>
+                </div>
+                <div class="form_item">
+                    <div class="form_component style2">
+                        <input type="text" placeholder="验证码" class="f_left" name="imgVCodeInput" maxlength="4"/>
+
+                        <a href="javascript:void(0)" class="vcode main_btn_color">
+                            <img src="" alt="" id="imgVCode">
+                        </a>
+                    </div>
+                </div>
+                <div class="form_item">
+                    <div class="form_component style2">
+                        <input type="text"
+                               placeholder="手机验证码" class="f_left"
+                               name="vCode"
+                               pattern="[0-9]*"
+                               maxlength="4">
+                        <a href="javascript:void(0)"
+                           class="btn main_btn_color"
+                           id="vCode">获取验证码</a>
+                    </div>
+                </div>
+                <div class="form_item">
+                    <div class="form_component">
+                        <input type="password"
+                               placeholder="请设置登录密码，6-18位数字字母组合"
+                               autocomplete="off"
+                               maxlength="18"
+                               name="password"/>
+                    </div>
+                </div>
+                <div class="form_item clearfix checkProtocol" >
+                    <div class="form_component">
+                        <input type="checkbox" id="checkProtocol" checked> <label for="checkProtocol">阅读并同意<a href="javascript:void(0)" id="openProtocol" style="color: #ed4c5f">《汇元金服用户协议》</a></label>
+                    </div>
+                </div>
+                <div class="form_item clearfix register_btn">
+                    <div class="form_component " >
+                        <a href="javascript:void(0)" class="btnSubmit" id="btnSubmit">
+                            立即注册
+                        </a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="content_pic">
+            <img src="/acts/cpsRegister/images/wy0130_03.png" alt="">
+        </div>
+        <div class="section section_main">
+            <div class="cal_box">
+                <form action="" id="calculateForm">
+                    <div class="cal_item">
+                        <span>投资金额</span>
+                        <input type="tel" name="amount" id="amount" placeholder="≥5000" maxlength="8" value="" pattern="[0-9]*">
+                    </div>
+                    <div class="cal_item">
+                        <span>投资周期</span>
+                        <select name="" id="cycle">
+                            <option value="0.02">60天</option>
+                            <option value="0.032">90天</option>
+                            <option value="0.04">180天</option>
+                        </select>
+                    </div>
+                    <div class="cal_item">
+                        <span>预计返现</span>
+                        <input type="text" name="cash" id="cash" placeholder="" value="0" maxlength="8" readonly>
+                    </div>
+                </form>
+                <div class="cal_item cal_item2">
+                    <a href="javascript:void(0)" id="calBtn" class="cal_btn btn">计算</a>
+                    <p> 注：现金返现将于投资成功后7个工作日内发放完毕</p>
+                    <a href="https://m.huiyuanjinfu.com/invest/list" class="cal_btn cal_btn2 investBtn" >我要返现</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="content_pic">
+            <img src="/acts/cpsRegister/images/wy0207_03.png" alt="">
+        </div>
+        <div class="content_pic">
+            <img src="/acts/cpsRegister/images/wy0131_03.jpg">
+        </div>
+    </div>
+
+    <a href="#registerForm" class="fix_btn">立即注册</a>
+</div>
+<% include ../js.html %>
+</body>
+<script>
+    var CpsReg = (function(){
+        /*表单相关*/
+        var $mobile= $('[name=mobile]'),
+            $vcode = $('[name=vCode]'),
+            $password = $('[name=password]'),
+            $rePassword = $('[name=rePassword]'),
+            $inviteCode = $('[name=inviteCode]'),
+            $vcodeBtn = $('#vCode'),
+
+            $imgVCodeInput = $('[name=imgVCodeInput]'),
+            $imgVcode = $('#imgVCode'),
+            $openProtocol = $('#openProtocol'),
+            $btn = $('#btnSubmit'),
+            $checkProtocol = $('#checkProtocol');
+
+        var initSomePlugins = function(){
+            /*标识符*/
+            var TOKEN = TL.getRandom();//前端生成token，忽略可能的重复
+
+            /*图形验证码*/
+            TL.getVcode({
+                elem:$imgVcode,
+                token:TOKEN
+            });
+
+            /*展开协议*/
+            $openProtocol.click(function(){
+                var $this = $(this);
+                if($this.data('load')){
+                }
+                TL.openRegisterProtocol();
+            });
+
+            /*发送短信*/
+            TL.sendVcode({
+                $input:$mobile,//手机号码
+                $btn:$vcodeBtn,//发送按钮
+                $vcode:$imgVCodeInput,
+                $imgVcode:$imgVcode,
+                url:'sendRegisterMobileVCode',
+                delay:60,
+                keyName:'mobile',
+                extraArgs:{
+                    token:TOKEN,
+                    version:'1.2.0'
+                }
+            });
+        };
+
+
+        var bindEvent = function () {
+//            $rePassword.on('blur',function(){
+//                if($rePassword.val() != $password.val()){
+//                    $rePassword.val('');
+//                    $.Alert('两次输入的密码不一致！');
+//                }
+//            });
+            $btn.bind('click',function(){
+                var $this = $(this);
+
+                if($this.hasClass('disabled'))return;
+                if($mobile.val() == ''){
+                    $.Alert('手机号码不能为空！');return;
+                }
+
+                if(!/^1[3-9]\d{9}$/.test($mobile.val())){
+                    $.Alert('手机号码格式有误！');return;
+                }
+
+                if($imgVCodeInput.val() == ''){
+                    $.Alert('图形验证码不能为空！');return;
+                }
+
+                if($vcode.val() == ''){
+                    $.Alert('手机验证码不能为空！');return;
+                }
+
+                if($password.val() == ''){
+                    $.Alert('密码不能为空！');return;
+                }
+
+                if(!/^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$)[^\s]{6,18}$/.test($password.val())){
+                    $.Alert('密码格式有误(6-18为数字字母的组合)！');return;
+                }
+//                if($rePassword.val() != $password.val()){
+//                    $rePassword.val('');
+//                    $.Alert('两次输入的密码不一致！');return;
+//                }
+                if(!$checkProtocol[0].checked){
+                    $.Alert('请确认用户注册协议！');
+                    return;
+                }
+
+                var semChannel = TL.getQueryField('from');
+
+                $this.addClass('disabled');
+
+                var data = {
+                    mobile:$mobile.val(),
+                    vCode:$vcode.val(),
+                    password:$password.val(),
+                    from:semChannel,
+                    invitationCode:$inviteCode.val()
+                };
+
+                TL.Ajax({
+                    url:'register',
+                    data:data,
+                    load:true,
+                    type:'post'
+                }).done(function(){
+                    $this.removeClass('disabeld');
+                    $.Alert('恭喜,注册成功!', function () {
+                        window.location.href = _config.mainIP+'/user/login';
+                        $this.removeClass('disabled');
+                    });
+                },function(){
+                    $this.removeClass('disabled');
+                }).fail(function(){
+                    $this.removeClass('disabled');
+                });
+
+            });
+        };
+
+        return {
+            init: function () {
+                initSomePlugins();
+                bindEvent();
+            }
+        }
+    })();
+
+
+    $(function () {
+        CpsReg.init();
+    });
+
+    /*计算*/
+    $(function(){
+        var $amount = $('#amount'),
+            $cycle = $('#cycle'),
+            $cash = $('#cash');
+
+        var $calBtn = $('#calBtn');
+
+        var calculateCash = function(amount,cycle){
+            var result = amount*cycle;
+            $cash.val(result);
+        };
+
+
+        var bindEvent = function(){
+            $calBtn.on('click',function(){
+                var _amount = $amount.val(),
+                    _cycle = $cycle.val();
+
+                if(!/^[0-9]*$/.test(_amount)){
+                    $.Alert('请输入正确格式的金额！');
+                    $cash.val(0);
+                    return
+                }
+                if(_amount*1 < 5000){
+                    $.Alert('单笔投资金额≥5000元才可获得现金返现');
+                    $cash.val(0);
+                    return
+                }
+
+                calculateCash(_amount*1,_cycle*1);
+
+            })
+        };
+
+        bindEvent();
+
+
+    })
+
+    // TL.checkFrontEnd('https://www.huiyuanjinfu.com/user/foword?url=/sem/cps/cpsRegister&channel='+channel);
+
+</script>
+</html>

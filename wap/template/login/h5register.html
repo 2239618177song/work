@@ -1,0 +1,111 @@
+<div class="weixin-bg" ng-controller='controllerH5Register'>
+    <div class="wx-dongrong-loge bg-bai" >
+        <img src="images/login/duorongLoge.png"/>
+    </div>
+    <div>
+        <img style="width: 100%" src="images/login/new_h.png"/>
+    </div>
+    <div class="font-box">
+        <p >国资入股注册资金<font class="huang">1</font>亿元 · <font class="huang">1</font>千万风险准备金 · <font class="huang">顶级律所</font>合规支持</p>
+    </div>
+    <div class="form-container" >
+        <form  ng-model="fromregister" name="myForm" novalidate>
+            <!-- <div class="control-group "  > -->
+            <div class="control-group">
+             
+                <input name="mobilephone" type="text" ng-pattern="/^1[3|4|5|7|8][0-9]{9}$/" placeholder="请输入手机号" ng-model="login.mobilephone" onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')" ng-blur="blurID('focusMobilephone',myForm)" minlength="11" maxlength="11" required>                
+            </div>
+            <div ng-class="{'color-danger':classmobile}"> {{desc_mobile}}</div>
+           
+            <div ng-disabled="true" class="identify">
+                <span  ng-click="getyzm(myForm)" class="fr">{{nowTimer}}</span>
+                <input ng-model="login.smsCode" class="fl" type="text"  placeholder="请输入短信验证码" maxlength="4" required>
+            </div>
+            <div ng-class="{'color-danger':classyzm}" > {{desc_yzm}}</div>
+            <div class="control-group marT2">
+                <label  ng-click="showPassword(passwordText)" ><i ng-class="{true:'icon icon-eye huang',false:'icon icon-eye'}[passwordText]"  ></i></label>
+                <input autocomplete="off" type="{{(passwordText|isShowPw).type}}"  placeholder="密码为6-18位字母数字混合" ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/" ng-model="login.passWord" name="passWord"  />
+            </div>
+
+             <div ng-class="{'color-danger':classpassword}"> {{desc_password}}</div>
+            <div class="control-group marT2">
+               <!--  <label >
+                 <i class="icon-pop"></i>
+                </label> -->
+                <input type="text" ng-model="login.recommPhone" placeholder="推荐人手机号（可不填）" ng-disabled="webFormPath.recommCodes != undefined">
+            </div>
+            <div class="h5-sub">
+                <input type ="submit" ng-disabled="myFrom.$valid" class="marT3 button-info" ng-click="zuce(myForm)" value ="注册立领10000元" >
+            </div>
+           
+            <div class="weixin-pbottom-1">
+                <p style="color: #fff">
+                    <label class="icon-phone4">
+                    </label> 
+                    致电了解更多活动：<span style="color:#FFEF34 ">4006-293-993</span></p>
+            </div>
+        </form>
+    </div>
+    <div class="weixin-zc-box">
+        <div class="weixin-zc-h" >
+            <div class="text-center" style="float: none;" >
+                <h1>为什么选择汇元金服？</h1>
+            </div>
+        </div>
+        <div class="weixin-zc-container" >
+            <div class="weixin-loge">
+                <img src="images/login/zc_log_1.png"/>
+            </div>
+            <div class="weixin-p">
+                <h1>国企背景</h1>
+                <p>国有资本入股，雄厚的实力保障</p>
+            </div>
+        </div>
+        <div class="weixin-zc-container" >
+            <div class="weixin-loge">
+                <img src="images/login/zc_log_2.png"/>
+            </div>
+            <div class="weixin-p">
+                <h1>本息保障计划</h1>
+                <p>历史到期产品100%本息兑付</p>
+                <p>安全可靠</p>
+            </div>
+        </div>
+        <div class="weixin-zc-container" >
+            <div class="weixin-loge">
+                <img src="images/login/zc_log_3.png"/>
+            </div>
+            <div class="weixin-p">
+                <h1>票据100%承兑</h1>
+                <p>所有票据来源于银行与大型国企</p>
+                <p>100%无条件承兑</p>
+            </div>
+        </div>
+        <div class="weixin-zc-container" >
+            <div class="weixin-loge">
+                <img src="images/login/zc_log_4.png"/>
+            </div>
+            <div class="weixin-p">
+                <h1>顶级律所全程支持</h1>
+                <p>顶级律所全程合规支持</p>
+            </div>
+        </div>
+    </div>
+    <div class="weixin-gydl-box">
+        <div class="weixin-jj-tital">
+            <div>
+                <h1>关于汇元</h1>
+            </div>
+        </div>
+        <div class="weixin-border">
+            <p>　　杭州啄米理财信息服务有限公司（以下简称“啄米理财”）成立于2015年1月，注册资金1亿，总部位于国际金融中心上海。</p>
+            <p>　　啄米理财是一家以银行承兑汇票、知名国企商票为主营业务的低风险、高收益的P2B互联网金融资产投资理财服务平台。背靠大型国有企业，深入挖掘挖掘供应链金融需求，为客户搭建了一个公开透明的创新型互联网金融服务平台。</p>
+        </div>
+    </div>
+</div>
+
+    <div class="h5-appBt">
+        <a href="http://app.duorongcf.com/html/2weima.html" target="_bank" class="container">
+            <input type ="submit" ng-disabled="myFrom.$valid" class="marT3 button-info btn-color"  value ="立即下载 “啄米理财” APP" >
+        </a>
+    </div>

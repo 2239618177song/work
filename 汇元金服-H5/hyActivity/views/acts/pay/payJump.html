@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跳转中...</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="/common/css/common.css">
+    <script src="/common/js/autoFixedLayout.js"></script>
+    <style>
+        html{
+            background-color:#fff;
+        }
+        .pay-jump{
+            padding-top:5rem;
+            background:url(/acts/pay/images/payJump.png) no-repeat center 3rem;
+            background-size:3.63rem 2.25rem;
+            text-align:center;
+            color:#666;
+        }
+        .pay-jump p:first-child{
+            margin-bottom:.25rem;
+            margin-top: .42rem;
+            font-size:.26rem;
+        }
+        .pay-jump span{
+            display:inline-block;
+            width:4rem;
+            height:.8rem;
+            background: linear-gradient(45deg,rgb(210,53,47),rgb(230,105,63));
+            color:#fff;
+            line-height:.8rem;
+            border-radius:.5rem;
+            margin-top:.39rem;
+            font-size:.26rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="pay-jump">
+        <p id="jumpText">正在跳转中...</p>
+        <p>没反应？点击直接跳转</p>
+        <span id="forwardBtn">直接跳转</span>
+        <form method="post" action="" id="forwardForm"></form>
+    </div>
+    <script>
+        var args = location.search.slice(1).split('&').map(function(item,i){
+            var index = item.indexOf('=');
+            var key = item.slice(0,index);
+            var value = item.slice(index+1);
+            return {
+                key:key,
+                value:value
+            };
+        });
+
+        window.onload = function () {
+            var $form = document.getElementById('forwardForm');
+            var $btn = document.getElementById('forwardBtn');
+            var $jumpText = document.getElementById('jumpText');
+
+            var inputStr = '';
+
+            args.map(function(item,i){
+                if(item.key != 'url'){
+                    inputStr+='<input type="hidden" name="'+decodeURIComponent(item.key)+'" value="'+decodeURIComponent(item.value)+'"/>';
+                }else{
+                    $form.action = decodeURIComponent(item.value);
+                }
+            });
+
+            $form.innerHTML = inputStr;
+
+            $form.submit();
+
+            $btn.onclick = function(){
+                $btn.innerHTML = '跳转中...';
+                $form.submit();
+            }
+        };
+    </script>
+</body>
+</html>

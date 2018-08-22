@@ -1,0 +1,330 @@
+.common_wrap{
+  margin:0 auto;
+}
+.luckWheel{
+  margin:0;
+  padding:0;
+  text-align: center;
+}
+
+.luckWheel .plate_wrap{
+  width:5.8rem;
+  height: 5.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin:0 auto;
+  position: relative;
+  box-shadow: 0 0 0.3rem #ddd;
+  position: absolute;
+  top:0;
+  left:50%;
+  margin-left:-2.9rem;
+  /*margin-top: 0.05rem;*/
+  /*margin-top: -2.8rem;*/
+}
+
+.luckWheel .plate{
+  width:100%;
+  height: 100%;
+  text-align: center;
+  background: url(../images/qixi_panel.png) no-repeat 0 0;
+  box-shadow: 0 0 0.03rem #fc7959;
+  background-size: 100% 100%;
+}
+
+.luckWheel .plate_wrap .luck_arrow{
+  width:1.3rem;
+  height: 1.3rem;
+  background:url(../images/btn_content.png) no-repeat 0 0 ;
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin-top:-0.65rem;
+  margin-left: -0.65rem;
+  background-size: 100% 100%;
+}
+
+.luckWheel .plate_wrap .luck_arrow:after{
+  content:'';
+  width:0.21rem;
+  height: 0.33rem;
+  background: url(../images/btn_03.png) no-repeat 0 0;
+  background-size: 100% 100%;
+  position: absolute;
+  left:50%;
+  margin-left: -0.1rem;
+  top:-0.32rem;
+}
+
+.luckWheel .plate_wrap .luck_arrow.disabled{
+  background-image: url(../images/btn_content_disabled.png);
+}
+
+.luckWheel .plate_wrap .luck_arrow.disabled:after{
+  background-image: url(../images/btn_06.png);
+}
+
+.luckWheel .section img{
+  display: block;
+  width: 100%;
+}
+
+.luckWheel .btn_area .btn{
+  width:2.75rem;
+  height: 0.9rem;
+  background: url(../images/btn_03.png) no-repeat 0 0;
+  display: block;
+  margin:0 auto;
+}
+
+.luckWheel .btn_area .btn:active{
+  opacity: 0.8;
+}
+
+.luckWheel .section{
+  position: relative;
+}
+
+.luckWheel .section img{
+  display: block;
+  width: 100%;
+}
+
+.btn_area{
+  background-color: #010d2d;
+}
+
+.btn_area a{
+  display: inline-block;
+  text-decoration: none;
+  background-color: #fbde14;
+  color:#333;
+  font-size: 0.14rem;
+  width:3rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  border-radius: 0.6rem;
+  font-size:0.24rem;
+}
+
+.btn_area a.my_award{
+  width:2rem;
+  margin:0 0.5rem;
+  font-weight:600;
+}
+
+.btn_area a span{
+  color:#e2212a;
+  font-size: 0.32rem;
+}
+
+.bottom{
+  position: relative;
+}
+
+.bottom .fake_btn{
+  position: absolute;
+  width: 3rem;
+  height: 0.8rem;
+  bottom: 1.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/*
+ * 弹窗样式
+ */
+
+ .luckWheel .mask{
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   left: 0;
+   top: 0;
+   background-color: rgba(0,0,0,0.5);
+ }
+
+ .luckWheel .tips{
+   position: fixed;
+   width: 6rem;
+   height: 5rem;
+   border-radius: 0.1rem;
+   top: 50%;
+   left: 50%;
+   margin-left: -3rem;
+   margin-top: -2.5rem;
+   -webkit-animation: scaleIn 0.5s;
+   animation: scaleIn 0.5s;
+ }
+
+ .luckWheel .tips img{
+   display: block;
+   width: 100%;
+   height: 100%;
+ }
+
+ .luckWheel .tips .text{
+   font-size: 0.36rem;
+   position: absolute;
+   width: 100%;
+   padding:0 0.2rem;
+   box-sizing: border-box;
+   bottom: 0rem;
+   color: #e1a914;
+   line-height: 0.5rem;
+ }
+
+ .luckWheel .tips .text p{
+   margin: 0;
+   margin-bottom: 0.5rem;
+ }
+
+ /*
+  * 投资风云榜
+  */
+
+  .rank_list {
+    position: relative;
+  }
+
+  .rank_list .list{
+    position: absolute;
+    width: 5.6rem;
+    top:0;
+    left:50%;
+    margin-left: -2.8rem;
+  }
+
+  .rank_list .list li{
+    background-color: #e1a914;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    margin-top: 0.1rem;
+    border-radius: 0.05rem;
+    overflow: hidden;
+  }
+
+  .rank_list .list li:nth-child(2){
+    background: url(../images/a_1.png) no-repeat 0.2rem 50%;
+    background-size: 0.3rem 0.3rem;
+  }
+  
+  .rank_list .list li.no_result{
+  	background:none !important;
+  }
+
+  .rank_list .list li:nth-child(3){
+    background: url(../images/a_2.png) no-repeat 0.2rem 50%;
+    background-size: 0.3rem 0.3rem;
+  }
+
+  .rank_list .list li:nth-child(4){
+    background: url(../images/a_3.png) no-repeat 0.2rem 50%;
+    background-size: 0.3rem 0.3rem;
+  }
+
+  .rank_list .list li:nth-child(even){
+    background-color: #fff29b;
+  }
+  
+  .rank_list .list li.no_result{
+    background:none;
+    height:2rem;
+    line-height:2rem;
+    font-size:0.28rem;
+
+  }
+
+  .rank_list .list li span{
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.24rem;
+  }
+
+
+  /**
+   * 我的奖品列表弹窗
+   */
+  .award_mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index:9999;
+  }
+
+  .award_mask .content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6.5rem;
+    height: 7rem;
+    margin-left:-3.25rem;
+    margin-top: -3.5rem;
+    background-color: #ffe114;
+    border-radius: 0.1rem;
+  }
+
+  .award_mask .content .title{
+    height: 0.8rem;
+    background: url(../images/award_list_title.png) no-repeat 50% 50%;
+    background-size: 2rem 0.5rem;
+  }
+
+  .award_mask .content .title .icon-close{
+    position: absolute;
+    width:.4rem;
+    height: .4rem;
+    background: url(../images/award_list_close.png) no-repeat 0 0;
+    background-size: 100%;
+    right:0.1rem;
+    top:0.1rem;
+  }
+
+  .award_mask .content .body{
+    position: absolute;
+    top:0.8rem;
+    bottom:0.2rem;
+    left:0.2rem;
+    right:0.2rem;
+    background-color: #ffeab0;
+    border-bottom-right-radius: 0.1rem;
+    border-bottom-left-radius: 0.1rem;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .award_mask .content .body .no_result{
+    height: 2rem;
+    line-height: 2rem;
+    font-size:0.28rem;
+  }
+
+  .award_mask .content .body .item{
+    display: block;
+    float: left;
+    width: 50%;
+    color:#a57605;
+  }
+
+  .award_mask .content .body .item img{
+    width:1.3rem;
+    height: 2rem;
+    display: block;
+    margin:0.2rem auto 0 auto;
+  }
+
+  .award_mask .content .body .item p{
+    color:#a57605;
+    font-size: 0.28rem;
+    margin-top: 0.2rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }

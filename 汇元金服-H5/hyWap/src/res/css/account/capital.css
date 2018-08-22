@@ -1,0 +1,79 @@
+/*资金记录*/
+._capitalSec{
+
+}
+
+._capitalSec .capital_list{
+
+}
+
+._capitalSec .item_wrap{
+    position: relative;
+    height: 2.0rem;
+}
+
+._capitalSec .capital_item{
+    width:52%;
+    position: absolute;
+    text-align: left;
+    height: 2.2rem;
+    border-radius: 0.1rem;
+    box-shadow: 1px 1px 5px #fb9164;
+    padding:0.3rem 0.2rem;
+}
+
+._capitalSec .capital_item.in{
+    background: linear-gradient(180deg,#e34f32,#fb9164);
+    color:#fff;
+}
+
+._capitalSec .capital_item.out{
+    background-color: #fff;
+    border:1px solid #ffbd96;
+}
+
+._capitalSec .capital_item.out .num{
+    color:#999;
+}
+
+._capitalSec .item_wrap:nth-child(odd) .capital_item{
+    left:0.4rem;
+}
+
+._capitalSec .item_wrap:nth-child(even) .capital_item{
+    right:0.4rem;
+}
+
+._capitalSec .capital_item .title{
+    font-size: 0.36rem;
+}
+
+._capitalSec .capital_item .title .dotted{
+    width:0.15rem;
+    height: 0.15rem;
+    border-radius: 50%;
+    background-color: #dc3d29;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.1rem;
+}
+
+._capitalSec .capital_item .num{
+    padding-left: 0.25rem;
+    margin-top: 0.3rem;
+}
+
+._capitalSec .capital_item .date{
+    padding-left: 0.25rem;
+    margin-top: 0.3rem;
+    color:#ff4206;
+    font-weight: 300;
+}
+
+._capitalSec .capital_item .date span.icon-clock{
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.2rem;
+    background: url(../../images/time_icon_normal.png) no-repeat 0 0;
+    background-size: 0.2rem;
+}

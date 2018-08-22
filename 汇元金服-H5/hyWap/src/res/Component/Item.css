@@ -1,0 +1,46 @@
+/**
+列表组件样式
+*/
+.CPT_itemWrap{
+    background-color: #fff;
+    border-top:1px solid #d8d8d8;
+    border-bottom:1px solid #d8d8d8;
+    padding-left: 15px;
+    margin-top: 15px;
+}
+
+.CPT_itemWrap > ul > li{
+    border-bottom: 1px solid #d8d8d8;
+    text-align: left;
+    height: 45px;
+    line-height:45px;
+    overflow: hidden;
+}
+
+.CPT_itemWrap > ul > li:last-child{
+    border-bottom: none !important;
+}
+
+.CPT_itemWrap > ul > li span.label{
+    font-size: 1.4rem;
+    color:#212121;
+    float: left;
+}
+
+.CPT_itemWrap > ul > li span.arrow{
+    float: right;
+    display: block;
+    height:45px;
+    width:20px;
+    margin-right: 10px;
+    background: url(./images/triangle.png) no-repeat 50% 50%;
+    background-size: 8px 13px;
+}
+
+.CPT_itemWrap > ul > li span.description{
+    margin:0 35px 0 60px;
+    text-align: right;
+    color:#ccc;
+    font-size: 1.4rem;
+    display: block;
+}

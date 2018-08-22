@@ -1,0 +1,551 @@
+/*cpDetail*/
+
+.newhand-wrapper.cp-wrapper .cp-header2 {
+	background: url(../../images/invest-detail-icon/invest-bg.png) center center no-repeat;
+	background-size: cover;
+}
+
+.newhand-wrapper.cp-wrapper .cp-header2 .common-head .xieyi,
+.newhand-wrapper.cp-wrapper .cp-header2 .common-head p {
+	color: #fff;
+}
+
+.newhand-wrapper.cp-wrapper .cp-header2 .common-head.fff-head {
+	background: transparent;
+	color: #fff;
+}
+
+.newhand-wrapper.cp-wrapper .cp-header2 .fff-head i {
+	background: url(../../images/backW.png) center no-repeat;
+	background-size: 200%;
+}
+
+.newhand-wrapper.cp-wrapper .cp-header2 .common-head:after {
+	border: none;
+}
+
+.newhand-wrapper.cp-wrapper .cp-detail2 .interest span:first-child:before {
+	background-color: #fc764d;
+}
+
+.newhand-wrapper.cp-wrapper .cp-detail2 .interest span {
+	color: #fc764d;
+}
+
+.newhand-wrapper.cp-wrapper .cp-detail2 .interest span:last-child:before {
+	background-color: #fc764d;
+}
+
+.newhand-wrapper.cp-wrapper .nav-pills li.active {
+	color: #fc764d;
+}
+
+.newhand-wrapper.cp-wrapper .nav-pills li.active:after {
+	pointer-events: none;
+	content: '';
+	width: 25px;
+	height: 2px;
+}
+
+.newhand-wrapper .newhand-btn {
+	height: 2.8125rem;
+}
+
+.newhand-wrapper .newhand-btn div {
+	width: 100%;
+	height: 100%;
+	background-color: #fc764d;
+}
+
+.newhand-wrapper .sign_box_bottom.earnings {
+	bottom: 2.8125rem;
+}
+
+.newhand-wrapper.cp-wrapper .nav-pills li.active a {
+	color: #fc764d;
+}
+
+.newhand-wrapper.cp-wrapper .bg-wrapper {
+	background-image: none;
+}
+
+.newhand-wrapper.cp-wrapper .cp-detail2 {
+	margin-top: .98765rem;
+}
+
+.newhand-wrapper .panel-default table .date {
+	text-align: center;
+}
+
+.newhand-wrapper .panel-default table th {
+	color: #b2b2b2;
+	background-color: #fff;
+	font-size: 0.8125rem;
+}
+
+.newhand-wrapper.cp-wrapper .panel {
+	margin-bottom: 0;
+}
+
+.newhand-wrapper.cp-wrapper .panel-heading div {
+	font-size: 12px;
+	color: #b2b2b2;
+}
+
+.newhand-wrapper.cp-wrapper .panel-heading div,
+.detail_aqbz .aqbz-item .item-title:after {
+	border: none;
+}
+
+.detail_aqbz .aqbz-item {
+	margin-bottom: 0.5rem;
+}
+
+.detail_aqbz .aqbz-item .item-title span {
+	color: #b2b2b2;
+}
+
+.detail_aqbz .aqbz-item .item-title i {
+	background: none;
+}
+
+.newhand-wrapper.cp-wrapper .panel-heading {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1rem;
+	background-color: #fff;
+	padding-right: 1.33333rem;
+	height: auto;
+}
+
+.newhand-wrapper.cp-wrapper .panel-heading .title {
+	margin-bottom: 0.5rem;
+}
+
+.newhand-wrapper.cp-wrapper .panel-heading .content {
+	height: auto;
+	font-size: 12px;
+	color: #333;
+}
+
+.newhand-wrapper.cp-wrapper .panel {
+	background-color: #f2f2f2;
+}
+
+
+/*发现*/
+
+
+/*GYWNM关于汇元*/
+
+.wap-more-box .logo-wrapper {
+	flex-direction: column;
+	align-items: center;
+	background-color: #fff;
+}
+
+.wap-more-box .more-bg div:last-child:after {
+	border-bottom: 1px solid #d2d2d2;
+}
+
+.wap-more-box .more-bg div:first-child:after {
+	border-top: 1px solid #d2d2d2;
+}
+
+
+/*actList*/
+
+.common-head .historyAct {
+	float: right;
+	height: 100%;
+	padding-right: 20px;
+	line-height: 3.40741rem;
+}
+
+.myMission .myMissionItem .info .btn.out:after {
+	border-radius: 24px;
+}
+
+
+/*活动中心*/
+
+.myMission .myMissionItem .info .time {
+	margin-top: 0;
+}
+
+
+/*YJFK*/
+
+.yjfk .submit-btn {
+	height: 48px;
+}
+
+.yjfk .submit-btn span {
+	width: 100%;
+}
+
+/*我的投资*/
+
+.myinvest-wrapper.myInvest .common-head {
+	background: url(../../images/account-icon/bg.png) center no-repeat;
+}
+
+.myinvest-wrapper.myInvest .common-head p {
+	color: #fff;
+}
+
+.myinvest-wrapper.myInvest .common-head i {
+	background: url(../../images/backW.png) center no-repeat;
+	background-size: 200%;
+}
+
+.myinvest-wrapper .list-wrap,
+.myinvest-wrapper .list-wrap .item-list:not(:first-child) {
+	margin-top: 0;
+}
+
+.myinvest-wrapper .list-wrap .item-list:not(:first-child) {
+	border-top: 1px solid #f3f3f3;
+}
+
+.myinvest-wrapper .myinvest-info .top .num,
+.myinvest-wrapper .myinvest-info .bottom .wait .num,
+.myinvest-wrapper .myinvest-info .bottom .all .num,
+.myinvest-wrapper .myinvest-trigger div.active {
+	color: #fc764d;
+}
+
+.myinvest-wrapper .myinvest-info .bottom .wait:after {
+	border-right-color: #f3f3f3;
+}
+
+.myinvest-wrapper .myinvest-trigger div.active:after {
+	width: 100%;
+	height: 2px;
+	color: #fc764d;
+}
+
+.myinvest-wrapper .list-wrap .item-list .title .tip.yellow {
+	color: #fc764d;
+}
+
+.myinvest-wrapper .list-wrap .item-list .title .tip.yellow:after {
+	border-color: #fc764d;
+	border-radius: 1.5rem;
+}
+
+.myinvest-wrapper .list-wrap .item-list .title .tip {
+	padding: 3px 20px;
+}
+
+.myinvest-wrapper .list-wrap .item-list .title .tip.gray:after {
+	border-radius: 1.5rem;
+}
+
+.myinvest-wrapper .list-wrap .item-list .title .info-title i {
+	display: inline-block;
+	width: 20px;
+	height: 15px;
+	box-sizing: border-box;
+	margin-right: 5px;
+	margin-bottom: -3px;
+	background: url(../../images/invest-icon/moneyBack.png) center no-repeat;
+	background-size: 100%;
+}
+
+.myinvest-wrapper .list-wrap .item-list .info-1 .info-title div,
+.myinvest-wrapper .list-wrap .item-list .info-1 .info-content {
+	color: #fc764d;
+	font-size: 18px;
+}
+.myinvest-wrapper .list-wrap .item-list .info-1 .percent {
+	text-align: center;
+}
+
+.myinvest-wrapper .list-wrap .item-list .info-1 .percent .info-title {
+	padding-bottom: 6px;
+}
+
+.myinvest-wrapper .list-wrap .item-list .info-1 .income:after {
+	border: none;
+}
+
+
+/*安全中心(我的信息)*/
+
+.my-info-wrapper .submit-btn {
+	height: 46px;
+}
+
+.my-info-wrapper .submit-btn span {
+	width: 100%;
+	background-color: #fc764d;
+}
+
+.my-info-wrapper ul li:not(:last-child):after {
+	border: 1px solid #f3f3f3;
+}
+
+
+/*找回密码*/
+
+.tradepwd-wrapper .pwd-box .right:after {
+	border: none;
+}
+
+.tradepwd-wrapper .pwd-box span.title {
+	width: 20px;
+	height: 25px;
+}
+
+.tradepwd-wrapper .pwd-box span.title {
+	background: url(../../images/login-icon/phone.png) left center no-repeat;
+	background-size: 100%;
+}
+
+.tradepwd-wrapper .pwd-box span.title.code {
+	background: url(../../images/login-icon/msg.png) left center no-repeat;
+	background-size: 100%;
+}
+
+.tradepwd-wrapper .pwd-box:last-child span.title {
+	background: url(../../images/login-icon/msg.png) left center no-repeat;
+	background-size: 100%;
+}
+/*重置密码*/
+
+.tradepwd-wrapper .pwd-box span.title.icon {
+	background: url(../../images/login-icon/pwd.png) left center no-repeat;
+	background-size: 100%;
+}
+/*实名认证 shiming*/
+.wap-smrz-box {
+	background-color: #fff;
+}
+
+.wap-smrz-box form input,
+.wap-smrz-box form select {
+	border: none;
+	margin: 0;
+	font-size: 14px;
+}
+
+.wap-smrz-box form.wap-shiming {
+	padding: 0 18px;
+}
+
+.wap-smrz-box form.wap-shiming div {
+	background-color: #fff;
+	display: flex;
+	position: relative;
+	align-items: center;
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.wap-smrz-box form.wap-shiming div.city .search {
+	width: 1.28125rem;
+	height: 1.28125rem;
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+	transform: translate(0, -50%);
+	-webkit-transform: translate(0, -50%);
+	background: url(../../images/search.png) center no-repeat;
+	background-size: 100%;
+}
+
+.wap-smrz-box form.wap-shiming div span.title {
+	width: 7rem;
+	flex: 0 0 auto;
+	align-items: center;
+	font-size: 14px;
+	color: #333333;
+	margin: 0 15px;
+	display: flex;
+}
+
+.wap-smrz-box form.wap-shiming div span.code-box {
+	flex: 0 0 90px;
+	font-size: 1rem;
+	color: #fc764d;
+}
+
+.wap-smrz-box form.wap-shiming div.bankName-box {
+	height: 3.55556rem;
+}
+
+.wap-smrz-box form.wap-shiming .user-box input,
+.wap-smrz-box form.wap-shiming .userId-box input,
+.wap-smrz-box form.wap-shiming .bank-box select,
+.wap-smrz-box form.wap-shiming .city-box input {
+	font-size: 12px;
+	flex: 1 1 auto;
+	height: 3.55556rem;
+}
+
+.wap-smrz-box form.wap-shiming .bankName-box input,
+.wap-smrz-box form.wap-shiming .phone-box input,
+.wap-smrz-box form.wap-shiming .msg-box input {
+	font-size: 12px;
+	flex: 1 1 auto;
+	height: 3.55556rem;
+}
+
+.newhand-wrapper.shiming .tip {
+	width: 100%;
+	height: 2rem;
+	line-height: 2rem;
+	position: fixed;
+	left: 0;
+	bottom: 46px;
+	text-align: center;
+	color: #b2b2b2;
+	font-size: 0.8125rem;
+	background-color: #fff;
+}
+
+.newhand-wrapper.shiming .tip a {
+	color: #fc764d;
+}
+
+.newhand-wrapper.shiming .submit-btn {
+	width: 100%;
+	height: 46px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}
+
+.newhand-wrapper.shiming .submit-btn a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #fc764d;
+	color: #fff;
+	font-size: 1.125rem;
+	text-align: center;
+	line-height: 46px;
+}
+/*优惠券*/
+/*myCoupon*/
+
+.h5-coupon2 .coupon-bg-wrapper .content .left {
+	padding: 0;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.h5-coupon2 .coupon-bg-wrapper .content .left:after {
+	border: none;
+}
+
+.h5-coupon2 .coupon-bg-wrapper .content .left>span {
+	font-size: 1.75rem;
+	padding-left: 2rem;
+}
+
+.h5-coupon2 .coupon-bg-wrapper .content .right {
+	color: #333;
+	align-items: center;
+}
+
+.h5-coupon2 .coupon-bg-wrapper .content .right .myCoupon-btn {
+	width: 5.625rem;
+	height: 1.28125rem;
+	background-color: #fc764d;
+	border-radius: 16px;
+	display: flex;
+	justify-content: center;
+	color: #fff;
+}
+
+.h5-coupon2 .coupon-bg-wrapper.guoqi {
+	padding: 10px;
+}
+
+.hb-coupon,
+.jxq-coupon,
+.fbq-coupon {
+	padding: 0 1rem;
+}
+
+.used-coupon,
+.hb-coupon,
+.jxq-coupon,
+.fbq-coupon {
+	margin-top: 1rem;
+}
+
+.hb-coupon .coupon-bank {
+	width: 100%;
+	font-size: 12px;
+	color: #b2b2b2;
+	text-align: center;
+}
+
+.hb-coupon .coupon-bank img {
+	width: 100%;
+}
+
+
+/*myUselessCoupon*/
+
+.h5-coupon2 .coupon-bg-wrapper.hb,
+.h5-coupon2 .coupon-bg-wrapper.jxq,
+.h5-coupon2 .coupon-bg-wrapper.fbq {
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+}
+
+
+/*我的邀请*/
+.invite-center .info div span {
+	color: #fc764d;
+}
+
+.invite-center .invite-btn {
+	height: auto;
+}
+
+.my-invitation-wrapper .btn-bot {
+	background: #fc764d;
+}
+
+.invite-center .invite-list .invite-blank {
+	text-align: center;
+	color: #b2b2b2;
+	font-size: 12px;
+}
+
+.invite-center .invite-list .invite-blank img {
+	width: 100%;
+}
+
+.invite-center .table-head div:last-child {
+	justify-content: center;
+}
+
+.invite-center .invite-list .table-item div:last-child {
+	justify-content: center;
+}
+
+/*体验金*/
+
+.mytyj-body .tyj-detail-wrapper {
+	padding: 0 1rem;
+	background: #fff;
+}
+
+.mytyj-body .tyj-detail-wrapper .tyj-detail {
+	justify-content: center;
+	align-items: center;
+}
+
+.mytyj-body .tyj-detail-wrapper .tyj-detail div:first-child {
+	padding-top: 0;
+}
+
+.mytyj-body .tyj-btn:after {
+	border: none;
+}

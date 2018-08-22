@@ -1,0 +1,17 @@
+<div class="hy-touziyue" ng-controller="hongyaTouziyueCtrl">
+	<div>
+		<img src="images/hyactivity/tzy-a.png" />		
+	</div>
+	<div>
+		<img src="images/hyactivity/tzy-b.png" />
+		<span class="count" ng-if="isLog">您已累计返现{{cashAmount || 0}}元</span>
+		<span class="count" ng-if="!isLog&&wap&&!app"><a ui-sref="dl({returnurl:'hongyatouziyue'})">登录查看累计返现金额</a></span>
+		<span class="count" ng-if="!isLog&&app"><a href="jsmp://page=3">登录查看累计返现金额</a></span>
+		<!--  -->
+		<span ng-if="wap&&!app" class="invest-btn" ui-sref="main.bankBillList"></span>
+		<a ng-if="app" href="jsmp://page=2" class="invest-btn"></a>
+	</div>
+
+	<span ng-if="wap&&!app" class="fixed-invest" ng-show="showFixedbtn" ui-sref="main.bankBillList">立即投资</span>
+	<a ng-if="app"  class="fixed-invest" ng-show="showFixedbtn" href="jsmp://page=2">立即投资</a>
+</div>

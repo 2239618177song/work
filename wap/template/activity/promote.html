@@ -1,0 +1,236 @@
+<div class="promote">
+    <main>
+        <img style="width:100%;display:block;" src="images/activity/promote/banner.png">
+        <div class="register-box">
+            <div class="promote-box">
+                <form class="wap-login-box" ng-model="fromregister" name="myForm" novalidate>
+                    <div class="input-item">
+                        <img src="images/activity/changcheng/ico-1.png" style="left:0.7rem;" />
+                        <div class="input-box">
+                            <input name="mobilephone" type="text" ng-pattern="/^1[3|4|5|7|8][0-9]{9}$/" placeholder="请输入手机号码" ng-model="login.mobilephone" onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')" ng-blur="blurID('focusMobilephone',myForm)" minlength="11" maxlength="11" required class="input">
+                        </div>
+                    </div>
+                    <div class="input-item">
+                        <img src="images/activity/tyj/ico-4.png" style="left:0.6rem;"/>
+                        <div class="input-box">
+                            <input id="imgcode" class="input" type="text" placeholder="请输入图形验证码" ng-model="login.picCode" name="picCode" minlength="4" maxlength="4" required autocomplete="off" />
+                            <span class="img-box"><img ng-click="clickInput($event)" src="login/validateCode2.dos"></span>
+                        </div>
+                    </div>
+                    <div class="input-item">
+                        <img src="images/activity/changcheng/ico-2.png" />
+                        <div class="input-box" style="width:57%;margin-right:3%;float:left;">
+                            <input ng-model="login.smsCode"  type="text"  placeholder="请输入短信验证码" maxlength="4" required class="input">
+                        </div>
+                        <div class="input-box" style="width:40%;float:left;border:1px solid #E70000;color:#E70000;box-sizing:border-box;border-radius:0.2rem;">
+                            <span ng-click="getyzm(myForm)" style="color:#FF5A52;">{{nowTimer}}</span>
+                        </div>
+                    </div>
+                    <div class="input-item">
+                        <img src="images/activity/changcheng/ico-3.png" />
+                        <div class="input-box">
+                            <input autocomplete="off" type="{{(passwordText|isShowPw).type}}"  placeholder="密码为6-18位字母数字混合" ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/" ng-model="login.passWord" name="passWord" required class="input" />
+                        </div>
+                    </div>
+                    <div class="input-item">
+                        <p><i class="checkbox" ng-click="agree=!agree" ng-class="{checked:agree}" ng-init="agree=true"></i>我已阅读并同意<a href="http://www.hongyajinrong.com/zc" style="color:#FDAF2A;">《汇元金服注册协议》</a></p>
+                    </div>
+                    <div class="input-item">
+                        <button class="btn" ng-click="zuce(myForm)" ng-disabled="!agree">立 即 注 册</button>
+                        <p style="text-align: center;"><a>我已注册&#x3000;<span ui-sref="dl" style="text-decoration:underline;color:#FDAF2A;">立即登录</span></a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <div class="main maind">
+        <img class="lefttop" src="images/activity/promote/maind-left.png">
+        <header>
+            <img src="images/activity/promote/maind-icon.png">
+            <div>
+                <h1>新手福利  产品丰富  壕礼多多</h1>
+                <p>新用户成功注册可获得相应体验金、红包奖励！</p>
+                <p>更多的活动期待您的参与！</p>
+            </div>
+            <footer></footer>
+        </header>
+        <div class="cp-box">
+            <h1>1个月</h1>
+            <div>
+                <h2>6%+4.5%&nbsp;&nbsp;&nbsp;</h2>
+                <p>预期年化收益</p>
+            </div>
+            <div>
+                <h2>35天</h2>
+                <p>投资期限</p>
+            </div>
+            <div>
+                <h2>￥1,020.83</h2>
+                <p>预计利息收益</p>
+            </div>
+        </div>
+        <div class="cp-box">
+            <h1>2个月</h1>
+            <div>
+                <h2>7.5%+3.8%&nbsp;</h2>
+                <p>预期年化收益</p>
+            </div>
+            <div>
+                <h2>60天</h2>
+                <p>投资期限</p>
+            </div>
+            <div>
+                <h2>￥1,833.33</h2>
+                <p>预计利息收益</p>
+            </div>
+        </div>
+        <div class="cp-box">
+            <h1>3个月</h1>
+            <div>
+                <h2>8.5%+3%&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                <p>预期年化收益</p>
+            </div>
+            <div>
+                <h2>90天</h2>
+                <p>投资期限</p>
+            </div>
+            <div>
+                <h2>￥2,875.00</h2>
+                <p>预计利息收益</p>
+            </div>
+        </div>
+        <div class="cp-box">
+            <h1>6个月</h1>
+            <div>
+                <h2>10.5%+0.5%</h2>
+                <p>预期年化收益</p>
+            </div>
+            <div>
+                <h2>180天</h2>
+                <p>投资期限</p>
+            </div>
+            <div>
+                <h2>￥6,000.00</h2>
+                <p>预计利息收益</p>
+            </div>
+        </div>
+        <p>*以投资金额10万元为例</p>
+    </div>
+    <div class="slider">
+        <div class="img-box swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/activity/promote/slidera.png" style="width:100%;display:block;">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/activity/promote/sliderb.png" style="width:100%;display:block;">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/activity/promote/sliderc.png" style="width:100%;display:block;">
+                </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-h"></div>
+        </div>
+    </div>
+    <div ng-click="gotop()" class="top-button">立 即 赚 钱</div>
+    <div class="main maina">
+        <header>
+            <img src="images/activity/promote/maina-icon.png">
+            <div>
+                <h1>和平影视垂直管理的首家互金平台</h1>
+                <p>汇元金服互联网金融平台于2016年9月26日正式上线。得到了监管部门、金融机构和业内同行的高度认可。</p>
+            </div>
+            <footer></footer>
+        </header>
+        <section ng-init="selected=1;">
+            <div class="img-box">
+                <img ng-if="selected==1" src="images/activity/promote/nava.png">
+                <img ng-if="selected==2" src="images/activity/promote/navb.png">
+                <img ng-if="selected==3" src="images/activity/promote/navc.png">
+                <img ng-if="selected==4" src="images/activity/promote/navd.png">
+            </div>
+            <div class="content-box">
+                <nav>
+                    <img ng-click="selected=1;"ng-class="selected==1?'active':''" src="images/activity/promote/icona.png">
+                    <img ng-click="selected=2;"ng-class="selected==2?'active':''" src="images/activity/promote/iconb.png">
+                    <img ng-click="selected=3;"ng-class="selected==3?'active':''" src="images/activity/promote/iconc.png">
+                    <img ng-click="selected=4;"ng-class="selected==4?'active':''" src="images/activity/promote/icond.png">
+                </nav>
+                <h2 ng-if="selected==1">上海和平影视企业公司（集团）董事长吴传平先生代表和平影视集团宣布，对集团直属的杭州啄米理财信息服务有限公司进行垂直化管理。</h2>
+                <h2 ng-if="selected==2">杭州啄米理财信息服务有限公司联合创始人王溥迪主旨演讲《国企金融创新发展》</h2>
+                <h2 ng-if="selected==3">新疆天富蓝玉光电科技有限公司总经理季礼明代表中小企业发表了《中国中小企业融资现状》的演讲。</h2>
+                <h2 ng-if="selected==4">大成律师事务所高级合伙人刘新宇律师从专业的司法角度，对《国资系互金平台如何做好合规发展？》进行了解析。</h2>
+                <br>
+                <p ng-if="selected==1">吴董表示：“这是和平影视集团进行垂直管理的首家互联网金融平台。并将在啄米理财内建立党支部，将其人事关系纳入到国有企业编制；严格按照网贷管理办法，以国有企业标准制定并向集团提交开展相关业务的制度、流程和标准，由和平影视集团指派专人定期对啄米理财的财务报表进行审计，并建立起对平台的第三方资金存管、银行存管、平台自有运营资金的日常巡查与监管制度。</p>
+                <p ng-if="selected==2">王总表示“平台自2016年9月26日正式上线以来，得到了监管部门、金融机构和业内同行的高度认可和广大投资人的支持与信任。获得上海和平影视企业的收购并对啄米理财进行垂直管理，深感荣幸，倍觉重任在肩。啄米理财坚持秉承中央“深化金融改革、服务实体经济”的国家经济发展战略，以服务中小微企业为己任，在2017年，不忘初心，砥砺前行，为中国经济和为普惠金融贡献出我们的一份力量。”</p>
+                <p ng-if="selected==3">季总表示：“针对中小微实体经济普遍存在着借款难，融资贵的阶段性难题，迫切渴望能够获得更为高效的，低成本的融资，投入到企业的再生产中，为社会创造更大的价值。并对以服务中小微企业为己任，产融结合，双轮驱动的啄米理财表示感谢和赞赏。</p>
+                <p ng-if="selected==4">他表示：“首先，国资系互金平台必须根据行业相关监管政策，自觉调整，做到合规自律发展；国资系平台应充分发挥自身在资产端的优势、在公信力、风控措施等方面的优势，努力打造平台自身的产品，创新业务模式，优化用户体验，让国资系真正成为整个互联网金融行业的金字招牌；国资系互金平台在践行互联网金融行业使命的同时，更承担着天然的社会责任。国资系互金平台应该把遵守监管、树立行业典范视为本分，把服务国家经济发展、保障投资者利益视为自身义不容辞的责任。”</p>
+            </div>
+        </section>
+    </div>
+    <div class="main mainb">
+        <header>
+            <img src="images/activity/promote/mainb-icon.png">
+            <div>
+                <h1>合规  稳健  多元发展</h1>
+                <p>上海和平影视企业公司（集团）正式宣布对集团所属的啄米理财进行垂直化管理</p>
+            </div>
+            <footer></footer>
+        </header>
+        <div class="content-box">
+            <img src="images/activity/promote/mainb-a.png">
+            <img src="images/activity/promote/mainb-b.png">
+            <img src="images/activity/promote/mainb-c.png">
+        </div>
+    </div>
+    <div class="main mainc">
+        <header>
+            <img src="images/activity/promote/mainc-icon.png">
+            <div>
+                <h1>1亿验资  层层把关  放心理财</h1>
+                <p>致力于打造一个值得信赖的、高效的互联网金融服务平台</p>
+                <p>为您守护好每一分财产</p>
+            </div>
+            <footer></footer>
+        </header>
+        <div class="content-box">
+            <div class="content">
+                <img src="images/activity/promote/mainc-cicona.png" alt="">
+                <p>银行账户千万级存款保障逾期先行垫付</p>
+                <footer></footer>
+            </div>
+            <div class="content">
+                <img src="images/activity/promote/mainc-ciconb.png" alt="">
+                <p>拥有1亿验资，实力雄厚啄米投资验资报告</p>
+                <footer></footer>
+            </div>
+            <div class="content">
+                <img src="images/activity/promote/mainc-ciconc.png" alt="">
+                <p>360°层层风控，严格审核，理财更放心</p>
+                <footer></footer>
+            </div>
+            <div class="content">
+                <img src="images/activity/promote/mainc-cicond.png" alt="">
+                <p>啄米理财完善的保障机制安享收益合规支持</p>
+                <footer></footer>
+            </div>
+            <div class="content">
+                <img src="images/activity/promote/mainc-cicone.png" alt="">
+                <p>两大律师为您合规支持严密保护您的资产</p>
+                <footer></footer>
+            </div>
+            <div class="content">
+                <img src="images/activity/promote/mainc-ciconf.png" alt="">
+                <p>100%国企背景和平影视垂直管理</p>
+                <footer></footer>
+            </div>
+        </div>
+    </div>
+    <div ng-if="showdownload==true" class="download">
+        <span>随时随地理财，抢标快人一步！</span>
+        <span ng-click="downloadclick()" class="download-button">下载APP</span>
+        <img ng-click="closedownload()" src="images/activity/promote/close-icon.png">
+    </div>
+    <div class="share-ios"><img ng-click="closethis()" src="images/share-ios.png" /></div>
+    <div class="share-android"><img ng-click="closethis()" src="images/share-android.png" /></div>
+</div>

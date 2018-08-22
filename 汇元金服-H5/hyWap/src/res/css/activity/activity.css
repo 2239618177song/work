@@ -1,0 +1,47 @@
+/*活动*/
+._activitySec {
+}
+
+._activitySec  a.actItem {
+    display: block;
+    background-color: #fff;
+    margin: 0 0.2rem 0.2rem;
+    border-radius: 0.15rem;
+    overflow: hidden
+}
+
+._activitySec  a.actItem .activityInfo {
+    padding: 0.1rem 0.2rem;
+    overflow: hidden
+}
+
+._activitySec  a.actItem .activityInfo>.status {
+    width: 1rem;
+    font-size: 0.26rem;
+    text-align: right;
+    margin-top: 0.15rem;
+}
+
+._activitySec  a.actItem .activityInfo>.status.going {
+    color: #f90
+}
+
+._activitySec  a.actItem .activityInfo>.status.end {
+    color: #aaa
+}
+
+._activitySec  a.actItem .activityInfo>.activitDetail {
+    margin-right: 0.9rem;
+    text-align: left
+}
+
+._activitySec  a.actItem .activityInfo>.activitDetail>p.title {
+    font-size: 0.32rem;
+    color: #333
+}
+
+._activitySec  a.actItem .activityInfo>.activitDetail>p.dateRange {
+    color: #aaa;
+    font-size: 0.28rem;
+    margin-top: 0.15rem;
+}

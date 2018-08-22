@@ -1,0 +1,70 @@
+.HY_banner_title{
+    height: 4rem;
+    background: linear-gradient(45deg,#d53823,#f07236);
+    padding-top: 1rem;
+    color:#fff;
+    font-size: 0.32rem;
+    position: relative;
+    z-index:1;
+    overflow: hidden;
+}
+
+
+.HY_banner_title:before,
+.HY_banner_title .inner_wrap:before{
+    content:'';
+    width:0.35rem;
+    height: 4.4rem;
+    position: absolute;
+    left:0;
+    bottom:-1rem;
+    background-color: #d63a25;
+    border-radius:0.3rem;
+    transform-origin: 50% 50%;
+    animation:rotateIn 1s;
+    animation-fill-mode: forwards;
+}
+.HY_banner_title .inner_wrap:before{
+    width:0.25rem;
+    left:0.6rem;
+}
+
+
+.HY_banner_title:after,
+.HY_banner_title .inner_wrap:after{
+    content:'';
+    width:0.35rem;
+    height: 4.4rem;
+    position: absolute;
+    right:1rem;
+    top:-2rem;
+    background-color: #ee6c35;
+    border-radius:0.3rem;
+    animation:rotateIn 1s;
+    animation-fill-mode: forwards;
+}
+
+.HY_banner_title .inner_wrap:after{
+    width:0.25rem;
+    right:-0.6rem;
+    top:-3rem;
+}
+
+@keyframes rotateIn{
+    from{
+        transform:rotate(0deg)
+    }
+
+    to{
+        transform:rotate(45deg);
+    }
+}
+
+.HY_banner_title .inner_wrap{
+    position: absolute;
+    z-index:1;
+    width:100%;
+    height: 100%;
+    left:0;
+    top:1rem;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>我和春天有个约‘惠’</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="/common/css/common.css">
+  <!--<link rel="stylesheet" href="/acts/actMarch2018/css/luckWheel.css">-->
+  <script src="/common/js/autoFixedLayout.js"></script>
+  <style>
+      .luckWheel{
+        background-color: #ddefe1;
+      }
+      .section{
+        width: 100%;
+      }
+      .section img{
+        display: block;
+        width: 100%;
+      }
+      .luckWheel .plate_wrap{
+        width:7.01rem;
+        height: 7.01rem;
+        border-radius: 50%;
+        overflow: hidden;
+        margin:0 auto;
+        position: relative;
+        box-shadow: 0 0 0.3rem #ddd;
+        /*position: absolute;*/
+        top:0;
+        /*left:50%;*/
+        /*margin-left:-2.9rem;*/
+        /*margin-top: 0.05rem;*/
+        /*margin-top: -2.8rem;*/
+      }
+      .luckWheel .plate{
+        width:100%;
+        height: 100%;
+        text-align: center;
+        background: url(/acts/cpsRegister/images/lottery_plate2.png) no-repeat 0 0;
+        box-shadow: 0 0 0.03rem #fc7959;
+        background-size: 100% 100%;
+      }
+
+      .luckWheel .plate_wrap .luck_arrow{
+        width:1.35rem;
+        height: 1.96rem;
+        background:url(/acts/cpsRegister/images/arrow.png) no-repeat 0 0 ;
+        position: absolute;
+        left:50%;
+        top:50%;
+        margin-top:-1.29rem;
+        margin-left: -0.64rem;
+        background-size: 100% 100%;
+      }
+      span.remain{
+        margin: 0.3rem auto;
+        display: block;
+        font-size: 0.3rem;
+        color: #065a4b;
+        font-weight: bolder;
+      }
+  </style>
+</head>
+<body class="luckWheel">
+  <div class="section"><img src=" /acts/cpsRegister/images/zp0301_01.png" alt="第1张"></div>
+  <div class="section">
+    <div class="plate_wrap">
+      <div class="plate">
+
+      </div>
+      <div class="luck_arrow trigger">
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <span class="remain">您当前拥有<span id="remainCount">1</span>次免费抽奖机会</span>
+  </div>
+  <div class="section"><img src="/acts/cpsRegister/images/zp0301_03.png" alt="第1张"></div>
+
+  <div class="section">
+    <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.huiyuanjinfu.lc&fromcase=40002">
+      <img src="/acts/cpsRegister/images/download.png" alt="">
+    </a>
+  </div>
+  <style>
+    .alert_model_mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 90;
+    }
+    .alert_content{
+      width: 5.25rem;
+      height:2rem;
+      margin: auto;
+      margin-top: 1.50rem;
+      /*background-color: #daffdd;*/
+      background-size: contain;
+    }
+    .close_btn{
+      width: 3.84rem;
+      height: 1.03rem;
+      display: block;
+      /*top: 7.22rem;*/
+      position: absolute;
+      /*background-color: #ddefe1;*/
+      left:0;
+      right:0;
+      margin:auto;
+      background: url(/acts/cpsRegister/images/get_btn.png);
+      background-size: 100% 100%;
+    }
+    .alert_model_mask .text{
+      position: relative;
+      font-size: 0.3rem;
+      /*position: absolute;*/
+      background-color: #daffdd;
+      width: 100%;
+      padding:0.5rem 0.2rem;
+      box-sizing: border-box;
+      /*bottom: 0rem;*/
+      color: #000;
+      line-height: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .closeBtn{
+      display: block;
+      position: absolute;
+      right: 0.18rem;
+      top: 0;
+    }
+  </style>
+  <div class="alert_modal_wrap" id="alertModal">
+    <!--<div class="alert_model_mask">-->
+      <!--<div class="alert_content scaleIn">-->
+        <!--<div class="text">-->
+          <!--<span class="closeBtn">X</span>-->
+          <!--<p>恭喜您获得：xxx</p>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<a href="javascript:void(0)" class="close_btn"></a>-->
+    <!--</div>-->
+  </div>
+  <!-- 我的奖品弹窗 -->
+
+
+
+  <%include ../js.html%>
+  <script src="/acts/actMarch2018/js/jquery.easing.min.js"></script>
+  <script src="/acts/actMarch2018/js/jQueryRotate.2.2.js"></script>
+  <script src="/acts/cpsRegister/js/indexLottery.js"></script>
+</body>
+</html>

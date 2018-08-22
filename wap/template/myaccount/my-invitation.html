@@ -1,0 +1,144 @@
+<div class="my-invitation-wrapper" ng-controller="myInvitationCtrl">
+	<div class="common-head" ng-click="toback()"><i></i><p>我的邀请</p></div>
+	<div class="all">
+		<a href="{{data.activity.appPutUrl}}?wap=true"><img src="{{data.activity.appPutImg}}" width="100%" /></a>
+	</div>
+	<!--<div class="total">
+		<b></b>
+		<div class="mod">
+			<p><span>累积邀请好友：</span>{{user.total}} <i>人</i></p>
+		</div>
+		<div class="mod">
+			<p><span>已完成投资 : </span>{{user.investors}} <i>人</i></p>
+		</div>
+	</div>
+	<table class="list">
+		<tr>
+			<th width="30%">注册手机号</th>
+			<th width="20%">姓名</th>
+			<th width="25%">注册时间</th>
+			<th width="25%">是否投资<p style="font-size: 0.6rem;color:red;">(新手标、体验标除外)</p></th>
+		</tr>
+		<tr ng-repeat="item in list" ng-if="list&&list.length>0">
+			<td>{{item.mobilePhone}}</td>
+			<td>{{item.realName}}</td>
+			<td>{{item.regTime | date:'yyyy-MM-dd'}}</td>
+			<td>{{item.isInvest}}</td>
+		</tr>
+		<tr ng-if="!list||list.length<=0">
+			<td colspan="4">您还未邀请好友</td>
+		</tr>
+	</table>-->
+
+	<div class="preview">
+		<p>
+			<span>累计获得返现：</span>
+			<span>{{data.threePresentRewards | currency:''}}元</span>
+		</p>
+		<!--<p>
+			<span>未领取奖金：</span>
+			<span><span>{{data.threePresentUnclaimed | currency:''}}</span>元</span>
+			<span ng-if="data.threePresentUnclaimed>0" ng-click="lingqu()">立即领取</span>
+		</p>-->
+	</div>
+	<div class="content">
+		<header><span><img src="images/myaccount/before-icon.png">一重礼</span><span>首投10000元及以上（除体验标），可获得18元返现；奖励会在满足条件的半小时内发放至账户余额！</span></header>
+		<div class="statistic">
+			<div>
+				<span>邀请好友人数总计</span>
+				<span>{{data.recommendedCount}} 位</span>
+			</div>
+			<p>
+				<span>完成首投的好友</span>
+				<span><span>{{data.firstInvestCount}}</span> 位</span>
+			</p>
+			<footer></footer>
+		</div>
+		<div class="table-box">
+			<div class="table-header">
+				<span style="width: 25%;">我的好友</span>
+				<span style="width: 35%;">投资金额(元)</span>
+				<span style="width: 40%;">我的返利奖金(元)</span>
+			</div>
+			<div class="table-body">
+				<table ng-if="firstInvestList.length>0">
+					<tr ng-repeat="item in firstInvestList">
+						<td width="25%">{{item.realname}}</td>
+						<td width="35%">{{item.investAmount}}</td>
+						<td width="40%"><span>{{item.rebateAmount | number:2}}</span></td>
+					</tr>
+				</table>
+				<p ng-if="firstInvestList.length<=0"><img src="images/myaccount/norecord.png"></p>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<header><span><img src="images/myaccount/before-icon.png">二重礼</span><span>用户在获得一重礼之后，邀请人可获得对应好友后续一年内每笔投资收益的25%作为邀请佣金！（不含募集期收益，奖励会在满足条件的半小时内发放至账户余额）</span></header>
+		<div class="statistic">
+			<div>
+				<span>邀请好友人数总计</span>
+				<span>{{data.recommendedCount}} 位</span>
+			</div>
+			<p>
+				<span>完成复投的好友</span>
+				<span><span>{{data.reInvestCount}}</span> 位</span>
+			</p>
+			<footer></footer>
+		</div>
+		<div class="table-box">
+			<div class="table-header">
+				<span style="width: 25%;">我的好友</span>
+				<!-- <span style="width: 19%;">投资次数</span> -->
+				<span style="width: 35%;">投资金额(元)</span>
+				<span style="width: 40%;">我的返利奖金(元)</span>
+			</div>
+			<div class="table-body">
+				<table ng-if="repeatInvestList.length>0">
+					<tr ng-repeat="item in repeatInvestList">
+						<td width="25%">{{item.realname}}</td>
+						<!-- <td width="19%">{{item.investOrder}}</td> -->
+						<td width="35%">{{item.investAmount}}</td>
+						<td width="40%"><span>{{item.rebateAmount | number:2}}</span></td>
+					</tr>
+				</table>
+				<p ng-if="repeatInvestList.length<=0"><img src="images/myaccount/norecord.png"></p>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<header><span><img src="images/myaccount/before-icon.png">三重礼</span><span>在每个自然月内，老用户通过邀请好友新增交易用户累计满5位后，即可获得一次性奖励300元（奖励会在次月的第一天发放至账户余额）。</span></header>
+		<div class="rank">
+			<h1 ng-if="!(data.nowRanking<=10)">您当前的排名暂时无法上榜</h1>
+			<img ng-if="!(data.nowRanking<=10)" src="images/myaccount/rank-fail.png">
+			<h3 ng-if="!(data.nowRanking<=10)">赶紧用洪荒之力召唤您的好友~</h3>
+
+			<h1 ng-if="data.nowRanking<=10">您的当前排名&#x3000;&#x3000;第<span>{{data.nowRanking}}</span>位</h1>
+			<img ng-if="data.nowRanking<=10" src="images/myaccount/rank-success.png">
+			<h3 ng-if="data.nowRanking<=10">保持住，马上就可领取大奖了！</h3>
+		</div>
+	</div>
+	<div class="btn-bot" ng-click="share()">立即邀请好友</div>
+	<!--领取奖金后弹框-->
+	<div class="activity-firend-hongbao">
+		<div class="hongbaobg">
+			<img src="images/activity/firend/hongbao.png" />
+			<div class="hongbaotext">
+				<p class="money">领取了奖金<br />{{hongbaoAmount}}元</p>
+				<p class="text">奖金已转入您的账户请及时查收</p>
+				<a class="sharebtn" ng-click="share()">分享赚更多</a>
+				<a class="cancel" ng-click="closehongbao()">放弃机会</a>
+			</div>
+		</div>
+	</div>
+	<!--分享弹框-->
+	<div class="fixed-box" ng-click="closeshare()">
+		<div class="linkurl" ng-click="default($event)">
+			<p>复制以下网址，发送给您的好友注册并投资</p>
+			<textarea>{{protocol}}//m.hongyajinrong.com/inviteReg?recommCode={{userOBJ.user.member.mobilephone}}&invitePerson={{invitePerson}}</textarea>
+		</div>
+		
+	</div>
+	<div class="activity-firend-boxweixin" ng-click="closeshareweixin()">
+    	<img src="images/activity/firend/sharetext.png" class="sharetext" />
+    </div>
+</div>

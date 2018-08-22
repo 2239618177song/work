@@ -1,0 +1,343 @@
+._aboutSec{
+    padding-top: 1rem;
+}
+
+._aboutSec .sec_title{
+    height: 1rem;
+    background-size: 2.6rem 1rem;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+}
+
+._aboutSec .banner_info{
+
+}
+
+._aboutSec .banner_info img{
+    display: block;
+    width:100%;
+}
+
+/*关于汇元*/
+._aboutSec .about{
+    
+}
+
+._aboutSec .about .sec_title{
+    background-image: url(../../../res/images/hy_title_gyhy.png);
+    margin-top: 0.2rem;
+}
+
+._aboutSec .about .content{
+    padding:0 0.3rem 0.3rem 0.3rem;
+}
+
+._aboutSec .about .content .item{
+    margin-top: 0.3rem;
+}
+
+._aboutSec .about .content .item .left_icon{
+    width:0.7rem;
+    height: 0.7rem;
+    background: url(../../images/title_kuang.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    float: left;
+    margin-top: 0.1rem;
+    color:#46428c;
+}
+
+._aboutSec .about .content .item .left_icon .text{
+    font-size: 0.2rem;
+    white-space: nowrap;
+    width: 1rem;
+    display: block;
+    margin-top: 0.3rem;
+    margin-left: 0.2rem;
+}
+
+._aboutSec .about .content .item .right_content{
+    margin-left: 1.4rem;
+    text-align: left;
+    text-indent: 0.56rem;
+    font-size:.24rem;
+    line-height: 0.36rem;
+    color:#666;
+    font-weight: 300;
+}
+
+._aboutSec .profile{
+    background-color: #eee;
+    padding: 0.4rem 0;
+}
+
+._aboutSec .profile .inner_wrap{
+    background-color: #fff;
+    margin:0 0.8rem;
+}
+
+._aboutSec .profile .top_img{
+    background-color: #46428c;
+    height: 1.8rem;
+    position: relative;
+}
+
+._aboutSec .profile .top_img img{
+    display: block;
+    position: absolute;
+    width: 4rem;
+    top:-0.2rem;
+    left:0.6rem;
+}
+
+._aboutSec .profile .sec_title{
+    background-image: url(../../images/hy_title_gsjj.png);
+    margin-top: 0.5rem;
+}
+
+._aboutSec .profile .content{
+    padding: 0.2rem 0.3rem;
+    color:#666;
+    font-weight: 300;
+}
+
+._aboutSec .profile .content p{
+    line-height: 0.36rem;
+    text-align: left;
+    text-indent: 0.56rem;
+}
+
+._aboutSec .product{
+    background-color: #fff;
+    padding: 0.3rem;
+}
+
+._aboutSec .product .sec_title{
+    background-image: url(../../images/hy_title_hycp.png);
+}
+
+._aboutSec .product .img_wrap{
+    margin-top: 0.2rem;
+}
+
+._aboutSec .product .product_list{
+    padding:0.3rem 0.8rem 0;
+    text-align: left;
+}
+
+._aboutSec .product .product_list .p_item{
+    margin-bottom: 0.2rem;
+    line-height: 0.36rem;
+    color:#666;
+}
+
+._aboutSec .product .product_list .p_item .p_title{
+    color:#333;
+}
+
+._aboutSec .product .product_list .p_item .p_detail{
+    color:#666;
+    font-weight: 300;
+}
+
+._aboutSec .publish{
+    background-color: #eee;
+    padding:0.3rem 0.4rem 0.4rem;
+}
+
+._aboutSec .publish .sec_title{
+    background-image: url(../../images/hy_title_hypl.png);
+}
+
+._aboutSec .publish .photos{
+    margin-top: 0.2rem;
+    text-align: center;
+}
+
+._aboutSec .publish .photos img{
+    display: block;
+    width:100%;
+    height: 100%;
+}
+
+._aboutSec .publish .photos .style1{
+    width:2.8rem;
+    height: 3.6rem;
+    display: inline-block;
+    margin:0.2rem;
+}
+
+._aboutSec .publish .photos .style2{
+    width: 5rem;
+    height: 3.6rem;
+    display: inline-block;
+    margin-top: 0.4rem;
+}
+
+._aboutSec .notice{
+    background-color: #fff;
+    padding:0.3rem;
+    padding-bottom: 0.6rem;
+}
+
+._aboutSec .notice .sec_title{
+    background-image: url(../../images/hy_title_hygg.png);
+}
+
+._aboutSec .notice .img_wrap{
+    width: 4rem;
+    margin:0 auto;
+}
+
+._aboutSec .notice .sub_title{
+    color:#666;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+._aboutSec .notice .content{
+    color:#666;
+    line-height: 0.5rem;
+}
+
+._aboutSec .photos{
+    background-color: #eee;
+    padding:0.3rem 0;
+}
+
+._aboutSec .photos .sec_title{
+    background-image: url(../../images/hy_title_hyxc.png);
+}
+
+._aboutSec .photos img{
+    display: block;
+    width:100%;
+    height: 100%;
+}
+
+._aboutSec .photos .img_wrap{
+    width:6rem;
+    margin:0.3rem auto;
+}
+
+._aboutSec .photos .img_inner_wrap1{
+    width:2.8rem;
+    height: 4rem;
+    float: left;
+}
+
+._aboutSec .photos .img_inner_wrap2{
+    width:3rem;
+    margin-left: 3rem;
+    height: 1.9rem;
+}
+
+._aboutSec .photos .img_inner_wrap3{
+    width:3rem;
+    height: 1.9rem;
+    margin-left: 3rem;
+    margin-top: 0.2rem;
+}
+
+._aboutSec .team{
+    background-color: #fff;
+    padding:0.3rem 0;
+}
+
+._aboutSec .team .sec_title{
+    background-image: url(../../images/hy_title_hytd.png);
+    margin-bottom: 0.2rem;
+}
+
+._aboutSec .team img{
+    width:100%;
+}
+
+._aboutSec .partner{
+    background-color: #fff;
+}
+
+._aboutSec .partner .sec_title{
+    background-image: url(../../images/hy_title_hzhb.png);
+}
+
+._aboutSec .partner .sub_item{
+    margin-top: 0.2rem;
+    padding:0.2rem 0.3rem;
+    color:#666;
+    font-weight: 300;
+}
+
+._aboutSec .partner .sub_item .sub_title{
+    width:2.6rem;
+    /*height: 0.55rem;*/
+    margin:0 auto;
+}
+
+._aboutSec .partner .sub_item .sub_title img{
+    width:100%;
+    height: 100%;
+}
+
+._aboutSec .partner .sub_item .content{
+    margin-top: 0.3rem;
+    line-height: 0.4rem;
+    text-align: left;
+}
+
+._aboutSec .partner .sub_item .content .bold{
+    color:#46428c;
+}
+
+._aboutSec .security{
+    background-color: #fff;
+    padding:0.3rem;
+}
+
+._aboutSec .security .sec_title{
+    background-image: url(../../images/hy_title_aqbz.png);
+}
+
+._aboutSec .security .item_list{
+    margin-top: 0.2rem;
+}
+
+._aboutSec .security .item_list img{
+    width:100%;
+    display: block;
+}
+
+._aboutSec .security .item_list .sub_item{
+    width:3.2rem;
+    height:5.5rem;
+    float: left;
+    border:1px solid #eee;
+    margin-bottom: 0.3rem;
+}
+
+._aboutSec .security .item_list .sub_item:nth-child(even){
+    margin-left: 0.3rem;
+}
+
+._aboutSec .security .item_list .sub_item .img_wrap{
+    position: relative;
+}
+
+._aboutSec .security .item_list .sub_item .img_wrap p{
+    position: absolute;
+    width:100%;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    color:#fff;
+    bottom:0;
+    left:0;
+    font-size: 0.24rem;
+}
+
+._aboutSec .security .item_list .sub_item .content{
+    padding:0.3rem 0.2rem;
+    text-align: left;
+    font-size:0.24rem;
+    line-height: 0.32rem;
+    color:#666;
+}

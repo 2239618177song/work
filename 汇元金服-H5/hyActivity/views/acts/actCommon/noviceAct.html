@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新手专享，壕礼3重奏</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/common/css/common.css">
+    <script src="/common/js/autoFixedLayout.js"></script>
+    <style>
+        /*
+		* 弹窗样式
+		*/
+        .niceGift .mask{
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0,0.5);
+
+        }
+        .niceGift .mask.dn{
+            /*display: block;*/
+        }
+        .niceGift .tips{
+            position: fixed;
+            width: 7rem;
+            height: auto;
+            border-radius: 20px;
+            top: 20%;
+            /* bottom: 0; */
+            left: 0;
+            right: 0;
+            /* margin-left: -3rem; */
+            /* margin-top: -2.5rem; */
+            -webkit-animation: scaleIn 0.5s;
+            animation: scaleIn 0.5s;
+            margin: auto;
+            background-color: #ffffff;
+
+            padding: 0.3rem 0;
+        }
+
+        .niceGift .tips img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .niceGift .tips .text{
+            font-size: 0.25rem;
+            /* position: absolute; */
+            width: 100%;
+            padding: 0.1rem;
+            box-sizing: border-box;
+            /* bottom: 38px; */
+            color: #000;
+            line-height: 1.5;
+            max-height: 8rem;
+            overflow: auto;
+            -webkit-overflow-scrolling:touch;
+        }
+        .niceGift .tips .text .title{
+            display: inline-block;
+            width: 85%;
+        }
+        .niceGift .tips .text .close{
+            margin-left: 0.2rem;
+            color: #eb6100;
+            cursor: pointer;
+        }
+        .niceGift .tips .text p{
+            margin: 0 auto;
+            text-align: left;
+            /* margin-bottom: 0.5rem; */
+            width: 95%;
+        }
+        .niceGift .tips .text .rule{
+            width: 95%;
+            margin: 20px auto;
+            background-color: #fffbef;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .niceGift .tips .text .rule span{
+            color: red;
+            font-weight: 600;
+        }
+        .niceGift .tips .text .rule.other{
+            background-color: #f7f1f7;
+        }
+        .font_color{
+            color: #eb6100;
+        }
+
+        .mask2 .text .rule p{
+            margin: 5px 0;
+        }
+        
+        .act_banner{
+        	background: url(/acts/actCommon/noviceImg/noviceActBan_01.png) no-repeat;
+        	background-size: 100% 100%;
+        	height: 8.53rem;
+        	position: relative;
+        }
+       	
+       	.act_btn{
+        	height: .73rem;
+        	width: 2.82rem;
+        	position: absolute;
+        	left: 50%;
+        	margin-left: -1.41rem;
+        }
+       	
+       	.act_banner .invest_btn{
+       		background: url(/acts/actCommon/noviceImg/novice_btn4.png) no-repeat;
+        	background-size: 100% 100%;
+        	bottom: .3rem;
+       	}
+       	
+       	.act_banner .register_btn{
+        	background: url(/acts/actCommon/noviceImg/novice_btn1.png) no-repeat;
+        	background-size: 100% 100%;
+        	bottom: .3rem;
+        }
+        
+        .rule_banner{
+        	background: url(/acts/actCommon/noviceImg/noviceActBan_02.png) no-repeat;
+        	background-size: 100% 100%;
+        	height: 5.26rem;
+        	position: relative;
+        }
+        
+        .rule_btn{
+        	background: url(/acts/actCommon/noviceImg/novice_btn2.png) no-repeat;
+        	background-size: 100% 100%;
+        	height: .38rem;
+        	width: 1.69rem;
+        	position: absolute;
+        	left: 50%;
+        	margin-left: -.845rem;
+        	bottom: .9rem;
+        }
+        
+        .exp_banner{
+        	background: url(/acts/actCommon/noviceImg/noviceActBan_03.png) no-repeat;
+        	background-size: 100% 100%;
+        	height: 5.34rem;
+        	position: relative;
+        }
+        
+        .expInvest_btn{
+        	background: url(/acts/actCommon/noviceImg/novice_btn3.png) no-repeat;
+        	background-size: 100% 100%;
+        	height: .54rem;
+        	width: 1.88rem;
+        	position: absolute;
+        	right: .52rem;
+        	bottom: 1.01rem;
+        }
+        
+        .invest_banner{
+        	background: url(/acts/actCommon/noviceImg/noviceActBan_04.png) no-repeat;
+        	background-size: 100% 100%;
+        	height: 8.51rem;
+        	position: relative;
+        	padding: 0 .52rem;
+        }
+        
+        .btn02{
+        	background: url(/acts/actCommon/noviceImg/novice_btn4.png) no-repeat;
+        	background-size: 100% 100%;
+        	bottom: 1.34rem;
+        }
+        
+        .invest_banner p{
+        	font-size: .18rem;
+        	position: absolute;
+        	color: #fff;
+        	bottom: .3rem;
+        	line-height: .3rem;
+        	width: 6.41rem;
+        }
+    </style>
+</head>
+<body class="niceGift">
+    <div class="content">
+		<div class="act_banner">
+			
+		</div>
+		
+		<div class="rule_banner">
+			<div class="rule_btn" data-btnid="1"></div>
+		</div>
+		
+		<div class="exp_banner">
+			<div class="expInvest_btn"></div>
+		</div>
+		
+		<div class="invest_banner">
+			<div class="act_btn btn02 invest_btn"></div>
+			<p>此活动最终解释权归汇元金服所有，如有疑问请致电客服400-872-9577</p>
+		</div>
+		
+    </div>
+
+    <div class="mask mask1">
+        <div class="tips">
+            <div class="text">
+                <p class="title">注册即送5188元红包，可在【我的券包】中查看</p><span class="close">关闭</span>
+                <div class="rule">
+                    <p>单笔投资≥1000元&nbsp&nbsp，期限≥30天，可用 <span>8</span>  元红包。</p>
+                    <p>单笔投资≥5000元&nbsp&nbsp，期限≥30天，可用 <span>18</span>  元红包。</p>
+                    <p>单笔投资≥10000元，期限≥30天，可用 <span>38</span>  元红包。</p>
+                    <p>单笔投资≥30000元，期限≥30天，可用 <span>128</span>  元红包。</p>
+                    <p>单笔投资≥50000元，期限≥30天，可用 <span>228</span>  元红包。</p>
+
+                </div>
+                <div class="rule other">
+                    <p>单笔投资≥10000元，期限≥45天，可用 <span>88</span>  元红包。</p>
+                    <p>单笔投资≥50000元，期限≥45天，可用 <span>478</span>  元红包。</p>
+                </div>
+                <div class="rule">
+                    <p>单笔投资≥10000元，期限≥60天，可用 <span>108</span>  元红包。</p>
+                    <p>单笔投资≥50000元，期限≥60天，可用 <span>584</span>  元红包。</p>
+                </div>
+                <div class="rule other">
+                    <p>单笔投资≥5000元，期限≥90天，可用 <span>68</span>  元红包。</p>
+                    <p>单笔投资≥30000元，期限≥90天，可用 <span>468</span>  元红包。</p>
+                    <p>单笔投资≥50000元，期限≥90天，可用 <span>860</span>  元红包。</p>
+                </div>
+                <div class="rule">
+                    <p>单笔投资≥5000元，期限≥180天，可用 <span>98</span>  元红包。</p>
+                    <p>单笔投资≥30000元，期限≥180天，可用 <span>698</span>  元红包。</p>
+                    <p>单笔投资≥50000元，期限≥180天，可用 <span>1318</span>  元红包。</p>
+                </div>
+                <p class="">本活动只针对活动期间注册的新用户，新手红包投资使用方可提现，不可叠加使用，使用有效期限为30天。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mask mask2 dn">
+        <div class="tips">
+            <div class="text">
+                <p class="title title1" style="width: 75%;">活动规则</p><span class="close">关闭</span>
+                <div class="rule">
+                    <p>1.新手在本平台完成注册和投资都可获得加息券，登录到【我的账户】中查看。</p>
+                    <p>2.注册即送2%加息券一张。</p>
+                    <p>3.首次单笔投资45天以上标的，金额满10000元即送1%加息券一张。</p>
+                    <p>4.加息券可增加您投资获取的额外年化利息收益，加息时间与您投资的标的时间相同。</p>
+                    <p style="color: #434343;">(举例：您投资30天期限9%理财项目勾选使用2%加息券，则该加息券的加息时间即为30天，加息券获得的额外收益以现金的形式与投资产品的回款同时返现到您的账户中。)</p>
+                    <p>5.单笔投资每张加息券仅限使用一次，有效期限为30天，不可叠加使用，不适用于新手标。</p>
+                    <p>6.此活动最终解释权归汇元金服所有，如有疑问请致电客服热线 400-872-9577 </p>
+                </div>
+                <p class="">本活动只针对活动期间注册的新用户，新手红包投资使用方可提现，不可叠加使用，使用有效期限为30天。</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<%include ../js.html%>
+<script>
+    $('.rule_btn').on('click',function () {
+        var maskId = $(this).data('btnid');
+        $('.mask'+maskId+'').fadeIn();
+    });
+    $('.close').on('click',function(e){
+        $(e.target).closest('.mask').fadeOut();
+    })
+
+    /**
+     * 添加按钮
+     */
+    var addBtn = function(){
+        var tpl =[];
+        TL.checkLogin(function () {
+            tpl.push('<div class="act_btn register_btn"></div>');
+            $('.act_banner').append(tpl);
+            goInvest();
+        },function () {
+        	tpl.push('<div class="act_btn invest_btn"></div>');
+            $('.act_banner').append(tpl);
+            goInvest();
+        });
+
+    };
+
+    /**
+     * 投资按钮
+     */
+    var goInvest = function(){
+        var $goInvest = $('.invest_btn');
+        var $goRegister = $('.register_btn');
+		var $goExpInvest = $('.expInvest_btn'); //体验标按钮
+		
+        $goInvest.click(function(){
+            if(window.navigator.userAgent.indexOf('LRAPP') != -1){//在app中
+                lrNative.toAppJumpTo({
+                    type:'investList',
+                    pram:'0'
+                })
+            }else{//app外部
+                window.location.href = _config.mainIP+'/invest/list';
+            }
+        });
+		
+		$goExpInvest.click(function(){
+            if(window.navigator.userAgent.indexOf('LRAPP') != -1){//在app中  体验标跳转
+                lrNative.toAppJumpTo({
+                    type:'investList',
+                    pram:'3'
+                })
+            }else{//app外部
+                window.location.href = _config.mainIP+'/invest/list';
+            }
+        });
+
+        $goRegister.click(function(){
+            if(window.navigator.userAgent.indexOf('LRAPP') != -1){//在app中
+                TL.toLogin();
+            }else{//app外部
+                window.location.href = _config.mainIP+'/user/register';
+            }
+        })
+    };
+
+
+
+    $(function(){
+
+        TL.judePlatform(function(){
+                goInvest();
+                addBtn();
+            },
+            {
+                native:function(){
+                    window.nativeInit = function () {//必须使用这样的方式
+                        goInvest();
+                        addBtn();
+                    };
+
+                    lrNative.toAppGetArgs();//获取鉴权参数
+                },
+                wechat:function(){
+                    goInvest();
+                    addBtn();
+                }
+            });
+
+    });
+</script>
+<script>
+    /*百度统计代码*/
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?226bab346f4a8f5a30385789407c2491";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</html>

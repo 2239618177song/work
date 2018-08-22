@@ -1,0 +1,23 @@
+<div class="wap-cjwt-box" ng-controller="RZZCCtrl">
+        <div class="common-head" ng-click="toback()" ng-if="wap">
+            <i></i>
+            <p>{{title}}</p>
+        </div>
+        <div class="content">
+                <div class="question-box">
+                    <div class="question-title" ng-click="onClick(0)">
+                        <p>操作失败可能出现的原因？</p>
+                        <i></i>
+                    </div>
+                    <div class="question-content" ng-show="num1">
+                        <p>(1) 10SM超过金额限制：</p>
+                        <p>此错误常见于单笔/单日/单月交易金额大于富友风控设置的商户限额。</p>
+                        <p>(2) 余额不足次数限制：</p>
+                        <p>快捷充值当天余额不足失败次数5次，单月20次，超过次数限制建议换卡支付。</p>
+                        <p>(3) 验证码有效期3分钟，3分钟内不要重复点击获取验证码</p>
+                        <p>短信验证码错误次数超限：最多失败3次</p>
+                        <p>短信错误次数超过3次 重新下单请求即可。</p>
+                    </div>
+                </div>
+            </div>
+    </div>

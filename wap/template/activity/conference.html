@@ -1,0 +1,91 @@
+<div class="conference">
+    <img src="images/activity/conference/bg.png" style="width:100%;">
+    <main>
+        <img class="parta" src="images/activity/conference/parta.png" style="display:block;width:95%;">
+        <div id="video-box" class="video-box">
+            <img class="partb" src="images/activity/conference/partbc.png" style="display:block;width:97%;">
+            <div class="video">
+                <!--<video id="video" controls="controls" webkit-playsinline="" src="http://www.hongyajinrong.com/images/shipin/heping-jusheng.mp4" style="width: 100%;  left: 0px; top: 0px;">
+                    不支持
+                </video>-->
+                <!--<div class="video-box">-->
+                <div ng-if="currentv==1">
+                    <video poster="images/activity/conference/video-imga.png" width="100%" height="100%" src="http://www.hongyajinrong.com/images/shipin/wangpudi.mp4" preload="none" controls></video>
+                </div>
+                <div ng-if="currentv==2">
+                    <video poster="images/activity/conference/video-imgb.png" width="100%" height="100%" src="http://www.hongyajinrong.com/images/shipin/jiliming.mp4" preload="none" controls></video>
+                </div>
+                <div ng-if="currentv==3">
+                    <video poster="images/activity/conference/video-imgc.png" width="100%" height="100%" src="http://www.hongyajinrong.com/images/shipin/wuchuanping.mp4" preload="none" controls></video>
+                </div>
+                <div ng-if="currentv==4">
+                    <video poster="images/activity/conference/video-imgd.png" width="100%" height="100%" src="http://www.hongyajinrong.com/images/shipin/liuxinyu.mp4" preload="none" controls></video>
+                </div>
+                <!--</div>-->
+            </div>
+            <div ng-click="currentv==1?(currentv=4):(currentv=currentv-1)" class="button left"></div>
+            <div ng-click="currentv==4?(currentv=1):(currentv=currentv+1)" class="button right"></div>
+            <header>
+                <div>
+                    <p ng-if="currentv==1">2017.1.4</p>
+                    <p ng-if="currentv==1">14:00:00</p>
+                    <p ng-if="currentv==2">2017.1.4</p>
+                    <p ng-if="currentv==2">14:45:00</p>
+                    <p ng-if="currentv==3">2017.1.4</p>
+                    <p ng-if="currentv==3">15:00:00</p>
+                    <p ng-if="currentv==4">2017.1.4</p>
+                    <p ng-if="currentv==4">15:15:00</p>
+                </div>
+                <div>
+                    <p ng-if="currentv==1">杭州啄米理财信息服务有限公司联合创始人王溥迪主旨演讲《国企金融创新发展》</p>
+                    <p ng-if="currentv==2">新疆天富蓝玉光电科技有限公司总经理季礼明代表中小企业发表了《中国中小企业融资现状》的演讲</p>
+                    <p ng-if="currentv==3">上海和平影视企业公司（集团）董事长吴传平先生代表和平影视集团宣布，对集团直属的杭州啄米理财信息服务有限公司进行穿透式的垂直化管理</p>
+                    <p ng-if="currentv==4">大成律师事务所高级合伙人刘新宇律师从专业的司法角度，对《国资系互金平台如何做好合规发展？》进行了解析</p>
+                </div>
+                <footer></footer>
+            </header>
+        </div>
+        <img class="partc" src="images/activity/conference/partc.png" style="display:block;width:100%;">
+        <div class="buttons">
+            <div ng-click="onselPhoto(1)" class="abutton" ng-class="(selected==1||selected>6)?'selecteda':''"></div>
+            <div ng-click="onselPhoto(2)" class="bbutton" ng-class="selected==2?'selectedb':''"></div>
+            <div ng-click="onselPhoto(3)" class="cbutton" ng-class="selected==3?'selectedc':''"></div>
+            <div ng-click="onselPhoto(4)" class="dbutton" ng-class="selected==4?'selectedd':''"></div>
+            <div ng-click="onselPhoto(5)" class="ebutton" ng-class="selected==5?'selectede':''"></div>
+            <div ng-click="onselPhoto(6)" class="fbutton" ng-class="(selected==6||selected<1)?'selectedf':''"></div>
+            <p></p>
+        </div>
+        <div class="slide">
+            <img class="partd" src="images/activity/conference/partd.png" style="display:block;width:100%;">
+            <div class="img-box swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/activity/conference/imga.jpg" style="width:100%;display:block;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/activity/conference/imgb.jpg" style="width:100%;display:block;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/activity/conference/imgc.jpg" style="width:100%;display:block;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/activity/conference/imgd.jpg" style="width:100%;display:block;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/activity/conference/imge.jpg" style="width:100%;display:block;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/activity/conference/imgf.jpg" style="width:100%;display:block;">
+                    </div>
+                </div>
+            </div>
+            <div class="button left button-prev"></div>
+            <div class="button right button-next"></div>
+        </div>
+        <footer>
+            <img class="parte" src="images/activity/conference/parte.png" style="display:block;width:94%;">
+            <div ng-if="wap" ui-sref="main.bankBillList"></div>
+            <a ng-if="!wap" href="jsmp://page=2?" style="display:block;"></a>
+        </footer>
+    </main>
+</div>

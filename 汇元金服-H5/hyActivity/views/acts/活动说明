@@ -1,0 +1,10 @@
+forward -> 主工程跳转页
+
+
+
+inviteFriends -> 邀请好友活动
+newRegister -> 新手注册活动
+actBreak -> 平台破千万活动
+http://192.168.1.122:3001/cpsRegister4?from=kb    开吧汇元渠道注册页
+doubleEle -> 2017双十一转盘抽奖活动
+/christmas2017 -> 2017汇元圣诞活动

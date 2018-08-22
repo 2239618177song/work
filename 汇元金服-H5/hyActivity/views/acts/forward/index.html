@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跳转中...</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <style>
+        body{
+            text-align: center;
+            padding:0;
+            margin:0;
+        }
+
+        .loading_area{
+            width:60%;
+            position: absolute;
+            left:20%;
+            top:40%;
+            transform:translateY(-50%);
+        }
+
+        .loading_area img{
+            width: 100%;
+        }
+
+        .loading_area p{
+            margin-top:20px;
+            font-size:20px;
+            color:#666;
+            text-align: center;
+        }
+
+        .loading_area .btn{
+            display: block;
+            width:200px;
+            height: 40px;
+            line-height: 40px;
+            background: linear-gradient(45deg,rgb(210,53,47),rgb(230,105,63));
+            color:#fff;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 300;
+            text-decoration: none;
+            margin:20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading_area">
+        <img src="/acts/forward/images/loading_jz.png" alt=""/>
+        <p id="jumpText">&nbsp;</p>
+        <!--<p>跳转中...</p>-->
+        <a href="javascript:void(0)" class="btn" id="forwardBtn">确定</a>
+    </div>
+
+    <form method="post" action="" id="forwardForm">
+
+    </form>
+    <script>
+        var args = location.search.slice(1).split('&').map(function(item,i){
+            //var keyValue = item.split('=');
+            var index = item.indexOf('=');
+            var key = item.slice(0,index);
+            var value = item.slice(index+1);
+
+            if(key == 'SignInfo'){
+                console.log(value);
+            }
+            return {
+                key:key,
+                value:value
+            };
+        });
+
+        window.onload = function () {
+            var $form = document.getElementById('forwardForm');
+            var $btn = document.getElementById('forwardBtn');
+            var $jumpText = document.getElementById('jumpText');
+            var timer;
+            var count = 3;
+
+            function countTime(){
+                timer = setInterval(function(){
+                    if(count == 0){
+                        clearInterval(timer);
+                        $btn.click();
+                        $jumpText.innerHTML = '跳转中...';
+                    }else{
+                        $jumpText.innerHTML = count+'秒后进行跳转';
+                        count--;
+                    }
+                },1000);
+            }
+
+            var inputStr = '';
+
+            args.map(function(item,i){
+                if(item.key != 'suburl'){
+                    inputStr+='<input type="hidden" name="'+decodeURIComponent(item.key)+'" value="'+decodeURIComponent(item.value)+'"/>';
+                }else{
+                    $form.action = decodeURIComponent(item.value);
+                }
+            });
+
+            $form.innerHTML = inputStr;
+
+            countTime();
+
+            $btn.onclick = function(){
+                $btn.innerHTML = '跳转中...';
+                $form.submit();
+            }
+        };
+    </script>
+</body>
+</html>

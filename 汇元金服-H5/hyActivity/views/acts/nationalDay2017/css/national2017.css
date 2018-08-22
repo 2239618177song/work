@@ -1,0 +1,330 @@
+body{
+    background-color: #23062b;
+}
+/*九宫格抽奖*/
+.section_{
+    width: 6.04rem;
+    height:6.04rem;
+    background: url(/acts/nationalDay2017/images/lottery_bg_wap.png) no-repeat;
+    background-size: 100%;
+    margin: 0.3rem auto;
+    padding: 0.001rem;
+}
+.lottery_box {
+    width: 5.2rem;
+    margin: 0.5rem auto;
+    padding: 0.01rem;
+    margin-top: 0.45rem;
+}
+
+.lottery {
+    /*padding: 72px 0 0 0;*/
+}
+
+.lottery td {
+    padding: 0 0.05rem 0.07rem;
+}
+
+.lottery .lottery_btn {
+    position: relative;
+}
+
+.lottery .lottery_btn p, .lottery .btn h4 a {
+    position: absolute;
+    /*top: -15px;*/
+    left: 0;
+    right: 0;
+    font-size: 0.1rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.lottery .lottery_btn h4 a {
+    left: 67px;
+}
+
+.lottery .lottery_btn i.dask {
+    width: 143px;
+    height: 105px;
+    position: absolute;
+    z-index: 100;
+    left: 31px;
+    top: 20px;
+    display: none;
+}
+
+.lottery .lottery_btn p span {
+    color: #fae325;
+    font-size: 0.1rem;
+}
+
+/*.lottery .lottery_btn.zhizhen {*/
+    /*background: url(/acts/nationalDay2017/images/nationalDay2017_17.png) no-repeat;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background-size: 100% 100%;*/
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*left: 0px;*/
+/*}*/
+
+.lottery .lottery_btn.zhizhen:active {
+    /*background: url(/src/semRes/images/btn2.jpg) no-repeat;*/
+}
+
+.lottery .lottery-unit {
+    position: relative;
+}
+.lottery-unit img,.lottery_btn img{
+    width: 100%;
+}
+.lottery .lottery-unit span {
+    position: absolute;
+    left: 1px;
+    top: -4px;
+    width: 100%;
+    height: 100%;
+    background: url(/acts/nationalDay2017/images/mask.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.lottery .active span {
+    display: none;
+}
+
+.section img{
+    display: block;
+    width: 100%;
+}
+/*.nationalSec .section1{*/
+    /*height: 29rem;*/
+    /*background: url(/acts/nationalDay2017/images/nationalDayBg.png) no-repeat center;*/
+/*}*/
+.tempWrap{
+    height: 2.7rem!important;
+}
+.nationalSec p.lottery_times{
+    top: 1.3rem;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.lucky_list{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+.lucky_list .list{
+    /* margin-top: 65px; */
+    position: absolute;
+    width: 100%;
+    top: 0.6rem;
+    /* left: 50%; */
+    /* margin-left: -2.8rem; */
+}
+.list ul{
+    /*padding: 0 45px;*/
+    overflow: hidden;
+    height: 2.7rem;
+    position: relative;
+}
+.list ul p{
+    color: #fcedcf;
+    font-size: 0.25rem;
+    line-height: 3;
+}
+.list ul li{
+    color: #fcedcf;
+    font-size: 0.25rem;
+    /*float: left;*/
+    margin: 0 0;
+    padding: 0.25rem 0;
+    width: 100%;
+    /*position: absolute;*/
+}
+.list ul li span{
+    margin: 0 0.05rem;
+}
+
+.section3 .rule{
+    width: 80%;
+    margin: 0.57rem auto;
+    text-align: left;
+    color: #d88129;
+    font-size: 0.16rem;
+    line-height: 1.7;
+}
+.section4{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.section5{
+    color: #fff;
+    margin: 0 auto;
+}
+
+a.lottery_chance{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #eeb34e;
+    color: #fff;
+    width: 3rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    border-radius: 0.1rem;
+    font-size: 0.24rem;
+    margin: 0.3rem auto;
+}
+a.lottery_chance span{
+    color: #cf4b17;
+}
+a.my_award{
+    display: inline-block;
+    text-decoration: none;
+    width: 3rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    border-radius: 0.1rem;
+    font-size: 0.24rem;
+    margin: 0.3rem auto;
+}
+/*滚动样式*/
+.nationalSec .swiper-container{
+    overflow: hidden;
+    height: 2.5rem;
+}
+
+
+/*
+ * 弹窗样式
+ */
+
+.mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.tips{
+    position: fixed;
+    width: 2.55rem;
+    height: 2.44rem;
+    border-radius: 0.1rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: -3rem;
+    margin-top: -2.5rem;
+    -webkit-animation: scaleIn 0.5s;
+    animation: scaleIn 0.5s;
+    margin: auto;
+}
+
+.tips img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.tips .text{
+    font-size: 28px;
+    position: absolute;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    bottom: 38px;
+    color: #e1a914;
+    line-height: 50px;
+}
+
+.tips .text p{
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+/**
+   * 我的奖品列表弹窗
+   */
+.award_mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index:9999;
+}
+
+.award_mask .content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6.5rem;
+    height: 7rem;
+    margin-left:-3.25rem;
+    margin-top: -3.5rem;
+    background-color: #ffe114;
+    border-radius: 0.1rem;
+}
+
+.award_mask .content .title{
+    height: 0.8rem;
+    background: url(/acts/magpieFestival/images/award_list_title.png) no-repeat 50% 50%;
+    background-size: 2rem 0.5rem;
+}
+
+.award_mask .content .title .icon-close{
+    position: absolute;
+    width:.4rem;
+    height: .4rem;
+    background: url(/acts/magpieFestival/images/award_list_close.png) no-repeat 0 0;
+    background-size: 100%;
+    right:0.1rem;
+    top:0.1rem;
+}
+
+.award_mask .content .body{
+    position: absolute;
+    top:0.8rem;
+    bottom:0.2rem;
+    left:0.2rem;
+    right:0.2rem;
+    background-color: #ffeab0;
+    border-bottom-right-radius: 0.1rem;
+    border-bottom-left-radius: 0.1rem;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.award_mask .content .body .no_result{
+    height: 2rem;
+    line-height: 2rem;
+    font-size:0.28rem;
+}
+
+.award_mask .content .body .item{
+    display: block;
+    float: left;
+    width: 50%;
+    color:#a57605;
+}
+
+.award_mask .content .body .item img{
+    width:2rem;
+    height: 2rem;
+    display: block;
+    margin:0.2rem auto 0 auto;
+}
+
+.award_mask .content .body .item p{
+    color:#a57605;
+    font-size: 0.28rem;
+    margin-top: 0.2rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

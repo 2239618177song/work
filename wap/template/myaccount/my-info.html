@@ -1,0 +1,36 @@
+<div class="my-info-wrapper" ng-controller="myInfoCtrl">
+	<div class="common-head" ng-click="toback()"><i></i>
+		<p>我的信息</p>
+	</div>
+	<div class="info-box">
+		<ul>
+			<li>
+				<p>{{user.mobilephone}}</p><span>手机号</span></li>
+			<li>
+				<p ng-if="user.realVerify == 1">{{user.realName}}</p>
+				<p ng-if="user.realVerify == 0" ui-sref="certification">未认证<i></i></p><span>姓名</span></li>
+			<li>
+				<p ng-if="user.realVerify == 1">{{user.idCards}}</p>
+				<p ng-if="user.realVerify == 0" ui-sref="certification">未认证<i></i></p><span>身份证号</span>
+			</li>
+			<li>
+				<p ng-if="user.realVerify == 1" ui-sref="myBank"><img src="images/bankIcon/{{user.bankId}}.png"><span>{{user.bankName}}</span><i></i></p>
+				<p ng-if="user.realVerify == 0" ui-sref="certification">未认证<i></i></p><span>银行卡</span>
+			</li>
+		</ul>
+	</div>
+	<div class="info-box">
+		<ul>
+			<li ui-sref="resetPwd({forget:false})">
+				<p><i></i></p><span>重置登录密码</span></li>
+			<li ui-sref="resetTradePwd({firstset:false})" ng-if="user.tpwdFlag == 1">
+				<p><i></i></p><span>重置交易密码</span></li>
+			<li ui-sref="resetTradePwd({firstset:true})" ng-if="user.tpwdFlag == 0">
+				<p><i></i></p><span>设置交易密码</span></li>
+		</ul>
+	</div>
+	<div class='submit-btn'>
+		<span ng-click="out('out')">安全退出</span>
+	</div>
+	<!-- <a href="" ng-click="out('out')">安全退出</a> -->
+</div>

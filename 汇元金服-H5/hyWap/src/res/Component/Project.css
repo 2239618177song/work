@@ -1,0 +1,228 @@
+.HY_project{
+    background-color: #fff;
+    margin: 0.2rem;
+    box-shadow: 0 0 3px #ddd;
+    border-radius: 0.1rem;
+    padding:0.2rem 0 0.3rem;
+    position: relative;
+}
+
+.HY_project .title{
+    height: 0.3rem;
+    line-height: 0.3rem;
+}
+
+.HY_project  .new_tag{
+    float: left;
+    width:1rem;
+    height: 0.4rem;
+    background: url(./images/corner_newer.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    margin-left: -0.1rem;
+}
+
+.HY_project  .hot_sell{
+    float: left;
+    width:1rem;
+    height: 0.4rem;
+    background: url(./images/corner_mark_2.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    margin-left: -0.1rem;
+}
+
+.HY_project .title .text{
+    text-align: left;
+    margin-right: 2.6rem;
+    margin-left:0.2rem ;
+    line-height: 0.4rem;
+    height: 0.4rem;
+    width:50%;
+}
+
+.HY_project .title .right_area{
+    float: right;
+    width:2.5rem;
+    text-align: left;
+    font-size: 0.24rem;
+}
+
+.HY_project .count_time{
+    color:#ff853d;
+    font-weight: 300;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    font-size: 0.24rem;
+    text-align: right;
+    margin-right: 0.2rem;
+    padding-right: 0.2rem;
+}
+
+.HY_project .count_time .icon{
+    width:0.3rem;
+    height: 0.3rem;
+    display: inline-block;
+    background:url(./images/daojishi-@2x.png) no-repeat 0 0;
+    background-size: 0.2rem;
+    vertical-align: middle;
+    margin-right: 0.05rem;
+}
+
+.HY_project .title .right_area .selling{
+    background-color: #ea523b;
+    border-radius: 0.05rem;
+    color:#fff;
+    display: inline-block;
+    width:1.1rem;
+    height: 0.35rem;
+    line-height: 0.35rem;
+    text-align: center;
+    font-weight: 100;
+}
+
+.HY_project .content{
+    margin-top: .6rem;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-right: .4rem;
+}
+
+.HY_project .content .item{
+    text-align: left;
+    padding-left: .3rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.HY_project .content .item .item_title{
+    color:#999;
+    font-size: 0.24rem;
+}
+
+.HY_project .content .item .value{
+    height: 1rem;
+    line-height: 1rem;
+    color:#666;
+}
+
+
+
+.HY_project .content .item.rate{
+    float: left;
+}
+
+.HY_project .content .item.rate .rate_value {
+    font-size: 0.6rem;
+    font-weight: 300;
+    color: #ff853d;
+}
+
+.HY_project .content .item.rate .add_rate{
+    font-size: 0.32rem;
+}
+
+.HY_project .content .item.rate .add_rate:after{
+    content:'%';
+    font-size: 0.24rem;
+}
+
+.HY_project .content .item.rate .rate_value:after{
+    content:'%';
+    color:#ff853d;
+    font-size: 0.32rem;
+}
+
+.HY_project .content .item.date{
+    
+}
+
+.HY_project .content .item.date .value{
+    font-size:0.4rem;
+}
+
+.HY_project .content .item.date .value .day{
+    font-size:0.28rem;
+}
+
+.HY_project.newer .title .text{/*新手标*/
+    margin-left:1.1rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.HY_project.sold_out:after{/*售罄标的*/
+    content:'';
+    position: absolute;
+    width:0.8rem;
+    height: 0.8rem;
+    right:0.5rem;
+    top:1rem;
+    background: url(./images/sold_out@2x.png) no-repeat 0 0;
+    background-size: 0.8rem;
+}
+
+.HY_project.selling:after{/*售卖中标的*/
+    content:'申购中';
+    color:#fff;
+    background-color: #ea523b;
+    border-radius: 0.05rem;
+    display: inline-block;
+    width:1.1rem;
+    height: 0.38rem;
+    line-height: 0.38rem;
+    font-size: 0.24rem;
+    text-align: center;
+    font-weight: 300;
+    position: absolute;
+    top:0.2rem;
+    right:1.0rem;
+}
+
+/*首页专用*/
+.HY_project.index .tag_area{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    position: relative;
+    margin-bottom: 0.1rem;
+}
+
+.HY_project.index .title .text{
+    margin-left: 0.2rem !important;
+}
+
+.HY_project.index .content{
+    margin-top: 0.1rem;
+}
+
+.HY_project.index .content .main_color{
+    color:#f35e3e !important;
+}
+
+
+.HY_project.index .content .item.rate{
+    width:3rem;
+}
+
+.HY_project.index .content .item.info{
+    border-left:1px solid #eee;
+    margin-left: 3rem;
+    text-align: left;
+    padding-top: 1px;
+}
+
+.HY_project.index .content .item.info .l_date{
+    margin-top: 0.1rem;
+}
+
+.HY_project.index .content .item.info .l_amount{
+    margin-top: 0.3rem;
+}

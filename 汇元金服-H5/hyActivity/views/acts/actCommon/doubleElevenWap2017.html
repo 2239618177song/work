@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>【汇元金服】-双十一狂欢盛宴</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/common/css/common.css">
+    <script src="/common/js/autoFixedLayout.js"></script>
+    <style>
+        .ActSec{
+
+        }
+        .ActSec .section{
+            width: 100%;
+        }
+        .ActSec img{
+            width: 100%;
+            display: block;
+        }
+        .Act_box{
+            background-color: #ee513d;
+        }
+        .ActSec .section.act1_box{
+            /*width: 80%;*/
+            width: 90%;
+            margin: 0.4rem auto;
+            height:0.37rem;
+            background:url("/acts/actCommon/images/doubleEleven/sign_line.png") no-repeat center;
+            background-size: 100% ;
+            padding: 0.1rem;
+        }
+        .act1_box .line{
+            margin-top: -0.2rem;
+        }
+        .dot{
+            width: 1.1rem;
+            /*height: 80px;*/
+            /*background-color: #fff;*/
+            /*border-radius: 50%;*/
+            display: inline-block;
+            vertical-align: top;
+            /*line-height: 7;*/
+            margin: 0 auto;
+        }
+        .dot span.span1{
+            width: 0.6rem;
+            height: 0.6rem;
+            margin: 0 auto;
+            background-color: #fff;
+            display: block;
+            border-radius: 50%;
+
+        }
+        .dot .span1.active{
+            background-color: #00fff6;
+            -webkit-box-shadow: 0 0 20px #eae9e9;
+            -moz-box-shadow: 0 0 20px #eae9e9;
+            box-shadow: 0 0 20px #eae9e9;
+
+        }
+        .dot span.span2{
+            font-size: 0.2rem;
+            display: inline-block;
+            /*width: 108px;*/
+            color: #fff;
+            font-weight: bold;
+            margin-top: 0.2rem;
+        }
+        .ActSec .section.btn_box1{
+            width: 70%;
+            margin: 0.6rem auto;
+        }
+        .ActSec .btn_box{
+            width: 70%;
+            margin: 0.6rem auto;
+        }
+        .ActSec .rank_list{
+            /*width: 5.59rem;*/
+            width: 93%;
+            margin: 0 auto;
+            height: 4.59rem;
+            background: url(/acts/actCommon/images/doubleEleven/rank_bg.png) no-repeat;
+            background-size: contain;
+            color: #fff;
+            position: relative;
+        }
+        .ActSec .rank_list .list {
+            position: absolute;
+            width: 95%;
+            top: 0.2rem;
+            left: 0;
+            right: 0;
+            /* margin-left: -2.8rem; */
+            margin: auto;
+            min-height: 3.28rem;
+            background-color: #facac4;
+        }
+        .ActSec .rank_list .list li {
+            background-color: #ee513d;
+            height: 0.53rem;
+            line-height: 0.53rem;
+            margin-top: 0;
+            border-radius: 0;
+            overflow: hidden;
+        }
+        .ActSec .rank_list .list li:nth-child(even) {
+            background-color: #facac4;
+            color: #ee513d;
+        }
+        .ActSec .rank_list .list li span {
+            font-size: 0.2rem;
+            float: left;
+            width: 33.33%;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        ._tips{
+            background-color: rgba(0, 0, 0, 0.21);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+        }
+        ._tips.dn{
+            display: none;
+        }
+        ._tips .tips_content{
+            width: 4.92rem;
+            height:3.46rem;
+            background: url("/acts/actCommon/images/doubleEleven/tips.png");
+            background-size: 100% 100%;
+            margin: 3.6rem auto;
+            -webkit-animation:scaleIn 0.3s;
+            animation:scaleIn 0.3s;
+            padding: 0.1px;
+        }
+        ._tips .tips_text{
+            /*width: 607px;*/
+            /*!* margin: auto; *!*/
+            /*margin-top: 284px;*/
+            /*margin-left: 150px;*/
+            /*font-size: 36px;*/
+            /*line-height: 1.5;*/
+            /*color: #ee523c;*/
+        }
+        ._tips .get_btn{
+            display: inline-block;
+            width: 1.5rem;
+            height: 0.6rem;
+            /* background-color: red; */
+            margin-top: 2.5rem;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body class="ActSec">
+<div class="Act_box">
+    <div class="section section1">
+        <img src="/acts/actCommon/images/doubleEleven/double11_wap_01.png" alt="">
+    </div>
+    <div class="section act1_box">
+        <div class="line">
+            <div class="dot dot_item"><span class="span1"></span><span class="span2">第一天</span></div>
+            <div class="dot dot_item"><span class="span1"></span><span class="span2">第二天</span></div>
+            <div class="dot dot_item"><span class="span1"></span><span class="span2">第三天</span></div>
+            <div class="dot dot_item"><span class="span1"></span><span class="span2">第四天</span></div>
+            <div class="dot dot_item"><span class="span1"></span><span class="span2">第五天</span></div>
+        </div>
+    </div>
+        <a href="javascript:void(0)" style="display: inline-block" >
+            <div class="section btn_box1" id="signBtn">
+                <img src="/acts/actCommon/images/doubleEleven/sign_btn.png" alt="">
+            </div>
+        </a>
+    <div class="section section2"><img src="/acts/actCommon/images/doubleEleven/double11_wap_03.png" alt=""></div>
+    <a href="javascript:void(0)">
+        <div class="btn_box invest_btn">
+            <img src="/acts/actCommon/images/doubleEleven/invest_btn.png" alt="">
+        </div>
+    </a>
+    <div class="section section3"><img src="/acts/actCommon/images/doubleEleven/double11_wap_05.png" alt=""></div>
+    <div class="section">
+        <div class="main_content">
+            <div class="rank_list">
+                <div class="list">
+                    <ul id="list">
+                        <li><span>排名</span><span>用户昵称</span><span>投资金额</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="javascript:void(0)" >
+        <div class="btn_box invest_btn">
+            <img src="/acts/actCommon/images/doubleEleven/invest_btn.png" alt="">
+        </div>
+    </a>
+    <div class="section section1"><img src="/acts/actCommon/images/doubleEleven/double11_wap_07.png" alt=""></div>
+
+</div>
+<div class="_tips dn">
+    <div class="tips_content scaleIn">
+        <div class="tips_text"></div>
+        <a href="javascript:void(0)" class="get_btn"></a>
+    </div>
+</div>
+</body>
+<%include ../js.html%>
+<script>
+    $(function(){
+        var isLogin = '${session_user}';
+        var redirectURL = '/sem/semAct/doubleElevenPC2017';
+
+        var userData = {
+//            signCount:0,
+//            isSign:1,
+//            receive:0 //是否已经领取红包
+
+            signCount:3,
+            isSign:1,
+            receive:0 //是否已经领取红包
+        };//用户初始数据
+
+        var renderUserData = function(){
+            TL.Ajax({
+                url:'getSign'
+            }).done(function(data){
+                userData.isSign = parseInt(data.isSign);
+                userData.signCount = parseInt(data.signCount);
+                userData.receive = parseInt(data.receive);
+                renderSign(userData.signCount);
+                //是否签到
+                var className = userData.isSign*1 ? 'actived' : '';
+                var text = userData.isSign*1 ? '已签到' : '立即签到';
+                $('#signBtn').addClass(className);
+
+                if((userData.signCount == 3 || userData.signCount > 3)&& userData.receive == 0 ){
+                    $('._tips').removeClass('dn');
+                }
+            })
+        }
+
+        var renderSign = function(data){
+            var $dotItem = $('.dot_item');
+            for(var i = 0; i < data ;i++){
+                console.log($dotItem[i])
+                $dotItem.eq(i).find('span').addClass('active');
+            }
+        }
+
+        /**
+         * 获取投资排行榜
+         */
+        var getRank = function($el){
+
+            //获取数据
+            var getData = function(){
+                TL.Ajax({
+                    url:'getRanking',
+                    data: {
+                        beginDate:'2017-11-1',
+                        endDate:'2017-11-26',
+                        rd:+new Date()
+                    }
+                }).done(function(data){
+                    render(data);
+                });
+            }
+
+            //渲染页面
+            var render = function(data){
+                var tpl = [];
+                if(data.length == 0){
+                    tpl.push('<li>暂无数据~</li>')
+                }else{
+                    data.map(function(v,i){
+                        if(i<3){
+                            tpl.push('<li><span style="background:url(/acts/actCommon/images/doubleEleven/teacter_top'+(i+1)+'.png) no-repeat 0.22rem 0.02rem;background-size: contain">'+(i+1)+'</span><span>'+v.name+'</span><span>'+v.value+'</span></li>');
+                        }else if(i<5){
+                            tpl.push('<li><span>'+(i+1)+'</span><span>'+v.name+'</span><span>'+v.value+'</span></li>');
+                        }else{
+
+                        }
+                    });
+                }
+
+                $('#list').append(tpl.join(''));
+            }
+
+            getData();
+        }
+
+        /*
+         * 领取红包
+         * */
+
+        var getRed = function($el){
+            if(userData.receive == 0){
+                TL.Ajax({
+                    url:'receiveActivitiesWelfare',
+                    type:'get'
+                }).done(function(data){
+                    $('._tips').addClass('dn');
+//                    layer.open({
+//                        title:' 提示',
+//                        content:'恭喜领取成功！',
+//                        btn: ['立即投资','暂不投资'],
+//                        yes:function(){
+//                            window.location.href = 'javascript:void(0)';
+//                        }
+//                    });
+                    $.Alert('18元无门槛红包领取成功！');
+//                    layer.msg('领取成功',function(){
+//                        $('._tips').addClass('dn');
+//                    });
+                    renderUserData();
+                    userData.isSign = 0;
+                },function (data) {
+                    $.Alert(data.errmsg)
+                    $el.removeClass('disabled');
+                }).fail(function(){
+                    $el.removeClass('disabled');
+                });
+            }else{
+
+            }
+
+        }
+
+        /*
+        签到函数
+        * */
+
+        var toSign = function($this){
+            if(userData.isSign == 1){
+                $.Alert('您今天已经签过到啦~');
+                return;
+            }
+//            var $this = $(this);
+            if($this.hasClass('actived')){
+                $.Alert('您今天已经签过到了~');
+                return;
+            }
+            TL.Ajax({
+                url:'sign',
+                type:'POST'
+            }).done(function(data){
+                $.Alert('签到成功');
+                renderUserData();
+                userData.isSign = 0;
+            },function (data) {
+ //           	debugger
+ //               $.Alert(data.errmsg)
+            }).fail(function(){
+
+            });
+        }
+
+        /*
+        * 绑定事件*/
+        var bindEvent = function(){
+            /*签到*/
+            $('#signBtn').on('click',function(){
+                var $this = $(this);
+
+                TL.checkLogin(function () {
+//                        $.Alert(1)
+                     TL.toLogin();
+                 },function () {
+//                    $.Alert(2)
+                    toSign($this);
+                 });
+
+
+            });
+
+            //领取红包
+            $('.get_btn').on('click',function(){
+                var $this = $(this);
+                if($this.hasClass('disabled'))return;
+                $this.addClass('disabled');
+                getRed($this);
+            })
+        };
+
+        /**
+         * 投资按钮
+         */
+        var goInvest = function(){
+            var $goInvest = $('.invest_btn');
+            $goInvest.click(function(){
+                if(window.navigator.userAgent.indexOf('LRAPP') != -1){//在app中
+                    lrNative.toAppJumpTo({
+                        type:'investList',
+                        pram:'0'
+                    })
+                }else{//app外部
+                    window.location.href = _config.mainIP+'/invest/list';
+                }
+            });
+        }
+
+        var initPage = function(){
+
+            renderUserData(); //获取用户活动数据 需要登录
+            getRank();
+            bindEvent();
+            goInvest();
+        };
+
+        /*原生处理*/
+        TL.judePlatform(function(){
+
+                initPage();
+            },
+            {
+                native:function(){
+                    window.nativeInit = function () {//必须使用这样的方式
+                        initPage();
+                    };
+
+                    lrNative.toAppGetArgs();//获取鉴权参数
+                },
+                wechat:function(){
+                    initPage();
+                }
+            });
+
+    })
+</script>
+</html>

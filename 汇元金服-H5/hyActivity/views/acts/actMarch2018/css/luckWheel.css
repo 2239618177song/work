@@ -1,0 +1,301 @@
+.common_wrap{
+  margin:0 auto;
+}
+.luckWheel{
+  /*margin:0;*/
+  padding:0;
+  text-align: center;
+    background-color: #ddefe1;
+}
+
+.luckWheel .plate_wrap{
+  width:5.8rem;
+  height: 5.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin:0 auto;
+  position: relative;
+  box-shadow: 0 0 0.3rem #ddd;
+  /*position: absolute;*/
+  top:0;
+  left:50%;
+  margin-left:-2.9rem;
+  /*margin-top: 0.05rem;*/
+  /*margin-top: -2.8rem;*/
+}
+
+.luckWheel .plate{
+  width:100%;
+  height: 100%;
+  text-align: center;
+  background: url(../images/lottery_plate_wap.png) no-repeat 0 0;
+  box-shadow: 0 0 0.03rem #fc7959;
+  background-size: 100% 100%;
+}
+
+.luckWheel .plate_wrap .luck_arrow{
+  width:1.35rem;
+  height: 1.96rem;
+  background:url(../images/lottery_arrow_wap.png) no-repeat 0 0 ;
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin-top:-1.29rem;
+  margin-left: -0.67rem;
+  background-size: 100% 100%;
+}
+.luckWheel .plate_wrap .luck_arrow .luck_arrow2{
+    width: 100%;
+    height: 100%;
+    background:url(../images/lottery_area.png) no-repeat 0 0 ;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+/*.luckWheel .plate_wrap .luck_arrow:after{*/
+  /*content:'';*/
+  /*width:0.70rem;*/
+  /*height: 0.89rem;*/
+  /*background: url(../images/arrow.png) no-repeat 0 0;*/
+  /*background-size: 100% 100%;*/
+  /*position: absolute;*/
+  /*left:50%;*/
+  /*!*margin-left: -0.1rem;*!*/
+  /*top:-0.73rem;*/
+    /*margin-left:-0.34rem;*/
+/*}*/
+
+.luckWheel .plate_wrap .luck_arrow.disabled{
+  background-image: url(../images/btn_content_disabled.png);
+}
+
+.luckWheel .plate_wrap .luck_arrow.disabled:after{
+  background-image: url(../images/btn_06.png);
+}
+
+.luckWheel .section img{
+  display: block;
+  width: 100%;
+}
+
+.luckWheel .btn_area .btn{
+  width:2.75rem;
+  height: 0.9rem;
+  background: url(../images/btn_03.png) no-repeat 0 0;
+  display: block;
+  margin:0 auto;
+}
+
+.luckWheel .btn_area .btn:active{
+  opacity: 0.8;
+}
+
+.luckWheel .section{
+  position: relative;
+}
+
+.luckWheel .section img{
+  display: block;
+  width: 100%;
+}
+
+.btn_area{
+  /*background-color: #010d2d;*/
+    margin: 0.5rem auto;
+}
+
+.btn_area a{
+  display: inline-block;
+  text-decoration: none;
+  /*background-color: #fbde14;*/
+  color:#333;
+  font-size: 0.14rem;
+  width:3rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  border-radius: 0.6rem;
+  font-size:0.24rem;
+}
+
+.btn_area a.my_award{
+  width:2rem;
+  margin:0 0.5rem;
+  font-weight:600;
+}
+
+.btn_area a span{
+  color:#e2212a;
+  font-size: 0.32rem;
+}
+
+.bottom{
+  position: relative;
+}
+
+.bottom .fake_btn{
+  position: absolute;
+  width: 3rem;
+  height: 0.8rem;
+  bottom: 1.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/*
+ * 弹窗样式
+ */
+
+ .luckWheel .mask{
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   left: 0;
+   top: 0;
+   background-color: rgba(0,0,0,0.5);
+ }
+
+ .luckWheel .tips{
+   position: fixed;
+   width: 6rem;
+   height: 3rem;
+     background-color: #daffdd;
+     color: #000;
+   border-radius: 0.1rem;
+   top: 50%;
+   left: 50%;
+   margin-left: -3rem;
+   margin-top: -2.5rem;
+   -webkit-animation: scaleIn 0.5s;
+   animation: scaleIn 0.5s;
+ }
+
+ .luckWheel .tips img{
+   display: block;
+   width: 100%;
+   height: 100%;
+ }
+
+ .luckWheel .tips .text{
+   font-size: 0.36rem;
+   position: absolute;
+   width: 100%;
+   padding:0 0.2rem;
+   box-sizing: border-box;
+   /*bottom: 0rem;*/
+   color: #599f6b;
+   line-height: 0.5rem;
+     margin-top: 0.5rem;
+ }
+
+ .luckWheel .tips .text p{
+   margin: 0;
+   margin-bottom: 0.5rem;
+ }
+
+
+
+  /**
+   * 我的奖品列表弹窗
+   */
+  .award_mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index:9999;
+  }
+
+  .award_mask .content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6.5rem;
+    height: 7rem;
+    margin-left:-3.25rem;
+    margin-top: -3.5rem;
+    background-color: #599f6b;
+    border-radius: 0.1rem;
+  }
+
+  .award_mask .content .title{
+    height: 0.8rem;
+    background: url(../images/award_list_title.png) no-repeat 50% 50%;
+    background-size: 2rem 0.5rem;
+  }
+
+  .award_mask .content .title .icon-close{
+    position: absolute;
+    width:.4rem;
+    height: .4rem;
+    background: url(../images/award_list_close.png) no-repeat 0 0;
+    background-size: 100%;
+    right:0.1rem;
+    top:0.1rem;
+      font-size: 0.3rem;
+  }
+
+  .award_mask .content .body{
+    position: absolute;
+    top:0.8rem;
+    bottom:0.2rem;
+    left:0.2rem;
+    right:0.2rem;
+    background-color: #ddefe1;
+    border-bottom-right-radius: 0.1rem;
+    border-bottom-left-radius: 0.1rem;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+      padding: 0.5rem 0;
+  }
+
+  .award_mask .content .body .no_result{
+    height: 2rem;
+    line-height: 2rem;
+    font-size:0.28rem;
+  }
+
+  .award_mask .content .body .item{
+    display: block;
+    float: left;
+    width: 50%;
+    color:#a57605;
+  }
+
+  .award_mask .content .body .item img{
+    width:1.3rem;
+    height: 2rem;
+    display: block;
+    margin:0.2rem auto 0 auto;
+  }
+
+  .award_mask .content .body .item p{
+    color:#599f6b;
+    font-size: 0.28rem;
+    margin-top: 0.2rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+
+  .invest_btn{
+      display: block;
+      width: 50%;
+      margin: auto;
+  }
+  .awards_btn{
+      display: block;
+      width: 50%;
+      margin:0 auto;
+      margin-bottom: 0.5rem;
+  }
+span.remain{
+    margin: 0.3rem auto;
+    display: block;
+    font-size: 0.3rem;
+    color: #065a4b;
+    font-weight: bolder;
+}
